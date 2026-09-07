@@ -397,19 +397,29 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
 
 <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
   <tr><th colspan="2" style="text-align: left;">Entrevista #1</th></tr>
-  <tr><td>Nombre</td><td> name </td></tr>
-  <tr><td>Apellidos</td><td> apellido </td></tr>
-  <tr><td>Edad</td><td>  </td></tr>
-  <tr><td>Distrito</td><td> distrito </td></tr>
-  <tr><td>Evidencia</td><td><img src="../assets/img/chapter-II/interview-segment-two-02-nombre" alt="Entrevista - name" width="420"/></td></tr>
+  <tr><td>Nombre</td><td> Alex </td></tr>
+  <tr><td>Apellidos</td><td> Nina Condori </td></tr>
+  <tr><td>Edad</td><td> 28 </td></tr>
+  <tr><td>Distrito</td><td> Ocongate - Cusco </td></tr>
+  <tr><td>Evidencia</td><td><img src="../assets/img/chapter-II/interview-segment-two-02-nombre" alt="Entrevista - Alex" width="420"/></td></tr>
   <tr><td>Link</td><td> link </td></tr>
-  <tr><td>Timing donde inicia la entrevista</td><td> min</td></tr>
-  <tr><td>Duración de la entrevista</td><td> min</td></tr>
-  <tr><td>Resumen</td><td>  .<br><br>
+  <tr><td>Timing donde inicia la entrevista</td><td> 00:30 min</td></tr>
+  <tr><td>Duración de la entrevista</td><td> 06:19 min</td></tr>
+  <tr><td>Resumen</td><td> El entrevistado se desempeña como gerente de operaciones de productos agrícolas en un distrito de Cusco. Señaló que actualmente coordinan avisos y alertas mediante grupos de WhatsApp y radioemisoras provinciales, pero estas vías se ven severamente afectadas por factores climáticos, por lo que requieren canales más directos y estables. En la fase de acopio, aplican muestreos aleatorios y catación en laboratorio; bonifican económicamente los lotes que cumplen con altos estándares de calidad y penalizan castigando el precio a los lotes deficientes. Respecto a la adopción digital, indicó que la principal barrera es cultural y etaria, ya que la mayoría de los socios son adultos mayores habituados a registros en papel físico. En materia comercial y de exportación, afirmó no haber tenido rechazos físicos ni devoluciones de carga, aunque sí enfrentan trabas y observaciones administrativas con SUNAT y normativas internacionales de destino. Finalmente, expresó una alta disposición y necesidad de adoptar una plataforma digital móvil para agilizar los controles de calidad y reemplazar las libretas físicas, haciendo énfasis en brindar capacitación a los socios para garantizar su adopción. <br><br>
   <b>Comportamiento y necesidades:</b>
-  .<br><br>
+  <ul>
+    <li><b>Alertas climáticas directas:</b> Requiere un canal confiable para recibir avisos de heladas y sequías que no dependa de radioemisoras locales vulnerables al clima.</li>
+    <li><b>Transparencia en el acopio:</b> Necesita digitalizar los muestreos de calidad (calibre y catación) para justificar de forma objetiva las bonificaciones o penalizaciones de pago.</li>
+    <li><b>Facilidad de uso y capacitación:</b> Demanda una interfaz intuitiva con acompañamiento técnico para reducir la resistencia al cambio en productores habituados al papel.</li>
+  </ul><br>
   <b>Tecnología, marcas y canales:</b>
-  .</td></tr>
+  <ul>
+    <li><b>Canales actuales:</b> WhatsApp para coordinación virtual y radioemisoras provinciales para avisos masivos.</li>
+    <li><b>Dispositivos habituales:</b> Teléfono inteligente (smartphone).</li>
+    <li><b>Registro actual:</b> Notas y libretas físicas de campo por parte de los socios.</li>
+    <li><b>Disposición tecnológica:</b> Alta apertura hacia una plataforma móvil que agilice los controles de calidad y simplifique las auditorías.</li>
+  </ul>
+  </td></tr>
 </table>
 
 <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
