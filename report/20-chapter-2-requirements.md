@@ -344,11 +344,11 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
 
 <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
   <tr><th colspan="2" style="text-align: left;">Entrevista #1</th></tr>
-  <tr><td>Nombre</td><td> Joaquin </td></tr>
-  <tr><td>Apellidos</td><td> Armando Gutierrez </td></tr>
+  <tr><td>Nombre</td><td> Mateo </td></tr>
+  <tr><td>Apellidos</td><td> Florez </td></tr>
   <tr><td>Edad</td><td> 21 </td></tr>
   <tr><td>Distrito</td><td> Quillabamba , Cusco </td></tr>
-  <tr><td>Evidencia</td><td><img src="../assets/img/chapter-II/interview-segment-two-02-nombre" alt="Entrevista - name" width="420"/></td></tr>
+  <tr><td>Evidencia</td><td><img src="../assets/img/interview/interview-segment-one-01-Mateo-Florez.png" alt="Entrevista - Mateo Florez" width="420"/></td></tr>
   <tr><td>Link</td><td> link </td></tr>
   <tr><td>Timing donde inicia la entrevista</td><td> 0:50 min </td></tr>
   <tr><td>Duración de la entrevista</td><td> 7:22min </td></tr>
@@ -365,7 +365,7 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
   <tr><td>Apellidos</td><td> Gutierrez Quispe </td></tr>
   <tr><td>Edad</td><td> 21 </td></tr>
   <tr><td>Distrito</td><td> Quillabamba - Cusco </td></tr>
-  <tr><td>Evidencia</td><td> </td></tr>
+  <tr><td>Evidencia</td><td><img src="../assets/img/interview/interview-segment-one-02-Joquin-Gutierrez.png" alt="Entrevista - Joaquin Gutierrez" width="420"/></td></tr>
   <tr><td>Link</td><td> link </td></tr>
   <tr><td>Timing donde inicia la entrevista</td><td> 00:00 min</td></tr>
   <tr><td>Duración de la entrevista</td><td> 08:30 min</td></tr>
@@ -393,7 +393,7 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
   <tr><td>Apellidos</td><td> apellido </td></tr>
   <tr><td>Edad</td><td>  </td></tr>
   <tr><td>Distrito</td><td> distrito </td></tr>
-  <tr><td>Evidencia</td><td><img src="../assets/img/chapter-II/interview-segment-two-02-nombre" alt="Entrevista - name" width="420"/></td></tr>
+  <tr><td>Evidencia</td><td><img src="../assets/img/interview/interview-segment-two-02-nombre" alt="Entrevista - name" width="420"/></td></tr>
   <tr><td>Link</td><td> link </td></tr>
   <tr><td>Timing donde inicia la entrevista</td><td> min</td></tr>
   <tr><td>Duración de la entrevista</td><td> min</td></tr>
@@ -412,7 +412,7 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
   <tr><td>Apellidos</td><td> Nina Condori </td></tr>
   <tr><td>Edad</td><td> 28 </td></tr>
   <tr><td>Distrito</td><td> Ocongate - Cusco </td></tr>
-  <tr><td>Evidencia</td><td><img src="../assets/img/chapter-II/interview-segment-two-02-nombre" alt="Entrevista - Alex" width="420"/></td></tr>
+  <tr><td>Evidencia</td><td><img src="../assets/img/interview/interview-segment-two-01-Nina-Condori.png" alt="Entrevista - Nina Condori" width="420"/></td></tr>
   <tr><td>Link</td><td> link </td></tr>
   <tr><td>Timing donde inicia la entrevista</td><td> 00:30 min</td></tr>
   <tr><td>Duración de la entrevista</td><td> 06:19 min</td></tr>
@@ -435,19 +435,27 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
 
 <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
   <tr><th colspan="2" style="text-align: left;">Entrevista #2</th></tr>
-  <tr><td>Nombre</td><td> name </td></tr>
-  <tr><td>Apellidos</td><td> apellido </td></tr>
-  <tr><td>Edad</td><td>  </td></tr>
-  <tr><td>Distrito</td><td> distrito </td></tr>
-  <tr><td>Evidencia</td><td><img src="../assets/img/chapter-II/interview-segment-two-02-nombre" alt="Entrevista - name" width="420"/></td></tr>
+  <tr><td>Nombre</td><td> Caleb </td></tr>
+  <tr><td>Apellidos</td><td> Quispe </td></tr>
+  <tr><td>Edad</td><td> 27 </td></tr>
+  <tr><td>Distrito</td><td> Arequipa - San Martin </td></tr>
+  <tr><td>Evidencia</td><td><img src="../assets/img/interview/interview-segment-two-02-Caleb-Quispe.png" alt="Entrevista - Caleb Quispe" width="420"/></td></tr>
   <tr><td>Link</td><td> link </td></tr>
   <tr><td>Timing donde inicia la entrevista</td><td> min</td></tr>
   <tr><td>Duración de la entrevista</td><td> min</td></tr>
-  <tr><td>Resumen</td><td>  .<br><br>
+  <tr><td>Resumen</td><td> El entrevistado, se desempeña como gerente de una cooperativa agrícola en el distrito de San Martín de las Cumbres, Arequipa. Representa a 300 socios y tiene como prioridad asegurar su rentabilidad. Señaló que actualmente advierten sobre amenazas climáticas mediante grupos de WhatsApp, recurriendo a SMS, radio local y técnicos de campo para las zonas altas sin internet, aunque con el riesgo de que la alerta llegue tarde. Durante el acopio, bonifican económicamente por quintal a quienes superan estándares de calidad y penalizan a los deficientes pagándoles el precio mínimo del mercado convencional, lo que les hace perder los beneficios cooperativos. Respecto a la digitalización, indicó que la principal barrera es cultural, dado que la mayoría de los socios superan los 50 años, temen equivocarse en el celular y prefieren su cuaderno físico; a esto se suma la falta de conectividad en las chacras. En el ámbito comercial, cerca del 10% de sus ventas sufre castigos en el precio debido a cuadernos de campo incompletos, lo que ocasiona la pérdida de sellos de certificación (como el Orgánico). Finalmente, expresó una total disposición para que la cooperativa asuma económicamente una plataforma tecnológica como gasto operativo, siempre que esta reduzca las semanas de papeleo previas a las auditorías y garantice la conservación de las primas económicas. <br><br>
   <b>Comportamiento y necesidades:</b>
-  .<br><br>
-  <b>Tecnología, marcas y canales:</b>
-  .</td></tr>
+   
+- Alertas climáticas oportunas: Requiere un sistema de comunicación que evite los retrasos actuales al notificar a las zonas más altas y desconectadas de internet.
+- Protección de certificaciones: Necesita asegurar que los datos de trazabilidad estén completos para mantener sellos orgánicos y evitar el castigo en el precio de sus lotes.
+- Eficiencia administrativa: Demanda reducir drásticamente las semanas de papeleo manual que actualmente exigen las auditorías.
+- Accesibilidad e inclusión digital: Necesita herramientas muy intuitivas que superen la desconfianza tecnológica de los productores mayores de 50 años y que puedan operar en fincas sin cobertura..<br><br>
+<b>Tecnología, marcas y canales:</b>
+
+- Canales actuales: WhatsApp, mensajes de texto (SMS), radio local en las madrugadas y visitas presenciales de técnicos de campo.
+- Dispositivos habituales: Teléfonos inteligentes (smartphones) en zonas conectadas y celulares básicos o radios en zonas remotas.
+- Registro actual: Cuadernos físicos de campo y papeleo manual.
+- Disposición tecnológica: Muy alta y con respaldo de inversión; perciben la adopción de una plataforma como un gasto operativo justificable que "se paga solo" al salvar las primas de certificación y agilizar el trabajo.</td></tr>
 </table>
 
 <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
@@ -456,7 +464,7 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
   <tr><td>Apellidos</td><td> Aquise Chauca </td></tr>
   <tr><td>Edad</td><td> 27 </td></tr>
   <tr><td>Distrito</td><td> San Antonio - Cañete </td></tr>
-  <tr><td>Evidencia</td><td><img src="../assets/img/chapter-II/interview-segment-two-02-nombre" alt="Entrevista - Cristo Valentino" width="420"/></td></tr>
+  <tr><td>Evidencia</td><td><img src="../assets/img/interview/interview-segment-two-03-Cristo-Aquise.png" alt="Entrevista - Cristo Valentino" width="420"/></td></tr>
   <tr><td>Link</td><td> link </td></tr>
   <tr><td>Timing donde inicia la entrevista</td><td> </td></tr>
   <tr><td>Duración de la entrevista</td><td> </td></tr>
@@ -480,19 +488,27 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
 
 <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
   <tr><th colspan="2" style="text-align: left;">Entrevista #1</th></tr>
-  <tr><td>Nombre</td><td> name </td></tr>
-  <tr><td>Apellidos</td><td> apellido </td></tr>
-  <tr><td>Edad</td><td>  </td></tr>
-  <tr><td>Distrito</td><td> distrito </td></tr>
-  <tr><td>Evidencia</td><td><img src="../assets/img/chapter-II/interview-segment-two-02-nombre" alt="Entrevista - name" width="420"/></td></tr>
+  <tr><td>Nombre</td><td> Erly </td></tr>
+  <tr><td>Apellidos</td><td> Mapelli </td></tr>
+  <tr><td>Edad</td><td> 50 </td></tr>
+  <tr><td>Distrito</td><td> Pasco - Oxapampa </td></tr>
+  <tr><td>Evidencia</td><td><img src="../assets/img/interview/interview-segment-three-01-Erly-Mapelli.png" alt="Entrevista - Erly Mapelli" width="420"/></td></tr>
   <tr><td>Link</td><td> link </td></tr>
   <tr><td>Timing donde inicia la entrevista</td><td> min</td></tr>
   <tr><td>Duración de la entrevista</td><td> min</td></tr>
-  <tr><td>Resumen</td><td>  .<br><br>
+  <tr><td>Resumen</td><td>El entrevistado es un ingeniero agrónomo de Oxapampa (egresado de la UNDAC) con experiencia en asistencia técnica para cultivos perennes como café, palto y granadilla en zonas de selva central como Pozuzo. Destaca que la topografía abrupta, las quebradas y el clima lluvioso reducen la capacidad operativa real de un asesor a un rango de entre 15 y 25 productores mensuales para mantener visitas continuas (mínimo cada 30 días). Enfatiza la dificultad de erradicar el hábito empírico de fumigar por calendario sin presencia real de plagas, y señala que la evaluación de daños climáticos se realiza de forma manual y visual mediante recorridos en patrones (X, M, Z). Valora el uso de herramientas digitales básicas para coordinar y dosificar, destacando la georreferenciación vinculada al Padrón de Productores Agrarios (PPA).<br><br>
   <b>Comportamiento y necesidades:</b>
-  .<br><br>
+ 
+- Capacidad operativa condicionada: La cobertura técnica efectiva cae a 15–25 productores al mes debido a caminatas de hasta 3 horas por quebradas y demoras por lluvias intensas.
+- Justificación de impacto por contraste: Demuestra el valor de su asesoría comparando visualmente parcelas de productores que acataron las pautas técnicas frente a los que no las aplicaron.
+- Resistencia al cambio en fitosanidad: Enfrenta la costumbre del productor de aplicar agroquímicos de forma fija por calendario (cada 8–10 días) sin leer etiquetas ni verificar síntomas previos.
+- Evaluación visual de siniestros: Requiere recorrer físicamente toda el área en patrones (X, M, Z) para estimar daños por heladas, lluvias o sequías según la etapa fenológica del cultivo.<br><br>
   <b>Tecnología, marcas y canales:</b>
-  .</td></tr>
+
+- Dispositivos y apps genéricas: Emplea WhatsApp como canal primario de contacto directo con los agricultores que cuentan con señal o wifi en sus localidades.
+- Herramientas de cálculo: Utiliza hojas de cálculo en Excel para estructurar y entregar tablas de dosificación nutricional foliar y edáfica.
+- Sistemas de información geográfica: Se apoya en Google Maps y resalta la georreferenciación de parcelas ligada al Padrón de Productores Agrarios (PPA).
+- Entorno de conectividad: Cobertura de red presente en caseríos, pero nula o restringida en quebradas y áreas de tránsito a pie.</td></tr>
 </table>
 
 <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
@@ -501,7 +517,7 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
   <tr><td>Apellidos</td><td> Torres Martinez </td></tr>
   <tr><td>Edad</td><td> 30 </td></tr>
   <tr><td>Distrito</td><td> Mala - Cañete </td></tr>
-  <tr><td>Evidencia</td><td><img src="../assets/img/chapter-II/interview-segment-three-02-nombre" alt="Entrevista - Eddy Alberto" width="420"/></td></tr>
+  <tr><td>Evidencia</td><td><img src="../assets/img/interview/interview-segment-three-02-Eddy-Alberto.png" alt="Entrevista - Eddy Alberto" width="420"/></td></tr>
   <tr><td>Link</td><td> link </td></tr>
   <tr><td>Timing donde inicia la entrevista</td><td> </td></tr>
   <tr><td>Duración de la entrevista</td><td> </td></tr>
@@ -527,7 +543,7 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
   <tr><td>Apellidos</td><td>  </td></tr>
   <tr><td>Edad</td><td>  </td></tr>
   <tr><td>Distrito</td><td> distrito </td></tr>
-  <tr><td>Evidencia</td><td><img src="../assets/img/chapter-II/interview-segment-two-foto" alt="Entrevista - nombre" width="420"/></td></tr>
+  <tr><td>Evidencia</td><td><img src="../assets/img/interview/interview-segment-three-02" alt="Entrevista - name" width="420"/></td></tr>
   <tr><td>Link</td><td> link </td></tr>
   <tr><td>Timing donde inicia la entrevista</td><td> min</td></tr>
   <tr><td>Duración de la entrevista</td><td> min</td></tr>
