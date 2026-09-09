@@ -344,14 +344,14 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
 
 <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
   <tr><th colspan="2" style="text-align: left;">Entrevista #1</th></tr>
-  <tr><td>Nombre</td><td> name </td></tr>
-  <tr><td>Apellidos</td><td> apellido </td></tr>
-  <tr><td>Edad</td><td>  </td></tr>
-  <tr><td>Distrito</td><td> distrito </td></tr>
+  <tr><td>Nombre</td><td> Joaquin </td></tr>
+  <tr><td>Apellidos</td><td> Armando Gutierrez </td></tr>
+  <tr><td>Edad</td><td> 21 </td></tr>
+  <tr><td>Distrito</td><td> Quillabamba , Cusco </td></tr>
   <tr><td>Evidencia</td><td><img src="../assets/img/chapter-II/interview-segment-two-02-nombre" alt="Entrevista - name" width="420"/></td></tr>
   <tr><td>Link</td><td> link </td></tr>
-  <tr><td>Timing donde inicia la entrevista</td><td> min</td></tr>
-  <tr><td>Duración de la entrevista</td><td> min</td></tr>
+  <tr><td>Timing donde inicia la entrevista</td><td> 0:50 min </td></tr>
+  <tr><td>Duración de la entrevista</td><td> 7:22min </td></tr>
   <tr><td>Resumen</td><td>  .<br><br>
   <b>Comportamiento y necesidades:</b>
   .<br><br>
@@ -361,19 +361,30 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
 
 <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
   <tr><th colspan="2" style="text-align: left;">Entrevista #2</th></tr>
-  <tr><td>Nombre</td><td> name </td></tr>
-  <tr><td>Apellidos</td><td> apellido </td></tr>
-  <tr><td>Edad</td><td>  </td></tr>
-  <tr><td>Distrito</td><td> distrito </td></tr>
-  <tr><td>Evidencia</td><td><img src="../assets/img/chapter-II/interview-segment-two-02-nombre" alt="Entrevista - name" width="420"/></td></tr>
+  <tr><td>Nombre</td><td> Joaquin Armando </td></tr>
+  <tr><td>Apellidos</td><td> Gutierrez Quispe </td></tr>
+  <tr><td>Edad</td><td> 21 </td></tr>
+  <tr><td>Distrito</td><td> Quillabamba - Cusco </td></tr>
+  <tr><td>Evidencia</td><td> </td></tr>
   <tr><td>Link</td><td> link </td></tr>
-  <tr><td>Timing donde inicia la entrevista</td><td> min</td></tr>
-  <tr><td>Duración de la entrevista</td><td> min</td></tr>
-  <tr><td>Resumen</td><td>  .<br><br>
+  <tr><td>Timing donde inicia la entrevista</td><td> 00:00 min</td></tr>
+  <tr><td>Duración de la entrevista</td><td> 08:30 min</td></tr>
+  <tr><td>Resumen</td><td> El entrevistado es un joven agricultor de café de 21 años residente en Quillabamba, Cusco, que trabaja conjuntamente con su padre en una parcela familiar ubicada en Maranura y complementa sus ingresos haciendo servicio de mototaxi. A lo largo de la entrevista, manifiesta que enfrentan pérdidas agrícolas severas debido a sequías y plagas como la roya, las cuales calculan de forma empírica y volumétrica sin un registro detallado de costos operativos o de inversión en insumos. Revela además que los precios de venta son fijados arbitrariamente por acopiadores e intermediarios al carecer de certificaciones formales de calidad en origen, y que la obtención de créditos resulta lenta o condicionante. Frente a este panorama, muestra una alta receptividad para adoptar la plataforma Dymbia como un puente tecnológico generacional en apoyo a su padre, remarcando que la inestabilidad de la señal celular en el campo hace indispensable que la herramienta permita el registro de datos en modo fuera de línea para su posterior sincronización. <br><br>
   <b>Comportamiento y necesidades:</b>
-  .<br><br>
+  <ul>
+    <li><b>Gestión empírica y tradicional:</b> Coadministra la parcela con su padre estimando pérdidas únicamente por volumen de sacos cosechados, omitiendo costos operativos hundidos.</li>
+    <li><b>Negociación y financiamiento:</b> Consulta precios en radio local o WhatsApp, dependiendo de créditos bancarios lentos o adelantos de intermediarios que imponen precios de venta desfavorables.</li>
+    <li><b>Soporte técnico y calidad:</b> Requiere monitorear tempranamente sequías y enfermedades (roya) sin hardware costoso, además de un certificado digital de calidad para defender un precio justo ante el comprador.</li>
+    <li><b>Registro fuera de línea:</b> Necesita registrar datos de campo sin depender de una conexión a internet activa o continua debido a la señal inestable.</li>
+  </ul><br>
   <b>Tecnología, marcas y canales:</b>
-  .</td></tr>
+  <ul>
+    <li><b>Dispositivos habituales:</b> Teléfono inteligente (Samsung Galaxy A14) valorando la autonomía de la batería para jornadas en campo.</li>
+    <li><b>Canales actuales:</b> WhatsApp para coordinaciones comerciales con fletes y compradores, Yape para pagos/cobros rápidos y redes sociales (Facebook e Instagram).</li>
+    <li><b>Conectividad:</b> Cobertura móvil inestable e intermitente en la parcela (Claro y Bitel), con pérdida total de señal en quebradas, dependiendo de la sincronización nocturna al retornar a Quillabamba.</li>
+    <li><b>Disposición tecnológica:</b> Alta apertura para adoptar la plataforma móvil y actuar como puente tecnológico generacional para su padre.</li>
+  </ul>
+  </td></tr>
 </table>
 
 <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
