@@ -452,19 +452,28 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
 
 <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
   <tr><th colspan="2" style="text-align: left;">Entrevista #3</th></tr>
-  <tr><td>Nombre</td><td>  </td></tr>
-  <tr><td>Apellidos</td><td>  </td></tr>
-  <tr><td>Edad</td><td>  </td></tr>
-  <tr><td>Distrito</td><td> distrito </td></tr>
-  <tr><td>Evidencia</td><td><img src="../assets/img/chapter-II/interview-segment-two-foto" alt="Entrevista - nombre" width="420"/></td></tr>
+  <tr><td>Nombre</td><td> Cristo Valentino </td></tr>
+  <tr><td>Apellidos</td><td> Aquise Chauca </td></tr>
+  <tr><td>Edad</td><td> 27 </td></tr>
+  <tr><td>Distrito</td><td> San Antonio - Cañete </td></tr>
+  <tr><td>Evidencia</td><td><img src="../assets/img/chapter-II/interview-segment-two-02-nombre" alt="Entrevista - Cristo Valentino" width="420"/></td></tr>
   <tr><td>Link</td><td> link </td></tr>
-  <tr><td>Timing donde inicia la entrevista</td><td> min</td></tr>
-  <tr><td>Duración de la entrevista</td><td> min</td></tr>
-  <tr><td>Resumen</td><td> .<br><br>
+  <tr><td>Timing donde inicia la entrevista</td><td> </td></tr>
+  <tr><td>Duración de la entrevista</td><td> </td></tr>
+  <tr><td>Resumen</td><td> El participante es un socio de 27 años radicado en el distrito de San Antonio (Cañete) e integrado en una organización cooperativa. Indicó que la transmisión de advertencias por eventos climáticos adversos se efectúa a través de chats zonales en WhatsApp y contacto directo telefónico a representantes de sector, contrarrestando la deficiente cobertura en parcelas. Durante la etapa de recepción del grano, ejecutan pruebas técnicas para ajustar tarifas con castigos económicos ante excesos de humedad o fallas, e incentivos financieros respaldados por clientes internacionales para perfiles de taza destacados. Sobre el seguimiento del producto, reveló que un 10% de las cargas destinadas al mercado exterior experimentó demoras por vacíos de datos de origen. Catalogó el apego a cuadernos físicos como el obstáculo determinante para la migración digital, agravado por la edad avanzada de varios miembros. Por último, ratificó el compromiso financiero del gremio para costear un sistema digital siempre que simplifique los procesos de fiscalización y auditoría anual. <br><br>
   <b>Comportamiento y necesidades:</b>
-   .<br><br>
+  <ul>
+    <li><b>Flujo contingente de avisos:</b> Precisa un mecanismo ágil para distribuir alertas por inclemencias o plagas vía WhatsApp y contactos clave de zona, sorteando la falta de conectividad continua en los campos.</li>
+    <li><b>Criterios objetivos en liquidaciones:</b> Busca respaldar las deducciones de precio por imperfecciones y los premios económicos mediante análisis de laboratorio al momento del pesaje.</li>
+    <li><b>Agilización de certificaciones:</b> Requiere migrar los registros manuscritos a un formato digital para asegurar la trazabilidad comercial y aminorar la carga operativa durante las auditorías formales.</li>
+  </ul><br>
   <b>Tecnología, marcas y canales:</b>
-   .</td></tr>
+  <ul>
+    <li><b>Canales actuales:</b> Comunidades temáticas en WhatsApp divididas regionalmente y comunicaciones móviles directas con enlaces sectoriales.</li>
+    <li><b>Registro actual y barreras:</b> Inclinación hacia libretas de papel por arraigo cultural, sensación de resguardo físico y dificultades de adaptabilidad tecnológica en afiliados mayores.</li>
+    <li><b>Disposición tecnológica:</b> Disposición favorable del grupo para asumir la suscripción de un software portátil si mitiga la inversión de tiempo en trámites de certificación.</li>
+  </ul>
+  </td></tr>
 </table>
 
 **Segmento 3: Ingenieros agrónomos y asesores técnicos de campo**
@@ -488,19 +497,28 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
 
 <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
   <tr><th colspan="2" style="text-align: left;">Entrevista #2</th></tr>
-  <tr><td>Nombre</td><td> name </td></tr>
-  <tr><td>Apellidos</td><td> apellido </td></tr>
-  <tr><td>Edad</td><td>  </td></tr>
-  <tr><td>Distrito</td><td> distrito </td></tr>
-  <tr><td>Evidencia</td><td><img src="../assets/img/chapter-II/interview-segment-two-02-nombre" alt="Entrevista - name" width="420"/></td></tr>
+  <tr><td>Nombre</td><td> Eddy Alberto </td></tr>
+  <tr><td>Apellidos</td><td> Torres Martinez </td></tr>
+  <tr><td>Edad</td><td> 30 </td></tr>
+  <tr><td>Distrito</td><td> Mala - Cañete </td></tr>
+  <tr><td>Evidencia</td><td><img src="../assets/img/chapter-II/interview-segment-three-02-nombre" alt="Entrevista - Eddy Alberto" width="420"/></td></tr>
   <tr><td>Link</td><td> link </td></tr>
-  <tr><td>Timing donde inicia la entrevista</td><td> min</td></tr>
-  <tr><td>Duración de la entrevista</td><td> min</td></tr>
-  <tr><td>Resumen</td><td>  .<br><br>
+  <tr><td>Timing donde inicia la entrevista</td><td> </td></tr>
+  <tr><td>Duración de la entrevista</td><td> </td></tr>
+  <tr><td>Resumen</td><td> El entrevistado es un asesor técnico de 30 años radicado en el distrito de Mala (Cañete), perteneciente al segmento de ingenieros agrónomos y especialistas de campo. Explicó que el tope máximo de atención personalizada se sitúa entre 35 y 40 agricultores por mes debido a la dispersión geográfica y al diligenciamiento manual de informes. En su rutina diaria emplea herramientas genéricas desarticuladas como WhatsApp, planillas de Excel y marcaciones en Google Maps para rastrear predios. Manifestó que sustentar el retorno de inversión de la asistencia presencial ante las directivas resulta complejo, dependiendo de comparativas de rendimiento o evidencias fotográficas postratamiento. Destacó que el principal reto en campo radica en erradicar la sobreaplicación de insumos agroquímicos por parte del productor empírico. Finalmente, advirtió que las evaluaciones de siniestros climáticos se efectúan mediante inspecciones en zigzag totalmente subjetivas, lo que deriva en diagnósticos tardíos o imprecisos del daño radicular e hídrico. <br><br>
   <b>Comportamiento y necesidades:</b>
-  .<br><br>
+  <ul>
+    <li><b>Escalabilidad en asistencia de campo:</b> Requiere optimizar los tiempos de traslado y el llenado de fichas físicas para superar el umbral restrictivo de 35 a 40 productores monitoreados al mes.</li>
+    <li><b>Justificación del impacto técnico:</b> Necesita reportar con métricas objetivas ante la gerencia que las asistencias preventivas protegen la productividad y no representan un gasto superfluo.</li>
+    <li><b>Estandarización de diagnósticos de daño:</b> Demanda herramientas de medición precisa para erradicar la inspección visual en zigzag y detectar oportunamente el estrés hídrico subsuperficial.</li>
+  </ul><br>
   <b>Tecnología, marcas y canales:</b>
-  .</td></tr>
+  <ul>
+    <li><b>Canales actuales:</b> Intercambio de fotografías por WhatsApp para consultas fitosanitarias y geolocalización puntual con Google Maps.</li>
+    <li><b>Registro actual y barreras:</b> Hojas de cálculo en Excel para consolidación administrativa y fichas manuscritas durante las inspecciones presenciales.</li>
+    <li><b>Disposición tecnológica:</b> Elevado interés en adoptar soluciones de agricultura de precisión que unifiquen la gestión de datos y mitiguen la dosificación empírica de agroquímicos.</li>
+  </ul>
+  </td></tr>
 </table>
 
 <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
