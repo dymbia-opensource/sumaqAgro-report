@@ -554,9 +554,29 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
    .</td></tr>
 </table>
 
-### 2.2.3. Análisis de entrevistas
-## 2.3. Needfinding
-### 2.3.1. User Personas
+## 2.2.3. Análisis de entrevistas
+### 2.3. Needfinding
+
+#### 2.3.1. User Personas
+
+A continuación, se presentan los tres arquetipos de usuario elaborados en UXPressia a partir del análisis cualitativo y cuantitativo de las entrevistas de campo, representando formalmente a cada uno de los segmentos objetivo de la plataforma Dymbia:
+
+##### Segmento 1: Pequeños y medianos agricultores independientes
+El arquetipo "Guillermo Cortés" representa al agricultor familiar tradicional que conduce parcelas de café y papa bajo métodos empíricos y sin conectividad continua, demandando una arquitectura móvil fuera de línea y monitoreo satelital sin inversión en sensores costosos en tierra para defender precios justos frente a intermediarios.
+
+![User Persona - Segmento 1: Guillermo Cortés](assets/img/chapter-II/user-persona-segmento-1-guillermo-cortes.png)
+
+##### Segmento 2: Productores organizados y directivos de cooperativas/asociaciones
+El arquetipo "Cristian Santana" sintetiza las necesidades de los administradores y directivos de acopio cooperativo, quienes requieren digitalizar los análisis de calidad en almacén, asegurar la trazabilidad de origen y agilizar los expedientes de auditoría para proteger las primas comerciales y de exportación.
+
+![User Persona - Segmento 2: Cristian Santana](assets/img/chapter-II/user-persona-segmento-2-cristian-santana.png)
+
+##### Segmento 3: Ingenieros agrónomos y asesores técnicos de campo
+El arquetipo "Juan Antonio Morales" consolida al consultor fitosanitario cuya cobertura se ve restringida por la dispersión geográfica en quebradas y por métodos visuales subjetivos, requiriendo teledetección multiespectral para priorizar predios y sustentar prescripciones técnicas ante la gerencia.
+
+![User Persona - Segmento 3: Ing. Juan Antonio Morales](assets/img/chapter-II/user-persona-segmento-3-juan-antonio-morales.png)
+
+
 ### 2.3.2. User Task Matrix
 ### 2.3.3. User Journey Mapping
 ### 2.3.4. Empathy Mapping
