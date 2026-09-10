@@ -566,6 +566,78 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
 </table>
 
 ## 2.2.3. Análisis de entrevistas
+
+### Segmento 1: Pequeños y medianos agricultores independientes de papa y café
+Se analizó la información cualitativa obtenida de productores agrícolas independientes para identificar las características operativas, financieras y de adopción digital clave que configuran el arquetipo de este segmento.
+
+### Características
+
+| Característica                                    | Mención    | %     | Evidencia                                                                                     |
+| ------------------------------------------------- | ---------- | ----- | --------------------------------------------------------------------------------------------- |
+| Coadministración familiar de la parcela           |   1/1      | 100%  | Trabaja conjuntamente con su padre en predio familiar                                         |
+| Pérdidas severas por clima y plagas               |   1/1      | 100%  | Manifiesta pérdidas críticas por sequías recurrentes y roya amarilla                          |
+| Estimación empírica y volumétrica                 |   1/1      | 100%  | Cuantifica mermas solo por sacos cosechados, omitiendo costos operativos hundidos             |
+| Fijación arbitraria de precios por intermediarios |   1/1      | 100%  | Los acopiadores imponen tarifas al carecer de certificados de calidad en origen               | 
+| Dependencia de financiamiento informal o lento    |   1/1      | 100%  | Enfrenta créditos bancarios tardíos o adelantos condicionados de compradores                  |
+| Conectividad móvil deficiente en campo            |   1/1      | 100%  | Pérdida total de cobertura (Claro/Bitel) en quebradas y zonas de cultivo                      |
+| Rol de puente tecnológico generacional            |   1/1      | 100%  | Disposición del productor joven para guiar e implementar la herramienta con su padre          |
+| Canales y medios utilizados                       |   1/1      | 100%  | Uso diario de WhatsApp, Yape, radioemisoras locales y redes sociales                          |
+| Tecnología usada                                  |   1/1      | 100%  | Teléfono inteligente con sistema operativo Android (Samsung Galaxy A14)                       |
+
+##### Insights
+
+1) Vulnerabilidad comercial por ausencia de registros formales: El agricultor calcula su rendimiento de manera memorística y volumétrica (conteo de sacos), desconociendo su inversión real en jornales e insumos. Esta carencia de datos y de certificaciones objetivas de calidad deja la fijación del precio final en manos de acopiadores locales, reduciendo drásticamente su margen de ganancia.
+2) La conectividad nula exige arquitectura 100% offline: Las parcelas ubicadas en quebradas carecen de señal de internet continua. Toda solución digital orientada al campo debe permitir el registro completo de actividades agrícolas fuera de línea y ejecutar sincronizaciones automáticas únicamente cuando el usuario retorna a zonas urbanas.
+3) Relevo generacional como acelerador de digitalización: Aunque los agricultores mayores mantienen un arraigo estricto a las prácticas tradicionales, los miembros jóvenes de la familia cuentan con habilidades digitales y alta disposición para actuar como intermediarios tecnológicos, facilitando la adopción de nuevas plataformas.
+
+### Segmento 2: Productores organizados y directivos de cooperativas agrícolas
+
+Se analizaron 3 entrevistas aplicadas a líderes, gerentes de operaciones y socios cooperativistas (Cusco, Arequipa y Cañete) para consolidar los factores críticos de gestión de acopio, fiscalización y requerimientos tecnológicos del sector organizado.
+
+### Características
+
+| Característica                                    | Mención    | %     | Evidencia                                                                                     |
+| ------------------------------------------------- | ---------- | ----- | --------------------------------------------------------------------------------------------- |
+| Gestión de acopio con premios y castigos          |   3/3      | 100%  | Bonifican lotes de alta calidad y penalizan o pagan precio mínimo a los deficientes           |
+| Uso de canales tradicionales de comunicación      |   3/3      | 100%  | Envío de alertas mediante WhatsApp, SMS, radio local matutina y técnicos presenciales         |
+| Alertas climáticas desfasadas o vulnerables       |   3/3      | 100%  | Los avisos se cortan por mal clima o llegan tarde a las zonas altas desconectadas             |
+| Castigo económico por cuadernos incompletos       |   3/3      | 100%  | Reportan pérdidas de cerca del 10% en ventas/cargas por vacíos en trazabilidad y sellos       | 
+| Barrera etaria y resistencia cultural al cambio   |   3/3      | 100%  | Socios mayores de 50 años habituados al papel que temen equivocarse en el celular             |
+| Sobrecarga de trabajo por auditorías anuales      |   3/3      | 100%  | Señalan semanas de trabajo manual y trámites lentos para sostener certificaciones             |
+| Disposición a financiar la plataforma digital     |   3/3      | 100%  | Las cooperativas asumen el software como gasto operativo que "se paga solo" al salvar primas  |
+| Canales y medios utilizados                       |   3/3      | 100%  | Grupos de WhatsApp regionales, radio provincial y llamadas directas                           |
+| Tecnología usada                                  |   3/3      | 100%  | Teléfonos inteligentes (Android), computadoras de oficina con Excel y radios portátiles       |
+
+##### Insights
+
+1) Riesgo financiero directo por trazabilidad deficiente: El uso continuado de libretas de papel genera omisiones de datos que conllevan el castigo de hasta un 10% del valor de exportación y la pérdida de sobreprecios por sellos orgánicos. La digitalización es vista por la gerencia como una salvaguarda de ingresos antes que como un simple gasto administrativo.
+2) Modelo de financiamiento B2B viable y justificado: A diferencia del productor individual, la cooperativa cuenta con solvencia y disposición formal de presupuesto para financiar la suscripción tecnológica, siempre que el sistema reduzca semanas de consolidación manual previas a las fiscalizaciones y auditorías.
+3) Inclusión de la base social mediante usabilidad simplificada: Dado que el promedio etario de los socios supera los 50 años, la interfaz de captura debe erradicar la complejidad técnica, emplear flujos intuitivos y estar respaldada por capacitaciones presenciales que venzan la desconfianza hacia los entornos móviles.
+
+### Segmento 3: Ingenieros agrónomos y asesores técnicos de campo
+
+Se analizaron 2 entrevistas a ingenieros agrónomos y extensionistas rurales (Oxapampa/Pozuzo y Cañete/Mala) para caracterizar su desempeño operativo, limitantes de cobertura geográfica y herramientas de diagnóstico.
+
+### Características
+
+| Característica                                     |   Mención  |   %   | Evidencia                                                                                     |
+| -------------------------------------------------- | ---------- | ----- | --------------------------------------------------------------------------------------------- |
+| Límite de cobertura condicionado por topografía    |   2/2      | 100%  | Supervisan entre 15–25 productores/mes en selva alta y entre 35–40 en zonas costeras          |
+| Caminatas prolongadas y demoras climáticas         |   2/2      | 100%  | Traslados a pie de 2 a 3 horas por quebradas y paralizaciones por temporales de lluvia        |
+| Uso de herramientas digitales genéricas y dispersas|   2/2      | 100%  | Emplean de forma desarticulada WhatsApp, hojas de cálculo en Excel y Google Maps              |
+| Dificultad para demostrar impacto ante gerencia    |   2/2      | 100%  | Justifican su labor únicamente mediante comparaciones empíricas visuales y fotos              | 
+| Lucha contra la fumigación empírica por calendario |   2/2      | 100%  | Productores aplican agroquímicos fijos (cada 8–10 días) sin signos reales de plagas           |
+| Evaluación visual subjetiva de siniestros          |   2/2      | 100%  | Recorridos pedestres en patrones (X, M, Z) para estimar daños por heladas o sequía            |
+| Reconocimiento del valor de la georreferenciación  |   2/2      | 100%  | Valoran el mapeo de predios ligado al Padrón de Productores Agrarios (PPA)                    |
+| Canales y medios utilizados                        |   2/2      | 100%  | WhatsApp para consultas fitosanitarias y coordinación en caseríos con cobertura               |
+| Tecnología usada                                   |   2/2      | 100%  | Teléfonos inteligentes con GPS integrado, computadoras portátiles y Excel                     |
+
+##### Insights
+
+1) Cuello de botella en la escalabilidad del extensionismo: La cobertura física presencial está saturada: el técnico invierte la mayor parte de su jornada descendiendo quebradas y llenando informes manuales. Es imperativo proveer herramientas de monitoreo satelital o remoto que permitan priorizar visitas a predios con anomalías críticas reales.
+2) Subjetividad en la estimación de siniestros y daños hídricos: Evaluar campos caminándolos en patrones en zigzag genera informes con alto sesgo humano e imprecisión en estrés radicular. El especialista necesita telemetría e índices de vegetación para cuantificar el daño con rigor técnico.
+3) Fragmentación operativa en herramientas genéricas: Los agrónomos deben coordinar en WhatsApp, calcular dosis en plantillas de Excel y ubicar parcelas en Google Maps. Unificar la georreferenciación (compatible con el PPA), el cálculo nutricional y el historial fitosanitario en un único entorno elevaría sustancialmente su productividad de campo.
+
 ### 2.3. Needfinding
 
 #### 2.3.1. User Personas
@@ -589,6 +661,33 @@ El arquetipo "Juan Antonio Morales" consolida al consultor fitosanitario cuya co
 
 
 ### 2.3.2. User Task Matrix
+
+Se presenta el User Task Matrix, que reúne las tareas que los tres arquetipos de usuario identificados en la cadena de valor agrícola realizan para cumplir sus objetivos. Estas tareas comprenden funciones operativas, diagnósticas y comerciales que los usuarios llevan a cabo de forma habitual en su día a día, independientemente de la existencia de una solución tecnológica.
+
+Los segmentos considerados para este análisis corresponden a los perfiles definidos en la investigación cualitativa:
+
+1) Segmento 1: Pequeños y medianos agricultores independientes de papa y café (representado por el arquetipo de Agricultor Independiente).
+2) Segmento 2: Productores organizados y directivos de cooperativas agrícolas (representado por el arquetipo de Directivo de Cooperativa).
+3) Segmento 3: Ingenieros agrónomos y asesores técnicos de campo (representado por el arquetipo de Asesor Técnico).
+
+##### Task Matrix
+
+| Tarea | Guillermo Cortés | | Cristian Santana | | Juan Antonio Morales | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| | Frecuencia | Importancia | Frecuencia | Importancia | Frecuencia | Importancia |
+| Inspeccionar visualmente el estado fitosanitario del cultivo | often | high | rarely | low | often | high |
+| Registrar costos de insumos, jornales y labores culturales | sometimes | high | sometimes | high | rarely | low |
+| Monitorear alertas climáticas y eventos extremos | often | high | often | high | sometimes | high |
+| Ejecutar aplicaciones de agroquímicos y fertilizantes | often | high | never | low | sometimes | high |
+| Evaluar daños físicos y estrés en el campo post-siniestro | sometimes | high | rarely | medium | sometimes | high |
+| Negociar volúmenes y precios de venta de la cosecha | sometimes | high | often | high | never | low |
+| Auditar y consolidar cuadernos de campo de trazabilidad | never | low | often | high | sometimes | high |
+| Realizar control de calidad, muestreo y catación en acopio | rarely | medium | often | high | rarely | medium |
+| Georreferenciar y mapear polígonos de parcelas | never | low | sometimes | high | often | high |
+| Elaborar planes de dosificación nutricional y recetas técnicas | rarely | low | rarely | low | often | high |
+| Rendir informes de visitas técnicas y justificar impacto | never | low | sometimes | high | often | high |
+| Gestionar certificaciones orgánicas, de origen o comercio justo | never | low | often | high | rarely | medium |
+
 ### 2.3.3. User Journey Mapping
 ### 2.3.4. Empathy Mapping
 
