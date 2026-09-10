@@ -708,4 +708,18 @@ Con el User Journey Map reconstruimos paso a paso lo que viven y sienten el admi
 
 ## 2.4. Big Picture Event Storming
 
+En una sesión colaborativa sincrónica mediante la herramienta Miro, el equipo llevó a cabo el modelado del dominio de negocio a través de la técnica de Big Picture Event Storming, tomando como referencia las pautas de la guía metodológica (<https://bit.ly/bpes-guide>). Esta dinámica permitió explorar de forma visual e intuitiva el ciclo de vida productivo y comercial en las cadenas de papa andina y café de especialidad, identificando los eventos trascendentales del negocio, los cuellos de botella operativos y los hitos comerciales sin sesgos tempranos de desarrollo técnico.
+
+### Exploración No Estructurada de Eventos (Domain Events)
+El taller inició con una lluvia de ideas abierta en la que cada integrante aportó hechos consumados de relevancia agronómica, financiera y de certificación. Estos eventos se formularon estrictamente en tiempo pasado participio mediante notas adhesivas de color naranja, abarcando desde la delimitación del predio y el cálculo de índices satelitales, hasta la anotación diaria de jornales y la emisión de certificados de calidad:
+
+![Exploración no estructurada de eventos de dominio](assets/img/chapter-II/step-1-unstructured-exploration.jpg)
+
+### Línea de Tiempo, Puntos de Dolor e Hitos del Negocio
+Posteriormente, los eventos se organizaron en una secuencia cronológica de izquierda a derecha sobre una línea de tiempo continua. A partir de este ordenamiento, se superpusieron los puntos de dolor (*pain points*) identificados durante el Needfinding mediante notas moradas en rombo (resistencia cultural al celular, desconexión móvil en quebradas, registros en papel extraviados y castigos arbitrarios de precio). Asimismo, se establecieron líneas divisorias verticales para demarcar los eventos fundamentales (*pivotal points*) que delimitan las fases operativas de SumaqAgro:
+
+![Línea de tiempo con puntos de dolor e hitos fundamentales](assets/img/chapter-II/step-2-timelines-pivotal-points.jpg)
+
+* **Enlace al tablero interactivo:** [Acceso al espacio de trabajo de Event Storming en Miro]([https://miro.com/app/board/uXjVHPEmUbl=/](https://miro.com/welcomeonboard/WG5aQ1R0dmR5b0xQWTI5TEZvaXplRmpPTUxmT2pmR1NNVXBVakcxRFI5Yk16dVY3TXpRc0RwbHVKNWFndGJvZDZkZXJrbkN4VFZQdzhHTjV6MWdBNUJtQnhYMVFmcjNLbkxyOWQwZlVuWHZ6UXVkOHlsNXRlcVBQd24wVS92ZWN3VHhHVHd5UWtSM1BidUtUYmxycDRnPT0hdjE=?share_link_id=946708686416))
+
 ## 2.5. Ubiquitous Language
