@@ -706,6 +706,20 @@ Con el User Journey Map reconstruimos paso a paso lo que viven y sienten el admi
 
 ### 2.3.4. Empathy Mapping
 
+Crear un producto con impacto real exige mirar más allá de las conductas visibles y conectar con el aspecto emocional del usuario. Mediante el mapa de empatía, superamos la simple segmentación demográfica para comprender su contexto interno. Desglosar lo que administradores y familias perciben, expresan y experimentan en su día a día nos permite descubrir tanto sus temores como sus expectativas clave. Este diagnóstico garantiza que Veyra trascienda la utilidad operativa y se posicione como una plataforma que transmite tranquilidad, respaldo y certidumbre.
+
+### Segmento 1: Pequeño agricultor independiente de café (Guillermo Cortés)
+
+![Empathy-Mapping-segmet-01.png](../assets/img/chapter-II/Empathy-Mapping-segmet-01.png)
+
+### Segmento 2: Gerente de operaciones de cooperativa agraria (Cristian Santana)
+
+![Empathy-Mapping-segmet-02.png](../assets/img/chapter-II/Empathy-Mapping-segmet-02.png)
+
+### Segmento 3: Asesor técnico de campo (Juan Antonio Morales)
+
+![Empathy-Mapping-segmet-03.png](../assets/img/chapter-II/Empathy-Mapping-segmet-03.png)
+
 ## 2.4. Big Picture Event Storming
 
 En una sesión colaborativa sincrónica mediante la herramienta Miro, el equipo llevó a cabo el modelado del dominio de negocio a través de la técnica de Big Picture Event Storming, tomando como referencia las pautas de la guía metodológica (<https://bit.ly/bpes-guide>). Esta dinámica permitió explorar de forma visual e intuitiva el ciclo de vida productivo y comercial en las cadenas de papa andina y café de especialidad, identificando los eventos trascendentales del negocio, los cuellos de botella operativos y los hitos comerciales sin sesgos tempranos de desarrollo técnico.
