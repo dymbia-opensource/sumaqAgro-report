@@ -689,6 +689,21 @@ Los segmentos considerados para este análisis corresponden a los perfiles defin
 | Gestionar certificaciones orgánicas, de origen o comercio justo | never | low | often | high | rarely | medium |
 
 ### 2.3.3. User Journey Mapping
+
+Con el User Journey Map reconstruimos paso a paso lo que viven y sienten el administrador y la familia durante el proceso. Al hacer visibles sus principales dificultades y puntos de dolor, podemos dirigir nuestra solución tecnológica justo donde más se necesita, convirtiendo una mala experiencia en un proceso simple y eficiente.
+
+### Segmento 1: Pequeño agricultor independiente de café (Guillermo Cortés)
+
+![User Journey Mapping-segmento-01](assets/img/chapter-II/User-Journey-Mapping-segment-01.png)
+
+### Segmento 2: Gerente de operaciones de cooperativa agraria (Cristian Santana)
+
+![User Journey Mapping-segmento-02](assets/img/chapter-II/User-Journey-Mapping-segment-02.png)
+
+### Segmento 3: Asesor técnico de campo (Juan Antonio Morales)
+
+![User Journey Mapping-segmento-03](assets/img/chapter-II/User-Journey-Mapping-segment-03.png)
+
 ### 2.3.4. Empathy Mapping
 
 ## 2.4. Big Picture Event Storming
