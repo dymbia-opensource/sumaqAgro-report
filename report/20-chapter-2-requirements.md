@@ -723,3 +723,27 @@ Posteriormente, los eventos se organizaron en una secuencia cronológica de izqu
 * **Enlace al tablero interactivo:** [Acceso al espacio de trabajo de Event Storming en Miro]([https://miro.com/app/board/uXjVHPEmUbl=/](https://miro.com/welcomeonboard/WG5aQ1R0dmR5b0xQWTI5TEZvaXplRmpPTUxmT2pmR1NNVXBVakcxRFI5Yk16dVY3TXpRc0RwbHVKNWFndGJvZDZkZXJrbkN4VFZQdzhHTjV6MWdBNUJtQnhYMVFmcjNLbkxyOWQwZlVuWHZ6UXVkOHlsNXRlcVBQd24wVS92ZWN3VHhHVHd5UWtSM1BidUtUYmxycDRnPT0hdjE=?share_link_id=946708686416))
 
 ## 2.5. Ubiquitous Language
+
+Con el fin de garantizar una comunicación fluida, consistente y libre de ambigüedades entre los desarrolladores, los directivos de cooperativas, los ingenieros agrónomos y los productores agrícolas, se ha elaborado el siguiente glosario de términos del dominio del negocio. Estos conceptos definen la semántica compartida de SumaqAgro y deben utilizarse de manera coherente en las reuniones de trabajo, el diseño de interfaces de usuario y la lógica interna del sistema:
+
+* **Field Plot (Parcela Agrícola):** Unidad territorial delimitada geográficamente mediante coordenadas perimetrales, destinada a la producción agraria y gestionada por un productor o socio cooperativo.
+* **Agricultural Cooperative (Cooperativa Agraria):** Organización asociativa formal que agrupa a productores de café y papa para centralizar el acopio, la asistencia técnica y la comercialización mayorista.
+* **Cooperative Member (Socio Cooperativo):** Productor empadronado formalmente en la cooperativa que accede a servicios de pesaje, secado, asistencia y liquidación comercial.
+* **Technical Advisor (Asesor Técnico):** Profesional agrónomo responsable de diagnosticar el estado sanitario de las parcelas, formular recetas de fertilización y asistir en campo.
+* **Sowing Date (Fecha de Siembra):** Momento temporal en el que se instala la semilla o plantón en el suelo, marcando el inicio del ciclo fenológico y el monitoreo satelital continuo.
+* **Crop Variety (Variedad de Cultivo):** Clasificación botánica de la semilla (p. ej., variedades de papa como Canchán o Yungay; variedades de café como Caturra o Geisha) que define los requerimientos de manejo.
+* **Vegetation Index - NDVI (Índice de Vegetación):** Indicador derivado de reflectancia satelital que evalúa el vigor fotosintético y la biomasa foliar del cultivo sin requerir sensores en tierra.
+* **Water Index - NDWI (Índice de Humedad):** Parámetro satelital que mide el contenido hídrico foliar para advertir estrés por sequía antes de que existan daños visibles en el lote.
+* **Agronomic Early Warning (Alerta Agroclimática):** Aviso prioritario emitido ante riesgos climáticos severos (heladas meteorológicas o sequías) o caídas anómalas en el vigor de la vegetación.
+* **Technical Prescription (Receta Fitosanitaria):** Formulación técnica emitida por el asesor que prescribe el insumo, la dosis exacta y las pautas para controlar una deficiencia o plaga.
+* **Daily Farm Labor - Jornal (Jornal Agrícola):** Unidad de remuneración correspondiente a una jornada diaria de trabajo manual en campo para labores de preparación, aporque o cosecha.
+* **Agricultural Inputs (Insumos Agropecuarios):** Materiales directos (abonos, fertilizantes y protectores de cultivo) aplicados en la parcela para garantizar su desarrollo productivo.
+* **Field Freight (Flete Rural):** Costo de transporte devengado por el traslado de insumos al fundo o el flete de la cosecha hacia el almacén o centro de acopio.
+* **Unit Production Cost (Costo Unitario de Producción):** Resultado monetario de dividir los gastos operativos acumulados de campaña entre el volumen cosechado o proyectado (soles por quintal o tonelada).
+* **Financial Breakeven Price (Punto de Equilibrio Financiero):** Precio mínimo de venta por unidad de comercialización necesario para cubrir la inversión del lote, evitando operar a pérdida.
+* **Harvest Batch (Lote de Cosecha):** Volumen consolidado de producto recolectado en una misma parcela y campaña, acondicionado para pesaje y muestreo de calidad.
+* **Potato Caliber (Calibre de Papa):** Clasificación por tamaño y diámetro del tubérculo según norma técnica oficial (Primera, Segunda y Tercera) para su destino comercial.
+* **Cup Profile Scoring - SCA (Puntaje de Perfil de Taza):** Calificación sensorial sobre 100 puntos asignada en laboratorio de catación para medir la calidad de cafés de especialidad.
+* **Digital Quality Certificate (Certificado Digital de Calidad):** Acreditación técnica no repudiable que valida los parámetros físicos, sensoriales y de procedencia del lote cosechado.
+* **Cryptographic Traceability QR (Código QR de Trazabilidad):** Identificador visual impreso o adherido al lote que enlaza públicamente a la ficha técnica de origen, calidad y no deforestación.
+* **Quality Premium Bonus (Bonificación por Calidad):** Sobreprecio o compensación económica adicional liquidada al agricultor por entregar cosechas que superan los estándares básicos de mercado.
