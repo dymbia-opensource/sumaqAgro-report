@@ -344,19 +344,30 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
 
 <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
   <tr><th colspan="2" style="text-align: left;">Entrevista #1</th></tr>
-  <tr><td>Nombre</td><td> Mateo </td></tr>
-  <tr><td>Apellidos</td><td> Florez </td></tr>
-  <tr><td>Edad</td><td> 21 </td></tr>
-  <tr><td>Distrito</td><td> Quillabamba , Cusco </td></tr>
+  <tr><td>Nombre</td><td> Mateo Sebastián </td></tr>
+  <tr><td>Apellidos</td><td> Flores Huamán </td></tr>
+  <tr><td>Edad</td><td> 26 </td></tr>
+  <tr><td>Distrito</td><td> Huancayo - Junín </td></tr>
   <tr><td>Evidencia</td><td><img src="../assets/img/interview/interview-segment-one-01-Mateo-Florez.png" alt="Entrevista - Mateo Florez" width="420"/></td></tr>
   <tr><td>Link</td><td> link </td></tr>
   <tr><td>Timing donde inicia la entrevista</td><td> 0:50 min </td></tr>
   <tr><td>Duración de la entrevista</td><td> 7:22min </td></tr>
-  <tr><td>Resumen</td><td>  .<br><br>
-  <b>Comportamiento y necesidades:</b>
-  .<br><br>
+  <tr><td>Resumen</td><td>El entrevistado es Mateo Sebastián Flores Huamán, un joven agricultor y técnico agrícola de 26 años residente en la ciudad de Huancayo, Junín, que coadministra junto a su padre parcelas familiares de papa ubicadas en Chupaca y de café en Satipo. A lo largo de la entrevista, manifiesta que enfrentan pérdidas agrícolas severas causadas principalmente por heladas en la papa y plagas en el café, las cuales calcula registrando insumos, semillas y jornales en herramientas digitales básicas para determinar sus costos exactos de producción y pérdidas financieras. Revela además que los precios de venta suelen ser influenciados por acopiadores e intermediarios, por lo que busca respaldar el valor de su cosecha con información precisa y canales de comercialización más directos, evitando créditos desfavorables mediante el uso de Agrobanco, Cajas Municipales y reinversión propia.<br><br>
+<b>Comportamiento y necesidades:</b>
+  <ul>
+    <li><b>Gestión y control de costos:</b> Coadministra las parcelas familiares llevando un registro digital de fertilizantes, semillas y horas de trabajo para calcular el costo real de producción por kilo/quintal y evitar vender a pérdida.</li>
+    <li><b>Negociación y financiamiento:</b> Consulta precios de referencia en el Mercado Mayorista de Lima por internet y grupos de WhatsApp, financiándose mediante crédito agrícola formal (Agrobanco, cajas municipales) o reinversión propia para no depender de tiendas comerciales.</li>
+    <li><b>Soporte técnico y prevención:</b> Requiere monitorear tempranamente amenazas climáticas (heladas en papa y plagas en café) mediante alertas satelitales sin inversión en hardware costoso, además de herramientas que validen la calidad de su producción.</li>
+    <li><b>Registro fuera de línea:</b> Necesita registrar insumos, labores y datos de campo sin depender de una conexión a internet activa o continua debido a la señal inestable o nula en las parcelas, sincronizando la información al retornar a la ciudad.</li>
+  </ul><br>
   <b>Tecnología, marcas y canales:</b>
-  .</td></tr>
+  <ul>
+    <li><b>Dispositivos habituales:</b> Teléfono inteligente de gama media (Xiaomi Redmi Note) valorando el rendimiento y la utilidad de las herramientas para la gestión diaria.</li>
+    <li><b>Canales actuales:</b> WhatsApp para coordinaciones comerciales con fletes y compradores, aplicaciones bancarias y de pago (Yape, BCP), redes sociales (Facebook, Instagram) y aplicaciones meteorológicas (AccuWeather).</li>
+    <li><b>Conectividad:</b> Cobertura móvil inestable e intermitente en las parcelas de Chupaca y Satipo (con caída a 3G/Edge o pérdida total de señal), dependiendo de la sincronización nocturna al retornar a Huancayo.</li>
+    <li><b>Disposición tecnológica:</b> Alta apertura para adoptar plataformas móviles agrícolas y actuar como puente tecnológico generacional para capacitar y apoyar a sus familiares mayores.</li>
+  </ul>
+  </td></tr>
 </table>
 
 <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
