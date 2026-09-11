@@ -714,7 +714,7 @@ Con el User Journey Map reconstruimos paso a paso lo que viven y sienten el admi
 
 ### 2.3.4. Empathy Mapping
 
-Crear un producto con impacto real exige mirar más allá de las conductas visibles y conectar con el aspecto emocional del usuario. Mediante el mapa de empatía, superamos la simple segmentación demográfica para comprender su contexto interno. Desglosar lo que administradores y familias perciben, expresan y experimentan en su día a día nos permite descubrir tanto sus temores como sus expectativas clave. Este diagnóstico garantiza que Veyra trascienda la utilidad operativa y se posicione como una plataforma que transmite tranquilidad, respaldo y certidumbre.
+Crear un producto con impacto real exige mirar más allá de las conductas visibles y conectar con el aspecto emocional del usuario. Mediante el mapa de empatía, superamos la simple segmentación demográfica para comprender su contexto interno. Desglosar lo que administradores y familias perciben, expresan y experimentan en su día a día nos permite descubrir tanto sus temores como sus expectativas clave. 
 
 ### Segmento 1: Pequeño agricultor independiente de café (Guillermo Cortés)
 
