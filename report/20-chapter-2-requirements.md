@@ -647,17 +647,17 @@ A continuación, se presentan los tres arquetipos de usuario elaborados en UXPre
 ##### Segmento 1: Pequeños y medianos agricultores independientes
 El arquetipo "Guillermo Cortés" representa al agricultor familiar tradicional que conduce parcelas de café y papa bajo métodos empíricos y sin conectividad continua, demandando una arquitectura móvil fuera de línea y monitoreo satelital sin inversión en sensores costosos en tierra para defender precios justos frente a intermediarios.
 
-![User Persona - Segmento 1: Guillermo Cortés](assets/img/chapter-II/user-persona-segmento-1-guillermo-cortes.png)
+![User Persona - Segmento 1: Guillermo Cortés](../assets/img/chapter-II/user-persona-segmento-1-guillermo-cortes.png)
 
 ##### Segmento 2: Productores organizados y directivos de cooperativas/asociaciones
 El arquetipo "Cristian Santana" sintetiza las necesidades de los administradores y directivos de acopio cooperativo, quienes requieren digitalizar los análisis de calidad en almacén, asegurar la trazabilidad de origen y agilizar los expedientes de auditoría para proteger las primas comerciales y de exportación.
 
-![User Persona - Segmento 2: Cristian Santana](assets/img/chapter-II/user-persona-segmento-2-cristian-santana.png)
+![User Persona - Segmento 2: Cristian Santana](../assets/img/chapter-II/user-persona-segmento-2-cristian-santana.png)
 
 ##### Segmento 3: Ingenieros agrónomos y asesores técnicos de campo
 El arquetipo "Juan Antonio Morales" consolida al consultor fitosanitario cuya cobertura se ve restringida por la dispersión geográfica en quebradas y por métodos visuales subjetivos, requiriendo teledetección multiespectral para priorizar predios y sustentar prescripciones técnicas ante la gerencia.
 
-![User Persona - Segmento 3: Ing. Juan Antonio Morales](assets/img/chapter-II/user-persona-segmento-3-juan-antonio-morales.png)
+![User Persona - Segmento 3: Ing. Juan Antonio Morales](../assets/img/chapter-II/user-persona-segmento-3-juan-antonio-morales.png)
 
 
 ### 2.3.2. User Task Matrix
@@ -694,15 +694,15 @@ Con el User Journey Map reconstruimos paso a paso lo que viven y sienten el admi
 
 ### Segmento 1: Pequeño agricultor independiente de café (Guillermo Cortés)
 
-![User Journey Mapping-segmento-01](assets/img/chapter-II/User-Journey-Mapping-segment-01.png)
+![User Journey Mapping-segmento-01](../assets/img/chapter-II/User-Journey-Mapping-segment-01.png)
 
 ### Segmento 2: Gerente de operaciones de cooperativa agraria (Cristian Santana)
 
-![User Journey Mapping-segmento-02](assets/img/chapter-II/User-Journey-Mapping-segment-02.png)
+![User Journey Mapping-segmento-02](../assets/img/chapter-II/User-Journey-Mapping-segment-02.png)
 
 ### Segmento 3: Asesor técnico de campo (Juan Antonio Morales)
 
-![User Journey Mapping-segmento-03](assets/img/chapter-II/User-Journey-Mapping-segment-03.png)
+![User Journey Mapping-segmento-03](../assets/img/chapter-II/User-Journey-Mapping-segment-03.png)
 
 ### 2.3.4. Empathy Mapping
 
@@ -727,12 +727,12 @@ En una sesión colaborativa sincrónica mediante la herramienta Miro, el equipo 
 ### Exploración No Estructurada de Eventos (Domain Events)
 El taller inició con una lluvia de ideas abierta en la que cada integrante aportó hechos consumados de relevancia agronómica, financiera y de certificación. Estos eventos se formularon estrictamente en tiempo pasado participio mediante notas adhesivas de color naranja, abarcando desde la delimitación del predio y el cálculo de índices satelitales, hasta la anotación diaria de jornales y la emisión de certificados de calidad:
 
-![Exploración no estructurada de eventos de dominio](assets/img/chapter-II/step-1-unstructured-exploration.jpg)
+![Exploración no estructurada de eventos de dominio](../assets/img/chapter-II/step-1-unstructured-exploration.jpg)
 
 ### Línea de Tiempo, Puntos de Dolor e Hitos del Negocio
 Posteriormente, los eventos se organizaron en una secuencia cronológica de izquierda a derecha sobre una línea de tiempo continua. A partir de este ordenamiento, se superpusieron los puntos de dolor (*pain points*) identificados durante el Needfinding mediante notas moradas en rombo (resistencia cultural al celular, desconexión móvil en quebradas, registros en papel extraviados y castigos arbitrarios de precio). Asimismo, se establecieron líneas divisorias verticales para demarcar los eventos fundamentales (*pivotal points*) que delimitan las fases operativas de SumaqAgro:
 
-![Línea de tiempo con puntos de dolor e hitos fundamentales](assets/img/chapter-II/step-2-timelines-pivotal-points.jpg)
+![Línea de tiempo con puntos de dolor e hitos fundamentales](../assets/img/chapter-II/step-2-timelines-pivotal-points.jpg)
 
 * **Enlace al tablero interactivo:** [Acceso al espacio de trabajo de Event Storming en Miro]([https://miro.com/app/board/uXjVHPEmUbl=/](https://miro.com/welcomeonboard/WG5aQ1R0dmR5b0xQWTI5TEZvaXplRmpPTUxmT2pmR1NNVXBVakcxRFI5Yk16dVY3TXpRc0RwbHVKNWFndGJvZDZkZXJrbkN4VFZQdzhHTjV6MWdBNUJtQnhYMVFmcjNLbkxyOWQwZlVuWHZ6UXVkOHlsNXRlcVBQd24wVS92ZWN3VHhHVHd5UWtSM1BidUtUYmxycDRnPT0hdjE=?share_link_id=946708686416))
 
