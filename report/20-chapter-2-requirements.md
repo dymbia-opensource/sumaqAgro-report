@@ -550,19 +550,28 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
 
 <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
   <tr><th colspan="2" style="text-align: left;">Entrevista #3</th></tr>
-  <tr><td>Nombre</td><td>  </td></tr>
-  <tr><td>Apellidos</td><td>  </td></tr>
-  <tr><td>Edad</td><td>  </td></tr>
-  <tr><td>Distrito</td><td> distrito </td></tr>
-  <tr><td>Evidencia</td><td><img src="../assets/img/interview/interview-segment-three-02" alt="Entrevista - name" width="420"/></td></tr>
+  <tr><td>Nombre</td><td> Jorge </td></tr>
+  <tr><td>Apellidos</td><td> Rodríguez Espinoza </td></tr>
+  <tr><td>Edad</td><td> 30 </td></tr>
+  <tr><td>Distrito</td><td> Piura </td></tr>
+  <tr><td>Evidencia</td><td><img src="../assets/img/interview/interview-segment-two-03-Jorge-Rodriguez.png" alt="Entrevista - name" width="420"/></td></tr>
   <tr><td>Link</td><td> link </td></tr>
   <tr><td>Timing donde inicia la entrevista</td><td> min</td></tr>
   <tr><td>Duración de la entrevista</td><td> min</td></tr>
-  <tr><td>Resumen</td><td> .<br><br>
+  <tr><td>Resumen</td><td>El entrevistado es un ingeniero agrónomo residente en Piura, de 30 años. A lo largo de la entrevista, manifiesta que mediante métodos tradicionales (libreta y camioneta) puede supervisar eficientemente a un máximo de 30 a 40 productores o 300 hectáreas, límite a partir del cual la prevención decae y el trabajo se vuelve reactivo. Para organizar su día a día y documentar sus visitas, utiliza herramientas genéricas como WhatsApp, Excel y Google Maps, aunque reconoce que la información resulta muy fragmentada. Revela además que cuantificar el rendimiento salvado tras una intervención es un reto constante que aborda mediante fotografías de "antes y después" y comparaciones con "lotes testigo" o históricos, asumiendo un margen de subjetividad. Destaca que la mayor dificultad con el agricultor empírico es erradicar la sobredosificación de agroquímicos y lograr el cumplimiento de los tiempos de carencia y uso de protección. Finalmente, evalúa los daños climáticos mediante muestreos físicos en zigzag, dependiendo fuertemente de su experiencia visual para estimar porcentajes de pérdida.<br><br>
   <b>Comportamiento y necesidades:</b>
-   .<br><br>
-  <b>Tecnología, marcas y canales:</b>
-   .</td></tr>
+
+- Gestión y control de cobertura: Administra y limita su alcance a un máximo de 40 productores o 300 hectáreas para mantener la calidad preventiva de su asesoría, evitando que la saturación lo obligue a simplemente "apagar incendios".
+- Demostración de resultados: Necesita elaborar reportes visuales y comparativos (lote tratado vs. lote testigo o histórico) para sustentar ante la gerencia de la cooperativa el impacto real de sus visitas, buscando minimizar la subjetividad de sus estimaciones.
+- Capacitación y corrección de hábitos: Enfrenta el desafío constante de educar al agricultor empírico en la calibración precisa de equipos de fumigación, el respeto estricto de los periodos de carencia pre-cosecha y el uso de equipos de protección personal (EPP).
+- Evaluación de campo y muestreo: Requiere realizar recorridos presenciales estandarizados (en "X" o zigzag) para tomar muestras aleatorias y diagnosticar visualmente el estrés hídrico o daño foliar, dependiendo de su "ojo" y experiencia agronómica.<br><br>
+
+<b> Tecnología, marcas y canales:</b>
+
+- Dispositivos y software habituales: Uso intensivo de teléfono inteligente y computadora para combinar hojas de cálculo (Excel) en la gestión de cronogramas y software de mapeo (Google Maps/Earth) para ubicar los predios.
+- Canales de comunicación: WhatsApp es la herramienta central y más ágil de su día a día, utilizada para recibir alertas tempranas, fotos de hojas dañadas y audios con consultas directas de los productores.
+- Gestión de datos fragmentada: La dependencia de un ecosistema de aplicaciones genéricas no conectadas entre sí genera una necesidad subyacente de centralizar y estructurar la información técnica que actualmente se dispersa.
+- Diagnóstico visual sin sensores: A pesar del uso de herramientas digitales para la organización, la toma de datos biométricos en campo (grado de marchitamiento, caída de flores, cuajado) sigue siendo un proceso 100% analógico, visual y basado en la experiencia personal.</td></tr>
 </table>
 
 ## 2.2.3. Análisis de entrevistas
@@ -616,27 +625,26 @@ Se analizaron 3 entrevistas aplicadas a líderes, gerentes de operaciones y soci
 
 ### Segmento 3: Ingenieros agrónomos y asesores técnicos de campo
 
-Se analizaron 2 entrevistas a ingenieros agrónomos y extensionistas rurales (Oxapampa/Pozuzo y Cañete/Mala) para caracterizar su desempeño operativo, limitantes de cobertura geográfica y herramientas de diagnóstico.
-
+Se analizaron 3 entrevistas a ingenieros agrónomos y extensionistas rurales (Oxapampa/Pozuzo, Cañete/Mala y Piura) para caracterizar su desempeño operativo, limitantes de cobertura geográfica y herramientas de diagnóstico.
 ### Características
 
 | Característica                                     |   Mención  |   %   | Evidencia                                                                                     |
 | -------------------------------------------------- | ---------- | ----- | --------------------------------------------------------------------------------------------- |
-| Límite de cobertura condicionado por topografía    |   2/2      | 100%  | Supervisan entre 15–25 productores/mes en selva alta y entre 35–40 en zonas costeras          |
-| Caminatas prolongadas y demoras climáticas         |   2/2      | 100%  | Traslados a pie de 2 a 3 horas por quebradas y paralizaciones por temporales de lluvia        |
-| Uso de herramientas digitales genéricas y dispersas|   2/2      | 100%  | Emplean de forma desarticulada WhatsApp, hojas de cálculo en Excel y Google Maps              |
-| Dificultad para demostrar impacto ante gerencia    |   2/2      | 100%  | Justifican su labor únicamente mediante comparaciones empíricas visuales y fotos              | 
-| Lucha contra la fumigación empírica por calendario |   2/2      | 100%  | Productores aplican agroquímicos fijos (cada 8–10 días) sin signos reales de plagas           |
-| Evaluación visual subjetiva de siniestros          |   2/2      | 100%  | Recorridos pedestres en patrones (X, M, Z) para estimar daños por heladas o sequía            |
-| Reconocimiento del valor de la georreferenciación  |   2/2      | 100%  | Valoran el mapeo de predios ligado al Padrón de Productores Agrarios (PPA)                    |
-| Canales y medios utilizados                        |   2/2      | 100%  | WhatsApp para consultas fitosanitarias y coordinación en caseríos con cobertura               |
-| Tecnología usada                                   |   2/2      | 100%  | Teléfonos inteligentes con GPS integrado, computadoras portátiles y Excel                     |
+| Límite de cobertura condicionado por topografía    |   3/3      | 100%  | Supervisan 15–25 productores/mes en selva alta, 35–40 en valles costeros o un tope de 300 ha antes de volverse reactivos          |
+| Caminatas prolongadas y demoras climáticas         |   3/3      | 100%  | Marchas a pie de 2 a 3 horas en quebradas bajo lluvia en selva y extensos traslados en camioneta en costa/norte        |
+| Uso de herramientas digitales genéricas y dispersas|   3/3      | 100%  | Emplean de forma desarticulada WhatsApp, hojas de cálculo en Excel y Google Maps / Earth              |
+| Dificultad para demostrar impacto ante gerencia    |   3/3      | 100%  | Justifican su labor con fotos de "antes y después", lotes testigo o comparaciones empíricas con sesgo de subjetividad          | 
+| Lucha contra la sobredosis y malas prácticas fitosanitarias |   3/3      | 100%  | Productores aplican agroquímicos fijos (cada 8–10 días) sin signos reales de plagas           |
+| Evaluación visual subjetiva de siniestros          |   3/3      | 100%  | Muestreos pedestres en patrones (zigzag, X, M, Z) dependiendo del "ojo" técnico para estimar mermas y estrés hídrico            |
+| Adopción de georreferenciación y cartografía digital  |   3/3      | 100%  | Valoran la georreferenciación vinculada al PPA y usan mapas digitales para rastrear predios dispersos                    |
+| Canales y medios utilizados                        |   3/3      | 100%  | WhatsApp para consultas fitosanitarias y coordinación en caseríos con cobertura               |
+| Tecnología usada                                   |   3/3      | 100%  | Teléfonos inteligentes con GPS integrado, computadoras portátiles y Excel                     |
 
 ##### Insights
 
-1) Cuello de botella en la escalabilidad del extensionismo: La cobertura física presencial está saturada: el técnico invierte la mayor parte de su jornada descendiendo quebradas y llenando informes manuales. Es imperativo proveer herramientas de monitoreo satelital o remoto que permitan priorizar visitas a predios con anomalías críticas reales.
-2) Subjetividad en la estimación de siniestros y daños hídricos: Evaluar campos caminándolos en patrones en zigzag genera informes con alto sesgo humano e imprecisión en estrés radicular. El especialista necesita telemetría e índices de vegetación para cuantificar el daño con rigor técnico.
-3) Fragmentación operativa en herramientas genéricas: Los agrónomos deben coordinar en WhatsApp, calcular dosis en plantillas de Excel y ubicar parcelas en Google Maps. Unificar la georreferenciación (compatible con el PPA), el cálculo nutricional y el historial fitosanitario en un único entorno elevaría sustancialmente su productividad de campo.
+1) Saturación operativa y transición de labor preventiva a reactiva: Los métodos tradicionales de supervisión presencial (libreta, recorridos a pie o camioneta) tienen un techo infranqueable: entre 15 y 25 productores en selva abrupta y un máximo de 30 a 40 productores (o 300 ha) en zonas planas. Superar este umbral degrada el acompañamiento técnico preventivo y convierte al extensionista en un gestor que solo "apaga incendios" fitosanitarios de forma reactiva.
+2) Subjetividad metodológica en la evaluación de daños y cálculo de retorno: Tanto el diagnóstico de siniestros climáticos como la justificación del impacto de las visitas técnicas se realizan mediante inspecciones pedestres en zigzag, fotografías de "antes y después" y comparación empírica con lotes testigo. Esta dependencia del "ojo" técnico genera reportes con alto margen de sesgo humano, haciendo indispensable el uso de índices de vegetación satelitales (como NDVI o estrés hídrico) para cuantificar mermas con respaldo numérico ante la gerencia.
+3) Fragmentación crítica del ecosistema digital de campo: El agrónomo depende de un flujo de trabajo desarticulado: resuelve consultas urgentes por WhatsApp, calcula dosis y calendarios en Excel y geolocaliza parcelas en Google Maps o Google Earth. Esta dispersión no solo provoca retrabajo administrativo y pérdida de trazabilidad, sino que mantiene la toma de datos agronómicos (calibración de mochilas, periodos de carencia y fenología) en un plano analógico y desestructurado.
 
 ### 2.3. Needfinding
 
