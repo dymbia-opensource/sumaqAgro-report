@@ -67,4 +67,25 @@ Las Historias de Usuario (US) e Historias Técnicas (TS) de SumaqAgro siguen la 
 
 ## 3.2. Impact Mapping
 
+En esta sección se explica y presenta el Impact Mapping desarrollado para el modelo de negocio digital de SumaqAgro mediante la herramienta UXPressia, articulando de forma deliberada los objetivos estratégicos de la startup con las fichas de los tres User Personas elaborados previamente y el catálogo de User Stories formalizadas en el sistema.
+
+Con el propósito de orientar el desarrollo hacia resultados medibles y alcanzables durante las fases de validación y prototipo, se definieron dos Business Goals formulados bajo criterios SMART:
+
+1. **Business Goal 1 (Retención de parcelas en campo):** Lograr una tasa de retención mensual activa superior al 70% en parcelas monitoreadas durante los primeros 6 meses de operación piloto.
+2. **Business Goal 2 (Validación y certificación institucional):** Formalizar un convenio piloto con al menos 1 cooperativa agraria y certificar digitalmente 20 lotes de cosecha en los primeros 4 meses.
+
+A partir de estas metas, se vincularon como Actors/Personas los arquetipos oficiales del proyecto: Guillermo Cortés (Segmento 1: Pequeños y medianos agricultores independientes), Cristian Santana (Segmento 2: Productores organizados y directivos de cooperativas/asociaciones) y Juan Antonio Morales (Segmento 3: Ingenieros agrónomos y asesores técnicos de campo). Para cada uno se determinaron los cambios de conducta esperados (Impacts), las capacidades provistas por la plataforma (Deliverables) y la derivación hacia sus correspondientes User Stories:
+
+* **Para el Business Goal 1 (Retención de parcelas en campo):**
+  * **Guillermo Cortés:** Se busca que monitoree de forma autónoma el vigor foliar y la humedad foliar de sus lotes cada semana sin depender de sensores físicos en tierra. Para propiciar este impacto, SumaqAgro provee un *Visor satelital multiespectral de vegetación y humedad foliar*, el cual se implementa a través de la historia **US-11** (*Como productor agrícola, quiero consultar el mapa satelital con índice de vegetación NDVI, para identificar zonas con estrés vegetativo sin necesidad de sensores en tierra*) y la historia **US-12** (*Como productor agrícola, quiero examinar el índice de humedad NDWI de mi predio, para prevenir pérdidas por sequía o exceso de irrigación*).
+  * **Cristian Santana:** Se requiere que supervise quincenalmente la evolución del vigor foliar y los costos agregados de los socios para proyectar el acopio global de campaña. El entregable correspondiente es el *Módulo de análisis histórico y curvas de tendencia temporal del cultivo*, sustentado en la historia **US-15** (*Como directivo de cooperativa, quiero analizar el gráfico histórico del índice NDVI a lo largo de la campaña, para evaluar la evolución del desarrollo vegetativo de los socios*) y la historia **US-20** (*Como directivo de cooperativa, quiero revisar la matriz consolidada de costos promedio por hectárea de los socios, para identificar ineficiencias financieras en la asociación*).
+
+* **Para el Business Goal 2 (Validación y certificación institucional):**
+  * **Cristian Santana:** Se busca que emita acreditaciones técnicas estandarizadas para defender el precio de venta en origen y reducir las semanas de preparación en auditorías aduaneras y de sellos orgánicos. SumaqAgro habilita el *Generador de certificados digitales de calidad y trazabilidad con código QR público*, operativizado mediante la historia **US-24** (*Como directivo de cooperativa, quiero generar un certificado digital de calidad firmado para un lote evaluado, para respaldar las características del producto ante compradores mayoristas*) y la historia **US-25** (*Como comprador mayorista, quiero escanear el código QR del certificado de calidad, para verificar la autenticidad y trazabilidad de origen del producto en tiempo real*).
+  * **Juan Antonio Morales:** Se requiere que priorice sus inspecciones presenciales en los fundos críticos y emita recetas técnicas digitales para reducir sus tiempos de traslado. Para habilitar este comportamiento, se entrega el *Panel consolidado de supervisión multiparcela y despachador de recetas técnicas*, concretado en la historia **US-14** (*Como asesor agrónomo, quiero visualizar el estado de múltiples parcelas asignadas en un solo panel, para priorizar las visitas técnicas a los predios más críticos*) y la historia **US-28** (*Como asesor agrónomo, quiero emitir una receta agronómica con las dosis de tratamiento recomendadas, para guiar al productor en el control efectivo de la plaga*).
+
+A continuación, se presenta la evidencia gráfica del Impact Mapping exportado en alta resolución desde UXPressia:
+
+![Impact Mapping del Sistema SumaqAgro](../assets/img/chapter-III/impact-mapping.png)
+
 ## 3.3. Product Backlog
