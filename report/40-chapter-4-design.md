@@ -16,6 +16,28 @@ El logo principal de **SumaqAgro**, un nombre que evoca la unión entre la natur
   <img src="../assets/img/chapter-IV/sumaqagro-logo.png" alt="SumaqAgro-Logo" width="350px" height="auto"/>
 </p>
 
+**Typography**
+
+La identidad tipográfica de SumaqAgro utiliza fuentes sans-serif seleccionadas de Google Fonts, elegidas por su alta legibilidad, apariencia moderna y óptima compatibilidad con entornos digitales navegables. La combinación de **Poppins** como tipografía principal e **Inter** como tipografía secundaria permite establecer una jerarquía visual clara e intuitiva entre títulos, contenidos informativos y elementos de interfaz, garantizando el cumplimiento de los estándares de accesibilidad web (a11y).
+
+**Fuente principal: Poppins**
+
+Se utiliza principalmente en encabezados y títulos, aportando un estilo geométrico y contemporáneo que refuerza la identidad visual de SumaqAgro:
+- **Títulos principales (H1 / Sección heading):** Poppins Bold, 40 px en versión de escritorio / 28 px en móvil (Ejemplo: “Cultiva con Información”).
+- **Títulos de secciones (H2 / Sub-headings):** Poppins SemiBold, 32 px en escritorio / 24 px en móvil (Ejemplo: “Nuestro Impacto en el Campo”).
+- **Títulos de tarjetas o bloques (H3):** Poppins Medium, 20 px.
+- **Subtítulos internos (H4):** Poppins Medium o SemiBold, entre 18 px y 20 px según el contexto.
+
+**Fuente secundaria: Inter**
+
+Se utiliza en bloques de lectura, etiquetas, botones, formularios y componentes de la interfaz gráfica debido a su extraordinaria claridad y rendimiento de lectura en pantallas de diversas resoluciones:
+- **Párrafos principales (Body 1):** Inter Regular, 16 px.
+- **Textos secundarios, subtítulos y Footer (Body 2):** Inter Regular, 14 px.
+- **Botones y llamadas a la acción (Button Text / CTA):** Inter SemiBold, 16 px.
+- **Etiquetas de formularios o elementos de interfaz (Labels):** Inter Medium, 14 px.
+
+Esta combinación y jerarquía tipográfica permite mantener una experiencia de usuario consistente, altamente accesible, clara y profesional a través de los distintos dispositivos y secciones de la plataforma.
+
 ### 4.1.2. Web Style Guidelines
 
 ## 4.2. Information Architecture
