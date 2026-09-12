@@ -89,3 +89,51 @@ A continuación, se presenta la evidencia gráfica del Impact Mapping exportado 
 ![Impact Mapping del Sistema SumaqAgro](../assets/img/chapter-III/impact-mapping.png)
 
 ## 3.3. Product Backlog
+
+La tabla siguiente muestra el Product Backlog de **SumaqAgro** ordenado conforme a la priorización de valor de negocio adoptada por el equipo de la startup **Dymbia**, con estimaciones en puntos de historia (*Story Points* en escala de Fibonacci: 1, 2, 3, 5 o 8).
+
+En la parte superior se listan los elementos de alcance público orientados al visitante para el despliegue del Landing Page en el Sprint 1; a continuación, se priorizan las funcionalidades operativas del núcleo del sistema para el productor agrícola, directivos de cooperativa y asesores técnicos; y en seguida, las historias técnicas de infraestructura API RESTful y seguridad backend en Spring Boot. La columna de identificadores utiliza las nomenclaturas `US` (User Story) y `TS` (Technical Story) según la convención establecida en la sección 3.1.
+
+> *(Insertar aquí la captura de pantalla del tablero del Product Backlog en Trello)*
+
+**Enlace al Tablero del Product Backlog (Trello):** [https://trello.com/b/dymbia-sumaqagro-backlog](https://trello.com/b/dymbia-sumaqagro-backlog)
+
+| Orden | Identificador | Título | Descripción | Story Points |
+| :---: | :---: | :--- | :--- | :---: |
+| 1 | **US-01** | Presentación de la propuesta de valor | Como visitante, quiero conocer de entrada la propuesta de valor de SumaqAgro, para entender cómo optimizar mis cultivos. | 2 |
+| 2 | **US-02** | Navegación por secciones del sitio | Como visitante, quiero navegar fácilmente por el menú principal, para acceder rápido a la información que busco. | 2 |
+| 3 | **US-03** | Selección e intercambio de idioma | Como visitante, quiero cambiar el idioma entre español e inglés, para visualizar el contenido en mi idioma de preferencia. | 2 |
+| 4 | **US-04** | Presentación de la startup y equipo fundador | Como visitante, quiero conocer la historia de Dymbia y sus fundadores, para generar confianza en el equipo detrás del proyecto. | 2 |
+| 5 | **US-05** | Demostración del producto mediante video | Como visitante, quiero reproducir el video demo, para visualizar el funcionamiento práctico del software en campo. | 2 |
+| 6 | **US-06** | Consulta de módulos y soluciones tecnológicas | Como visitante, quiero explorar las soluciones clave del proyecto, para entender los módulos funcionales del sistema. | 2 |
+| 7 | **US-07** | Consulta de planes de suscripción y facturación | Como visitante de cooperativa, quiero explorar los planes y modalidades de pago, para seleccionar la opción económica adecuada. | 3 |
+| 8 | **US-08** | Visualización de métricas de impacto y testimonios | Como visitante, quiero ver indicadores de impacto y testimonios reales, para validar los resultados reportados. | 2 |
+| 9 | **US-09** | Consulta de términos de servicio y políticas legales | Como visitante, quiero acceder a los documentos de Términos y Privacidad, para conocer la confidencialidad de mis datos. | 1 |
+| 10 | **US-10** | Registro y delimitación GPS de parcelas | Como productor agrícola, quiero delimitar el polígono de mi parcela por GPS, para habilitar el seguimiento satelital de mi cultivo. | 5 |
+| 11 | **US-11** | Visualización de mapa multiespectral NDVI | Como productor agrícola, quiero consultar el mapa de vegetación NDVI, para identificar zonas con estrés vegetal. | 5 |
+| 12 | **US-12** | Monitoreo de índice de humedad en suelo (NDWI) | Como productor agrícola, quiero examinar el índice NDWI, para prevenir pérdidas por sequía o exceso de riego. | 5 |
+| 13 | **US-13** | Recepción de alertas por estrés vegetativo o hídrico | Como productor agrícola, quiero recibir alertas por caídas en NDVI/NDWI, para tomar acciones correctivas inmediatas. | 3 |
+| 14 | **US-14** | Panel consolidado de predios para asesores | Como asesor agrónomo, quiero visualizar múltiples parcelas asignadas en un panel, para priorizar las visitas críticas. | 5 |
+| 15 | **US-15** | Análisis de series temporales de salud del cultivo | Como directivo de cooperativa, quiero analizar el gráfico histórico de NDVI, para evaluar el desarrollo vegetativo de los socios. | 3 |
+| 16 | **US-16** | Registro de gastos en insumos y fertilizantes | Como productor agrícola, quiero anotar los costos de insumos por parcela, para llevar un control ordenado de mi inversión. | 3 |
+| 17 | **US-17** | Registro de jornales y mano de obra agrícola | Como productor agrícola, quiero registrar los pagos por jornales, para contabilizar el costo total de mano de obra. | 3 |
+| 18 | **US-18** | Cálculo automático del punto de equilibrio financiero | Como productor agrícola, quiero conocer el precio mínimo de venta por saco/quintal, para negociar un precio justo en el mercado. | 5 |
+| 19 | **US-19** | Registro de costos de transporte y flete | Como productor agrícola, quiero ingresar los gastos de flete hacia el acopio, para incluir el costo logístico en mi margen. | 3 |
+| 20 | **US-20** | Consolidado de costos de producción por hectárea | Como directivo de cooperativa, quiero revisar los costos promedio por hectárea de los socios, para identificar ineficiencias. | 5 |
+| 21 | **US-21** | Exportación de reportes financieros de campaña | Como directivo de cooperativa, quiero exportar el resumen financiero de la campaña, para presentar resultados en asambleas. | 3 |
+| 22 | **US-22** | Registro de clasificación por calibres de papa | Como productor agrícola, quiero registrar la distribución de calibres de papa, para determinar la calidad comercial del lote. | 3 |
+| 23 | **US-23** | Registro de evaluación y perfil de taza SCA de café | Como directivo de cooperativa, quiero ingresar los puntajes de catación SCA, para certificar café de especialidad. | 5 |
+| 24 | **US-24** | Generación de certificado digital de calidad en PDF | Como directivo de cooperativa, quiero generar un certificado digital firmado en PDF, para respaldar la calidad ante compradores. | 5 |
+| 25 | **US-25** | Verificación pública mediante código QR | Como comprador mayorista, quiero escanear el código QR del certificado, para verificar la autenticidad y origen del producto. | 3 |
+| 26 | **US-26** | Historial de certificados emitidos por socio | Como directivo de cooperativa, quiero consultar el historial de certificados por socio, para auditar entregas históricas. | 3 |
+| 27 | **US-27** | Carga de evidencias fotográficas de síntomas | Como productor agrícola, quiero adjuntar fotos de síntomas de plagas, para solicitar un diagnóstico remoto al asesor. | 3 |
+| 28 | **US-28** | Emisión y envío de prescripciones agronómicas | Como asesor agrónomo, quiero emitir una receta agronómica con dosis recomendadas, para guiar al productor en el control de plagas. | 5 |
+| 29 | **US-29** | Agendamiento y seguimiento de visitas de campo | Como asesor agrónomo, quiero programar visitas de inspección en un calendario, para organizar mis desplazamientos a fundos. | 3 |
+| 30 | **US-30** | Registro de aplicación de tratamiento fitosanitario | Como productor agrícola, quiero confirmar la aplicación de la receta agronómica, para dejar constancia del tratamiento. | 3 |
+| 31 | **US-31** | Despacho de alertas fitosanitarias regionales | Como asesor agrónomo, quiero emitir un boletín de alerta fitosanitaria regional, para prevenir brotes epidémicos. | 3 |
+| 32 | **TS-01** | Integración con API externa de AgroMonitoring | Como developer, quiero implementar el cliente HTTP para consumir AgroMonitoring, para extraer datos NDVI/NDWI. | 8 |
+| 33 | **TS-02** | Servicio de autenticación JWT y Spring Security | Como developer, quiero implementar Spring Security con tokens JWT, para proteger los endpoints de la API RESTful. | 5 |
+| 34 | **TS-03** | Endpoint REST de cálculo de punto de equilibrio | Como developer, quiero exponer el endpoint de punto de equilibrio, para procesar los cálculos financieros en el backend. | 5 |
+| 35 | **TS-04** | Endpoint REST para generación de PDF y código QR | Como developer, quiero desarrollar el servicio de generación de PDF/QR, para soportar la emisión de certificados. | 5 |
+| 36 | **TS-05** | Persistencia y sincronización offline diferida | Como developer, quiero implementar caché y sincronización diferida en la API, para permitir registros sin conexión. | 5 |
+| 37 | **TS-06** | Documentación de API RESTful con OpenAPI y Swagger UI | Como developer, quiero integrar Springdoc OpenAPI, para disponer de la documentación interactiva Swagger UI. | 3 |
