@@ -304,7 +304,7 @@ A través de este análisis, establecemos tácticas ofensivas para explotar nues
 ### 2.2.1. Diseño de entrevistas
 Para garantizar un proceso de investigación de usuarios (*User Research*) riguroso y estructurado, hemos diseñado guías de entrevista semiestructuradas divididas en dos grandes bloques. El primero recopila datos demográficos y de contexto digital aplicables a cualquier entrevistado; el segundo aborda preguntas específicas y profundas adaptadas a los dolores, responsabilidades y dinámicas operativas de cada segmento objetivo.
 
-#### Bloque 1: Preguntas Generales 
+#### Bloque 1: Preguntas Generales
 
 Este cuestionario inicial estandariza la recolección de metadatos demográficos clave y evalúa la madurez digital base de los usuarios en su entorno habitual:
 1. **Identificación básica:** ¿Cuál es su nombre completo, su edad y a qué se dedica principalmente en el día a día?
@@ -467,12 +467,12 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
   <tr><td>Duración de la entrevista</td><td>29:46 min</td></tr>
   <tr><td>Resumen</td><td> El entrevistado, se desempeña como gerente de una cooperativa agrícola en el distrito de San Martín de las Cumbres, Arequipa. Representa a 300 socios y tiene como prioridad asegurar su rentabilidad. Señaló que actualmente advierten sobre amenazas climáticas mediante grupos de WhatsApp, recurriendo a SMS, radio local y técnicos de campo para las zonas altas sin internet, aunque con el riesgo de que la alerta llegue tarde. Durante el acopio, bonifican económicamente por quintal a quienes superan estándares de calidad y penalizan a los deficientes pagándoles el precio mínimo del mercado convencional, lo que les hace perder los beneficios cooperativos. Respecto a la digitalización, indicó que la principal barrera es cultural, dado que la mayoría de los socios superan los 50 años, temen equivocarse en el celular y prefieren su cuaderno físico; a esto se suma la falta de conectividad en las chacras. En el ámbito comercial, cerca del 10% de sus ventas sufre castigos en el precio debido a cuadernos de campo incompletos, lo que ocasiona la pérdida de sellos de certificación (como el Orgánico). Finalmente, expresó una total disposición para que la cooperativa asuma económicamente una plataforma tecnológica como gasto operativo, siempre que esta reduzca las semanas de papeleo previas a las auditorías y garantice la conservación de las primas económicas. <br><br>
   <b>Comportamiento y necesidades:</b>
-   
+
 - Alertas climáticas oportunas: Requiere un sistema de comunicación que evite los retrasos actuales al notificar a las zonas más altas y desconectadas de internet.
 - Protección de certificaciones: Necesita asegurar que los datos de trazabilidad estén completos para mantener sellos orgánicos y evitar el castigo en el precio de sus lotes.
 - Eficiencia administrativa: Demanda reducir drásticamente las semanas de papeleo manual que actualmente exigen las auditorías.
 - Accesibilidad e inclusión digital: Necesita herramientas muy intuitivas que superen la desconfianza tecnológica de los productores mayores de 50 años y que puedan operar en fincas sin cobertura..<br><br>
-<b>Tecnología, marcas y canales:</b>
+  <b>Tecnología, marcas y canales:</b>
 
 - Canales actuales: WhatsApp, mensajes de texto (SMS), radio local en las madrugadas y visitas presenciales de técnicos de campo.
 - Dispositivos habituales: Teléfonos inteligentes (smartphones) en zonas conectadas y celulares básicos o radios en zonas remotas.
@@ -520,7 +520,7 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
   <tr><td>Duración de la entrevista</td><td> 47:06 min</td></tr>
   <tr><td>Resumen</td><td>El entrevistado es un ingeniero agrónomo de Oxapampa (egresado de la UNDAC) con experiencia en asistencia técnica para cultivos perennes como café, palto y granadilla en zonas de selva central como Pozuzo. Destaca que la topografía abrupta, las quebradas y el clima lluvioso reducen la capacidad operativa real de un asesor a un rango de entre 15 y 25 productores mensuales para mantener visitas continuas (mínimo cada 30 días). Enfatiza la dificultad de erradicar el hábito empírico de fumigar por calendario sin presencia real de plagas, y señala que la evaluación de daños climáticos se realiza de forma manual y visual mediante recorridos en patrones (X, M, Z). Valora el uso de herramientas digitales básicas para coordinar y dosificar, destacando la georreferenciación vinculada al Padrón de Productores Agrarios (PPA).<br><br>
   <b>Comportamiento y necesidades:</b>
- 
+
 - Capacidad operativa condicionada: La cobertura técnica efectiva cae a 15–25 productores al mes debido a caminatas de hasta 3 horas por quebradas y demoras por lluvias intensas.
 - Justificación de impacto por contraste: Demuestra el valor de su asesoría comparando visualmente parcelas de productores que acataron las pautas técnicas frente a los que no las aplicaron.
 - Resistencia al cambio en fitosanidad: Enfrenta la costumbre del productor de aplicar agroquímicos de forma fija por calendario (cada 8–10 días) sin leer etiquetas ni verificar síntomas previos.
@@ -585,12 +585,12 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
 - Diagnóstico visual sin sensores: A pesar del uso de herramientas digitales para la organización, la toma de datos biométricos en campo (grado de marchitamiento, caída de flores, cuajado) sigue siendo un proceso 100% analógico, visual y basado en la experiencia personal.</td></tr>
 </table>
 
-## 2.2.3. Análisis de entrevistas
+### 2.2.3. Análisis de entrevistas
 
-### Segmento 1: Pequeños y medianos agricultores independientes de papa y café
+#### Segmento 1: Pequeños y medianos agricultores independientes de papa y café
 Se analizó la información cualitativa obtenida de productores agrícolas independientes para identificar las características operativas, financieras y de adopción digital clave que configuran el arquetipo de este segmento.
 
-### Características
+#### Características
 
 | Característica                                       | Mención | % | Evidencia |
 | :---------------------------------------------------- |:---:  | :---: | :-------------------------------------------------------------------------------------------------------- |
@@ -613,11 +613,11 @@ Se analizó la información cualitativa obtenida de productores agrícolas indep
 3) Demanda de telemetría y alertas satelitales sin inversión en hardware: Los productores enfrentan contingencias fitosanitarias y climáticas de alto impacto (heladas, sequías, roya y rancha), pero no disponen de capital para instalar estaciones meteorológicas o sensores en sus lotes. Existe una necesidad homogénea de recibir alertas tempranas predictivas e información de salud foliar o estrés hídrico directamente en el celular, aprovechando datos satelitales abiertos para actuar antes de perder la inversión de la campaña.
 4) El relevo generacional como catalizador de modernización rural :Los hijos agricultores manejan fluidamente smartphones, aplicaciones de mensajería y servicios financieros digitales. Este segmento actúa como el habilitador tecnológico natural del núcleo familiar: absorben la solución técnica, asumen la carga del registro digital y traducen las recomendaciones agronómicas para sus padres o parientes mayores arraigados a las prácticas tradicionales.
 
-### Segmento 2: Productores organizados y directivos de cooperativas agrícolas
+#### Segmento 2: Productores organizados y directivos de cooperativas agrícolas
 
 Se analizaron 3 entrevistas aplicadas a líderes, gerentes de operaciones y socios cooperativistas (Cusco, Arequipa y Cañete) para consolidar los factores críticos de gestión de acopio, fiscalización y requerimientos tecnológicos del sector organizado.
 
-### Características
+#### Características
 
 | Característica                                    | Mención    | %     | Evidencia                                                                                     |
 | ------------------------------------------------- | ---------- | ----- | --------------------------------------------------------------------------------------------- |
@@ -631,16 +631,16 @@ Se analizaron 3 entrevistas aplicadas a líderes, gerentes de operaciones y soci
 | Canales y medios utilizados                       |   3/3      | 100%  | Grupos de WhatsApp regionales, radio provincial y llamadas directas                           |
 | Tecnología usada                                  |   3/3      | 100%  | Teléfonos inteligentes (Android), computadoras de oficina con Excel y radios portátiles       |
 
-##### Insights
+###### Insights
 
 1) Riesgo financiero directo por trazabilidad deficiente: El uso continuado de libretas de papel genera omisiones de datos que conllevan el castigo de hasta un 10% del valor de exportación y la pérdida de sobreprecios por sellos orgánicos. La digitalización es vista por la gerencia como una salvaguarda de ingresos antes que como un simple gasto administrativo.
 2) Modelo de financiamiento B2B viable y justificado: A diferencia del productor individual, la cooperativa cuenta con solvencia y disposición formal de presupuesto para financiar la suscripción tecnológica, siempre que el sistema reduzca semanas de consolidación manual previas a las fiscalizaciones y auditorías.
 3) Inclusión de la base social mediante usabilidad simplificada: Dado que el promedio etario de los socios supera los 50 años, la interfaz de captura debe erradicar la complejidad técnica, emplear flujos intuitivos y estar respaldada por capacitaciones presenciales que venzan la desconfianza hacia los entornos móviles.
 
-### Segmento 3: Ingenieros agrónomos y asesores técnicos de campo
+#### Segmento 3: Ingenieros agrónomos y asesores técnicos de campo
 
 Se analizaron 3 entrevistas a ingenieros agrónomos y extensionistas rurales (Oxapampa/Pozuzo, Cañete/Mala y Piura) para caracterizar su desempeño operativo, limitantes de cobertura geográfica y herramientas de diagnóstico.
-### Características
+#### Características
 
 | Característica                                     |   Mención  |   %   | Evidencia                                                                                     |
 | -------------------------------------------------- | ---------- | ----- | --------------------------------------------------------------------------------------------- |
@@ -654,7 +654,7 @@ Se analizaron 3 entrevistas a ingenieros agrónomos y extensionistas rurales (Ox
 | Canales y medios utilizados                        |   3/3      | 100%  | WhatsApp para consultas fitosanitarias y coordinación en caseríos con cobertura               |
 | Tecnología usada                                   |   3/3      | 100%  | Teléfonos inteligentes con GPS integrado, computadoras portátiles y Excel                     |
 
-##### Insights
+###### Insights
 
 1) Saturación operativa y transición de labor preventiva a reactiva: Los métodos tradicionales de supervisión presencial (libreta, recorridos a pie o camioneta) tienen un techo infranqueable: entre 15 y 25 productores en selva abrupta y un máximo de 30 a 40 productores (o 300 ha) en zonas planas. Superar este umbral degrada el acompañamiento técnico preventivo y convierte al extensionista en un gestor que solo "apaga incendios" fitosanitarios de forma reactiva.
 2) Subjetividad metodológica en la evaluación de daños y cálculo de retorno: Tanto el diagnóstico de siniestros climáticos como la justificación del impacto de las visitas técnicas se realizan mediante inspecciones pedestres en zigzag, fotografías de "antes y después" y comparación empírica con lotes testigo. Esta dependencia del "ojo" técnico genera reportes con alto margen de sesgo humano, haciendo indispensable el uso de índices de vegetación satelitales (como NDVI o estrés hídrico) para cuantificar mermas con respaldo numérico ante la gerencia.
@@ -679,7 +679,6 @@ El arquetipo "Cristian Santana" sintetiza las necesidades de los administradores
 El arquetipo "Juan Antonio Morales" consolida al consultor fitosanitario cuya cobertura se ve restringida por la dispersión geográfica en quebradas y por métodos visuales subjetivos, requiriendo teledetección multiespectral para priorizar predios y sustentar prescripciones técnicas ante la gerencia.
 
 ![user-persona-segmento-3-juan-antonio-morales.jpeg](assets/img/chapter-II/user-persona-segmento-3-juan-antonio-morales.jpeg)
-
 
 ### 2.3.2. User Task Matrix
 
