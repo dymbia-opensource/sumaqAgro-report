@@ -1,15 +1,27 @@
-from: markdown-yaml_metadata_block
+# =====================================================================
+# Pandoc defaults — Informe del Trabajo Final (Docs-as-Code)
+# Uso:  pandoc --defaults=config/build.yaml -o dist/<nombre>.pdf
+#       (o simplemente `make pdf` / `./build.ps1`)
+# =====================================================================
 
-file-scope: true
-metadata-file: metadata.yaml
+# Markdown estilo GitHub + HTML embebido.
+#  +lists_without_preceding_blankline : listas sin línea en blanco previa (como GitHub)
+#  -yaml_metadata_block        : las líneas '---' del informe son separadores, no metadatos
+#  -blank_before_header        : acepta encabezados sin línea en blanco previa (como GitHub)
+#  -markdown_in_html_blocks    : cada bloque HTML llega completo al filtro (tablas, <p><img></p>)
+#  -implicit_figures           : no usa el alt de la imagen como pie de figura
+from: markdown+raw_html+pipe_tables+lists_without_preceding_blankline-yaml_metadata_block-blank_before_header-markdown_in_html_blocks-implicit_figures
 
+metadata-files:
+  - metadata.yaml
+
+# El ORDEN de esta lista es el orden del PDF (estructura del enunciado).
+# La carátula del PDF se genera desde metadata.yaml (01-caratula.md queda solo para GitHub).
 input-files:
-  # Preliminares (Front-Matter)
-  - report/front-matter/01-caratula.md
   - report/front-matter/02-version-history.md
   - report/front-matter/03-collaboration.md
+  - config/pdf/toc.md                          # "Contenido" (tabla de contenidos)
   - report/front-matter/04-student-outcome.md
-  # Capítulos del Informe
   - report/10-chapter-1-intro.md
   - report/20-chapter-2-requirements.md
   - report/30-chapter-3-specification.md
@@ -17,20 +29,20 @@ input-files:
   - report/50-chapter-5-implementation.md
   - report/60-conclusions.md
   - report/99-bibliography.md
-  # Anexos (Ruta real en la raíz del proyecto)
-  - report/annexes/annex-b-performance-report.md
   - report/annexes/annex-c-videos.md
 
+# Las imágenes se escriben relativas a report/ (assets/img/...), igual que en GitHub
 resource-path:
-  - "."
   - "report"
-  - "report/assets"
-  - "report/assets/img"
-  - "assets"
-  - "annexes"
+  - "report/front-matter"
+  - "."
 
-output-file: dist/upc-pre-202620-1asi0729-dymbia-report-av1.pdf
+filters:
+  - config/filters/pdf.lua
+
+include-in-header:
+  - config/pdf/preamble.tex
+
 pdf-engine: xelatex
-number-sections: true
-toc: true
-toc-depth: 4
+toc: false            # la tabla de contenidos la inserta config/pdf/toc.md en su lugar
+number-sections: false  # los títulos ya traen su numeración (1.1., 1.1.1., ...)
