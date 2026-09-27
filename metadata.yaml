@@ -1,17 +1,42 @@
 ---
-title: "Informe de Trabajo Final — SumaqAgro"
-subtitle: "Plataforma SaaS para Digitalización y Trazabilidad en Cadenas de Café y Papa Andina"
-author:
-  - "Tejada Pumacayo, Yamil Jared (U20241H037)"
-  - "Duarte Ruffner, Drago Derick (U202315120)"
-  - "Solorzano Sullca, Benjamin (U202422816)"
-  - "Sanca Condori, Miguel (U20241E057)"
-  - "Vargas Enriquez, Jose Carlos (U202422128)"
-date: "Mayo, 2026 (Semana 4 — Hito AV1)"
-institution: "Universidad Peruana de Ciencias Aplicadas (UPC)"
-course: "1ASI0729 — Desarrollo de Aplicaciones Open Source"
-term: "Ciclo 2026-20"
-instructor: "Velasquez Nuñez, Angel Augusto"
-lang: "es-PE"
+# ---- Propiedades del PDF ------------------------------------------------
+title: "Informe de Trabajo Final — Dymbia / SumaqAgro"
+author: "Dymbia"
+lang: es
 papersize: a4
+geometry: "margin=2.3cm"
+fontsize: 11pt
+# Fuentes: Arial / Consolas existen en Windows y macOS.
+# En Linux usar "Liberation Sans" / "Liberation Mono" (o comentar para Latin Modern).
+mainfont: "Arial"
+monofont: "Consolas"
+toc-depth: 4
+colorlinks: true
+linkcolor: "black"
+toccolor: "black"
+urlcolor: "blue"
+
+# ---- Carátula (la genera config/filters/pdf.lua) ------------------------
+# Actualizar `milestone` y `date` en cada entrega (AV1, TB1, AV2, TB2).
+cover:
+  logo: "report/assets/img/upc-logo.png"
+  university: "Universidad Peruana de Ciencias Aplicadas"
+  faculty: "Facultad de Ingeniería"
+  career: "Carrera de Ingeniería de Software"
+  term: "2026-20"
+  course-code: "1ASI0729"
+  course-name: "Desarrollo de Aplicaciones Open Source"
+  nrc: "7742"
+  instructor: "Velásquez Núñez, Ángel Augusto"
+  report-title: "Informe de Trabajo Final"
+  milestone: "TB1"
+  startup: "Dymbia"
+  product: "SumaqAgro"
+  members:
+    - { code: "U202315120", name: "Duarte Ruffner, Drago Derick" }
+    - { code: "U20241E057", name: "Sanca Condori, Miguel" }
+    - { code: "U202422816", name: "Solorzano Sullca, Benjamin" }
+    - { code: "U20241H037", name: "Tejada Pumacayo, Yamil Jared" }
+    - { code: "U202422128", name: "Vargas Enriquez, Jose Carlos" }
+  date: "Octubre de 2026"
 ---
