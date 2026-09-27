@@ -16,27 +16,5 @@ linkcolor: "black"
 toccolor: "black"
 urlcolor: "blue"
 
-# ---- Carátula (la genera config/filters/pdf.lua) ------------------------
-# Actualizar `milestone` y `date` en cada entrega (AV1, TB1, AV2, TB2).
-cover:
-  logo: "report/assets/img/upc-logo.png"
-  university: "Universidad Peruana de Ciencias Aplicadas"
-  faculty: "Facultad de Ingeniería"
-  career: "Carrera de Ingeniería de Software"
-  term: "2026-20"
-  course-code: "1ASI0729"
-  course-name: "Desarrollo de Aplicaciones Open Source"
-  nrc: "7742"
-  instructor: "Velásquez Núñez, Ángel Augusto"
-  report-title: "Informe de Trabajo Final"
-  milestone: "TB1"
-  startup: "Dymbia"
-  product: "SumaqAgro"
-  members:
-    - { code: "U202315120", name: "Duarte Ruffner, Drago Derick" }
-    - { code: "U20241E057", name: "Sanca Condori, Miguel" }
-    - { code: "U202422816", name: "Solorzano Sullca, Benjamin" }
-    - { code: "U20241H037", name: "Tejada Pumacayo, Yamil Jared" }
-    - { code: "U202422128", name: "Vargas Enriquez, Jose Carlos" }
-  date: "Octubre de 2026"
+
 ---

@@ -16,8 +16,9 @@ metadata-files:
   - metadata.yaml
 
 # El ORDEN de esta lista es el orden del PDF (estructura del enunciado).
-# La carátula del PDF se genera desde metadata.yaml (01-caratula.md queda solo para GitHub).
+# La carátula del PDF es report/front-matter/01-caratula.md (misma que en GitHub).
 input-files:
+  - report/front-matter/01-caratula.md
   - report/front-matter/02-version-history.md
   - report/front-matter/03-collaboration.md
   - config/pdf/toc.md                          # "Contenido" (tabla de contenidos)

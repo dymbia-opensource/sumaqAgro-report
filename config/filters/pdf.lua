@@ -134,6 +134,16 @@ local function fix_table(tbl)
 end
 
 local pass2 = {
+  -- ::: {.center} ... ::: -> contenido centrado (carátula)
+  Div = function(el)
+    if el.classes:includes('center') then
+      local out = { latex('\\begin{center}') }
+      for _, b in ipairs(el.content) do out[#out + 1] = b end
+      out[#out + 1] = latex('\\end{center}')
+      return out
+    end
+  end,
+
   Image = normalize_width,
   Table = fix_table,
 
