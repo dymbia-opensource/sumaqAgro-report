@@ -1,0 +1,35 @@
+% ---------------------------------------------------------------
+% preamble.tex — Ajustes LaTeX para el PDF del informe
+% ---------------------------------------------------------------
+\usepackage{float}
+\usepackage{etoolbox}
+\usepackage{xurl}                       % permite cortar URLs largas
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small Dymbia --- SumaqAgro}
+\fancyhead[R]{\small 1ASI0729 Desarrollo de Aplicaciones Open Source}
+\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+
+% La carátula la genera el filtro; se desactiva el \maketitle por defecto
+\renewcommand\maketitle{}
+
+% Tablas: letra más pequeña y celdas que respetan saltos de línea
+\AtBeginEnvironment{longtable}{\footnotesize}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.25}
+
+% Encabezados #### y ##### en su propia línea (no "en línea" con el texto)
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+  {3ex \@plus 1ex \@minus .2ex}{1ex}{\normalfont\normalsize\bfseries}}
+\renewcommand\subparagraph{\@startsection{subparagraph}{5}{\z@}%
+  {2.5ex \@plus 1ex \@minus .2ex}{0.8ex}{\normalfont\normalsize\bfseries\itshape}}
+\makeatother
+\setcounter{secnumdepth}{-10}
+
+% Bloques de código: cortar líneas largas
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,breakanywhere,commandchars=\\\{\}}
+\setkeys{Gin}{keepaspectratio}
