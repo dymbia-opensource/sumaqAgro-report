@@ -70,8 +70,6 @@ La interfaz web utilizará una paleta de colores basada principalmente en tonos 
 </p>
 
 
-
-
 **Spacing**
 
 SumaqAgro utiliza un sistema de espaciado basado en múltiplos de 8 px, permitiendo mantener una interfaz ordenada, consistente y fácil de adaptar a diferentes tamaños de pantalla[cite: 1]. Este sistema se aplica en márgenes, paddings, separación entre componentes y distribución de contenido[cite: 1].
@@ -145,6 +143,36 @@ Con el fin de asegurar que la plataforma sea inclusiva para todos los perfiles d
 
 - **Contraste y escalabilidad:** Cumplimiento de los niveles de contraste de color según la norma **WCAG 2.1 AA**, con un ratio mínimo de **4.5:1** para texto normal, y uso de unidades relativas como `rem` y `em` para garantizar el escalado de tipografías sin distorsión de la interfaz.
 
+
+### 4.1.3. Mobile Style Guidelines
+
+Esta sección define las pautas de la aplicación móvil de **SumaqAgro**, diseñada en Figma para Android (frame de 360 × 800 px) y pensada para el uso en campo con una sola mano. Hereda la identidad visual de las secciones anteriores. [Ver diseño en Figma](https://www.figma.com/design/ISAgMtqNOAucizqd3eXYzR/UI-DESIGN?node-id=898-10332).
+
+**a) Patrones de navegación:** Se emplea una *Bottom Navigation Bar* fija con cinco destinos (Inicio, Monitoreo, Finanzas, Alertas y Perfil), con íconos y etiquetas visibles, complementada con un botón de acción flotante (*FAB*) para la acción principal de Finanzas (“Anotar gasto”). Las vistas de detalle y los formularios usan una flecha de retroceso en la barra superior.
+
+![bottom-navigation.png](assets/img/chapter-4/mobile-style-guidelines/bottom-navigation.png)
+
+**b) Componentes nativos:**
+- Botones primarios rellenos en teal (`#00796B`) con texto blanco y ancho completo en formularios; botones secundarios con borde teal.
+- Tarjetas (*cards*) de 16 px de radio para los indicadores clave, con la tarjeta de *Salud Foliar* en teal oscuro (`#004D40`) para dar jerarquía.
+- *Bottom sheets* para selectores (*Cambiar Parcela*, *Enviar foto de plaga*) y modales o diálogos para confirmaciones (guardar gasto, finalizar plan, cerrar sesión).
+- Chips de selección (*Insumos y Abono*, *Mano de Obra / Jornal*, *Flete*) y banners ámbar para avisos de sincronización pendiente.
+
+**c) Tipografía:** Poppins para títulos y cifras clave (Display 32 px, H1 28 px, H2 24 px, H3 20 px) e Inter para texto e interfaz (cuerpo 16 px, texto secundario 14 px, etiquetas y *captions* 12 px).
+
+![typography.png](assets/img/chapter-4/mobile-style-guidelines/typography.png)
+
+**d) Colores:** Escala Material en teal (primario), verde (confirmaciones y estado “Óptimo”) y grises (fondos y bordes); rojo `#D32F2F` para errores y alertas críticas y ámbar `#FFC107` para avisos. El texto blanco solo se usa sobre teal `#00796B` o más oscuro (contraste AA ≥ 4.5:1).
+
+![mobile-colors.png](assets/img/chapter-4/mobile-style-guidelines/mobile-colors.png)
+
+**e) Espaciado:** Base de 8 px (4, 8, 16, 24, 32 y 48 px), con márgenes laterales de 16 px y radios de 8, 12, 16 y 24 px.
+
+**f) Gestos y accesibilidad:** Solo se usan toques simples (*tap*), sin gestos complejos. Las áreas táctiles son de al menos 48 × 48 px, y los estados se comunican con ícono y texto, no solo con color.
+
+**g) Iconografía:** Se utilizan íconos *Material Symbols Rounded* de 24 × 24 px, siempre acompañados de una etiqueta.
+
+![iconography.png](assets/img/chapter-4/mobile-style-guidelines/iconography.png)
 
 
 ## 4.2. Information Architecture
@@ -264,6 +292,7 @@ Sistema jerárquico accesible desde un menú lateral con iconografía clara. Inc
 - Canal de comunicación directo para dictar diagnósticos, recomendar dosificación de insumos y mantener un historial clínico por cada parcela.
   <br>
   <br>
+- 
 ### 4.2.2. Labeling Systems
 
 El sistema de etiquetado de **SumaqAgro** ha sido diseñado para ser claro, directo y fácil de entender por agricultores, cooperativas y agrónomos, usando palabras clave con un número mínimo de términos sin perder precisión. Las etiquetas evitan tecnicismos innecesarios y buscan reducir la carga cognitiva del usuario en el campo.
