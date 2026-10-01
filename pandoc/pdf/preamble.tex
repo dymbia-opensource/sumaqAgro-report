@@ -1,22 +1,27 @@
 % ---------------------------------------------------------------
 % preamble.tex — Ajustes LaTeX para el PDF del informe
 % ---------------------------------------------------------------
-\usepackage{float}
 \usepackage{etoolbox}
 \usepackage{xurl}                       % permite cortar URLs largas
 \usepackage{fancyhdr}
+
+% Numeración de páginas: número arábigo en la esquina inferior derecha de
+% todas las páginas, desde la carátula (página 1), sin encabezados.
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\small Dymbia --- SumaqAgro}
-\fancyhead[R]{\small 1ASI0729 Desarrollo de Aplicaciones Open Source}
-\fancyfoot[C]{\thepage}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 \setlength{\headheight}{14pt}
+
+% Texto justificado (el interlineado 1.5 se define con `linestretch` en metadata.yaml)
+\emergencystretch=2em
 
 % La carátula la genera el filtro; se desactiva el \maketitle por defecto
 \renewcommand\maketitle{}
 
 % Tablas: letra más pequeña y celdas que respetan saltos de línea
-\AtBeginEnvironment{longtable}{\footnotesize}
+\AtBeginEnvironment{longtable}{\footnotesize\setstretch{1}}
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.25}
 
@@ -31,5 +36,6 @@
 
 % Bloques de código: cortar líneas largas
 \usepackage{fvextra}
+\AtBeginEnvironment{Highlighting}{\setstretch{1}}   % código con interlineado sencillo
 \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,breakanywhere,commandchars=\\\{\}}
 \setkeys{Gin}{keepaspectratio}
