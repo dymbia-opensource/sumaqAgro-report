@@ -1027,50 +1027,37 @@ Los mock-ups de la aplicación móvil se elaboraron en Figma (página *Mobile*) 
 
 **Aplicación del Design System, principios de diseño e inclusión:** Se usa la misma paleta teal/verde, las tipografías Poppins e Inter y el espaciado base 8 px de la web. La jerarquía visual destaca la tarjeta de *Salud Foliar* en teal oscuro, seguida de *Gasto Total* y *Precio para no perder*. Las tarjetas agrupan los datos relacionados (proximidad y región común), la navegación inferior de cinco destinos queda en la zona del pulgar y las acciones principales usan botones de ancho completo. Para la inclusión se emplean áreas táctiles de 48 px, contraste AA, estados cualitativos junto a las cifras (por ejemplo "Optimal"), formularios con chips y foto de recibo en lugar de texto largo, y un indicador de conexión visible para el modo sin conexión. Las etiquetas respetan la arquitectura de información de la sección 4.2.
 
-### LOGIN / REGISTER
+### LOGIN, REGISTER AND HOME
 
 ![Mobile mock-up - Login](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-login.png)
-
 ![Mobile mock-up - Sign up](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-signup.png)
-
-### HOME (MY PLOT)
-
 ![Mobile mock-up - Home - My Plot](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-home.png)
 
-### MY PLOTS AND REGISTER A PLOT
+### MY PLOTS, REGISTER A PLOT AND MONITORING
 
 ![Mobile mock-up - My Plots](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-my-plots.png)
-
 ![Mobile mock-up - Register plot - map](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-register-plot-map.png)
-
-### MONITORING
-
 ![Mobile mock-up - Monitoring - NDVI viewer](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-monitoring-ndvi.png)
 
 ### FINANCES
 
 ![Mobile mock-up - Campaign Finances](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-finances.png)
-
 ![Mobile mock-up - Log expense](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-log-expense.png)
 
 ### AGRICULTURAL ALERTS
 
 ![Mobile mock-up - Agricultural Alerts](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-alerts.png)
-
 ![Mobile mock-up - Detailed Measures](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-detailed-measures.png)
 
 ### ADVISOR AND HARVEST CERTIFICATES
 
 ![Mobile mock-up - Advisor Consultation](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-advisor.png)
-
 ![Mobile mock-up - Harvest Certificates](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-certificates.png)
 
 ### SETTINGS AND OFFLINE MODE
 
 ![Mobile mock-up - Profile - Settings & Help](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-settings.png)
-
 ![Mobile mock-up - Offline mode](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-offline.png)
-
 
 ### 4.4.4. Web Applications User Flow Diagrams
 
@@ -1330,7 +1317,7 @@ La navegación interactiva traduce de manera directa las decisiones de Arquitect
   [Visualizar Prototipo Mobile SumaqAgro en Figma](https://www.figma.com/design/ISAgMtqNOAucizqd3eXYzR/UI-DESIGN?node-id=7-56&t=zJ6zOatR2rSsKo7x-1)
 
 * **Enlace al Prototipo Mobile (Android 360 × 800):**  
-  [Visualizar Prototipo Mobile en Figma](https://www.figma.com/design/ISAgMtqNOAucizqd3eXYzR/UI-DESIGN?node-id=898-10332). Cada flujo de usuario (UG-01 a UG-08) se abre desde su punto de inicio ▶ en el panel *Prototype*.
+  [Visualizar Prototipo Mobile en Figma](https://www.figma.com/design/ISAgMtqNOAucizqd3eXYzR/UI-DESIGN?node-id=898-10332). Cada flujo de usuario (UG-01 a UG-08) se abre desde su punto de inicio (botón de reproducir) en el panel *Prototype*.
 
 ##### Demostración Audiovisual en Microsoft Stream (Mobile)
 
