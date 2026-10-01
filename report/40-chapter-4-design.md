@@ -280,6 +280,19 @@ Sistema jerárquico accesible desde un menú lateral con iconografía clara. Inc
 
 - **Funcionalidades destacadas:** Revisión de fotografías de plagas enviadas por agricultores, emisión de recetas técnicas y seguimiento de avisos de riesgo.
 
+**Organización visual del contenido**
+
+- **Jerárquica (*visual hierarchy*):** Se aplica en el Landing Page (de la propuesta de valor a los planes) y en los dashboards, donde el indicador más importante, como la salud foliar, se destaca sobre los demás y los detalles quedan en niveles inferiores.
+- **Secuencial (*step-by-step*):** Se aplica en las tareas que se completan en pasos ordenados: el registro de cuenta, la recuperación de contraseña con código OTP, el registro de una parcela (mapa, datos del cultivo y confirmación) y el plan de acción de una alerta.
+- **Matricial:** Se aplica en cuadrículas de tarjetas, como las parcelas registradas con sus cupos disponibles, los indicadores clave del dashboard y la comparación de planes de suscripción en el Landing Page.
+
+**Esquemas de categorización del contenido**
+
+- **Por tópicos:** Los módulos de la aplicación se agrupan por tema (Principal, Operación agrícola y Sistema), al igual que los gastos (Insumos y Abono, Mano de Obra y Flete) y las alertas (clima y fitosanitarias).
+- **Cronológico:** El historial de gastos, las alertas, las consultas al asesor y los certificados se ordenan del más reciente al más antiguo.
+- **Alfabético:** Se aplica en las listas de selección, como parcelas y cultivos, para encontrar un elemento sin esfuerzo.
+- **Según audiencia:** Se desarrolla a continuación en *Segmentación por audiencia*.
+
 **Segmentación por audiencia**
 
 **a. Agricultores independientes**
