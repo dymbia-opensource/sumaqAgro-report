@@ -1474,6 +1474,8 @@ La orquestación entre los contextos delimitados se rige por políticas eventual
 
 En esta sección se presenta el Diagrama de Contexto del Sistema (Nivel 1 del modelo C4), el cual delimita las fronteras operativas y de software de la plataforma **SumaqAgro**, ubicándola como la solución central del ecosistema. A través de esta vista de alto nivel, se establecen los canales de comunicación y flujos de información que mantiene el sistema tanto con los distintos perfiles de usuario identificados en la investigación como con los servicios externos de terceros necesarios para la operación agrícola. Siguiendo los lineamientos de arquitectura y el enfoque *Diagram-as-Code* exigido para el proyecto, el modelado se desarrolló mediante la herramienta **Structurizr** a través de su especificación formal en Structurizr DSL.
 
+**Herramienta utilizada:** Structurizr (*Diagrams as Code*, mediante Structurizr DSL).
+
 ![C4 Model - Diagrama de Contexto del Sistema (Nivel 1)](assets/img/chapter-4/c4/c4-system-context-diagram.png)
 
 #### Explicación del Diagrama de Contexto
@@ -1499,6 +1501,8 @@ El diagrama sitúa en el centro a **SumaqAgro Platform**, plataforma web distrib
 ### 4.6.3. Software Architecture Container Diagrams
 
 En esta sección se presenta y describe el Diagrama de Contenedores (Nivel 2 del modelo C4) de la plataforma **SumaqAgro**, el cual profundiza en la frontera del sistema para exponer su arquitectura técnica distribuida. Este diagrama muestra las unidades de despliegue y ejecución independientes que componen la solución, la distribución de responsabilidades entre ellas, las principales decisiones de tecnología adoptadas y los protocolos de red empleados para la comunicación interna y con sistemas externos. El modelado fue estructurado y generado formalmente mediante la especificación DSL de la herramienta **Structurizr**.
+
+**Herramienta utilizada:** Structurizr (*Diagrams as Code*, mediante Structurizr DSL).
 
 ![C4 Model - Diagrama de Contenedores (Nivel 2)](assets/img/chapter-4/c4/c4-container-diagram.png)
 
@@ -1530,6 +1534,8 @@ La topología de ejecución del sistema está conformada por cuatro contenedores
 ### 4.6.4. Software Architecture Components Diagrams
 
 En esta sección se presentan y explican los Diagramas de Componentes (Nivel 3 del modelo C4) correspondientes a cada uno de los contenedores de software ejecutables que integran la plataforma **SumaqAgro**: la **Landing Page**, la **Web Application (Single Page Application en Angular 18)** y el **RESTful API Backend (Spring Boot 3.x)**. A través de estos diagramas se detalla la descomposición estructural interna de cada unidad de despliegue, identificando la naturaleza de sus componentes, sus responsabilidades de negocio asignadas, los detalles de implementación tecnológica y sus flujos de interacción internos y externos. El modelado fue desarrollado en **Structurizr** siguiendo la especificación formal de Structurizr DSL.
+
+**Herramienta utilizada:** Structurizr (*Diagrams as Code*, mediante Structurizr DSL).
 
 ---
 
