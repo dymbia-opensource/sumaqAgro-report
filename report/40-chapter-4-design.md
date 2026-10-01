@@ -72,7 +72,7 @@ La interfaz web utilizará una paleta de colores basada principalmente en tonos 
 
 **Spacing**
 
-SumaqAgro utiliza un sistema de espaciado basado en múltiplos de 8 px, permitiendo mantener una interfaz ordenada, consistente y fácil de adaptar a diferentes tamaños de pantalla[cite: 1]. Este sistema se aplica en márgenes, paddings, separación entre componentes y distribución de contenido[cite: 1].
+SumaqAgro utiliza un sistema de espaciado basado en múltiplos de 8 px, permitiendo mantener una interfaz ordenada, consistente y fácil de adaptar a diferentes tamaños de pantalla. Este sistema se aplica en márgenes, paddings, separación entre componentes y distribución de contenido.
 
 *   **4 px – Extra Small (XS):** Separaciones mínimas entre elementos relacionados, como iconos y texto.
 *   **8 px – Small (S):** Espaciado interno pequeño, utilizado en botones, etiquetas y elementos compactos.
@@ -585,7 +585,7 @@ En la vista móvil (**Mobile Web Browser**) de las secciones institucionales, el
 
 **Solutions**
 
-En la vista móvil (**Mobile Web Browser**) de las secciones comerciales y funcionales, el contenido se adapta a una columna única vertical: en la parte superior, la sección **¿A quién ayudamos?** apila secuencialmente las tres tarjetas de autoselección por rol (*Agricultores independientes*, *Líderes de cooperativas* y *Asesores técnicos*), situando en cada una su icono, titular, descripción de enfoque, vista previa gráfica y el botón de acción (*CTA*) con ancho completo al pie para facilitar el toque con una sola mano[cite: 1, 3]; a continuación, la sección **Soluciones y Características** transforma la grilla de escritorio en un apilamiento lineal de cuatro tarjetas de funcionalidades (monitoreo satelital NDVI, costos por lote, certificación de calidad y prescripciones agronómicas), cada una con su barra decorativa superior, icono de módulo, título, párrafo descriptivo y una tarjeta inferior de impacto cuantificable orientada al valor en campo.
+En la vista móvil (**Mobile Web Browser**) de las secciones comerciales y funcionales, el contenido se adapta a una columna única vertical: en la parte superior, la sección **¿A quién ayudamos?** apila secuencialmente las tres tarjetas de autoselección por rol (*Agricultores independientes*, *Líderes de cooperativas* y *Asesores técnicos*), situando en cada una su icono, titular, descripción de enfoque, vista previa gráfica y el botón de acción (*CTA*) con ancho completo al pie para facilitar el toque con una sola mano; a continuación, la sección **Soluciones y Características** transforma la grilla de escritorio en un apilamiento lineal de cuatro tarjetas de funcionalidades (monitoreo satelital NDVI, costos por lote, certificación de calidad y prescripciones agronómicas), cada una con su barra decorativa superior, icono de módulo, título, párrafo descriptivo y una tarjeta inferior de impacto cuantificable orientada al valor en campo.
 
 <p align="center">
   <img src="assets/img/chapter-4/landing-page/wireframe/mobile/wireframe-mobile-help.png" alt="wireframe-testimonials-impact-footer" width="600px" height="auto"/>
@@ -716,7 +716,7 @@ A continuación, se presentan los wireframes principales de la aplicación web c
   <img src="assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-certificate.png"  width="600px" height="auto"/>
 </p>
 
-**Agricultural Alerts:** Este módulo centraliza la vigilancia agroclimática y sanitaria de las parcelas del productor (US-13, US-31)[cite: 3, 7], estructurándose a través de una secuencia de tarjetas informativas que detallan el incidente detectado (tales como caídas críticas de vigor foliar, estrés hídrico o riesgos de helada)[cite: 3, 7]; cada reporte integra un panel de medidas técnicas detalladas, la cronología temporal de tareas requeridas para mitigar la anomalía y un indicador de plan de acción finalizado con confirmación de cumplimiento en campo, permitiendo auditar y cerrar el ciclo de contingencia del cultivo de manera ordenada y oportuna.
+**Agricultural Alerts:** Este módulo centraliza la vigilancia agroclimática y sanitaria de las parcelas del productor (US-13, US-31), estructurándose a través de una secuencia de tarjetas informativas que detallan el incidente detectado (tales como caídas críticas de vigor foliar, estrés hídrico o riesgos de helada); cada reporte integra un panel de medidas técnicas detalladas, la cronología temporal de tareas requeridas para mitigar la anomalía y un indicador de plan de acción finalizado con confirmación de cumplimiento en campo, permitiendo auditar y cerrar el ciclo de contingencia del cultivo de manera ordenada y oportuna.
 <p align="center">
   <img src="assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-alert.png"  width="600px" height="auto"/>
   <img src="assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-statistics.png"  width="600px" height="auto"/>
@@ -902,6 +902,9 @@ El flujo de interacción se inicia en el módulo «Visor Satelital Multispectral
 
 En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**, los cuales representan de manera visual y detallada las principales funcionalidades de la solución. Estos diseños fueron elaborados tomando como base los wireframes desarrollados previamente, permitiendo definir con mayor precisión la estructura, distribución de elementos, estilos visuales y flujo de interacción de la interfaz antes de su implementación final.
 
+**Aplicación del Design System, principios de diseño e inclusión:** Los mock-ups aplican el Design System de la sección 4.1 (paleta teal/verde/neutros, tipografía Poppins e Inter, espaciado base 8 px y componentes de Angular Material). Se aplica jerarquía visual con tarjetas de indicadores (*KPI Cards*) y el principio de proximidad y región común de la Gestalt para agrupar datos relacionados. Los estados se comunican con color, ícono y texto, y se mantienen contrastes AA y áreas táctiles de al menos 48 px. La navegación lateral (*sidebar*) y las etiquetas siguen la arquitectura de información de la sección 4.2.
+
+### Desktop Web Browser
 
 ### LOGIN / REGISTER
 
@@ -963,17 +966,58 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
   <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-offline-mode.png"  width="600px" height="auto"/>
 </p>
 
-**User Goal 6:** Usuario desea registrar un gasto de campo en finanzas de la campaña
+### Mobile Web Browser
 
-Flujo normal:
-<p align="center">
-  <img src="assets/img/chapter-4/wireflows/ug-6-resumido.png" width="600px" height="auto"/>
-</p>
+Los mock-ups de la aplicación móvil se elaboraron en Figma (página *Mobile 2.0*) sobre un frame Android de 360 × 800 px, a partir de los wireframes móviles y aplicando las Mobile Style Guidelines de la sección 4.1.3. A continuación se presentan las pantallas principales del productor.
 
-El flujo de interacción se inicia en el módulo «Finanzas de la Campaña» (Mis Gastos y Ganancias), donde el usuario hace clic en el botón de acción rápida «Añadir Nuevo Gasto»; tras este evento, el sistema lo redirige a la vista del formulario «Registrar Gasto de Campo» para seleccionar el tipo de costo operativo (Insumos y Abono, Mano de Obra o Flete), asignar la parcela correspondiente, ingresar el monto desembolsado y la fecha; finalmente, al pulsar el botón «Guardar Gasto», se procesa la información y se muestra una ventana modal de confirmación con el resumen del registro exitoso.
-<p align="center">
-  <img src="assets/img/chapter-4/wireflows/ug-6.png" width="600px" height="auto"/>
-</p>
+[Ver página Mobile 2.0 en Figma](https://www.figma.com/design/ISAgMtqNOAucizqd3eXYzR/UI-DESIGN?node-id=898-10332)
+
+**Aplicación del Design System, principios de diseño e inclusión:** Se usa la misma paleta teal/verde, las tipografías Poppins e Inter y el espaciado base 8 px de la web. La jerarquía visual destaca la tarjeta de *Salud Foliar* en teal oscuro, seguida de *Gasto Total* y *Precio para no perder*. Las tarjetas agrupan los datos relacionados (proximidad y región común), la navegación inferior de cinco destinos queda en la zona del pulgar y las acciones principales usan botones de ancho completo. Para la inclusión se emplean áreas táctiles de 48 px, contraste AA, estados cualitativos junto a las cifras (por ejemplo "Optimal"), formularios con chips y foto de recibo en lugar de texto largo, y un indicador de conexión visible para el modo sin conexión. Las etiquetas respetan la arquitectura de información de la sección 4.2.
+
+### LOGIN / REGISTER
+
+![Mobile mock-up - Login](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-login.png)
+
+![Mobile mock-up - Sign up](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-signup.png)
+
+### HOME (MY PLOT)
+
+![Mobile mock-up - Home - My Plot](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-home.png)
+
+### MY PLOTS AND REGISTER A PLOT
+
+![Mobile mock-up - My Plots](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-my-plots.png)
+
+![Mobile mock-up - Register plot - map](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-register-plot-map.png)
+
+### MONITORING
+
+![Mobile mock-up - Monitoring - NDVI viewer](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-monitoring-ndvi.png)
+
+### FINANCES
+
+![Mobile mock-up - Campaign Finances](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-finances.png)
+
+![Mobile mock-up - Log expense](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-log-expense.png)
+
+### AGRICULTURAL ALERTS
+
+![Mobile mock-up - Agricultural Alerts](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-alerts.png)
+
+![Mobile mock-up - Detailed Measures](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-detailed-measures.png)
+
+### ADVISOR AND HARVEST CERTIFICATES
+
+![Mobile mock-up - Advisor Consultation](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-advisor.png)
+
+![Mobile mock-up - Harvest Certificates](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-certificates.png)
+
+### SETTINGS AND OFFLINE MODE
+
+![Mobile mock-up - Profile - Settings & Help](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-settings.png)
+
+![Mobile mock-up - Offline mode](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-offline.png)
+
 
 ### 4.4.4. Web Applications User Flow Diagrams
 
@@ -1130,6 +1174,52 @@ Para cada User Goal se modela la ruta de éxito principal (*happy path*) junto c
 * **Unhappy Paths (Rutas alternativas y de excepción):**
   * *Datos contables incompletos o no válidos:* Si el usuario omite seleccionar el tipo de costo, deja el monto vacío o ingresa una cifra numérica menor o igual a cero (`S/ 0.00`), la interfaz muestra alertas visuales de validación en rojo debajo de los campos afectados y deshabilita el envío hasta subsanar la entrada.
   * *Pérdida de conectividad en parcela (Offline-First):* Si el desembolso se anota directamente en campo sin cobertura 4G/WiFi, el *Service Worker* captura la transacción y persiste el registro en *IndexedDB*. La aplicación muestra un banner informativo indicando que el gasto se guardó en el dispositivo y se sincronizará con la base de datos central al detectar conexión, visualizándose temporalmente en el historial con un icono ámbar de sincronización pendiente.
+
+
+---
+
+#### User Flow 07 (UG-07): Envío de Reporte de Plaga al Asesor
+
+* **User Goal:** Reportar una incidencia fitosanitaria con evidencia fotográfica para que el asesor técnico asignado emita un diagnóstico.
+* **User Persona:** Guillermo Cortés (Pequeño y Mediano Agricultor Independiente).
+* **Herramienta utilizada:** Figma / FigJam.
+
+##### Mock-up Flow Diagram (Alta Fidelidad)
+![User Flow Mock-ups UG-07 - Reporte de Plaga](assets/img/chapter-4/wireflows/ug-7.png)
+
+##### Resumed Flow Diagram (Flujo Lógico Resumido)
+![Flujo Resumido UG-07](assets/img/chapter-4/wireflows/ug-7-resumido.png)
+
+##### Explicación de flujos y condiciones
+* **Happy Path (Ruta de éxito esperada):**
+  1. En la sección *Consulta al Asesor* (*Asistencia Fitosanitaria y Recetas*), el productor presiona **"Enviar Foto de Plaga"**.
+  2. Se despliega el formulario *Enviar Reporte de Plaga*, donde selecciona la parcela, adjunta la fotografía de la evidencia y agrega observaciones opcionales.
+  3. Presiona **"Enviar Reporte"**; el sistema registra la consulta y muestra una confirmación de que el reporte fue enviado al ingeniero asignado.
+* **Unhappy Paths (Rutas alternativas y de excepción):**
+  * *Sin foto adjunta:* el formulario resalta el campo de evidencia y no permite el envío hasta adjuntar una imagen.
+  * *Sin señal:* el reporte se guarda en el dispositivo, se muestra el estado "Reporte en cola" y se envía automáticamente al recuperar la conexión.
+
+---
+
+#### User Flow 08 (UG-08): Cambio de Parcela en el Visor Satelital Multiespectral
+
+* **User Goal:** Alternar entre las parcelas registradas dentro del visor satelital para revisar los índices NDVI y NDWI de cada una.
+* **User Persona:** Guillermo Cortés (Pequeño y Mediano Agricultor Independiente).
+* **Herramienta utilizada:** Figma / FigJam.
+
+##### Mock-up Flow Diagram (Alta Fidelidad)
+![User Flow Mock-ups UG-08 - Cambio de Parcela](assets/img/chapter-4/wireflows/ug-8.png)
+
+##### Resumed Flow Diagram (Flujo Lógico Resumido)
+![Flujo Resumido UG-08](assets/img/chapter-4/wireflows/ug-8-resumido.png)
+
+##### Explicación de flujos y condiciones
+* **Happy Path (Ruta de éxito esperada):**
+  1. En el módulo *Salud del Cultivo* (visor satelital), el productor presiona **"Cambiar Parcela"**.
+  2. El sistema muestra la lista de parcelas disponibles y el usuario selecciona la deseada.
+  3. Se solicita una confirmación y, al pulsar **"Confirmar"**, el visor actualiza el polígono y los índices multiespectrales del nuevo predio.
+* **Unhappy Paths (Rutas alternativas y de excepción):**
+  * *Parcela sin imagen reciente (nubosidad):* el visor muestra un aviso indicando que no hay una imagen satelital utilizable para esa parcela.
 
 
 ## 4.5. Web Applications Prototyping
