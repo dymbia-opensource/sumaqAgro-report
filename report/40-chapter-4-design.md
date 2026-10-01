@@ -100,7 +100,7 @@ Este enfoque comunicacional busca generar confianza y lealtad, asegurando a los 
 
 ### 4.1.2. Web Style Guidelines
 
-Esta sección define las pautas visuales, de maquetación y de componentes de interfaz para el desarrollo del sitio web estático (**Landing Page en HTML5/CSS3/JS**) y la aplicación web orientada a la gestión agrícola en **Angular**, utilizando **Angular Material** como librería principal de componentes de UI.
+Esta sección define las pautas visuales, de maquetación y de componentes de interfaz para el desarrollo del sitio web estático (**Landing Page en HTML5/CSS3/JS**) y la aplicación web orientada a la gestión agrícola en **Angular**, utilizando **Angular Material** como biblioteca principal de componentes de UI.
 
 El enfoque está centrado en garantizar una experiencia visual y de interacción consistente, accesible (**a11y**) y adaptable a cualquier dispositivo utilizado en campo u oficina.
 
@@ -118,7 +118,7 @@ La interfaz de **SumaqAgro** se adapta de forma fluida a las pantallas de teléf
 
 Para el **Landing Page**, la adaptabilidad se logra mediante *CSS Flexbox*, *CSS Grid* y *Media Queries* nativas.
 
-Para la **Web Application en Angular**, la maquetación se gestiona mediante directivas de diseño responsivo y librerías de componentes adaptables.
+Para la **Web Application en Angular**, la maquetación se gestiona mediante directivas de diseño responsivo y bibliotecas de componentes adaptables.
 
 ### Componentes y patrones compatibles
 
@@ -1341,10 +1341,10 @@ Durante la dinámica colaborativa, el equipo ejecutó las siguientes actividades
 ---
 
 #### Evidencia del Modelado en Miro
-A continuación se presenta la vista general del tablero desarrollado en Miro, evidenciando los 10 pasos de la metodología Design-Level Event Storming y la organización de los elementos de modelado por colores y categorías.
+A continuación se presenta la vista general del tablero desarrollado en Miro, evidenciando los 10 pasos de la técnica Design-Level Event Storming y la organización de los elementos de modelado por colores y categorías.
 #### Step 1: Domain Events
 ![event-storming-step-1-bainstrome.jpg](assets/img/chapter-4/domain-driven-design/event-storming-step-1-bainstrome.jpg)
-* Dentro de la metodología de Event Storming consiste en realizar una lluvia de ideas intensiva para capturar todos los acontecimientos relevantes que ocurren dentro del dominio del negocio.
+* Dentro de la técnica de Event Storming consiste en realizar una lluvia de ideas intensiva para capturar todos los acontecimientos relevantes que ocurren dentro del dominio del negocio.
 #### Step 2: Timelines
 ![event-storming-step-2-timelines.jpg](assets/img/chapter-4/domain-driven-design/event-storming-step-2-timelines.jpg)
 * El segundo paso de Event Storming transforma la lluvia de ideas caótica del Paso 1 en una narrativa operativa coherente, secuenciada cronológicamente de izquierda a derecha bajo el escenario principal o Happy Path.
@@ -1450,7 +1450,7 @@ La orquestación entre los contextos delimitados se rige por políticas eventual
 
 ### 4.6.2. Software Architecture Context Diagram
 
-En este apartado se presenta el Diagrama de Contexto del Sistema (Nivel 1 del modelo C4), el cual delimita las fronteras operativas y de software de la plataforma **SumaqAgro**, ubicándola como la solución central del ecosistema. A través de esta vista de alto nivel, se establecen los canales de comunicación y flujos de información que mantiene el sistema tanto con los distintos perfiles de usuario identificados en la investigación como con los servicios externos de terceros necesarios para la operación agrícola. Siguiendo los lineamientos de arquitectura y el enfoque *Diagram-as-Code* exigido para el proyecto, el modelado se desarrolló mediante la herramienta **Structurizr** a través de su especificación formal en Structurizr DSL.
+En esta sección se presenta el Diagrama de Contexto del Sistema (Nivel 1 del modelo C4), el cual delimita las fronteras operativas y de software de la plataforma **SumaqAgro**, ubicándola como la solución central del ecosistema. A través de esta vista de alto nivel, se establecen los canales de comunicación y flujos de información que mantiene el sistema tanto con los distintos perfiles de usuario identificados en la investigación como con los servicios externos de terceros necesarios para la operación agrícola. Siguiendo los lineamientos de arquitectura y el enfoque *Diagram-as-Code* exigido para el proyecto, el modelado se desarrolló mediante la herramienta **Structurizr** a través de su especificación formal en Structurizr DSL.
 
 ![C4 Model - Diagrama de Contexto del Sistema (Nivel 1)](assets/img/chapter-4/c4/c4-system-context-diagram.png)
 
@@ -1588,7 +1588,7 @@ El contenedor transaccional de backend, desarrollado en **Java 21 con Spring Boo
 
 ## 4.7. Software Object-Oriented Design
 
-En este apartado bajamos el diseño de arquitectura a un nivel más concreto de implementación técnica, traduciendo lo definido en el Event Storming y los componentes de Spring Boot hacia diagramas de clases UML para cada Bounded Context. El objetivo es estructurar cómo se organizan internamente los paquetes, las entidades del dominio, las raíces de agregado (Aggregate Roots), los objetos de valor (Value Objects), los controladores REST, los servicios de aplicación y los repositorios de persistencia.
+En esta sección bajamos el diseño de arquitectura a un nivel más concreto de implementación técnica, traduciendo lo definido en el Event Storming y los componentes de Spring Boot hacia diagramas de clases UML para cada Bounded Context. El objetivo es estructurar cómo se organizan internamente los paquetes, las entidades del dominio, las raíces de agregado (Aggregate Roots), los objetos de valor (Value Objects), los controladores REST, los servicios de aplicación y los repositorios de persistencia.
 
 Para mantener una arquitectura limpia y desacoplada, el diseño sigue los principios SOLID y las convenciones de Domain-Driven Design (DDD). De esta forma aseguramos que la lógica del negocio permanezca independiente de la infraestructura web o de la base de datos, facilitando el mantenimiento y las pruebas unitarias del software.
 
@@ -1958,12 +1958,6 @@ Para mantener la coherencia con el diseño guiado por el dominio (DDD) de la sec
   * **Índices satelitales:** Los valores de reflectancia foliar (NDVI y NDWI) usan `DECIMAL(5,4)`, cubriendo el rango de trabajo de -1.0000 a +1.0000.
 * **Manejo de Estados:** Los estados de negocio se guardan como cadenas `VARCHAR(20)` asociadas a los enums del backend (como `'ACTIVE'`, `'IN_PROGRESS'`, `'PENDING'` o `'CERTIFIED'`).
 * **Campos de Auditoría:** Las tablas principales incluyen las columnas `created_at` y `updated_at` de tipo `TIMESTAMP` para registrar automáticamente cuándo se crea o modifica cada fila.
-
----
-
-### 4.8.1. Database Diagrams
-
-A continuación, se presentan y explican los Database Diagrams elaborados en **Hackolade Studio** para la base de datos relacional sobre **MySQL 8.0**, gestionada y desplegada mediante **DataGrip**, agrupados de forma modular por cada uno de los 7 **Bounded Contexts** del dominio de negocio de SumaqAgro.
 
 ---
 
