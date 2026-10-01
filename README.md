@@ -1,9 +1,9 @@
 # SumaqAgro — Project Documentation Report
 
-[![Build Status](https://img.shields.io/badge/Docs--as--Code-Pandoc%20%7C%20XeLaTeX-blue.svg)](Makefile)
+[![Build Status](https://img.shields.io/badge/Docs--as--Code-Pandoc%20%7C%20XeLaTeX-blue.svg)](pandoc/Makefile)
 [![Course](https://img.shields.io/badge/UPC-1ASI0729%20Open%20Source-red.svg)](https://www.upc.edu.pe/)
 [![Milestone](https://img.shields.io/badge/Delivery-AV1%20Sprint%20Review-brightgreen.svg)](#tabla-de-contenidos---entregable-av1)
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE.md)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
 
 Repositorio oficial para la gestión, redacción colaborativa y compilación secuencial del **Informe de Proyecto Final** de la startup **Dymbia** y su plataforma SaaS **SumaqAgro**, desarrollado bajo el enfoque **Docs-as-Code**, GitFlow y Conventional Commits para el curso *1ASI0729 Desarrollo de Aplicaciones Open Source* (Ciclo 2026-20).
 
@@ -164,9 +164,8 @@ sumaqAgro-report/
 │   ├── build.ps1                        # .\pandoc\build.ps1 -Milestone tb1 (Windows)
 │   ├── filters/
 │   │   └── pdf.lua                      # Imágenes y tablas HTML → PDF
-│   ├── latex/
-│   │   └── preamble.tex                 # Ajustes LaTeX
-│   ├── templates/
+│   ├── pdf/
+│   │   ├── preamble.tex                 # Ajustes LaTeX
 │   │   └── toc.md                       # Posición de la tabla de contenidos
 │   └── build/                           # Salida del PDF (ignorada por Git)
 ├── report/                              # Contenido del informe
@@ -183,9 +182,11 @@ sumaqAgro-report/
 │   ├── 60-conclusions.md
 │   ├── 99-bibliography.md               # Prefijo 99: referencias APA
 │   ├── annexes/
-│   │   └── annex-a-videos.md
+│   │   ├── annex-a-student-outcome.md
+│   │   ├── annex-b-performance-report.md
+│   │   └── annex-c-videos.md
 │   └── assets/img/                      # Imágenes agrupadas por capítulo
-│       ├── chapter-1/                   # team/
+│       ├── chapter-1/                   # team/, lean-ux-canvas.png
 │       ├── chapter-2/                   # interviews/, personas, empathy y journey maps
 │       ├── chapter-3/                   # impact map, backlog
 │       ├── chapter-4/                   # c4/, class-diagrams/, database/, event-storming/,
@@ -195,7 +196,7 @@ sumaqAgro-report/
 │       └── upc-logo.png
 ├── CHANGELOG.md                         # Cambios por versión
 ├── CONTRIBUTING.md                      # GitFlow, Conventional Commits y compilación
-├── LICENSE.md                           # CC BY-NC-SA 4.0
+├── LICENSE.md                           # MIT
 └── README.md                            # Portada digital e índice navegable
 ```
 

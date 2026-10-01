@@ -1,7 +1,9 @@
 # =====================================================================
 # Pandoc defaults — Informe del Trabajo Final (Docs-as-Code)
-# Uso:  pandoc --defaults=pandoc/build.yaml -o dist/<nombre>.pdf
-#       (o simplemente `make pdf` / `./build.ps1`)
+# Uso:  pandoc --defaults=pandoc/build.yaml -o pandoc/build/<nombre>.pdf
+#       (o simplemente `make -C pandoc pdf` / `.\pandoc\build.ps1`)
+# Las rutas usan ${.} (carpeta de este archivo), así funciona desde
+# cualquier directorio de trabajo.
 # =====================================================================
 
 # Markdown estilo GitHub + HTML embebido.
@@ -13,36 +15,36 @@
 from: markdown+raw_html+pipe_tables+lists_without_preceding_blankline-yaml_metadata_block-blank_before_header-markdown_in_html_blocks-implicit_figures
 
 metadata-files:
-  - metadata.yaml
+  - ${.}/metadata.yaml
 
 # El ORDEN de esta lista es el orden del PDF (estructura del enunciado).
 # La carátula del PDF es report/front-matter/01-caratula.md (misma que en GitHub).
 input-files:
-  - report/front-matter/01-caratula.md
-  - report/front-matter/02-version-history.md
-  - report/front-matter/03-collaboration.md
-  - pandoc/pdf/toc.md                          # "Contenido" (tabla de contenidos)
-  - report/front-matter/04-student-outcome.md
-  - report/10-chapter-1-intro.md
-  - report/20-chapter-2-requirements.md
-  - report/30-chapter-3-specification.md
-  - report/40-chapter-4-design.md
-  - report/50-chapter-5-implementation.md
-  - report/60-conclusions.md
-  - report/99-bibliography.md
-  - report/annexes/annex-c-videos.md
+  - ${.}/../report/front-matter/01-caratula.md
+  - ${.}/../report/front-matter/02-version-history.md
+  - ${.}/../report/front-matter/03-collaboration.md
+  - ${.}/pdf/toc.md                     # "Contenido" (tabla de contenidos)
+  - ${.}/../report/front-matter/04-student-outcome.md
+  - ${.}/../report/10-chapter-1-intro.md
+  - ${.}/../report/20-chapter-2-requirements.md
+  - ${.}/../report/30-chapter-3-specification.md
+  - ${.}/../report/40-chapter-4-design.md
+  - ${.}/../report/50-chapter-5-implementation.md
+  - ${.}/../report/60-conclusions.md
+  - ${.}/../report/99-bibliography.md
+  - ${.}/../report/annexes/annex-c-videos.md
 
 # Las imágenes se escriben relativas a report/ (assets/img/...), igual que en GitHub
 resource-path:
-  - "report"
-  - "report/front-matter"
-  - "."
+  - "${.}/../report"
+  - "${.}/../report/front-matter"
+  - "${.}/.."
 
 filters:
-  - pandoc/filters/pdf.lua
+  - ${.}/filters/pdf.lua
 
 include-in-header:
-  - pandoc/pdf/preamble.tex
+  - ${.}/pdf/preamble.tex
 
 pdf-engine: xelatex
 toc: false            # la tabla de contenidos la inserta pandoc/pdf/toc.md en su lugar
