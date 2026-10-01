@@ -7,6 +7,7 @@
 Para garantizar una colaboración fluida y estandarizada a lo largo del ciclo de vida del producto digital **SumaqAgro**, el equipo ha definido y configurado un entorno de desarrollo integrado. Este conjunto de herramientas abarca las seis categorías fundamentales exigidas por la metodología del proyecto: *Project Management*, *Requirements Management*, *Product UX/UI Design*, *Software Development*, *Software Deployment* y *Software Documentation*. A continuación, se detalla la caracterización técnica de cada herramienta utilizada, su propósito específico en el proyecto y las rutas oficiales de acceso o descarga.
 
 ---
+
 #### 1. Project Management
 
 ##### **Jira Software**
@@ -236,14 +237,14 @@ Se adoptan la **HTML Style Guide and Coding Conventions**, la **Google HTML/CSS 
 
 #### Convenciones CSS3 / SASS
 * **Nomenclatura BEM (Block Element Modifier):** Para la organización de clases CSS y evitar colisiones de estilos, se aplica la convención BEM con identificadores en inglés:
-    * `Block`: Representa la entidad principal independiente (ej. `.card`, `.navbar`).
-    * `Element`: Componente dependiente del bloque (ej. `.card__title`, `.navbar__item`).
-    * `Modifier`: Variante de estado o apariencia (ej. `.card__button--accent`, `.navbar__link--active`).
+  * `Block`: Representa la entidad principal independiente (ej. `.card`, `.navbar`).
+  * `Element`: Componente dependiente del bloque (ej. `.card__title`, `.navbar__item`).
+  * `Modifier`: Variante de estado o apariencia (ej. `.card__button--accent`, `.navbar__link--active`).
 * **Propiedades CSS Ordenadas:** Las declaraciones dentro de una regla CSS deben ordenarse siguiendo la estructura:
-    1. Posicionamiento (`position`, `top`, `z-index`).
-    2. Modelo de Caja (`display`, `flex`, `grid`, `width`, `padding`, `margin`).
-    3. Tipografía (`font-family`, `font-size`, `color`, `text-align`).
-    4. Visuales y Efectos (`background-color`, `border`, `box-shadow`, `opacity`).
+  1. Posicionamiento (`position`, `top`, `z-index`).
+  2. Modelo de Caja (`display`, `flex`, `grid`, `width`, `padding`, `margin`).
+  3. Tipografía (`font-family`, `font-size`, `color`, `text-align`).
+  4. Visuales y Efectos (`background-color`, `border`, `box-shadow`, `opacity`).
 * **Uso de Variables:** Se centralizan los colores corporativos, tipografías y espaciados mediante variables CSS/SASS (`:root` o `_variables.scss`), prohibiendo el uso de colores en formato hexadecimal directamente en las hojas de estilo de los componentes.
 
 #### Convenciones JavaScript (Vanilla JS para scripts dinámicos en la Landing Page)
@@ -306,8 +307,8 @@ La estructura del paquete base sigue la nomenclatura de dominio inverso en minú
 * **Uso de DTOs (Data Transfer Objects):** La capa REST no debe exponer directamente entidades `@Entity` de JPA. Se exige el uso de patrones DTO (`Record` en Java 21) para las peticiones (`RequestDTO`) y respuestas (`ResponseDTO`).
 * **Anotaciones Lombok:** Se requiere el uso de `@Getter`, `@Setter`, `@Builder` y `@RequiredArgsConstructor` para reducir la verbosidad de métodos accesores y constructores.
 * **Diseño de Endpoints RESTful:**
-    * URIs en minúsculas, plurales, en idioma inglés y versionadas: `/api/v1/parcels`, `/api/v1/certificates`.
-    * Verbos HTTP adecuados: `GET` (lectura), `POST` (creación), `PUT` (actualización completa), `DELETE` (eliminación).
+  * URIs en minúsculas, plurales, en idioma inglés y versionadas: `/api/v1/parcels`, `/api/v1/certificates`.
+  * Verbos HTTP adecuados: `GET` (lectura), `POST` (creación), `PUT` (actualización completa), `DELETE` (eliminación).
 * **Manejo Global de Excepciones:** Se implementa la anotación `@RestControllerAdvice` para capturar excepciones de negocio y retornar respuestas estructuradas bajo el estándar RFC 7807 (*Problem Details for HTTP APIs*) con el código de estado HTTP correspondiente.
 
 ---
@@ -320,9 +321,9 @@ Se adopta la convención **Gherkin Conventions for Readable Specifications** par
 #### Reglas de Redacción de Escenarios
 * **Estructura Declarativa:** Los escenarios deben redactarse con una sintaxis orientada al comportamiento del usuario (*behavior-driven*) y no a los detalles técnicos de la interfaz gráfica (evitar expresiones como "hacer clic en el botón X").
 * **Palabras Clave Estándar:** Cada escenario debe articularse estrictamente con los conectores BDD en español:
-    * **`Dado que` (`Given`):** Establece las precondiciones y el contexto inicial del sistema.
-    * **`Cuando` (`When`):** Describe la acción o evento desencadenante ejecutado por el actor.
-    * **`Entonces` (`Then`):** Especifica el resultado esperado, la respuesta del sistema o el cambio de estado observable.
+  * **`Dado que` (`Given`):** Establece las precondiciones y el contexto inicial del sistema.
+  * **`Cuando` (`When`):** Describe la acción o evento desencadenante ejecutado por el actor.
+  * **`Entonces` (`Then`):** Especifica el resultado esperado, la respuesta del sistema o el cambio de estado observable.
 * **Atomicidad y Claridad:** Cada escenario debe probar una única regla de negocio o flujo alternativo (un escenario por cada caso de éxito o fallo principal).
 
 ---
@@ -387,7 +388,7 @@ Se finaliza la configuración haciendo clic en **"Save and Deploy"**.
 
 Cloudflare Pages inicia automáticamente el pipeline de entrega continua: clona el código fuente desde GitHub, valida la estructura de archivos estáticos (HTML/CSS/JS/Assets) y distribuye los artefactos en los más de 300 centros de datos de su red Edge global.
 
-![Paso 7](assets/img/chapter-V/deployment-configuration/step-7.png) 
+![Paso 7](assets/img/chapter-V/deployment-configuration/step-7.png)
 
 ##### Paso 8: Confirmación de despliegue exitoso y dominio público HTTPS
 
@@ -533,7 +534,7 @@ En esta sección se presenta la evidencia visual y funcional de los productos de
 
 A continuación, se adjuntan las capturas de pantalla de las vistas principales implementadas, demostrando la alta fidelidad de la interfaz construida respecto a los *mock-ups* originales definidos en la etapa de diseño:
 
-**Evidencia Visual: Capturas de Pantalla (Desktop y Mobile)** 
+**Evidencia Visual: Capturas de Pantalla (Desktop y Mobile)**
 
 **Desktop View:**
 

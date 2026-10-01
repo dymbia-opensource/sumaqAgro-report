@@ -59,9 +59,9 @@ La interfaz web utilizará una paleta de colores basada principalmente en tonos 
 - **Navegación:** el menú lateral mantendrá una apariencia clara, utilizando fondo blanco y colores verdes o teal para identificar opciones seleccionadas, iconos y elementos interactivos.
 
 - **Estados del sistema:** se utilizarán colores específicos para comunicar información importante:
-    - **Rojo:** errores, acciones incorrectas o situaciones que requieren atención inmediata.
-    - **Amarillo:** advertencias o situaciones que necesitan precaución.
-    - **Verde:** estados correctos, disponibles, saludables o confirmaciones exitosas.
+  - **Rojo:** errores, acciones incorrectas o situaciones que requieren atención inmediata.
+  - **Amarillo:** advertencias o situaciones que necesitan precaución.
+  - **Verde:** estados correctos, disponibles, saludables o confirmaciones exitosas.
 
 - **Contraste y legibilidad:** los colores oscuros serán utilizados principalmente para textos y elementos destacados, mientras que los tonos claros servirán como fondos y superficies, buscando mantener un contraste adecuado y una lectura sencilla en toda la aplicación.
 
@@ -460,17 +460,17 @@ La navegación en **SumaqAgro** está diseñada para facilitar el recorrido del 
 Además, en la aplicación web se implementa un menú lateral fijo (sidenav) organizado por categorías principales, el cual permite el acceso directo a las funcionalidades de gestión y monitoreo del sistema:
 
 - **Principal:**
-    - **Mi Parcela:** Vista del panel general del predio.
+  - **Mi Parcela:** Vista del panel general del predio.
 - **Operación agrícola:**
-    - **Salud del Cultivo:** Visor con mapas de vigor foliar y métricas del predio.
-    - **Mis Gastos y Ganancias:** Gestión contable e historial financiero de campaña.
-    - **Consulta al Asesor:** Canal directo de atención fitosanitaria y recetas técnicas.
-    - **Mis Certificados de Cosecha:** Emisión y consulta de certificados trazables con QR.
+  - **Salud del Cultivo:** Visor con mapas de vigor foliar y métricas del predio.
+  - **Mis Gastos y Ganancias:** Gestión contable e historial financiero de campaña.
+  - **Consulta al Asesor:** Canal directo de atención fitosanitaria y recetas técnicas.
+  - **Mis Certificados de Cosecha:** Emisión y consulta de certificados trazables con QR.
 - **Sistema:**
-    - **Alertas Agrícolas:** Centro de avisos de riesgo y boletín fitosanitario.
-    - **Configuración y Ayuda:** Ajustes de la cuenta, datos de parcelas y soporte.
-    - **Modo Sin Conexión:** Estado operativo para sincronización de datos en campo.
-    - **Cerrar Sesión:** Salida segura de la plataforma.
+  - **Alertas Agrícolas:** Centro de avisos de riesgo y boletín fitosanitario.
+  - **Configuración y Ayuda:** Ajustes de la cuenta, datos de parcelas y soporte.
+  - **Modo Sin Conexión:** Estado operativo para sincronización de datos en campo.
+  - **Cerrar Sesión:** Salida segura de la plataforma.
 
 Cada sección está representada con un ícono claro y una etiqueta visible, asegurando una navegación fluida e intuitiva dentro de la consola de trabajo.
 
@@ -560,7 +560,7 @@ En la vista móvil (**Mobile Web Browser**) de las secciones comerciales y funci
 
 <p align="center">
   <img src="assets/img/chapter-IV/landing-page/wireframe/mobile/wireframe-mobile-help.png" alt="wireframe-testimonials-impact-footer" width="600px" height="auto"/>
- 
+
 </p>
 <p align="center">
   <img src="assets/img/chapter-IV/landing-page/wireframe/mobile/wireframe-mobile-solutions.png" alt="wireframe-testimonials-impact-footer" width="592px" height="auto"/>
@@ -774,7 +774,7 @@ Para construir un wireflow, primero se identifica el objetivo que el usuario des
 
 **User Goal 1:** Usuario desea registrarse en la aplicación
 
-Flujo normal: 
+Flujo normal:
 <p align="center">
   <img src="assets/img/chapter-IV/wireflows/ug-1-resumido.png"  width="600px" height="auto"/>
 </p>
@@ -874,7 +874,7 @@ El flujo de interacción se inicia en el módulo «Visor Satelital Multispectral
 En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**, los cuales representan de manera visual y detallada las principales funcionalidades de la solución. Estos diseños fueron elaborados tomando como base los wireframes desarrollados previamente, permitiendo definir con mayor precisión la estructura, distribución de elementos, estilos visuales y flujo de interacción de la interfaz antes de su implementación final.
 
 
-### LOGIN / REGISTER 
+### LOGIN / REGISTER
 
 <p align="center">
   <img src="assets/img/chapter-IV/applications-design/mockups/desktop/mockup-app-login.png"  width="600px" height="auto"/>
@@ -1093,8 +1093,8 @@ Para cada User Goal se modela la ruta de éxito principal (*happy path*) junto c
 * **Happy Path (Ruta de éxito esperada):**
   1. El agricultor navega a la sección *Finanzas de la Campaña* y presiona el botón interactivo **"+ Anotar Nuevo Gasto"** ubicado en la cabecera superior.
   2. La plataforma lo dirige al formulario estructurado *Registrar Gasto de Campo*:
-    * **Paso 1:** Selecciona el tipo de costo operativo mediante chips de selección rápida (`Insumos y Abono`, `Mano de Obra / Jornal` o `Flete`).
-    * **Paso 2:** Selecciona la parcela asignada (`Fundo Los Pinos`), digita el nombre del insumo o labor, especifica la cantidad, introduce el monto total pagado en soles (`S/ 1,240.00`), la fecha de desembolso y, de forma opcional, adjunta el número de comprobante o recibo y notas adicionales de campo.
+  * **Paso 1:** Selecciona el tipo de costo operativo mediante chips de selección rápida (`Insumos y Abono`, `Mano de Obra / Jornal` o `Flete`).
+  * **Paso 2:** Selecciona la parcela asignada (`Fundo Los Pinos`), digita el nombre del insumo o labor, especifica la cantidad, introduce el monto total pagado en soles (`S/ 1,240.00`), la fecha de desembolso y, de forma opcional, adjunta el número de comprobante o recibo y notas adicionales de campo.
   3. El usuario pulsa el botón **"Guardar Gasto"**. El sistema valida la integridad de los datos monetarios y registra el asiento en el backend transaccional.
   4. La aplicación superpone la ventana modal de confirmación *Registro Gasto de Campo Exitoso* con check circular verde, resumiendo el desglose: concepto guardado, fecha y monto final (`S/ 1,240.00`).
   5. Al hacer clic en **"Regresar a registrar gastos"** o volver al panel principal, el nuevo registro se incorpora a la tabla del *Historial de desembolsos registrados*, actualizando automáticamente el Total Gastado y recalculando el **Precio Mínimo de Venta** por saco para no incurrir en pérdidas comerciales.
@@ -1141,7 +1141,7 @@ La navegación interactiva traduce de manera directa las decisiones de Arquitect
 
 ##### Demostración Audiovisual en Microsoft Stream (Desktop)
 
-* **Plataforma de Alojamiento:** Microsoft Stream 
+* **Plataforma de Alojamiento:** Microsoft Stream
 * **Nombre del Video (Nomenclatura Oficial):** `upc-pre-202620-1asi0729-7742-dymbia-prototype-desktop-sprint-1.mp4`
 * **Duración:** 04:15 minutos
 * **Enlace de Reproducción:** [Reproducir Demostración Desktop en Microsoft Stream](https://goo.su/MEGQ9O9)
@@ -1159,7 +1159,7 @@ La navegación interactiva traduce de manera directa las decisiones de Arquitect
 
 ##### Demostración Audiovisual en Microsoft Stream (Mobile)
 
-* **Plataforma de Alojamiento:** Microsoft Stream 
+* **Plataforma de Alojamiento:** Microsoft Stream
 * **Nombre del Video (Nomenclatura Oficial):** `upc-pre-202620-1asi0729-7742-dymbia-prototype-mobile-sprint-1.mp4`
 * **Duración:** 04:30 minutos
 * **Enlace de Reproducción:** [Reproducir Demostración Mobile en Microsoft Stream](https://goo.su/XRcWU)
@@ -1170,6 +1170,7 @@ La navegación interactiva traduce de manera directa las decisiones de Arquitect
 En esta sección se traslada la comprensión del negocio obtenida en el Big Picture Event Storming hacia el diseño de arquitectura de software guiado por el dominio (Domain-Driven Design - DDD) y el modelo de abstracción y comunicación visual C4 Model en sus niveles de Contexto, Contenedores y Componentes. A través de esta aproximación arquitectónica, se divide el espacio del problema en Bounded Contexts independientes y de bajo acoplamiento, estableciendo sus agregados transaccionales (Aggregates), comandos, eventos de dominio, modelos de consulta (Read Models) y políticas de automatización reactivas. Asimismo, se formaliza la topología técnica y modular de la solución distribuida, articulando la aplicación web de cara al usuario, el servicio de backend RESTful en Spring Boot, la base de datos relacional y las interfaces de integración con servicios externos.
 
 ---
+
 ### 4.6.1. Design-Level Event Storming
 El equipo llevó a cabo una sesión sincrónica de trabajo colaborativo en Miro siguiendo las pautas metodológicas de la guía Design-Level EventStorming (<https://bit.ly/dles-guide>). La dinámica se enfocó en profundizar y refinar el modelo general del dominio de las cadenas de café de especialidad y papa andina, definiendo las reglas de invariante transaccional y la mecánica de ejecución del sistema.
 
@@ -1185,6 +1186,7 @@ Durante la dinámica colaborativa, el equipo ejecutó las siguientes actividades
 * **Definición de reglas de negocio e invariantes (Aggregates - Amarillo):** Agrupación de datos y comportamientos transaccionales atómicos bajo raíces de agregación (Aggregate Roots) para garantizar la consistencia del estado del sistema en todo momento.
 
 ---
+
 #### Evidencia del Modelado en Miro
 A continuación se presenta la vista general del tablero desarrollado en Miro, evidenciando los 10 pasos de la metodología Design-Level Event Storming y la organización de los elementos de modelado por colores y categorías.
 #### Step 1: Domain Events
@@ -1220,6 +1222,7 @@ A continuación se presenta la vista general del tablero desarrollado en Miro, e
 * **Enlace interactivo al espacio de trabajo:** [Tablero de Event Storming en Miro](https://miro.com/welcomeonboard/WG5aQ1R0dmR5b0xQWTI5TEZvaXplRmpPTUxmT2pmR1NNVXBVakcxRFI5Yk16dVY3TXpRc0RwbHVKNWFndGJvZDZkZXJrbkN4VFZQdzhHTjV6MWdBNUJtQnhYMVFmcjNLbkxyOWQwZlVuWHVPRUdrWUJzeGVtb1g5cE9UeGFKdjJBd044SHFHaVlWYWk0d3NxeHNmeG9BPT0hdjE=?share_link_id=126689221129)
 
 ---
+
 #### Alineación con Subdominios SaaS y Bounded Contexts
 
 Considerando la estructura de subdominios recomendada para plataformas SaaS de servicios (gestión de identidades, suscripciones, recursos, ejecución de servicios y analítica) y adaptándola al *Ubiquitous Language* de la cadena de valor agroalimentaria, el dominio se estructuró en 7 Bounded Contexts:
@@ -1227,59 +1230,62 @@ Considerando la estructura de subdominios recomendada para plataformas SaaS de s
 **1. Identity & Access Management (IAM) Context (Generic Subdomain)**
 * **Responsabilidad:** Administrar el ciclo de vida de identidades, perfiles, asignación de roles institucionales y provisión de credenciales seguras mediante tokens criptográficos JWT.
 * **Agregado `UserAccount`:**
-    * *Commands:* `CreateProducerAccount`, `RegisterCooperativeAccount`, `UpdateUserProfile`, `AssignCooperativeRole`, `InviteAgronomistToCooperative`.
-    * *Events:* `ProducerAccountCreated`, `CooperativeAccountRegistered`, `UserProfileUpdated`, `CooperativeRoleAssigned`, `AgronomistInvitationSent`.
-    * *Read Models:* `UserProfileDashboard`, `CooperativeMemberDirectory`.
+  * *Commands:* `CreateProducerAccount`, `RegisterCooperativeAccount`, `UpdateUserProfile`, `AssignCooperativeRole`, `InviteAgronomistToCooperative`.
+  * *Events:* `ProducerAccountCreated`, `CooperativeAccountRegistered`, `UserProfileUpdated`, `CooperativeRoleAssigned`, `AgronomistInvitationSent`.
+  * *Read Models:* `UserProfileDashboard`, `CooperativeMemberDirectory`.
 
 **2. Subscriptions & Payments Context (Generic Subdomain)**
 * **Responsabilidad:** Controlar la monetización SaaS, selección de planes comerciales (Semilla, Cooperativa Pro, Asesor Técnico), validación de transacciones y cuotas activas de parcelas.
 * **Agregado `Subscription`:**
-    * *Commands:* `SelectSubscriptionPlan`, `SubmitPaymentTransaction`, `ActivateSubscriptionPro`, `CancelSubscriptionPlan`.
-    * *Events:* `SubscriptionPlanSelected`, `PaymentTransactionProcessed`, `SubscriptionProActivated`, `SubscriptionPlanCancelled`.
-    * *Read Models:* `PricingCatalogView`, `BillingStatusLedger`.
-    * *External System:* Stripe / Niubiz Payment Gateway.
+  * *Commands:* `SelectSubscriptionPlan`, `SubmitPaymentTransaction`, `ActivateSubscriptionPro`, `CancelSubscriptionPlan`.
+  * *Events:* `SubscriptionPlanSelected`, `PaymentTransactionProcessed`, `SubscriptionProActivated`, `SubscriptionPlanCancelled`.
+  * *Read Models:* `PricingCatalogView`, `BillingStatusLedger`.
+  * *External System:* Stripe / Niubiz Payment Gateway.
 
 **3. Plot & Crop Management Context (Supporting Subdomain)**
 * **Responsabilidad:** Administrar la georreferenciación física de fundos y parcelas mediante coordenadas perimetrales continuas (polígonos GPS), caracterización de suelo e inicio fenológico.
 * **Agregado `FieldPlot`:**
-    * *Commands:* `RegisterFieldPlot`, `DelineatePerimeterCoordinates`, `RecordSoilBaseline`, `SelectCropType`, `SpecifySeedVariety`, `RecordSowingDate`.
-    * *Events:* `FieldPlotRegistered`, `PerimeterCoordinatesDelineated`, `SoilBaselineRecorded`, `CropTypeSelected`, `SeedVarietySpecified`, `SowingDateRecorded`.
-    * *Read Models:* `CadastralGISMap`, `CropPhenologyTimeline`.
-    * *External System:* MIDAGRI Padrón de Productores (PPA) API.
+  * *Commands:* `RegisterFieldPlot`, `DelineatePerimeterCoordinates`, `RecordSoilBaseline`, `SelectCropType`, `SpecifySeedVariety`, `RecordSowingDate`.
+  * *Events:* `FieldPlotRegistered`, `PerimeterCoordinatesDelineated`, `SoilBaselineRecorded`, `CropTypeSelected`, `SeedVarietySpecified`, `SowingDateRecorded`.
+  * *Read Models:* `CadastralGISMap`, `CropPhenologyTimeline`.
+  * *External System:* MIDAGRI Padrón de Productores (PPA) API.
 
 **4. Satellite Analytics & Alerting Context (Core Subdomain)**
 * **Responsabilidad:** Orquestar la observación terrestre multiespectral mediante Sentinel-2 para deducir vigor foliar (NDVI) y estrés hídrico (NDWI), despachar alertas preventivas y gestionar recetas técnicas de campo.
 * **Agregado `VegetationAnalysis`:**
-    * *Commands:* `FetchMultispectralTiles`, `ComputeVegetationIndexes`, `TriggerAgroclimaticAlert`, `UploadPestEvidencePhoto`, `ScheduleFieldInspection`, `RecordDamageAssessment`, `IssueTechnicalPrescription`, `ConfirmTreatmentApplication`.
-    * *Events:* `MultispectralTilesIngested`, `NDVIIndexComputed`, `NDWIIndexComputed`, `VegetationAnomalyDetected`, `AgroclimaticAlertDispatched`, `PestEvidencePhotoUploaded`, `FieldInspectionScheduled`, `DamageAssessmentRecorded`, `TechnicalPrescriptionIssued`, `TreatmentApplicationConfirmed`.
-    * *Read Models:* `SatelliteVegetationMap`, `MultispectralIndexDashboard`, `PhytosanitaryDiagnosisInbox`.
-    * *External Systems:* Sentinel-2 Open Access API (ESA), SENAMHI Weather API, Twilio SMS / WhatsApp Gateway.
+  * *Commands:* `FetchMultispectralTiles`, `ComputeVegetationIndexes`, `TriggerAgroclimaticAlert`, `UploadPestEvidencePhoto`, `ScheduleFieldInspection`, `RecordDamageAssessment`, `IssueTechnicalPrescription`, `ConfirmTreatmentApplication`.
+  * *Events:* `MultispectralTilesIngested`, `NDVIIndexComputed`, `NDWIIndexComputed`, `VegetationAnomalyDetected`, `AgroclimaticAlertDispatched`, `PestEvidencePhotoUploaded`, `FieldInspectionScheduled`, `DamageAssessmentRecorded`, `TechnicalPrescriptionIssued`, `TreatmentApplicationConfirmed`.
+  * *Read Models:* `SatelliteVegetationMap`, `MultispectralIndexDashboard`, `PhytosanitaryDiagnosisInbox`.
+  * *External Systems:* Sentinel-2 Open Access API (ESA), SENAMHI Weather API, Twilio SMS / WhatsApp Gateway.
 
 **5. Field Cost Accounting Context (Core Subdomain)**
 * **Responsabilidad:** Proveer una bitácora contable rural para asentar compras de insumos, jornales diarios y fletes (con soporte de persistencia local desconectada), determinando el costo unitario por lote y el punto de equilibrio financiero.
 * **Agregado `LotFinancialLedger`:**
-    * *Commands:* `RecordAgrochemicalExpense`, `RecordDailyLaborExpense`, `RecordFieldFreightExpense`, `LogOfflineFieldExpense`, `SynchronizeFieldLedger`, `ConsolidateLotExpenses`, `CalculateBreakevenPrice`.
-    * *Events:* `AgrochemicalExpenseRecorded`, `DailyLaborExpenseRecorded`, `FieldFreightExpenseRecorded`, `OfflineFieldExpenseLogged`, `FieldLedgerSynchronized`, `TotalLotInvestmentCalculated`, `BreakevenPriceCalculated`.
-    * *Read Models:* `LotExpenseLogView`, `BreakevenAnalysisReport`.
+  * *Commands:* `RecordAgrochemicalExpense`, `RecordDailyLaborExpense`, `RecordFieldFreightExpense`, `LogOfflineFieldExpense`, `SynchronizeFieldLedger`, `ConsolidateLotExpenses`, `CalculateBreakevenPrice`.
+  * *Events:* `AgrochemicalExpenseRecorded`, `DailyLaborExpenseRecorded`, `FieldFreightExpenseRecorded`, `OfflineFieldExpenseLogged`, `FieldLedgerSynchronized`, `TotalLotInvestmentCalculated`, `BreakevenPriceCalculated`.
+  * *Read Models:* `LotExpenseLogView`, `BreakevenAnalysisReport`.
 
 **6. Harvest Quality & Certification Context (Core Subdomain)**
 * **Responsabilidad:** Controlar la recolección, pesaje formal de acopio, calificación de calibres de tubérculo (MIDAGRI) y protocolos de catación sensorial SCA, emitiendo certificados digitales inmutables con código QR público.
 * **Agregado `HarvestBatch`:**
-    * *Commands:* `RegisterHarvestYield`, `WeighDeliveredLot`, `ExtractRepresentativeSample`, `GradePotatoCaliber`, `PerformCoffeeCuppingSCA`, `AssignQualityScore`, `GenerateDigitalQualityCertificate`, `VerifyLotTraceability`.
-    * *Events:* `HarvestYieldRegistered`, `DeliveredLotWeighed`, `RepresentativeSampleExtracted`, `PotatoCaliberGraded`, `CoffeeCuppingCompleted`, `QualityScoreAssigned`, `DigitalQualityCertificateGenerated`, `TraceabilityQRCodeCreated`, `LotTraceabilityVerified`.
-    * *Read Models:* `HarvestGradingSheet`, `PublicTraceabilityQRView`.
-    * *External System:* Public QR Verification Gateway.
+  * *Commands:* `RegisterHarvestYield`, `WeighDeliveredLot`, `ExtractRepresentativeSample`, `GradePotatoCaliber`, `PerformCoffeeCuppingSCA`, `AssignQualityScore`, `GenerateDigitalQualityCertificate`, `VerifyLotTraceability`.
+  * *Events:* `HarvestYieldRegistered`, `DeliveredLotWeighed`, `RepresentativeSampleExtracted`, `PotatoCaliberGraded`, `CoffeeCuppingCompleted`, `QualityScoreAssigned`, `DigitalQualityCertificateGenerated`, `TraceabilityQRCodeCreated`, `LotTraceabilityVerified`.
+  * *Read Models:* `HarvestGradingSheet`, `PublicTraceabilityQRView`.
+  * *External System:* Public QR Verification Gateway.
 
 **7. Commercial Settlement Context (Core Subdomain)**
 * **Responsabilidad:** Publicar lotes certificados en el catálogo comercial, gestionar las posturas de oferta de compradores mayoristas y liquidar la venta garantizando un margen por encima del costo de producción.
 * **Agregado `CommercialSettlement`:**
-    * *Commands:* `SetBaseSettlementPrice`, `PublishCertifiedLot`, `SubmitPurchaseOffer`, `AcceptLotSaleAndLiquidate`, `CalculateFinalNetMargin`.
-    * *Events:* `BaseSettlementPriceSet`, `CertifiedLotPublished`, `PurchaseOfferReceived`, `LotSaleRegistered`, `NetIncomeCalculated`.
-    * *Read Models:* `CertifiedLotCatalog`, `CommercialSettlementLedger`.
+  * *Commands:* `SetBaseSettlementPrice`, `PublishCertifiedLot`, `SubmitPurchaseOffer`, `AcceptLotSaleAndLiquidate`, `CalculateFinalNetMargin`.
+  * *Events:* `BaseSettlementPriceSet`, `CertifiedLotPublished`, `PurchaseOfferReceived`, `LotSaleRegistered`, `NetIncomeCalculated`.
+  * *Read Models:* `CertifiedLotCatalog`, `CommercialSettlementLedger`.
 
 ---
+
 #### Políticas de Automatización Reactivas (Policies)
+
 La orquestación entre los contextos delimitados se rige por políticas eventuales bajo el estándar *Whenever [Domain Event] Then [Command]*:
+
 * **P1:** `Whenever ProducerAccountCreated Then SelectSubscriptionPlan`
 * **P2:** `Whenever SubscriptionProActivated Then RegisterFieldPlot`
 * **P3:** `Whenever SowingDateRecorded Then FetchMultispectralTiles`
@@ -1314,6 +1320,7 @@ El diagrama sitúa en el centro a **SumaqAgro Platform**, plataforma web distrib
 * **Public QR Verification Gateway:** Punto de acceso web público y liviano que resuelve las peticiones de validación iniciadas por los compradores mayoristas al escanear los códigos QR, certificando la autenticidad e inmutabilidad del lote evaluado.
 
 ---
+
 ### 4.6.3. Software Architecture Container Diagrams
 
 En esta sección se presenta y describe el Diagrama de Contenedores (Nivel 2 del modelo C4) de la plataforma **SumaqAgro**, el cual profundiza en la frontera del sistema para exponer su arquitectura técnica distribuida. Este diagrama muestra las unidades de despliegue y ejecución independientes que componen la solución, la distribución de responsabilidades entre ellas, las principales decisiones de tecnología adoptadas y los protocolos de red empleados para la comunicación interna y con sistemas externos. El modelado fue estructurado y generado formalmente mediante la especificación DSL de la herramienta **Structurizr**.
@@ -1342,6 +1349,7 @@ La topología de ejecución del sistema está conformada por cuatro contenedores
 * **Cliente Web a Backend:** La Single Page Application consume la lógica de negocio y envía datos locales sincronizados mediante llamadas asíncronas RESTful sobre HTTPS, transmitiendo datos estructurados en formato JSON protegidos con tokens de autorización Bearer JWT.
 * **Backend a Base de Datos:** Las operaciones transaccionales y de persistencia de los agregados se ejecutan directamente a través de una conexión TCP protegida sobre el puerto 3306 mediante el controlador JDBC de MySQL.
 * **Backend a Servicios Externos:** Las consultas salientes hacia Sentinel-2 API, SENAMHI Weather API, Twilio Gateway, Stripe/Niubiz y MIDAGRI PPA se realizan mediante clientes HTTP desacoplados bajo peticiones seguras HTTPS/JSON.
+
 ---
 
 ### 4.6.4. Software Architecture Components Diagrams
@@ -1422,6 +1430,7 @@ El contenedor transaccional de backend, desarrollado en **Java 21 con Spring Boo
 * **Capa de Persistencia (Spring Data JPA Repositories):**
   Interfaces que extienden de `JpaRepository` para mapear los agregados hacia las tablas de la base de datos MySQL 8.0 vía JDBC sobre el puerto TCP 3306:
   * `UserAccountRepository`, `SubscriptionRepository`, `FieldPlotRepository`, `VegetationAnalysisRepository`, `CostLedgerRepository`, `HarvestBatchRepository` y `CommercialSettlementRepository`.
+
 ---
 
 ## 4.7. Software Object-Oriented Design
@@ -1448,28 +1457,28 @@ El Bounded Context de Identity & Access Management modela la gestión de identid
 
 * **`UserAccount` (Aggregate Root):**
   Constituye la raíz de consistencia transaccional del contexto, protegiendo las invariantes asociadas al ciclo de vida de la cuenta.
-    * **Atributos privados:**
-        * `- id: Long`: Identificador único secuencial de la entidad dentro de la base de datos.
-        * `- fullName: String`: Nombre completo o razón social del titular registrado.
-        * `- isActive: Boolean`: Bandera booleana que determina si la cuenta se encuentra habilitada para iniciar sesión.
-        * `- registeredAt: LocalDateTime`: Marca temporal de auditoría que registra la fecha y hora de creación.
-        * `- email: Email`: Objeto de valor que resguarda la dirección de correo validada.
-        * `- password: PasswordHash`: Objeto de valor que almacena el hash criptográfico de la clave de acceso.
-    * **Métodos públicos:**
-        * `+ UserAccount(fullName: String, email: Email, password: PasswordHash)`: Constructor que inicializa una cuenta activa con fecha actual.
-        * `+ activate(): void`: Cambia el estado de `isActive` a verdadero.
-        * `+ deactivate(): void`: Inhabilita la cuenta para bloquear accesos transaccionales.
-        * `+ assignRole(role: Role): void`: Vincula un nuevo rol institucional a la colección interna del usuario.
-        * `+ removeRole(role: Role): void`: Remueve un rol previamente concedido garantizando que al menos quede un rol base.
-        * `+ updateProfile(fullName: String): void`: Muta el nombre del titular previa validación de longitud.
-        * `+ getId(): Long`, `+ getFullName(): String`, `+ getEmail(): Email`, `+ getRoles(): List<Role>`: Métodos de lectura de estado.
+  * **Atributos privados:**
+    * `- id: Long`: Identificador único secuencial de la entidad dentro de la base de datos.
+    * `- fullName: String`: Nombre completo o razón social del titular registrado.
+    * `- isActive: Boolean`: Bandera booleana que determina si la cuenta se encuentra habilitada para iniciar sesión.
+    * `- registeredAt: LocalDateTime`: Marca temporal de auditoría que registra la fecha y hora de creación.
+    * `- email: Email`: Objeto de valor que resguarda la dirección de correo validada.
+    * `- password: PasswordHash`: Objeto de valor que almacena el hash criptográfico de la clave de acceso.
+  * **Métodos públicos:**
+    * `+ UserAccount(fullName: String, email: Email, password: PasswordHash)`: Constructor que inicializa una cuenta activa con fecha actual.
+    * `+ activate(): void`: Cambia el estado de `isActive` a verdadero.
+    * `+ deactivate(): void`: Inhabilita la cuenta para bloquear accesos transaccionales.
+    * `+ assignRole(role: Role): void`: Vincula un nuevo rol institucional a la colección interna del usuario.
+    * `+ removeRole(role: Role): void`: Remueve un rol previamente concedido garantizando que al menos quede un rol base.
+    * `+ updateProfile(fullName: String): void`: Muta el nombre del titular previa validación de longitud.
+    * `+ getId(): Long`, `+ getFullName(): String`, `+ getEmail(): Email`, `+ getRoles(): List<Role>`: Métodos de lectura de estado.
 
 * **`Role` (Entity) y `RoleType` (Enumeration):**
   Representa el permiso concedido al usuario. `Role` contiene el atributo privado `- id: Long` y `- roleType: RoleType`. La enumeración `RoleType` tipifica estrictamente las etiquetas de autorización: `ROLE_PRODUCER` (productores familiares), `ROLE_COOPERATIVE` (directivos de acopio), `ROLE_AGRONOMIST` (asesores técnicos) y `ROLE_BUYER` (compradores mayoristas).
 
 * **`Email` y `PasswordHash` (Value Objects):**
-    * `Email`: Objeto inmutable con el atributo privado `- address: String`. Su constructor valida la conformidad con la expresión regular de correo electrónico estándar RFC 5322; expone `+ getAddress(): String` y sobrescribe `equals()` y `hashCode()`.
-    * `PasswordHash`: Contiene `- hashValue: String`. Encapsula el algoritmo de derivación de claves BCrypt; expone `+ verifyPassword(plainTextPassword: String): Boolean` para comparar credenciales sin exponer la contraseña en texto plano y `+ getHashValue(): String`.
+  * `Email`: Objeto inmutable con el atributo privado `- address: String`. Su constructor valida la conformidad con la expresión regular de correo electrónico estándar RFC 5322; expone `+ getAddress(): String` y sobrescribe `equals()` y `hashCode()`.
+  * `PasswordHash`: Contiene `- hashValue: String`. Encapsula el algoritmo de derivación de claves BCrypt; expone `+ verifyPassword(plainTextPassword: String): Boolean` para comparar credenciales sin exponer la contraseña en texto plano y `+ getHashValue(): String`.
 
 * **`UserAccountRepository` (Domain Repository Interface):**
   Interfaz que abstrae las operaciones de persistencia mediante Spring Data JPA. Define los contratos `+ findById(id: Long): Optional<UserAccount>`, `+ findByEmail(email: Email): Optional<UserAccount>`, `+ existsByEmail(email: Email): Boolean`, `+ save(user: UserAccount): UserAccount` y `+ delete(user: UserAccount): void`.
@@ -1502,21 +1511,21 @@ Este contexto delimita el modelo de monetización SaaS, gobernando la activació
 
 * **`Subscription` (Aggregate Root):**
   Controla los límites y la vigencia comercial del acceso al servicio.
-    * **Atributos privados:**
-        * `- id: Long`: Identificador de la suscripción.
-        * `- userId: Long`: Identificador del usuario o cooperativa titular (referencia por identidad hacia IAM).
-        * `- planTier: PlanTier`: Categoría del plan contratado.
-        * `- startDate: LocalDate`: Fecha inicial de vigencia.
-        * `- endDate: LocalDate`: Fecha de vencimiento de la membresía.
-        * `- isActive: Boolean`: Estado transaccional del servicio contratado.
-        * `- maxAllowedPlots: Integer`: Cuota máxima permitida de parcelas registrables.
-        * `- transactions: List<PaymentTransaction>`: Colección histórica de cobros asociados.
-    * **Métodos públicos:**
-        * `+ Subscription(userId: Long, planTier: PlanTier, months: Integer)`: Constructor que establece fechas y cuota base.
-        * `+ activate(): void`: Habilita la suscripción tras la confirmación del pago.
-        * `+ renew(months: Integer): void`: Extiende la fecha de término por el periodo pagado.
-        * `+ cancel(): void`: Inhabilita la renovación automática y actualiza `isActive` a falso, emitiendo la cancelación del contrato.
-        * `+ hasPlotQuotaAvailable(currentCount: Integer): Boolean`: Valida si el cliente aún puede registrar parcelas adicionales.
+  * **Atributos privados:**
+    * `- id: Long`: Identificador de la suscripción.
+    * `- userId: Long`: Identificador del usuario o cooperativa titular (referencia por identidad hacia IAM).
+    * `- planTier: PlanTier`: Categoría del plan contratado.
+    * `- startDate: LocalDate`: Fecha inicial de vigencia.
+    * `- endDate: LocalDate`: Fecha de vencimiento de la membresía.
+    * `- isActive: Boolean`: Estado transaccional del servicio contratado.
+    * `- maxAllowedPlots: Integer`: Cuota máxima permitida de parcelas registrables.
+    * `- transactions: List<PaymentTransaction>`: Colección histórica de cobros asociados.
+  * **Métodos públicos:**
+    * `+ Subscription(userId: Long, planTier: PlanTier, months: Integer)`: Constructor que establece fechas y cuota base.
+    * `+ activate(): void`: Habilita la suscripción tras la confirmación del pago.
+    * `+ renew(months: Integer): void`: Extiende la fecha de término por el periodo pagado.
+    * `+ cancel(): void`: Inhabilita la renovación automática y actualiza `isActive` a falso, emitiendo la cancelación del contrato.
+    * `+ hasPlotQuotaAvailable(currentCount: Integer): Boolean`: Valida si el cliente aún puede registrar parcelas adicionales.
 
 * **`PaymentTransaction` (Entity):**
   Registra cada evento de cobro monetario. Contiene `- id: Long`, `- externalTransactionId: String` (código devuelto por la pasarela), `- paymentDate: LocalDateTime`, `- amount: Money` y `- status: PaymentStatus`. Expone `+ markAsCompleted(): void` y `+ markAsFailed(reason: String): void`.
@@ -1525,8 +1534,8 @@ Este contexto delimita el modelo de monetización SaaS, gobernando la activació
   Encapsula importes con precisión contable. Posee los atributos privados `- amount: BigDecimal` y `- currency: String`. Expone métodos inmutables como `+ add(other: Money): Money`, impidiendo operaciones aritméticas erróneas entre monedas distintas.
 
 * **`PlanTier` y `PaymentStatus` (Enumerations):**
-    * `PlanTier`: Define los niveles `FREE_SEED` (plan base individual), `COOPERATIVE_PRO` (gestión gremial multivariable) y `TECHNICAL_ADVISOR` (cartera agronómica).
-    * `PaymentStatus`: Fases de cobro `PENDING`, `COMPLETED` y `FAILED`.
+  * `PlanTier`: Define los niveles `FREE_SEED` (plan base individual), `COOPERATIVE_PRO` (gestión gremial multivariable) y `TECHNICAL_ADVISOR` (cartera agronómica).
+  * `PaymentStatus`: Fases de cobro `PENDING`, `COMPLETED` y `FAILED`.
 
 * **`StripeClientAssembler` (Infrastructure Layer):**
   Componente de infraestructura y enlace con la pasarela de pagos externa. Encapsula las credenciales y llamadas seguras HTTPS/JSON mediante `+ chargeCard(token: String, amount: Money): String` y `+ toPaymentTransaction(stripeResponse: String): PaymentTransaction` para transformar la respuesta sin procesar de la API en la entidad de cobro del dominio.
@@ -1552,27 +1561,27 @@ Gestiona la delimitación espacial y catastral de predios agrícolas, los atribu
 
 * **`FieldPlot` (Aggregate Root):**
   Raíz de agregación que salvaguarda la integridad geográfica y el estado agronómico de la parcela.
-    * **Atributos privados:**
-        * `- id: Long`: Identificador único del predio.
-        * `- producerId: Long`: Vínculo referencial hacia el productor titular en IAM.
-        * `- plotName: String`: Nombre o denominación común del lote.
-        * `- calculatedAreaHectares: Double`: Superficie calculada de forma computacional en hectáreas.
-        * `- perimeter: PerimeterCoordinates`: Geometría vectorial cerrada del lote.
-        * `- soil: SoilBaseline`: Caracterización inicial de suelo.
-        * `- campaign: CropCampaign`: Campaña agrícola instalada en el terreno.
-    * **Métodos públicos:**
-        * `+ FieldPlot(producerId: Long, plotName: String, perimeter: PerimeterCoordinates)`: Inicializa la parcela validando topología.
-        * `+ updatePerimeter(newPerimeter: PerimeterCoordinates): void`: Recalcula el área y reemplaza las coordenadas perimetrales.
-        * `+ registerSoilAnalysis(soil: SoilBaseline): void`: Asocia los resultados de laboratorio del suelo.
-        * `+ startCropCampaign(campaign: CropCampaign): void`: Asigna una nueva campaña fenológica de siembra.
+  * **Atributos privados:**
+    * `- id: Long`: Identificador único del predio.
+    * `- producerId: Long`: Vínculo referencial hacia el productor titular en IAM.
+    * `- plotName: String`: Nombre o denominación común del lote.
+    * `- calculatedAreaHectares: Double`: Superficie calculada de forma computacional en hectáreas.
+    * `- perimeter: PerimeterCoordinates`: Geometría vectorial cerrada del lote.
+    * `- soil: SoilBaseline`: Caracterización inicial de suelo.
+    * `- campaign: CropCampaign`: Campaña agrícola instalada en el terreno.
+  * **Métodos públicos:**
+    * `+ FieldPlot(producerId: Long, plotName: String, perimeter: PerimeterCoordinates)`: Inicializa la parcela validando topología.
+    * `+ updatePerimeter(newPerimeter: PerimeterCoordinates): void`: Recalcula el área y reemplaza las coordenadas perimetrales.
+    * `+ registerSoilAnalysis(soil: SoilBaseline): void`: Asocia los resultados de laboratorio del suelo.
+    * `+ startCropCampaign(campaign: CropCampaign): void`: Asigna una nueva campaña fenológica de siembra.
 
 * **`PerimeterCoordinates` y `GeoPoint` (Value Objects):**
-    * `GeoPoint`: Encapsula un vértice geográfico mediante `- latitude: Double` y `- longitude: Double`, validando los rangos estándar de latitud (-90 a 90) y longitud (-180 a 180).
-    * `PerimeterCoordinates`: Encapsula la lista privada `- points: List<GeoPoint>`. Su método `+ validatePolygonClosure(): Boolean` asegura que el vértice final coincida con el inicial, mientras que `+ computeAreaHectares(): Double` calcula el área utilizando el algoritmo de la fórmula de Shoelace proyectada.
+  * `GeoPoint`: Encapsula un vértice geográfico mediante `- latitude: Double` y `- longitude: Double`, validando los rangos estándar de latitud (-90 a 90) y longitud (-180 a 180).
+  * `PerimeterCoordinates`: Encapsula la lista privada `- points: List<GeoPoint>`. Su método `+ validatePolygonClosure(): Boolean` asegura que el vértice final coincida con el inicial, mientras que `+ computeAreaHectares(): Double` calcula el área utilizando el algoritmo de la fórmula de Shoelace proyectada.
 
 * **`SoilBaseline` y `CropCampaign` (Entities):**
-    * `SoilBaseline`: Contiene `- textureType: String`, `- phLevel: Double` y `- organicMatterPercentage: Double`.
-    * `CropCampaign`: Modela la campaña fenológica instalada en la parcela. Contiene los atributos privados `- id: Long`, `- cropType: CropType` (`SPECIALTY_COFFEE` o `ANDEAN_POTATO`), `- seedVariety: String` (ej. Typica, Caturra, Canchán, Yungay) y `- sowingDate: LocalDate`. Expone los métodos `+ updateSeedVariety(variety: String): void` y `+ recordSowingDate(date: LocalDate): void`, soportando los eventos de siembra.
+  * `SoilBaseline`: Contiene `- textureType: String`, `- phLevel: Double` y `- organicMatterPercentage: Double`.
+  * `CropCampaign`: Modela la campaña fenológica instalada en la parcela. Contiene los atributos privados `- id: Long`, `- cropType: CropType` (`SPECIALTY_COFFEE` o `ANDEAN_POTATO`), `- seedVariety: String` (ej. Typica, Caturra, Canchán, Yungay) y `- sowingDate: LocalDate`. Expone los métodos `+ updateSeedVariety(variety: String): void` y `+ recordSowingDate(date: LocalDate): void`, soportando los eventos de siembra.
 
 * **`MidagriClientAssembler` (Infrastructure Layer):**
   Componente de infraestructura que consulta el Padrón de Productores Agrarios (PPA). Expone `+ validateProducerCadastralId(producerDni: String, cadastralCode: String): Boolean` y `+ toProducerProfile(ppaApiResponse: String): Object` para traducir las respuestas del padrón gubernamental hacia el dominio.
@@ -1595,31 +1604,31 @@ Este contexto centraliza la captura de telemetría espectral provista por Sentin
 
 * **`VegetationAnalysis` (Aggregate Root):**
   Consolida el estado biofísico de un predio en un punto específico en el tiempo.
-    * **Atributos privados:**
-        * `- id: Long`: Identificador del registro analítico.
-        * `- plotId: Long`: Parcela evaluada.
-        * `- captureDate: LocalDate`: Fecha de adquisición de la baldosa satelital.
-        * `- cloudCoveragePercentage: Double`: Porcentaje de cobertura nubosa detectado.
-        * `- ndvi: NdviReading`: Valor computado del índice de vegetación normalizado.
-        * `- ndwi: NdwiReading`: Valor computado del índice diferencial de agua.
-        * `- alerts: List<AgroclimaticAlert>`: Alertas preventivas emitidas.
-        * `- prescriptions: List<TechnicalPrescription>`: Recetas técnicas registradas por agrónomos.
-    * **Métodos públicos:**
-        * `+ evaluateVegetativeHealth(): void`: Compara los índices contra umbrales basales para detectar estrés biótico o abiótico.
-        * `+ triggerAlert(alert: AgroclimaticAlert): void`: Anexa una advertencia ante caídas bruscas de reflectancia.
-        * `+ addPrescription(rx: TechnicalPrescription): void`: Incorpora la prescripción correctiva del asesor técnico.
+  * **Atributos privados:**
+    * `- id: Long`: Identificador del registro analítico.
+    * `- plotId: Long`: Parcela evaluada.
+    * `- captureDate: LocalDate`: Fecha de adquisición de la baldosa satelital.
+    * `- cloudCoveragePercentage: Double`: Porcentaje de cobertura nubosa detectado.
+    * `- ndvi: NdviReading`: Valor computado del índice de vegetación normalizado.
+    * `- ndwi: NdwiReading`: Valor computado del índice diferencial de agua.
+    * `- alerts: List<AgroclimaticAlert>`: Alertas preventivas emitidas.
+    * `- prescriptions: List<TechnicalPrescription>`: Recetas técnicas registradas por agrónomos.
+  * **Métodos públicos:**
+    * `+ evaluateVegetativeHealth(): void`: Compara los índices contra umbrales basales para detectar estrés biótico o abiótico.
+    * `+ triggerAlert(alert: AgroclimaticAlert): void`: Anexa una advertencia ante caídas bruscas de reflectancia.
+    * `+ addPrescription(rx: TechnicalPrescription): void`: Incorpora la prescripción correctiva del asesor técnico.
 
 * **`NdviReading` y `NdwiReading` (Value Objects):**
   Encapsulan los índices matemáticos mediante `- value: Double`, validando en sus constructores que el valor numérico se sitúe estrictamente en el intervalo $[-1.0, 1.0]$. `NdviReading` provee `+ isStressAnomaly(): Boolean` (activo si el valor cae por debajo de 0.40 en etapas clave), y `NdwiReading` expone `+ isWaterDeficit(): Boolean`.
 
 * **`AgroclimaticAlert` y `TechnicalPrescription` (Entities):**
-    * `AgroclimaticAlert`: Modela eventos de riesgo; posee `- alertType: String`, `- severity: AlertSeverity` (`LOW`, `MEDIUM`, `CRITICAL`), `- message: String` y `- emittedAt: LocalDateTime`.
-    * `TechnicalPrescription`: Receta de campo; posee `- advisorId: Long`, `- diagnosis: String`, `- correctiveTreatment: String`, `- dosage: String` y `- isApplied: Boolean`, exponiendo `+ markAsApplied(): void`.
+  * `AgroclimaticAlert`: Modela eventos de riesgo; posee `- alertType: String`, `- severity: AlertSeverity` (`LOW`, `MEDIUM`, `CRITICAL`), `- message: String` y `- emittedAt: LocalDateTime`.
+  * `TechnicalPrescription`: Receta de campo; posee `- advisorId: Long`, `- diagnosis: String`, `- correctiveTreatment: String`, `- dosage: String` y `- isApplied: Boolean`, exponiendo `+ markAsApplied(): void`.
 
 * **Componentes de Integración y Transformación (`SatelliteClientAssembler`, `WeatherClientAssembler`, `TwilioNotificationAssembler`):**
-    * `SatelliteClientAssembler`: Descarga bandas ópticas multiespectrales B4, B8 y B8A desde Sentinel-2 y ejecuta `+ toVegetationAnalysis(tileData: byte[]): VegetationAnalysis`.
-    * `WeatherClientAssembler`: Consume alertas meteorológicas y heladas de SENAMHI, traduciéndolas mediante `+ toAgroclimaticAlert(rawWeatherAlert: String): AgroclimaticAlert`.
-    * `TwilioNotificationAssembler`: Serializa la alerta en una carga útil de texto con `+ toSmsPayload(alert: AgroclimaticAlert): String` y despacha el mensaje SMS/WhatsApp a los productores.
+  * `SatelliteClientAssembler`: Descarga bandas ópticas multiespectrales B4, B8 y B8A desde Sentinel-2 y ejecuta `+ toVegetationAnalysis(tileData: byte[]): VegetationAnalysis`.
+  * `WeatherClientAssembler`: Consume alertas meteorológicas y heladas de SENAMHI, traduciéndolas mediante `+ toAgroclimaticAlert(rawWeatherAlert: String): AgroclimaticAlert`.
+  * `TwilioNotificationAssembler`: Serializa la alerta en una carga útil de texto con `+ toSmsPayload(alert: AgroclimaticAlert): String` y despacha el mensaje SMS/WhatsApp a los productores.
 
 ##### Relaciones y Cardinalidades del Contexto:
 * **Composición (`VegetationAnalysis` "1" *-- "1" `NdviReading` y `NdwiReading`):** Los índices satelitales son inseparables del informe espectral.
@@ -1638,19 +1647,19 @@ Modela la contabilidad analítica de costos agrícolas, soportando la sincroniza
 
 * **`LotFinancialLedger` (Aggregate Root):**
   Libro mayor contable que centraliza las inversiones operativas de una campaña productiva.
-    * **Atributos privados:**
-        * `- id: Long`: Identificador del libro financiero.
-        * `- plotId: Long`: Parcela vinculada a la campaña.
-        * `- campaignYear: Integer`: Año o ciclo agrícola correspondiente.
-        * `- totalInvested: Money`: Inversión acumulada consolidada.
-        * `- estimatedYieldUnits: Double`: Rendimiento estimado o real expresado en sacos o toneladas.
-        * `- breakeven: BreakevenPrice`: Objeto de valor con el umbral financiero mínimo.
-        * `- expenses: List<ExpenseEntry>`: Asientos contables individuales.
-    * **Métodos públicos:**
-        * `+ recordExpense(entry: ExpenseEntry): void`: Registra un gasto individual actualizando la sumatoria acumulada.
-        * `+ syncOfflineBatch(entries: List<ExpenseEntry>): void`: Procesa asientos diferidos provenientes del almacenamiento local del cliente.
-        * `+ consolidateFinances(finalYieldUnits: Double): void`: Cierra el ciclo contable calculando los costos unitarios definitivos.
-        * `+ calculateBreakeven(): BreakevenPrice`: Ejecuta la fórmula financiera dividiendo el total invertido entre el volumen cosechado.
+  * **Atributos privados:**
+    * `- id: Long`: Identificador del libro financiero.
+    * `- plotId: Long`: Parcela vinculada a la campaña.
+    * `- campaignYear: Integer`: Año o ciclo agrícola correspondiente.
+    * `- totalInvested: Money`: Inversión acumulada consolidada.
+    * `- estimatedYieldUnits: Double`: Rendimiento estimado o real expresado en sacos o toneladas.
+    * `- breakeven: BreakevenPrice`: Objeto de valor con el umbral financiero mínimo.
+    * `- expenses: List<ExpenseEntry>`: Asientos contables individuales.
+  * **Métodos públicos:**
+    * `+ recordExpense(entry: ExpenseEntry): void`: Registra un gasto individual actualizando la sumatoria acumulada.
+    * `+ syncOfflineBatch(entries: List<ExpenseEntry>): void`: Procesa asientos diferidos provenientes del almacenamiento local del cliente.
+    * `+ consolidateFinances(finalYieldUnits: Double): void`: Cierra el ciclo contable calculando los costos unitarios definitivos.
+    * `+ calculateBreakeven(): BreakevenPrice`: Ejecuta la fórmula financiera dividiendo el total invertido entre el volumen cosechado.
 
 * **`ExpenseEntry` (Entity) y `ExpenseCategory` (Enumeration):**
   Modela cada egreso operativo. Contiene `- id: Long`, `- category: ExpenseCategory`, `- concept: String`, `- expenseDate: LocalDate`, `- amount: Money` y `- isOfflineSync: Boolean`. `ExpenseCategory` clasifica el gasto en `AGROCHEMICALS` (fertilizantes y plaguicidas), `LABOR_PAYROLL` (jornales de campo), `FREIGHT_TRANSPORT` (flete rural) o `MACHINERY_SERVICES` (alquiler de maquinaria).
@@ -1682,19 +1691,19 @@ Este contexto delimita el pesaje formal de acopio, la graduación física de tub
 
 * **`HarvestBatch` (Aggregate Root):**
   Representa el lote material acopiado y sometido a verificación técnica.
-    * **Atributos privados:**
-        * `- id: Long`: Identificador del lote de cosecha.
-        * `- plotId: Long`: Referencia al predio de procedencia.
-        * `- harvestDate: LocalDate`: Fecha formal de recolección.
-        * `- netWeightKg: Double`: Masa neta recepcionada en balanza.
-        * `- cuppingSession: CoffeeCuppingSession`: Evaluación sensorial de café (si aplica).
-        * `- caliberGrading: PotatoCaliberGrading`: Graduación morfométrica de papa (si aplica).
-        * `- certificate: QualityCertificate`: Acreditación digital emitida.
-    * **Métodos públicos:**
-        * `+ recordDeliveryWeight(netWeightKg: Double): void`: Registra el pesaje oficial de entrega.
-        * `+ gradeCoffee(cupping: CoffeeCuppingSession): void`: Asocia los puntajes de cata sensorial.
-        * `+ gradePotato(caliber: PotatoCaliberGrading): void`: Asocia los calibres físicos clasificados.
-        * `+ issueDigitalCertificate(cert: QualityCertificate): void`: Emite el certificado inmutable con firma digital.
+  * **Atributos privados:**
+    * `- id: Long`: Identificador del lote de cosecha.
+    * `- plotId: Long`: Referencia al predio de procedencia.
+    * `- harvestDate: LocalDate`: Fecha formal de recolección.
+    * `- netWeightKg: Double`: Masa neta recepcionada en balanza.
+    * `- cuppingSession: CoffeeCuppingSession`: Evaluación sensorial de café (si aplica).
+    * `- caliberGrading: PotatoCaliberGrading`: Graduación morfométrica de papa (si aplica).
+    * `- certificate: QualityCertificate`: Acreditación digital emitida.
+  * **Métodos públicos:**
+    * `+ recordDeliveryWeight(netWeightKg: Double): void`: Registra el pesaje oficial de entrega.
+    * `+ gradeCoffee(cupping: CoffeeCuppingSession): void`: Asocia los puntajes de cata sensorial.
+    * `+ gradePotato(caliber: PotatoCaliberGrading): void`: Asocia los calibres físicos clasificados.
+    * `+ issueDigitalCertificate(cert: QualityCertificate): void`: Emite el certificado inmutable con firma digital.
 
 * **`CoffeeCuppingSession` (Entity):**
   Modela el protocolo de catación según el estándar SCA. Contiene `- fragranceAroma: Double`, `- acidity: Double`, `- body: Double`, `- balance: Double` y `- overallScore: Double`. Expone `+ computeTotalScaScore(): Double` y `+ isSpecialtyCoffee(): Boolean` (válido si el puntaje final supera los 80 puntos SCA).
@@ -1725,25 +1734,25 @@ Gobierna la publicación en catálogo de los lotes certificados, la recepción d
 
 * **`CommercialSettlement` (Aggregate Root):**
   Controla el acuerdo comercial y la liquidación financiera de la venta.
-    * **Atributos privados:**
-        * `- id: Long`: Identificador de la negociación.
-        * `- harvestBatchId: Long`: Referencia al lote certificado disponible.
-        * `- baseNegotiationPrice: Money`: Precio de apertura establecido para la venta.
-        * `- status: SettlementStatus`: Fase actual del ciclo de vida comercial.
-        * `- acceptedOffer: PurchaseOffer`: Oferta comercial formalmente aceptada por el productor o directivo.
-        * `- netMargin: NetMargin`: Margen de ganancia neta consolidado.
-        * `- offers: List<PurchaseOffer>`: Lista de propuestas de compra recibidas.
-    * **Métodos públicos:**
-        * `+ publishLot(): void`: Transiciona el estado a publicado en el catálogo mayorista tras verificar el punto de equilibrio.
-        * `+ receiveOffer(offer: PurchaseOffer): void`: Añade una propuesta de compra a la negociación.
-        * `+ acceptOfferAndLiquidate(offerId: Long, productionCost: Money): void`: Acepta la oferta seleccionada, calcula el margen neto resultante y cambia el estado a liquidado (`LIQUIDATED`).
+  * **Atributos privados:**
+    * `- id: Long`: Identificador de la negociación.
+    * `- harvestBatchId: Long`: Referencia al lote certificado disponible.
+    * `- baseNegotiationPrice: Money`: Precio de apertura establecido para la venta.
+    * `- status: SettlementStatus`: Fase actual del ciclo de vida comercial.
+    * `- acceptedOffer: PurchaseOffer`: Oferta comercial formalmente aceptada por el productor o directivo.
+    * `- netMargin: NetMargin`: Margen de ganancia neta consolidado.
+    * `- offers: List<PurchaseOffer>`: Lista de propuestas de compra recibidas.
+  * **Métodos públicos:**
+    * `+ publishLot(): void`: Transiciona el estado a publicado en el catálogo mayorista tras verificar el punto de equilibrio.
+    * `+ receiveOffer(offer: PurchaseOffer): void`: Añade una propuesta de compra a la negociación.
+    * `+ acceptOfferAndLiquidate(offerId: Long, productionCost: Money): void`: Acepta la oferta seleccionada, calcula el margen neto resultante y cambia el estado a liquidado (`LIQUIDATED`).
 
 * **`PurchaseOffer` (Entity):**
   Propuesta económica vinculada al lote. Contiene `- id: Long`, `- buyerId: Long`, `- offeredPrice: Money`, `- offeredAt: LocalDateTime` y `- isAccepted: Boolean`. Expone `+ accept(): void` y `+ reject(): void`.
 
 * **`SettlementStatus` (Enumeration) y `NetMargin` (Value Object):**
-    * `SettlementStatus`: Máquina de estados de la venta: `DRAFT`, `PUBLISHED`, `OFFER_RECEIVED`, `ACCEPTED` y `LIQUIDATED`.
-    * `NetMargin`: Objeto inmutable que almacena `- netProfitAmount: BigDecimal` y `- marginPercentage: Double`, garantizando que la liquidación visualice la rentabilidad final obtenida.
+  * `SettlementStatus`: Máquina de estados de la venta: `DRAFT`, `PUBLISHED`, `OFFER_RECEIVED`, `ACCEPTED` y `LIQUIDATED`.
+  * `NetMargin`: Objeto inmutable que almacena `- netProfitAmount: BigDecimal` y `- marginPercentage: Double`, garantizando que la liquidación visualice la rentabilidad final obtenida.
 
 * **`SettlementResourceAssembler` (Assembler / Interface Layer):**
   Traduce las peticiones comerciales entre la web y el dominio. Implementa `+ toResourceFromEntity(entity: CommercialSettlement): SettlementResource` y `+ toEntityFromResource(resource: PublishLotResource): CommercialSettlement`.
@@ -1772,8 +1781,8 @@ Para mantener una alineación estricta con la arquitectura de software basada en
 * **Claves Primarias (Primary Keys - PK):** Identificador entero de 64 bits `id` de tipo `BIGINT AUTO_INCREMENT` en todas las tablas.
 * **Claves Foráneas (Foreign Keys - FK):** Formato `<entity_singular>_id` vinculado explícitamente a la clave primaria de la tabla referenciada (ej. `user_id`, `field_plot_id`).
 * **Auditoría y Trazabilidad:** Todas las tablas principales incluyen las columnas obligatorias de auditoría temporal:
-    * `created_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP`
-    * `updated_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP`
+  * `created_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP`
+  * `updated_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP`
 * **Manejo de Estados:** Atributos de estado definidos mediante cadenas `VARCHAR` con restricciones `CHECK` o tipos enumerados implícitos en inglés (ej. `'ACTIVE'`, `'INACTIVE'`, `'PENDING'`, `'CERTIFIED'`).
 
 ---
@@ -1791,9 +1800,9 @@ Para mantener la coherencia con el diseño guiado por el dominio (DDD) de la sec
 * **Claves Primarias (PK):** Se utilizó un identificador subrogado `id` de tipo `BIGINT AUTO_INCREMENT` en todas las tablas para facilitar la indexación y optimizar las consultas en MySQL.
 * **Claves Foráneas (FK) e Integridad:** Las relaciones usan el formato `<entidad>_id` vinculado con restricciones `FOREIGN KEY` explícitas. En tablas dependientes (como las coordenadas perimetrales de una parcela) se aplica `ON DELETE CASCADE` para evitar registros huérfanos.
 * **Tipos de Datos y Precisión:**
-    * **Montos contables y costos:** Se utiliza `DECIMAL(10,2)` para registrar precios, jornales, compras y liquidaciones sin errores de redondeo.
-    * **Coordenadas GPS:** Se definieron como `DECIMAL(10,8)` para latitud y `DECIMAL(11,8)` para longitud, logrando precisión adecuada al trazar los polígonos de las parcelas.
-    * **Índices satelitales:** Los valores de reflectancia foliar (NDVI y NDWI) usan `DECIMAL(5,4)`, cubriendo el rango de trabajo de -1.0000 a +1.0000.
+  * **Montos contables y costos:** Se utiliza `DECIMAL(10,2)` para registrar precios, jornales, compras y liquidaciones sin errores de redondeo.
+  * **Coordenadas GPS:** Se definieron como `DECIMAL(10,8)` para latitud y `DECIMAL(11,8)` para longitud, logrando precisión adecuada al trazar los polígonos de las parcelas.
+  * **Índices satelitales:** Los valores de reflectancia foliar (NDVI y NDWI) usan `DECIMAL(5,4)`, cubriendo el rango de trabajo de -1.0000 a +1.0000.
 * **Manejo de Estados:** Los estados de negocio se guardan como cadenas `VARCHAR(20)` asociadas a los enums del backend (como `'ACTIVE'`, `'IN_PROGRESS'`, `'PENDING'` o `'CERTIFIED'`).
 * **Campos de Auditoría:** Las tablas principales incluyen las columnas `created_at` y `updated_at` de tipo `TIMESTAMP` para registrar automáticamente cuándo se crea o modifica cada fila.
 
@@ -1817,31 +1826,31 @@ Este contexto delimita la persistencia de usuarios, perfiles institucionales, ro
 Almacena las cuentas de usuario registradas en la plataforma (productores, directivos de cooperativa, asesores agrónomos y administradores).
 
 * **Columnas:**
-    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador único del usuario.
-    * `first_name`: `VARCHAR(100) NOT NULL` - Nombres del usuario.
-    * `last_name`: `VARCHAR(100) NOT NULL` - Apellidos del usuario.
-    * `email`: `VARCHAR(150) NOT NULL UNIQUE` - Correo electrónico de inicio de sesión.
-    * `password_hash`: `VARCHAR(255) NOT NULL` - Contraseña encriptada con algoritmo BCrypt.
-    * `phone_number`: `VARCHAR(20) NULL` - Número de teléfono o WhatsApp para notificaciones rural/SMS.
-    * `status`: `VARCHAR(20) NOT NULL DEFAULT 'ACTIVE'` - Estado de la cuenta (`'ACTIVE'`, `'INACTIVE'`, `'BLOCKED'`).
-    * `created_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha de registro.
-    * `updated_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` - Fecha de última actualización.
+  * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador único del usuario.
+  * `first_name`: `VARCHAR(100) NOT NULL` - Nombres del usuario.
+  * `last_name`: `VARCHAR(100) NOT NULL` - Apellidos del usuario.
+  * `email`: `VARCHAR(150) NOT NULL UNIQUE` - Correo electrónico de inicio de sesión.
+  * `password_hash`: `VARCHAR(255) NOT NULL` - Contraseña encriptada con algoritmo BCrypt.
+  * `phone_number`: `VARCHAR(20) NULL` - Número de teléfono o WhatsApp para notificaciones rural/SMS.
+  * `status`: `VARCHAR(20) NOT NULL DEFAULT 'ACTIVE'` - Estado de la cuenta (`'ACTIVE'`, `'INACTIVE'`, `'BLOCKED'`).
+  * `created_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha de registro.
+  * `updated_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` - Fecha de última actualización.
 
 ###### Tabla `roles`
 Catálogo de roles del sistema para el control de acceso basado en roles (RBAC).
 
 * **Columnas:**
-    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del rol.
-    * `name`: `VARCHAR(50) NOT NULL UNIQUE` - Nombre técnico del rol (`'ROLE_FARMER'`, `'ROLE_COOPERATIVE_DIRECTOR'`, `'ROLE_AGRONOMIST'`).
-    * `description`: `VARCHAR(255) NULL` - Descripción funcional del rol.
+  * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del rol.
+  * `name`: `VARCHAR(50) NOT NULL UNIQUE` - Nombre técnico del rol (`'ROLE_FARMER'`, `'ROLE_COOPERATIVE_DIRECTOR'`, `'ROLE_AGRONOMIST'`).
+  * `description`: `VARCHAR(255) NULL` - Descripción funcional del rol.
 
 ###### Tabla `user_roles`
 Tabla asociativa para la relación de muchos a muchos (N:M) entre usuarios y roles.
 
 * **Columnas y Restricciones:**
-    * `user_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `users(id)` ON DELETE CASCADE.
-    * `role_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `roles(id)` ON DELETE CASCADE.
-    * **Primary Key Compuesta:** `PRIMARY KEY (user_id, role_id)`
+  * `user_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `users(id)` ON DELETE CASCADE.
+  * `role_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `roles(id)` ON DELETE CASCADE.
+  * **Primary Key Compuesta:** `PRIMARY KEY (user_id, role_id)`
 
 ---
 
@@ -1857,33 +1866,33 @@ Gestiona los planes comerciales (Semilla, Cooperativa Pro, Asesor Técnico), el 
 Catálogo de planes comerciales habilitados.
 
 * **Columnas:**
-    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del plan.
-    * `name`: `VARCHAR(50) NOT NULL UNIQUE` - Nombre del plan (`'SEED_FREE'`, `'COOPERATIVE_PRO'`, `'AGRONOMIST_TECH'`).
-    * `price_monthly`: `DECIMAL(10,2) NOT NULL` - Tarifa mensual en Soles (PEN).
-    * `max_plots_allowed`: `INT NOT NULL` - Límite máximo de parcelas georreferenciadas permitidas.
-    * `max_hectares_allowed`: `DECIMAL(10,2) NOT NULL` - Límite de hectáreas acumuladas.
+  * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del plan.
+  * `name`: `VARCHAR(50) NOT NULL UNIQUE` - Nombre del plan (`'SEED_FREE'`, `'COOPERATIVE_PRO'`, `'AGRONOMIST_TECH'`).
+  * `price_monthly`: `DECIMAL(10,2) NOT NULL` - Tarifa mensual en Soles (PEN).
+  * `max_plots_allowed`: `INT NOT NULL` - Límite máximo de parcelas georreferenciadas permitidas.
+  * `max_hectares_allowed`: `DECIMAL(10,2) NOT NULL` - Límite de hectáreas acumuladas.
 
 ###### Tabla `subscriptions`
 Registra la suscripción activa o histórica de un usuario/entidad.
 
 * **Columnas:**
-    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la suscripción.
-    * `user_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `users(id)`.
-    * `plan_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `subscription_plans(id)`.
-    * `start_date`: `DATE NOT NULL` - Fecha de inicio.
-    * `end_date`: `DATE NOT NULL` - Fecha de vencimiento.
-    * `status`: `VARCHAR(20) NOT NULL DEFAULT 'ACTIVE'` - Estado (`'ACTIVE'`, `'EXPIRED'`, `'CANCELLED'`).
+  * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la suscripción.
+  * `user_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `users(id)`.
+  * `plan_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `subscription_plans(id)`.
+  * `start_date`: `DATE NOT NULL` - Fecha de inicio.
+  * `end_date`: `DATE NOT NULL` - Fecha de vencimiento.
+  * `status`: `VARCHAR(20) NOT NULL DEFAULT 'ACTIVE'` - Estado (`'ACTIVE'`, `'EXPIRED'`, `'CANCELLED'`).
 
 ###### Tabla `payments`
 Bitácora de cobros y facturación procesada mediante la pasarela de pagos.
 
 * **Columnas:**
-    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del pago.
-    * `subscription_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `subscriptions(id)`.
-    * `amount`: `DECIMAL(10,2) NOT NULL` - Monto cobrado.
-    * `transaction_token`: `VARCHAR(255) NOT NULL` - Token de transacción retornado por Stripe/Niubiz.
-    * `payment_status`: `VARCHAR(20) NOT NULL` - Estado (`'COMPLETED'`, `'FAILED'`, `'REFUNDED'`).
-    * `paid_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha y hora del pago.
+  * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del pago.
+  * `subscription_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `subscriptions(id)`.
+  * `amount`: `DECIMAL(10,2) NOT NULL` - Monto cobrado.
+  * `transaction_token`: `VARCHAR(255) NOT NULL` - Token de transacción retornado por Stripe/Niubiz.
+  * `payment_status`: `VARCHAR(20) NOT NULL` - Estado (`'COMPLETED'`, `'FAILED'`, `'REFUNDED'`).
+  * `paid_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha y hora del pago.
 
 ---
 
@@ -1899,36 +1908,36 @@ Modela las parcelas agrícolas georreferenciadas, los vértices de polígonos GP
 Almacena las parcelas registradas por los productores agrícolas.
 
 * **Columnas:**
-    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la parcela.
-    * `user_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `users(id)` (Propietario del predio).
-    * `plot_name`: `VARCHAR(100) NOT NULL` - Nombre o alias del fundo (ej. "Fundo La Libertad").
-    * `crop_type`: `VARCHAR(50) NOT NULL` - Tipo de cultivo (`'POTATO'`, `'COFFEE'`).
-    * `seed_variety`: `VARCHAR(100) NOT NULL` - Variedad botánica (ej. "Yungay", "Canchan", "Typica", "Geisha").
-    * `total_area_hectares`: `DECIMAL(10,2) NOT NULL` - Área calculada del polígono en hectáreas.
-    * `altitude_masl`: `INT NULL` - Altitud sobre el nivel del mar (m.s.n.m.).
-    * `soil_ph`: `DECIMAL(4,2) NULL` - Valor de pH del suelo registrado en la línea base.
-    * `status`: `VARCHAR(20) NOT NULL DEFAULT 'ACTIVE'` - Estado operacional.
+  * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la parcela.
+  * `user_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `users(id)` (Propietario del predio).
+  * `plot_name`: `VARCHAR(100) NOT NULL` - Nombre o alias del fundo (ej. "Fundo La Libertad").
+  * `crop_type`: `VARCHAR(50) NOT NULL` - Tipo de cultivo (`'POTATO'`, `'COFFEE'`).
+  * `seed_variety`: `VARCHAR(100) NOT NULL` - Variedad botánica (ej. "Yungay", "Canchan", "Typica", "Geisha").
+  * `total_area_hectares`: `DECIMAL(10,2) NOT NULL` - Área calculada del polígono en hectáreas.
+  * `altitude_masl`: `INT NULL` - Altitud sobre el nivel del mar (m.s.n.m.).
+  * `soil_ph`: `DECIMAL(4,2) NULL` - Valor de pH del suelo registrado en la línea base.
+  * `status`: `VARCHAR(20) NOT NULL DEFAULT 'ACTIVE'` - Estado operacional.
 
 ###### Tabla `plot_coordinates`
 Guarda la secuencia ordenada de coordenadas GPS (latitud y longitud) que forman el perímetro de la parcela (Relación 1:N con `field_plots`).
 
 * **Columnas:**
-    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del punto GPS.
-    * `field_plot_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `field_plots(id)` ON DELETE CASCADE.
-    * `sequence_order`: `INT NOT NULL` - Orden consecutivo del vértice en el polígono (1, 2, 3...).
-    * `latitude`: `DECIMAL(10,8) NOT NULL` - Latitud decimal GPS.
-    * `longitude`: `DECIMAL(11,8) NOT NULL` - Longitud decimal GPS.
+  * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del punto GPS.
+  * `field_plot_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `field_plots(id)` ON DELETE CASCADE.
+  * `sequence_order`: `INT NOT NULL` - Orden consecutivo del vértice en el polígono (1, 2, 3...).
+  * `latitude`: `DECIMAL(10,8) NOT NULL` - Latitud decimal GPS.
+  * `longitude`: `DECIMAL(11,8) NOT NULL` - Longitud decimal GPS.
 
 ###### Tabla `crop_campaigns`
 Registra las campañas fenológicas de cultivo por año/temporada.
 
 * **Columnas:**
-    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la campaña.
-    * `field_plot_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `field_plots(id)`.
-    * `campaign_name`: `VARCHAR(100) NOT NULL` - Nombre de la campaña (ej. "Campaña Chica 2026").
-    * `sowing_date`: `DATE NOT NULL` - Fecha de siembra.
-    * `estimated_harvest_date`: `DATE NOT NULL` - Fecha estimada de cosecha.
-    * `status`: `VARCHAR(20) NOT NULL DEFAULT 'IN_PROGRESS'` - Estado (`'IN_PROGRESS'`, `'HARVESTED'`).
+  * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la campaña.
+  * `field_plot_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `field_plots(id)`.
+  * `campaign_name`: `VARCHAR(100) NOT NULL` - Nombre de la campaña (ej. "Campaña Chica 2026").
+  * `sowing_date`: `DATE NOT NULL` - Fecha de siembra.
+  * `estimated_harvest_date`: `DATE NOT NULL` - Fecha estimada de cosecha.
+  * `status`: `VARCHAR(20) NOT NULL DEFAULT 'IN_PROGRESS'` - Estado (`'IN_PROGRESS'`, `'HARVESTED'`).
 
 ---
 
@@ -1944,35 +1953,35 @@ Guarda los registros de reflectancia multiespectral (NDVI y NDWI) extraídos per
 Almacena el historial de índices multiespectrales procesados por fecha y parcela.
 
 * **Columnas:**
-    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la lectura.
-    * `field_plot_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `field_plots(id)`.
-    * `capture_date`: `DATE NOT NULL` - Fecha de la toma de imagen satelital por Sentinel-2.
-    * `ndvi_score`: `DECIMAL(5,4) NOT NULL` - Índice de Vegetación de Diferencia Normalizada (-1.0000 a +1.0000).
-    * `ndwi_score`: `DECIMAL(5,4) NOT NULL` - Índice de Humedad de Diferencia Normalizada.
-    * `tile_image_url`: `VARCHAR(255) NULL` - URL de la baldosa o mapa de calor generado en color falso.
-    * `anomaly_detected`: `BOOLEAN DEFAULT FALSE` - Flag que indica si el índice cayó por debajo del umbral mínimo.
+  * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la lectura.
+  * `field_plot_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `field_plots(id)`.
+  * `capture_date`: `DATE NOT NULL` - Fecha de la toma de imagen satelital por Sentinel-2.
+  * `ndvi_score`: `DECIMAL(5,4) NOT NULL` - Índice de Vegetación de Diferencia Normalizada (-1.0000 a +1.0000).
+  * `ndwi_score`: `DECIMAL(5,4) NOT NULL` - Índice de Humedad de Diferencia Normalizada.
+  * `tile_image_url`: `VARCHAR(255) NULL` - URL de la baldosa o mapa de calor generado en color falso.
+  * `anomaly_detected`: `BOOLEAN DEFAULT FALSE` - Flag que indica si el índice cayó por debajo del umbral mínimo.
 
 ###### Tabla `agroclimatic_alerts`
 Boletines de alerta por heladas, sequías o ataques de plagas despachados a los productores.
 
 * **Columnas:**
-    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la alerta.
-    * `field_plot_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `field_plots(id)`.
-    * `alert_type`: `VARCHAR(50) NOT NULL` - Tipo (`'FROST_WARNING'`, `'WATER_STRESS'`, `'PEST_ANOMALY'`).
-    * `severity`: `VARCHAR(20) NOT NULL` - Gravedad (`'LOW'`, `'MEDIUM'`, `'HIGH'`, `'CRITICAL'`).
-    * `message`: `TEXT NOT NULL` - Descripción detallada del riesgo detectado.
-    * `dispatched_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha de emisión.
+  * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la alerta.
+  * `field_plot_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `field_plots(id)`.
+  * `alert_type`: `VARCHAR(50) NOT NULL` - Tipo (`'FROST_WARNING'`, `'WATER_STRESS'`, `'PEST_ANOMALY'`).
+  * `severity`: `VARCHAR(20) NOT NULL` - Gravedad (`'LOW'`, `'MEDIUM'`, `'HIGH'`, `'CRITICAL'`).
+  * `message`: `TEXT NOT NULL` - Descripción detallada del riesgo detectado.
+  * `dispatched_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha de emisión.
 
 ###### Tabla `agronomic_prescriptions`
 Recetas y prescripciones fitosanitarias emitidas por asesores agrónomos ante reportes de campo.
 
 * **Columnas:**
-    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la receta.
-    * `field_plot_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `field_plots(id)`.
-    * `agronomist_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `users(id)` (Asesor emisor).
-    * `diagnosis`: `TEXT NOT NULL` - Diagnóstico de la afección o plaga.
-    * `recommended_treatment`: `TEXT NOT NULL` - Dosis y producto fitosanitario recomendado.
-    * `application_confirmed`: `BOOLEAN DEFAULT FALSE` - Confirmación del productor tras aplicar la receta.
+  * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la receta.
+  * `field_plot_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `field_plots(id)`.
+  * `agronomist_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `users(id)` (Asesor emisor).
+  * `diagnosis`: `TEXT NOT NULL` - Diagnóstico de la afección o plaga.
+  * `recommended_treatment`: `TEXT NOT NULL` - Dosis y producto fitosanitario recomendado.
+  * `application_confirmed`: `BOOLEAN DEFAULT FALSE` - Confirmación del productor tras aplicar la receta.
 
 ---
 
@@ -1988,51 +1997,51 @@ Contabilidad de costos operativos rurales con soporte de sincronización offline
 Registro de compras de fertilizantes, abonos y plaguicidas por parcela/campaña.
 
 * **Columnas:**
-    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del gasto.
-    * `campaign_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `crop_campaigns(id)`.
-    * `product_name`: `VARCHAR(100) NOT NULL` - Nombre del insumo/fertilizante.
-    * `quantity`: `DECIMAL(10,2) NOT NULL` - Cantidad comprada.
-    * `unit_of_measure`: `VARCHAR(20) NOT NULL` - Unidad (`'KG'`, `'LITER'`, `'SAC'`).
-    * `unit_cost`: `DECIMAL(10,2) NOT NULL` - Precio unitario (PEN).
-    * `total_cost`: `DECIMAL(10,2) NOT NULL` - Monto total del gasto.
-    * `purchase_date`: `DATE NOT NULL` - Fecha de compra.
+  * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del gasto.
+  * `campaign_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `crop_campaigns(id)`.
+  * `product_name`: `VARCHAR(100) NOT NULL` - Nombre del insumo/fertilizante.
+  * `quantity`: `DECIMAL(10,2) NOT NULL` - Cantidad comprada.
+  * `unit_of_measure`: `VARCHAR(20) NOT NULL` - Unidad (`'KG'`, `'LITER'`, `'SAC'`).
+  * `unit_cost`: `DECIMAL(10,2) NOT NULL` - Precio unitario (PEN).
+  * `total_cost`: `DECIMAL(10,2) NOT NULL` - Monto total del gasto.
+  * `purchase_date`: `DATE NOT NULL` - Fecha de compra.
 
 ###### Tabla `labor_expenses`
 Registro de pago de jornales a trabajadores agrícolas para labores de siembra, deshierbe o cosecha.
 
 * **Columnas:**
-    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del gasto de mano de obra.
-    * `campaign_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `crop_campaigns(id)`.
-    * `activity_type`: `VARCHAR(100) NOT NULL` - Labor realizada (ej. "Deshierbe manual", "Cosecha").
-    * `workers_count`: `INT NOT NULL` - Número de peones contratados.
-    * `days_worked`: `DECIMAL(5,2) NOT NULL` - Número de días/jornales.
-    * `cost_per_day`: `DECIMAL(10,2) NOT NULL` - Pago por jornal diario (PEN).
-    * `total_cost`: `DECIMAL(10,2) NOT NULL` - Monto total de jornales.
-    * `work_date`: `DATE NOT NULL` - Fecha del trabajo.
+  * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del gasto de mano de obra.
+  * `campaign_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `crop_campaigns(id)`.
+  * `activity_type`: `VARCHAR(100) NOT NULL` - Labor realizada (ej. "Deshierbe manual", "Cosecha").
+  * `workers_count`: `INT NOT NULL` - Número de peones contratados.
+  * `days_worked`: `DECIMAL(5,2) NOT NULL` - Número de días/jornales.
+  * `cost_per_day`: `DECIMAL(10,2) NOT NULL` - Pago por jornal diario (PEN).
+  * `total_cost`: `DECIMAL(10,2) NOT NULL` - Monto total de jornales.
+  * `work_date`: `DATE NOT NULL` - Fecha del trabajo.
 
 ###### Tabla `freight_expenses`
 Gastos de transporte y flete desde la parcela hacia el centro de acopio o almacén.
 
 * **Columnas:**
-    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del flete.
-    * `campaign_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `crop_campaigns(id)`.
-    * `driver_name`: `VARCHAR(100) NULL` - Nombre del transportista/camionero.
-    * `destination`: `VARCHAR(150) NOT NULL` - Almacén o destino del flete.
-    * `total_cost`: `DECIMAL(10,2) NOT NULL` - Costo total del servicio de flete.
-    * `freight_date`: `DATE NOT NULL` - Fecha del traslado.
+  * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del flete.
+  * `campaign_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `crop_campaigns(id)`.
+  * `driver_name`: `VARCHAR(100) NULL` - Nombre del transportista/camionero.
+  * `destination`: `VARCHAR(150) NOT NULL` - Almacén o destino del flete.
+  * `total_cost`: `DECIMAL(10,2) NOT NULL` - Costo total del servicio de flete.
+  * `freight_date`: `DATE NOT NULL` - Fecha del traslado.
 
 ###### Tabla `breakeven_calculations`
 Módulo de consolidación financiera que determina la inversión total y el costo mínimo de venta por unidad.
 
 * **Columnas:**
-    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del cálculo.
-    * `campaign_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `crop_campaigns(id)` UNIQUE.
-    * `total_agrochemical_cost`: `DECIMAL(10,2) NOT NULL` - Sumatoria de insumos.
-    * `total_labor_cost`: `DECIMAL(10,2) NOT NULL` - Sumatoria de jornales.
-    * `total_freight_cost`: `DECIMAL(10,2) NOT NULL` - Sumatoria de fletes.
-    * `total_investment`: `DECIMAL(10,2) NOT NULL` - Inversión total de la campaña.
-    * `estimated_yield_units`: `DECIMAL(10,2) NOT NULL` - Volumen cosechado estimado (en quintales/toneladas).
-    * `breakeven_price_per_unit`: `DECIMAL(10,2) NOT NULL` - **Punto de equilibrio:** Precio mínimo de venta por unidad para no generar pérdidas.
+  * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del cálculo.
+  * `campaign_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `crop_campaigns(id)` UNIQUE.
+  * `total_agrochemical_cost`: `DECIMAL(10,2) NOT NULL` - Sumatoria de insumos.
+  * `total_labor_cost`: `DECIMAL(10,2) NOT NULL` - Sumatoria de jornales.
+  * `total_freight_cost`: `DECIMAL(10,2) NOT NULL` - Sumatoria de fletes.
+  * `total_investment`: `DECIMAL(10,2) NOT NULL` - Inversión total de la campaña.
+  * `estimated_yield_units`: `DECIMAL(10,2) NOT NULL` - Volumen cosechado estimado (en quintales/toneladas).
+  * `breakeven_price_per_unit`: `DECIMAL(10,2) NOT NULL` - **Punto de equilibrio:** Precio mínimo de venta por unidad para no generar pérdidas.
 
 ---
 
@@ -2048,47 +2057,47 @@ Modelado de la cosecha recolectada, evaluaciones de calidad física por calibres
 Registro de lotes de cosecha ingresados a almacén/cooperativa.
 
 * **Columnas:**
-    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del lote cosechado.
-    * `campaign_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `crop_campaigns(id)`.
-    * `batch_code`: `VARCHAR(50) NOT NULL UNIQUE` - Código de lote asignado (ej. "BATCH-2026-P01").
-    * `total_weight_kg`: `DECIMAL(10,2) NOT NULL` - Peso total cosechado en kilogramos.
-    * `harvest_date`: `DATE NOT NULL` - Fecha de recolección.
-    * `quality_status`: `VARCHAR(20) NOT NULL DEFAULT 'PENDING'` - Estado (`'PENDING'`, `'EVALUATED'`, `'CERTIFIED'`).
+  * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del lote cosechado.
+  * `campaign_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `crop_campaigns(id)`.
+  * `batch_code`: `VARCHAR(50) NOT NULL UNIQUE` - Código de lote asignado (ej. "BATCH-2026-P01").
+  * `total_weight_kg`: `DECIMAL(10,2) NOT NULL` - Peso total cosechado en kilogramos.
+  * `harvest_date`: `DATE NOT NULL` - Fecha de recolección.
+  * `quality_status`: `VARCHAR(20) NOT NULL DEFAULT 'PENDING'` - Estado (`'PENDING'`, `'EVALUATED'`, `'CERTIFIED'`).
 
 ###### Tabla `potato_caliber_evaluations`
 Clasificación de calibres de tubérculo para papa según estándar de pesaje/diámetro.
 
 * **Columnas:**
-    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la evaluación de papa.
-    * `harvest_batch_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `harvest_batches(id)` UNIQUE.
-    * `first_caliber_percentage`: `DECIMAL(5,2) NOT NULL` - Porcentaje de Papa Primera (>120g / >6cm).
-    * `second_caliber_percentage`: `DECIMAL(5,2) NOT NULL` - Porcentaje de Papa Segunda (80g-120g).
-    * `third_caliber_percentage`: `DECIMAL(5,2) NOT NULL` - Porcentaje de Papa Tercera/Chanchera (<80g).
-    * `defective_percentage`: `DECIMAL(5,2) NOT NULL` - Porcentaje con daños mecánicos o plagas.
+  * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la evaluación de papa.
+  * `harvest_batch_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `harvest_batches(id)` UNIQUE.
+  * `first_caliber_percentage`: `DECIMAL(5,2) NOT NULL` - Porcentaje de Papa Primera (>120g / >6cm).
+  * `second_caliber_percentage`: `DECIMAL(5,2) NOT NULL` - Porcentaje de Papa Segunda (80g-120g).
+  * `third_caliber_percentage`: `DECIMAL(5,2) NOT NULL` - Porcentaje de Papa Tercera/Chanchera (<80g).
+  * `defective_percentage`: `DECIMAL(5,2) NOT NULL` - Porcentaje con daños mecánicos o plagas.
 
 ###### Tabla `coffee_cupping_evaluations`
 Ficha de catación de café de especialidad según estándar SCA (Specialty Coffee Association).
 
 * **Columnas:**
-    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la catación.
-    * `harvest_batch_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `harvest_batches(id)` UNIQUE.
-    * `fragrance_aroma_score`: `DECIMAL(4,2) NOT NULL` - Puntaje de Fragancia/Aroma (0-10).
-    * `flavor_score`: `DECIMAL(4,2) NOT NULL` - Puntaje de Sabor (0-10).
-    * `acidity_score`: `DECIMAL(4,2) NOT NULL` - Puntaje de Acidez (0-10).
-    * `body_score`: `DECIMAL(4,2) NOT NULL` - Puntaje de Cuerpo (0-10).
-    * `overall_score`: `DECIMAL(4,2) NOT NULL` - Puntaje General del catador (0-10).
-    * `total_sca_score`: `DECIMAL(5,2) NOT NULL` - **Puntaje Total Taza SCA** (ej. 85.50 pts -> Café de Especialidad).
+  * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la catación.
+  * `harvest_batch_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `harvest_batches(id)` UNIQUE.
+  * `fragrance_aroma_score`: `DECIMAL(4,2) NOT NULL` - Puntaje de Fragancia/Aroma (0-10).
+  * `flavor_score`: `DECIMAL(4,2) NOT NULL` - Puntaje de Sabor (0-10).
+  * `acidity_score`: `DECIMAL(4,2) NOT NULL` - Puntaje de Acidez (0-10).
+  * `body_score`: `DECIMAL(4,2) NOT NULL` - Puntaje de Cuerpo (0-10).
+  * `overall_score`: `DECIMAL(4,2) NOT NULL` - Puntaje General del catador (0-10).
+  * `total_sca_score`: `DECIMAL(5,2) NOT NULL` - **Puntaje Total Taza SCA** (ej. 85.50 pts -> Café de Especialidad).
 
 ###### Tabla `quality_certificates`
 Certificados digitales emitidos con código QR y archivo PDF firmado.
 
 * **Columnas:**
-    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del certificado.
-    * `harvest_batch_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `harvest_batches(id)` UNIQUE.
-    * `certificate_number`: `VARCHAR(100) NOT NULL UNIQUE` - Código único de certificado (ej. "CERT-SUMAQ-2026-8841").
-    * `pdf_download_url`: `VARCHAR(255) NOT NULL` - Enlace de descarga del PDF generado.
-    * `qr_verification_code`: `VARCHAR(255) NOT NULL UNIQUE` - Token encriptado codificado en el código QR para verificación pública.
-    * `issued_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha y hora de emisión.
+  * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador del certificado.
+  * `harvest_batch_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `harvest_batches(id)` UNIQUE.
+  * `certificate_number`: `VARCHAR(100) NOT NULL UNIQUE` - Código único de certificado (ej. "CERT-SUMAQ-2026-8841").
+  * `pdf_download_url`: `VARCHAR(255) NOT NULL` - Enlace de descarga del PDF generado.
+  * `qr_verification_code`: `VARCHAR(255) NOT NULL UNIQUE` - Token encriptado codificado en el código QR para verificación pública.
+  * `issued_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha y hora de emisión.
 
 ---
 
@@ -2104,32 +2113,32 @@ Gestión del catálogo de lotes certificados expuestos a compradores mayoristas,
 Publicaciones de lotes de cosecha certificados disponibles para la venta.
 
 * **Columnas:**
-    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la publicación.
-    * `quality_certificate_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `quality_certificates(id)` UNIQUE.
-    * `asking_price_per_unit`: `DECIMAL(10,2) NOT NULL` - Precio base pretendido por quintal/tonelada.
-    * `available_quantity`: `DECIMAL(10,2) NOT NULL` - Volumen disponible para venta.
-    * `publication_status`: `VARCHAR(20) NOT NULL DEFAULT 'PUBLISHED'` - Estado (`'PUBLISHED'`, `'NEGOTIATING'`, `'SOLD'`).
-    * `published_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha de publicación.
+  * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la publicación.
+  * `quality_certificate_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `quality_certificates(id)` UNIQUE.
+  * `asking_price_per_unit`: `DECIMAL(10,2) NOT NULL` - Precio base pretendido por quintal/tonelada.
+  * `available_quantity`: `DECIMAL(10,2) NOT NULL` - Volumen disponible para venta.
+  * `publication_status`: `VARCHAR(20) NOT NULL DEFAULT 'PUBLISHED'` - Estado (`'PUBLISHED'`, `'NEGOTIATING'`, `'SOLD'`).
+  * `published_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha de publicación.
 
 ###### Tabla `purchase_offers`
 Ofertas comerciales enviadas por compradores mayoristas o empresas exportadoras.
 
 * **Columnas:**
-    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la oferta.
-    * `publication_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `certified_lot_publications(id)`.
-    * `buyer_user_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `users(id)` (Comprador ofertante).
-    * `offered_price_per_unit`: `DECIMAL(10,2) NOT NULL` - Precio por unidad ofertado.
-    * `offered_total_amount`: `DECIMAL(10,2) NOT NULL` - Monto total de la oferta.
-    * `offer_status`: `VARCHAR(20) NOT NULL DEFAULT 'PENDING'` - Estado (`'PENDING'`, `'ACCEPTED'`, `'REJECTED'`).
-    * `offered_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha de recepción de la oferta.
+  * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la oferta.
+  * `publication_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `certified_lot_publications(id)`.
+  * `buyer_user_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `users(id)` (Comprador ofertante).
+  * `offered_price_per_unit`: `DECIMAL(10,2) NOT NULL` - Precio por unidad ofertado.
+  * `offered_total_amount`: `DECIMAL(10,2) NOT NULL` - Monto total de la oferta.
+  * `offer_status`: `VARCHAR(20) NOT NULL DEFAULT 'PENDING'` - Estado (`'PENDING'`, `'ACCEPTED'`, `'REJECTED'`).
+  * `offered_at`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha de recepción de la oferta.
 
 ###### Tabla `commercial_settlements`
 Liquidación comercial final que cierra la venta y calcula la ganancia neta.
 
 * **Columnas:**
-    * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la liquidación.
-    * `purchase_offer_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `purchase_offers(id)` UNIQUE.
-    * `agreed_total_sale`: `DECIMAL(10,2) NOT NULL` - Ingreso bruto total acordado por la venta.
-    * `total_campaign_cost`: `DECIMAL(10,2) NOT NULL` - Costo total de inversión derivado del módulo financiero.
-    * `net_profit_margin`: `DECIMAL(10,2) NOT NULL` - **Ganancia Neta Real:** (`agreed_total_sale - total_campaign_cost`).
-    * `settlement_date`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha de cierre y liquidación.
+  * `id`: `BIGINT AUTO_INCREMENT` **[PK]** - Identificador de la liquidación.
+  * `purchase_offer_id`: `BIGINT NOT NULL` **[FK]** -> Referencia a `purchase_offers(id)` UNIQUE.
+  * `agreed_total_sale`: `DECIMAL(10,2) NOT NULL` - Ingreso bruto total acordado por la venta.
+  * `total_campaign_cost`: `DECIMAL(10,2) NOT NULL` - Costo total de inversión derivado del módulo financiero.
+  * `net_profit_margin`: `DECIMAL(10,2) NOT NULL` - **Ganancia Neta Real:** (`agreed_total_sale - total_campaign_cost`).
+  * `settlement_date`: `TIMESTAMP DEFAULT CURRENT_TIMESTAMP` - Fecha de cierre y liquidación.
