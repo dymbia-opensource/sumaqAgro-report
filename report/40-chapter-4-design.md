@@ -337,6 +337,15 @@ El sistema de etiquetado de **SumaqAgro** ha sido diseñado para ser claro, dire
 
 - **Configuración y Ayuda:** Sección para gestionar **“Datos de mi parcela”**, **“Cuenta”**, **“Manuales de ayuda”** y el botón directo **“Llamar a Soporte SumaqAgro”**.
 
+### Etiquetado en la Aplicación Móvil
+
+La aplicación móvil mantiene las mismas etiquetas del Lenguaje Ubicuo, con textos más cortos para pantallas de 360 px:
+
+- **Barra de navegación inferior:** **Inicio** (*Home*), **Monitoreo** (*Monitoring*), **Finanzas** (*Finances*), **Alertas** (*Alerts*) y **Perfil** (*Profile*).
+- **Tarjetas del Inicio:** **Salud Foliar** (*Leaf Health*), **Gasto Total** (*Total Spend*) y **Precio para no perder** (*Break-even Price*).
+- **Acciones principales:** **Anotar gasto** (*Log expense*), **Enviar foto de plaga** (*Send pest photo*) y **Registrar parcela** (*Register new plot*).
+- **Estados:** **Conectado** (*Connected*), **Óptimo** (*Optimal*) y **pendientes** (*pending*) para los datos por sincronizar.
+
 ### 4.2.3. SEO Tags and Meta Tags
 
 Con el objetivo de mejorar la visibilidad de "SumaqAgro" en los motores de búsqueda y facilitar su descubrimiento tanto por agricultores independientes, líderes de cooperativas y asesores técnicos agrónomos interesados en optimizar el rendimiento y la gestión de sus cultivos, se ha establecido una estrategia SEO que incluye el uso adecuado de etiquetas HTML para los principales elementos informativos del sitio web estático (Landing Page) y la aplicación web.
@@ -467,6 +476,15 @@ Entre las principales opciones se encuentran:
 - Filtrado según severidad del riesgo.
 - Consulta del historial de diagnósticos.
 - Consulta de recetas fitosanitarias emitidas por predio.
+
+#### Búsqueda en la Aplicación Móvil
+
+En la aplicación móvil la búsqueda se simplifica para el uso con una sola mano:
+
+- **Barra de búsqueda** en la parte superior de las pantallas de Inicio y Finanzas (por ejemplo, "Buscar en mi parcela").
+- **Chips de filtro** bajo la barra, como **Todos**, **Insumos**, **Mano de obra** y **Flete** en el historial de gastos.
+- **Resultados en tarjetas** de una sola columna, con el estado indicado por color, ícono y texto.
+
 ### 4.2.5. Navigation Systems
 
 La navegación en **SumaqAgro** está diseñada para facilitar el recorrido del usuario de manera clara y rápida. En la Landing Page se implementa una barra de navegación fija (header) en la parte superior que contiene el isotipo de la marca, enlaces directos a las secciones principales, botones de acción y selector de idioma. Estas secciones son:
@@ -508,6 +526,17 @@ Cada sección está representada con un ícono claro y una etiqueta visible, ase
 </p>
 
 > <p align="center">Navegación de la aplicación web (Sidenav)</p>
+
+En la **aplicación móvil** el menú lateral se sustituye por una barra de navegación inferior (*Bottom Navigation Bar*) con cinco destinos fijos, ubicada en la zona del pulgar:
+
+- **Inicio:** Panel de Mi Parcela con salud foliar, gasto total y precio para no perder.
+- **Monitoreo:** Visor satelital con las capas de vigor foliar (NDVI) y humedad (NDWI).
+- **Finanzas:** Gastos y ganancias de la campaña, con acceso al registro de un nuevo gasto.
+- **Alertas:** Avisos de riesgo y plan de acción.
+- **Perfil:** Configuración, ayuda, modo sin conexión y cierre de sesión.
+
+Las vistas de detalle y los formularios se recorren con una flecha de retroceso en la barra superior, y las acciones frecuentes aparecen como accesos rápidos en el Inicio (*Consultar con el Asesor*, *Mis Certificados* y *Enviar foto de plaga*).
+
 
 <br>
 
