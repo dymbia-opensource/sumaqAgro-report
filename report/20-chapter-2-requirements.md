@@ -664,21 +664,30 @@ Se analizaron 3 entrevistas a ingenieros agrónomos y extensionistas rurales (Ox
 
 #### 2.3.1. User Personas
 
-A continuación, se presentan los tres arquetipos de usuario elaborados en UXPressia (disponibles en: https://uxpressia.com/w/v8FzI/t/eqZxS) a partir del análisis cualitativo y cuantitativo de las entrevistas de campo, representando formalmente a cada uno de los segmentos objetivo de la plataforma Dymbia:
-##### Segmento 1: Pequeños y medianos agricultores independientes
-El arquetipo "Guillermo Cortés" representa al agricultor familiar tradicional que conduce parcelas de café y papa bajo métodos empíricos y sin conectividad continua, demandando una arquitectura móvil fuera de línea y monitoreo satelital sin inversión en sensores costosos en tierra para defender precios justos frente a intermediarios.
+A partir del análisis cualitativo y cuantitativo de las 9 entrevistas de campo realizadas a productores, dirigentes cooperativos y agrónomos, se construyeron tres arquetipos de usuario en UXPressia (disponibles en: https://uxpressia.com/w/v8FzI/t/eqZxS). Estos personajes consolidan las conductas, frustraciones y dinámicas de trabajo observadas en el sector agrario real, sirviendo como guía para el diseño funcional de la plataforma SumaqAgro y la startup Dymbia.
 
-![user-persona-segmento-1-guillermo-cortes.jpeg](assets/img/chapter-2/user-persona-segmento-1-guillermo-cortes.jpeg)
+##### Segmento 1: Pequeños y medianos agricultores independientes
+El arquetipo **Guillermo Cortés** representa al agricultor familiar de los valles interandinos y zonas de selva alta. Trabaja parcelas familiares de 1 a 5 hectáreas de papa y café junto a sus hijos. Maneja sus labores de memoria o en cuadernos de apuntes que frecuentemente se deterioran o pierden por la humedad del campo.
+
+Guillermo no dispone de capital ni infraestructura para instalar sensores de humedad o estaciones meteorológicas en tierra. Además, trabaja la mayor parte del día en quebradas o laderas donde la señal celular (3G o Edge) se corta por completo. Esto lo deja desprotegido frente a eventos climáticos repentinos como heladas o ataques de roya y rancha, detectando el daño cuando ya es irreversible. Al momento de comercializar su cosecha, desconoce el costo real acumulado por saco o quintal (jornales, combustible, fertilizantes), viéndose forzado a aceptar los precios castigados y deducciones arbitrarias que imponen los acopiadores intermediarios.
+
+![user-persona-segmento-1-guillermo-cortes.png](assets/img/chapter-2/user-persona/user-persona-segmento-1-guillermo-cortes.png){width=120px}
 
 ##### Segmento 2: Productores organizados y directivos de cooperativas/asociaciones
-El arquetipo "Cristian Santana" sintetiza las necesidades de los administradores y directivos de acopio cooperativo, quienes requieren digitalizar los análisis de calidad en almacén, asegurar la trazabilidad de origen y agilizar los expedientes de auditoría para proteger las primas comerciales y de exportación.
 
-![user-persona-segmento-2-cristian-santana.jpeg](assets/img/chapter-2/user-persona-segmento-2-cristian-santana.jpeg)
+El arquetipo **Cristian Santana** refleja el perfil del gerente de operaciones o jefe de acopio cooperativo en zonas cafetaleras y paperas. Es responsable de recibir, pesar, catar y consolidar la producción de cientos de socios empadronados para cumplir con contratos comerciales en mercados mayoristas o de exportación.
+
+El principal obstáculo de Cristian radica en la dependencia de las libretas de papel de los socios, la mayoría adultos mayores con alta resistencia a interfaces tecnológicas complejas. Esta falta de digitalización provoca que hasta un 10% de los lotes sufra demoras u observaciones en aduanas y auditorías de sellos de calidad (como orgánico o comercio justo) por vacíos en la trazabilidad de origen. Asimismo, los métodos manuales de liquidación en almacén generan desconfianza al aplicar bonificaciones o penalizaciones por calidad física y sensorial (calibres o puntaje de taza SCA).
+
+![user-persona-segmento-2-cristian-santana.png](assets/img/chapter-2/user-persona/user-persona-segmento-2-cristian-santana.png){width=120px}
 
 ##### Segmento 3: Ingenieros agrónomos y asesores técnicos de campo
-El arquetipo "Juan Antonio Morales" consolida al consultor fitosanitario cuya cobertura se ve restringida por la dispersión geográfica en quebradas y por métodos visuales subjetivos, requiriendo teledetección multiespectral para priorizar predios y sustentar prescripciones técnicas ante la gerencia.
 
-![user-persona-segmento-3-juan-antonio-morales.jpeg](assets/img/chapter-2/user-persona-segmento-3-juan-antonio-morales.jpeg)
+El arquetipo **Juan Antonio Morales** representa al profesional de extensión agrícola que asiste técnicamente a decenas de agricultores distribuidos en zonas geográficamente dispersas y de difícil acceso (caminatas de 2 a 3 horas entre predios).
+
+La cobertura técnica de Juan Antonio está limitada a un máximo de 20 a 40 productores al mes. Esta restricción de tiempo lo obliga a realizar un trabajo netamente reactivo, acudiendo a las parcelas únicamente cuando la plaga o el estrés hídrico ya se manifestaron visualmente. Sus diagnósticos de daños por siniestros climáticos se basan en recorridos en zigzag altamente subjetivos ("al ojo"), y sus recomendaciones técnicas quedan dispersas en mensajes informales de WhatsApp o notas sueltas, dificultando demostrar con datos numéricos el retorno de inversión de sus visitas técnicas frente a la gerencia de la cooperativa.
+
+![user-persona-segmento-3-juan-antonio-morales.png](assets/img/chapter-2/user-persona/user-persona-segmento-3-juan-antonio-morales.png){width=120px}
 
 ### 2.3.2. User Task Matrix
 
