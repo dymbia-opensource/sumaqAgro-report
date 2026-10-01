@@ -8,15 +8,22 @@
     3. <img> en línea (fotos del equipo) -> imagen real.
     4. <div style="page-break-after: always;"></div> -> \clearpage.
     5. Anchos en px de las imágenes -> porcentaje del ancho de línea.
-    6. Imágenes solas en un párrafo -> centradas.
+       Las imágenes sin ancho se escalan según su tamaño en píxeles y las
+       capturas de celular (verticales) se limitan en alto para que no
+       ocupen una página completa.
+    6. Imágenes solas en un párrafo -> centradas. Varias capturas de celular
+       en el mismo párrafo (líneas contiguas) -> una fila, lado a lado.
     7. Cada encabezado de nivel 1 (# ...) inicia en una página nueva.
-    8. Genera la carátula a partir del bloque `cover:` de metadata.yaml.
 
   Compatible con Pandoc 2.9+ y 3.x.
 ]]
 
 local stringify = pandoc.utils.stringify
 local MAX_PX = 650  -- ancho (px) que se considera 100% del ancho de línea
+local LINE_CM = 15.9  -- ancho de línea en cm (A4 con márgenes de 2.54 cm)
+local CAP_PHONE_CM = 11  -- alto máximo de una captura de celular (~media página)
+local CAP_LONG_CM = 19     -- alto máximo de una captura de celular con scroll largo
+local ROW_GAP = 1.5        -- separación (%) entre capturas en una misma fila
 
 local function latex(s) return pandoc.RawBlock('latex', s) end
 local function is_html(fmt) return fmt == 'html' or fmt == 'html5' end
@@ -58,16 +65,52 @@ local pass1 = {
 }
 
 -- ---------------------------------------------------------------- pasada 2
+-- Tamaño en píxeles de un PNG (se lee de la cabecera del archivo)
+local function png_size(path)
+  local f = io.open(path, 'rb')
+  if not f then return nil end
+  local d = f:read(24)
+  f:close()
+  if not d or #d < 24 or d:sub(1, 8) ~= '\137PNG\r\n\26\n' then return nil end
+  return string.unpack('>I4', d, 17), string.unpack('>I4', d, 21)
+end
+
+local function image_size(src)
+  local dirs = (PANDOC_STATE and PANDOC_STATE.resource_path) or {}
+  for _, dir in ipairs(dirs) do
+    local w, h = png_size(dir .. '/' .. src)
+    if w then return w, h end
+  end
+  return png_size(src)
+end
+
+local function width_pct(img)
+  local v = img.attributes.width
+  return v and tonumber(v:match('^([%d%.]+)%%$')) or nil
+end
+
 local function normalize_width(img)
   -- Se reconstruyen los atributos: solo se conserva `width` (en %),
   -- el alto se calcula manteniendo la proporción.
   local w = img.attributes.width
-  local attrs = {}
+  local pct
   if w then
     local px = tonumber(w:match('^(%d+)%s*p?x?$'))
-    if px then
-      w = math.min(100, math.floor(px * 100 / MAX_PX + 0.5)) .. '%'
-    end
+    pct = px and (px * 100 / MAX_PX) or width_pct(img)
+  end
+  local pw, ph = image_size(img.src)
+  if pw then
+    if not w then pct = pw * 100 / MAX_PX end
+    local ratio = ph / pw
+    local cap
+    if pw <= 800 and ratio > 2.4 then cap = CAP_LONG_CM
+    elseif pw <= 800 and ratio >= 1.8 then cap = CAP_PHONE_CM end
+    if cap and pct then pct = math.min(pct, cap / ratio / LINE_CM * 100) end
+  end
+  local attrs = {}
+  if pct then
+    attrs = { {'width', string.format('%.1f%%', math.min(100, pct))} }
+  elseif w then
     attrs = { {'width', w} }
   end
   img.attr = pandoc.Attr(img.identifier, img.classes, attrs)
@@ -137,9 +180,9 @@ local pass2 = {
   -- ::: {.center} ... ::: -> contenido centrado (carátula)
   Div = function(el)
     if el.classes:includes('center') then
-      local out = { latex('\\begin{center}') }
+      local out = { latex('\\begingroup\\setstretch{1}\\begin{center}') }
       for _, b in ipairs(el.content) do out[#out + 1] = b end
-      out[#out + 1] = latex('\\end{center}')
+      out[#out + 1] = latex('\\end{center}\\endgroup')
       return out
     end
   end,
@@ -155,6 +198,29 @@ local pass2 = {
       if x.t == 'Image' then has_img = true break end
     end
     if not has_img then return nil end
+
+    -- Varias capturas contiguas que caben en una línea -> una sola fila
+    local imgs, only_imgs, total = {}, true, 0
+    for _, x in ipairs(el.content) do
+      if x.t == 'Image' then
+        imgs[#imgs + 1] = x
+        total = total + (width_pct(x) or 100)
+      elseif x.t ~= 'Space' and x.t ~= 'SoftBreak' then
+        only_imgs = false
+      end
+    end
+    if only_imgs and #imgs >= 2 and total + ROW_GAP * (#imgs - 1) <= 100 then
+      local row = {}
+      for i, x in ipairs(imgs) do
+        if i > 1 then
+          row[#row + 1] = pandoc.RawInline('latex',
+            string.format('\\hspace{%.3f\\linewidth}', ROW_GAP / 100))
+        end
+        row[#row + 1] = x
+      end
+      return { latex('\\begin{center}'), pandoc.Para(row), latex('\\end{center}') }
+    end
+
     local out, buf = {}, {}
     local function flush()
       local only_space = true
@@ -183,49 +249,4 @@ local pass2 = {
   end,
 }
 
--- ---------------------------------------------------------------- carátula
-local function esc(s)
-  return (s:gsub('([&%%$#_{}])', '\\%1'))
-end
-
-local function m(meta, key) return meta[key] and esc(stringify(meta[key])) or '' end
-
-local function build_cover(meta)
-  local c = meta.cover
-  if not c then return nil end
-  local L = {}
-  local function add(s) L[#L + 1] = s end
-  add('\\begin{titlepage}\\centering')
-  if c.logo then
-    add('\\includegraphics[width=3.2cm]{' .. stringify(c.logo) .. '}\\par\\vspace{0.8cm}')
-  end
-  add('{\\large\\bfseries ' .. m(c, 'university') .. '\\par}\\vspace{0.2cm}')
-  add('{\\large ' .. m(c, 'faculty') .. '\\par}')
-  add('{\\large ' .. m(c, 'career') .. ' --- Ciclo ' .. m(c, 'term') .. '\\par}\\vspace{0.8cm}')
-  add('{\\large\\bfseries ' .. m(c, 'course-code') .. ' ' .. m(c, 'course-name') .. '\\par}\\vspace{0.3cm}')
-  add('{\\large NRC: ' .. m(c, 'nrc') .. '\\par}\\vspace{0.3cm}')
-  add('{\\large Docente: ' .. m(c, 'instructor') .. '\\par}\\vspace{1cm}')
-  add('{\\LARGE\\bfseries ' .. m(c, 'report-title') .. '\\par}\\vspace{0.3cm}')
-  add('{\\large Entrega: ' .. m(c, 'milestone') .. '\\par}\\vspace{0.8cm}')
-  add('{\\large Startup: \\textbf{' .. m(c, 'startup') .. '}\\par}\\vspace{0.2cm}')
-  add('{\\large Producto: \\textbf{' .. m(c, 'product') .. '}\\par}\\vspace{0.8cm}')
-  add('{\\large\\bfseries Integrantes\\par}\\vspace{0.3cm}')
-  add('\\begin{tabular}{ll}\\textbf{Código} & \\textbf{Apellidos y Nombres}\\\\\\hline')
-  for _, mem in ipairs(c.members or {}) do
-    add(m(mem, 'code') .. ' & ' .. m(mem, 'name') .. '\\\\')
-  end
-  add('\\end{tabular}\\par\\vfill')
-  add('{\\large ' .. m(c, 'date') .. '\\par}')
-  add('\\end{titlepage}')
-  return latex(table.concat(L, '\n'))
-end
-
-local pass3 = {
-  Pandoc = function(doc)
-    local cover = build_cover(doc.meta)
-    if cover then table.insert(doc.blocks, 1, cover) end
-    return doc
-  end,
-}
-
-return { pass1, pass2, pass3 }
+return { pass1, pass2 }

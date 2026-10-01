@@ -4,8 +4,9 @@ title: "Informe de Trabajo Final — Dymbia / SumaqAgro"
 author: "Dymbia"
 lang: es
 papersize: a4
-geometry: "margin=2.3cm"
+geometry: "margin=2.54cm"   # márgenes de 1 pulgada (APA 7)
 fontsize: 11pt
+linestretch: 1.5                # interlineado 1.5
 # Fuentes: Arial / Consolas existen en Windows y macOS.
 # En Linux usar "Liberation Sans" / "Liberation Mono" (o comentar para Latin Modern).
 mainfont: "Arial"

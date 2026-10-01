@@ -102,6 +102,7 @@ Repositorio oficial para la gestión, redacción colaborativa y compilación sec
   * [4.1. Style Guidelines](report/40-chapter-4-design.md#41-style-guidelines)
     * [4.1.1. General Style Guidelines](report/40-chapter-4-design.md#411-general-style-guidelines)
     * [4.1.2. Web Style Guidelines](report/40-chapter-4-design.md#412-web-style-guidelines)
+    * [4.1.3. Mobile Style Guidelines](report/40-chapter-4-design.md#413-mobile-style-guidelines)
   * [4.2. Information Architecture](report/40-chapter-4-design.md#42-information-architecture)
     * [4.2.1. Organization Systems](report/40-chapter-4-design.md#421-organization-systems)
     * [4.2.2. Labeling Systems](report/40-chapter-4-design.md#422-labeling-systems)
