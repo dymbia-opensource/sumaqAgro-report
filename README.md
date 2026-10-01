@@ -157,39 +157,43 @@ El repositorio implementa la estructura modular de directorios para compilación
 
 ```text
 sumaqAgro-report/
-├── config/
-│   └── build.yaml                       # Configuración de compilación Pandoc / XeLaTeX
-├── report/                              # Directorio raíz del informe modular
-│   ├── front-matter/                    # Prefijos 01-09: Carátula, versiones y Student Outcome
+├── pandoc/                              # Pipeline de exportación a PDF
+│   ├── build.yaml                       # Configuración Pandoc / XeLaTeX (orden de los capítulos)
+│   ├── metadata.yaml                    # Propiedades del PDF (fuentes, márgenes, idioma)
+│   ├── Makefile                         # make -C pandoc pdf MILESTONE=tb1
+│   ├── build.ps1                        # .\pandoc\build.ps1 -Milestone tb1 (Windows)
+│   ├── filters/
+│   │   └── pdf.lua                      # Imágenes y tablas HTML → PDF
+│   ├── latex/
+│   │   └── preamble.tex                 # Ajustes LaTeX
+│   ├── templates/
+│   │   └── toc.md                       # Posición de la tabla de contenidos
+│   └── build/                           # Salida del PDF (ignorada por Git)
+├── report/                              # Contenido del informe
+│   ├── front-matter/                    # Prefijos 01-09
 │   │   ├── 01-caratula.md
 │   │   ├── 02-version-history.md
 │   │   ├── 03-collaboration.md
 │   │   └── 04-student-outcome.md
-│   ├── 10-chapter-1-intro.md            # Prefijos 10-89: Capítulos principales
+│   ├── 10-chapter-1-intro.md            # Prefijos 10-89: capítulos
 │   ├── 20-chapter-2-requirements.md
 │   ├── 30-chapter-3-specification.md
 │   ├── 40-chapter-4-design.md
 │   ├── 50-chapter-5-implementation.md
 │   ├── 60-conclusions.md
-│   ├── 99-bibliography.md               # Prefijo 99: Referencias en formato APA
-│   ├── annexes/                         # Anexos aislados dentro de report/
-│   │   ├── annex-a-student-outcome.md
-│   │   ├── annex-b-performance-report.md
-│   │   └── annex-c-videos.md
-│   └── assets/                          # Imágenes, diagramas y recursos
-│       └── img/
-│           ├── c4/
-│           ├── chapter-II/
-│           ├── chapter-III/
-│           ├── chapter-IV/
-│           ├── chapter-V/
-│           ├── class-diagrams/
-│           ├── event-storming/
-│           ├── interview/
-│           ├── team/
-│           ├── lean-ux-canvas.png
-│           └── upc-logo.png
-├── .gitignore
-├── Makefile                             # Automatización de compilación (make pdf)
-├── metadata.yaml                        # Variables globales del reporte académico
+│   ├── 99-bibliography.md               # Prefijo 99: referencias APA
+│   ├── annexes/
+│   │   └── annex-a-videos.md
+│   └── assets/img/                      # Imágenes agrupadas por capítulo
+│       ├── chapter-1/                   # team/
+│       ├── chapter-2/                   # interviews/, personas, empathy y journey maps
+│       ├── chapter-3/                   # impact map, backlog
+│       ├── chapter-4/                   # c4/, class-diagrams/, database/, event-storming/,
+│       │                                # domain-driven-design/, applications-design/, landing-page/, wireflows/
+│       ├── chapter-5/                   # deployment-configuration/, landing-page/, sprint-1/
+│       ├── lean-ux-canvas.png
+│       └── upc-logo.png
+├── CHANGELOG.md                         # Cambios por versión
+├── CONTRIBUTING.md                      # GitFlow, Conventional Commits y compilación
+├── LICENSE.md                           # CC BY-NC-SA 4.0
 └── README.md                            # Portada digital e índice navegable
