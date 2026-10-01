@@ -197,3 +197,25 @@ sumaqAgro-report/
 ├── CONTRIBUTING.md                      # GitFlow, Conventional Commits y compilación
 ├── LICENSE.md                           # CC BY-NC-SA 4.0
 └── README.md                            # Portada digital e índice navegable
+```
+
+## Compilación del PDF
+
+Requisitos: **Pandoc 3.x** y **XeLaTeX** (MiKTeX o TeX Live / MacTeX). Todos los comandos se ejecutan desde la raíz del repositorio.
+
+### Windows (PowerShell)
+
+Instalación (una sola vez):
+
+```powershell
+winget install --id JohnMacFarlane.Pandoc
+winget install --id MiKTeX.MiKTeX
+```
+
+En **MiKTeX Console → Settings**, activa *Install missing packages on-the-fly: Always*.
+
+Compilación:
+
+```powershell
+.\pandoc\build.ps1 -Milestone tb1
+```
