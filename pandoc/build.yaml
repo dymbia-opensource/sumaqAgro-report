@@ -1,6 +1,6 @@
 # =====================================================================
 # Pandoc defaults — Informe del Trabajo Final (Docs-as-Code)
-# Uso:  pandoc --defaults=config/build.yaml -o dist/<nombre>.pdf
+# Uso:  pandoc --defaults=pandoc/build.yaml -o dist/<nombre>.pdf
 #       (o simplemente `make pdf` / `./build.ps1`)
 # =====================================================================
 
@@ -21,7 +21,7 @@ input-files:
   - report/front-matter/01-caratula.md
   - report/front-matter/02-version-history.md
   - report/front-matter/03-collaboration.md
-  - config/pdf/toc.md                          # "Contenido" (tabla de contenidos)
+  - pandoc/pdf/toc.md                          # "Contenido" (tabla de contenidos)
   - report/front-matter/04-student-outcome.md
   - report/10-chapter-1-intro.md
   - report/20-chapter-2-requirements.md
@@ -39,11 +39,11 @@ resource-path:
   - "."
 
 filters:
-  - config/filters/pdf.lua
+  - pandoc/filters/pdf.lua
 
 include-in-header:
-  - config/pdf/preamble.tex
+  - pandoc/pdf/preamble.tex
 
 pdf-engine: xelatex
-toc: false            # la tabla de contenidos la inserta config/pdf/toc.md en su lugar
+toc: false            # la tabla de contenidos la inserta pandoc/pdf/toc.md en su lugar
 number-sections: false  # los títulos ya traen su numeración (1.1., 1.1.1., ...)
