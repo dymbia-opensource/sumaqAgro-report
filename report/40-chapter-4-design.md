@@ -96,6 +96,15 @@ La voz y el tono de SumaqAgro están diseñados para ser tan claros, cercanos y 
 
 * **Voz: Experta y facilitadora.** Posicionamos a SumaqAgro como una herramienta moderna para la transformación agrícola, manteniendo siempre una comunicación accesible que prioriza los beneficios prácticos que la plataforma ofrece en el día a día.
 
+**Dimensiones del tono de voz**
+
+Siguiendo las cuatro dimensiones del tono de voz, SumaqAgro se ubica de la siguiente manera:
+
+* **Divertido / Serio → Serio.** Las decisiones del productor afectan su cosecha y sus ingresos, por lo que se evitan los chistes y el lenguaje informal en alertas, costos y recomendaciones.
+* **Formal / Casual → Casual.** Se usa un trato cercano y en segunda persona (“Tu cultivo tiene buen vigor”, “¡Buen día, Guillermo!”), con frases cortas y sin tecnicismos innecesarios.
+* **Respetuoso / Irreverente → Respetuoso.** Se reconoce el conocimiento y la experiencia del agricultor, y los mensajes de error explican cómo corregir el problema sin culpar al usuario.
+* **Entusiasta / Sereno → Sereno.** Las alertas de helada o plaga se comunican con calma y con pasos claros a seguir; el entusiasmo se reserva para confirmar logros, como un registro exitoso o un cultivo en estado “Óptimo”.
+
 Este enfoque comunicacional busca generar confianza y lealtad, asegurando a los productores y organizaciones agrícolas que cuentan con un aliado tecnológico claro y efectivo para optimizar la gestión de sus cultivos.
 
 ### 4.1.2. Web Style Guidelines
