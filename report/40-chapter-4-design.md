@@ -999,9 +999,9 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
 
 ### Mobile Web Browser
 
-Los mock-ups de la aplicación móvil se elaboraron en Figma (página *Mobile 2.0*) sobre un frame Android de 360 × 800 px, a partir de los wireframes móviles y aplicando las Mobile Style Guidelines de la sección 4.1.3. A continuación se presentan las pantallas principales del productor.
+Los mock-ups de la aplicación móvil se elaboraron en Figma (página *Mobile*) sobre un frame Android de 360 × 800 px, a partir de los wireframes móviles y aplicando las Mobile Style Guidelines de la sección 4.1.3. A continuación se presentan las pantallas principales del productor.
 
-[Ver página Mobile 2.0 en Figma](https://www.figma.com/design/ISAgMtqNOAucizqd3eXYzR/UI-DESIGN?node-id=898-10332)
+[Ver página Mobile en Figma](https://www.figma.com/design/ISAgMtqNOAucizqd3eXYzR/UI-DESIGN?node-id=898-10332)
 
 **Aplicación del Design System, principios de diseño e inclusión:** Se usa la misma paleta teal/verde, las tipografías Poppins e Inter y el espaciado base 8 px de la web. La jerarquía visual destaca la tarjeta de *Salud Foliar* en teal oscuro, seguida de *Gasto Total* y *Precio para no perder*. Las tarjetas agrupan los datos relacionados (proximidad y región común), la navegación inferior de cinco destinos queda en la zona del pulgar y las acciones principales usan botones de ancho completo. Para la inclusión se emplean áreas táctiles de 48 px, contraste AA, estados cualitativos junto a las cifras (por ejemplo "Optimal"), formularios con chips y foto de recibo en lugar de texto largo, y un indicador de conexión visible para el modo sin conexión. Las etiquetas respetan la arquitectura de información de la sección 4.2.
 
@@ -1306,6 +1306,9 @@ La navegación interactiva traduce de manera directa las decisiones de Arquitect
 
 * **Enlace al Prototipo Interactivo en Figma (Mobile):**  
   [Visualizar Prototipo Mobile SumaqAgro en Figma](https://www.figma.com/design/ISAgMtqNOAucizqd3eXYzR/UI-DESIGN?node-id=7-56&t=zJ6zOatR2rSsKo7x-1)
+
+* **Enlace al Prototipo Mobile (Android 360 × 800):**  
+  [Visualizar Prototipo Mobile en Figma](https://www.figma.com/design/ISAgMtqNOAucizqd3eXYzR/UI-DESIGN?node-id=898-10332). Cada flujo de usuario (UG-01 a UG-08) se abre desde su punto de inicio ▶ en el panel *Prototype*.
 
 ##### Demostración Audiovisual en Microsoft Stream (Mobile)
 
