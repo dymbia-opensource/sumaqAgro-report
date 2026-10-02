@@ -1357,52 +1357,61 @@ A continuación se presenta la vista general del tablero desarrollado en Miro, e
 
 ![event-storming-step-1-unstructured-exploration.jpg](assets/img/chapter-4/domain-driven-design/event-storming-step-1-unstructured-exploration.jpg)
 
-* En este paso el equipo hizo una lluvia de ideas con todos los eventos de dominio que ocurren en el negocio, sin preocuparse todavía por el orden. Cada evento se escribió en inglés y en tiempo pasado, por ejemplo *Field Plot Registered* o *Frost Risk Detected*. Al revisar el tablero se eliminaron los eventos repetidos y los que estaban en español, y quedaron 67 eventos que cubren desde el registro del usuario hasta la certificación de la cosecha. Algunos eventos de venta del lote, como *Lot Sale Registered*, aparecieron en esta lluvia de ideas, pero en los pasos siguientes se dejaron fuera del alcance del MVP.
+* En este paso se colocan los eventos de dominio del negocio sin un orden definido, escritos en inglés y en tiempo pasado. Son 67 eventos que van desde el registro del usuario hasta la certificación de la cosecha, por ejemplo *User Signed Up*, *Field Plot Registered*, *Frost Risk Detected* y *Quality Certificate Issued*. También aparecen algunos eventos de venta del lote, que quedan fuera del alcance del MVP.
 
 #### Step 2: Timelines
 
 ![event-storming-step-2-timelines.jpg](assets/img/chapter-4/domain-driven-design/event-storming-step-2-timelines.jpg)
 
-* Con los eventos del paso 1 armamos la línea de tiempo, ordenándolos de izquierda a derecha según cómo ocurren en una campaña real: el usuario se registra, crea su parcela, inicia la campaña, recibe el monitoreo satelital, registra sus gastos y al final certifica la cosecha. En la fila principal quedó el camino feliz y debajo se colocaron los escenarios alternativos, como *Subscription Cancelled*, *Cloudy Imagery Discarded* o *Frost Risk Detected*, que no siempre ocurren pero que el sistema debe contemplar.
+* Los eventos se ordenan de izquierda a derecha según cómo ocurren en una campaña: registro del usuario, registro de la parcela, inicio de la campaña, monitoreo satelital, registro de gastos y certificación de la cosecha. En la fila principal está el camino feliz y debajo los escenarios alternativos, como *Subscription Cancelled*, *Cloudy Imagery Discarded* o *Frost Risk Detected*.
 
 #### Step 3: Pain Points
 
 ![event-storming-step-3-paint-points.jpg](assets/img/chapter-4/domain-driven-design/event-storming-step-3-paint-points.jpg)
 
-* Sobre la línea de tiempo marcamos con rombos morados las dudas y problemas que salieron en las entrevistas con agricultores, cooperativas y agrónomos. Identificamos nueve, entre ellos la resistencia de los adultos mayores a usar el celular, la falta de un catastro formal para mapear las parcelas, el límite de AgroMonitoring para parcelas menores a 1 hectárea, la nubosidad que impide tomar mediciones, la falta de señal móvil para recibir alertas de helada y la pérdida de los cuadernos de costos en papel. Varios de estos puntos se convirtieron después en decisiones de diseño, como el modo sin conexión, las alertas por SMS y WhatsApp y el descarte de imágenes nubladas.
+* Los rombos morados marcan los puntos de dolor sobre la línea de tiempo. Son nueve preguntas que salieron de las entrevistas, por ejemplo cómo superar la resistencia de los adultos mayores al celular, cómo mapear parcelas sin un catastro formal, qué pasa si la parcela mide menos de 1 hectárea, cómo medir con nubosidad extrema, cómo emitir alertas de helada sin señal móvil y cómo controlar los costos si se pierden los registros en papel.
 
 #### Step 4: Pivotal Points
 
 ![event-storming-step-4-timelines-pivotal-points.jpg](assets/img/chapter-4/domain-driven-design/event-storming-step-4-timelines-pivotal-points.jpg)
 
-* Después buscamos los eventos que marcan un cambio de etapa en el negocio y colocamos barras verticales para dividir la línea de tiempo. Quedaron seis secciones: registro, organizaciones y suscripciones; configuración de la parcela y la campaña; monitoreo del cultivo y alertas; asesoría agronómica; contabilidad de costos de campo; y calidad y certificación de la cosecha. Por ejemplo, *Subscription Activated* cierra el registro y *Crop Campaign Started* abre el seguimiento del cultivo. Al final quedó una séptima sección con la comercialización del lote, que marcamos como fuera del alcance del MVP. Estas secciones fueron la primera pista de los bounded contexts.
+* Las barras verticales marcan los eventos que cambian la etapa del negocio y dividen la línea de tiempo en seis secciones: registro, organizaciones y suscripciones; configuración de la parcela y la campaña; monitoreo del cultivo y alertas; asesoría agronómica; contabilidad de costos de campo; y calidad y certificación de la cosecha. Por ejemplo, *Subscription Activated* cierra el registro y *Crop Campaign Started* inicia el seguimiento del cultivo. La última sección, comercialización del lote, queda fuera del alcance del MVP.
 
 #### Step 5: Commands
 
 ![event-storming-step-5-Commands.jpg](assets/img/chapter-4/domain-driven-design/event-storming-step-5-Commands.jpg)
 
-* A cada evento le agregamos el comando que lo provoca, escrito en imperativo, y el actor que lo ejecuta. Por ejemplo, el agricultor ejecuta *Register Field Plot* y se produce *Field Plot Registered*, y el agrónomo ejecuta *Issue Technical Prescription* y se produce *Technical Prescription Issued*. Los actores son el visitante, el usuario registrado, el agricultor, el gerente de la cooperativa, el agrónomo y el personal de acopio de la cooperativa (calificador de calidad y catador de café). También aparece el programador del sistema, que ejecuta tareas automáticas como *Fetch Satellite Imagery*. En este paso notamos que varios comandos no tenían un actor porque el sistema los hacía solo, y esos pasaron al paso siguiente.
+* Las notas azules son los comandos, escritos en imperativo, y cada uno está junto al evento que provoca y al actor que lo ejecuta. Por ejemplo, el agricultor ejecuta *Register Field Plot* y se produce *Field Plot Registered*, y el agrónomo ejecuta *Issue Technical Prescription* y se produce *Technical Prescription Issued*. Los actores son el visitante, el usuario registrado, el agricultor, el gerente de la cooperativa, el agrónomo, el calificador de calidad, el catador de café y el programador del sistema, que ejecuta tareas automáticas como *Fetch Satellite Imagery*.
 
 #### Step 6: Policies
 
 ![event-storming-step-6-policies.jpg](assets/img/chapter-4/domain-driven-design/event-storming-step-6-policies.jpg)
 
-* Los comandos que se ejecutan solos los convertimos en políticas con la forma *Whenever [evento] Then [comando]*. En el tablero teníamos varias notas sueltas debajo de otras porque no sabíamos dónde ponerlas, y casi todas eran justamente reacciones automáticas del sistema. Quedaron once políticas, por ejemplo: cuando un usuario se registra se le asigna el Plan Semilla, cuando se registra la fecha de siembra se programa el monitoreo satelital, cuando se detecta una anomalía de vegetación, estrés hídrico o riesgo de helada se emite una alerta agroclimática, y cuando se inicia una campaña se abre su libro de costos.
+* Las notas moradas son las políticas: comandos que el sistema ejecuta solo cuando ocurre un evento, con la forma *Whenever [evento] Then [comando]*. Son once, por ejemplo: cuando un usuario se registra se le asigna el Plan Semilla, cuando se registra la fecha de siembra se programa el monitoreo satelital, cuando se detecta una anomalía de vegetación, estrés hídrico o riesgo de helada se emite una alerta agroclimática, y cuando se inicia una campaña se abre su libro de costos.
 
 #### Step 7: Read Models
 
 ![event-storming-step-7-read-models.jpg](assets/img/chapter-4/domain-driven-design/event-storming-step-7-read-models.jpg)
 
-* Luego agregamos los modelos de lectura, es decir, la información que el actor necesita ver antes de ejecutar un comando. Por ejemplo, antes de registrar una parcela el agricultor revisa *My Plots and Plan Quota* para saber cuántos cupos le quedan, antes de emitir una receta el agrónomo revisa *Phytosanitary Diagnosis Inbox* y antes de vender su cosecha el productor consulta el *Breakeven Report*. La mayoría de estos modelos de lectura coinciden con las pantallas que diseñamos para la aplicación web, como la vista de mis parcelas, el visor de salud del cultivo y la sección de gastos.
+* Las notas verdes son los modelos de lectura, es decir, la información que el actor revisa antes de ejecutar un comando. Por ejemplo, el agricultor revisa *My Plots and Plan Quota* antes de registrar una parcela, el agrónomo revisa *Phytosanitary Diagnosis Inbox* antes de emitir una receta y el productor consulta el *Breakeven Report* para conocer su precio mínimo de venta. Estos modelos corresponden a las pantallas de la aplicación web.
 
 #### Step 8: External Systems
-![event-storming-step-8-external-systems-refactorizado.jpg](assets/img/chapter-4/domain-driven-design/event-storming-step-8-external-systems-refactorizado.jpg)
-* El paso 8 identifica e integra los sistemas externos y servicios de terceros que interactúan con el dominio, enviando comandos o reaccionando a los eventos generados.
+
+![event-storming-step-8-external-systems-refactorizado.jpg](assets/img/chapter-4/domain-driven-design/event-storming-step-8-external-systems.jpg)
+
+* Las notas rosadas son los sistemas externos con los que se comunica la plataforma. Son tres: la API de AgroMonitoring, que entrega las imágenes satelitales de Sentinel-2 y Landsat-8, los índices NDVI y NDWI y el pronóstico del clima; la pasarela de pagos Niubiz, que confirma el pago de las suscripciones; y Twilio, que envía las alertas por SMS y WhatsApp.
+
 #### Step 9: Aggregates
+
 ![event-storming-step-9-aggregates.jpg](assets/img/chapter-4/domain-driven-design/event-storming-step-9-aggregates.jpg)
-* El paso 9 encapsula la lógica de negocio, las entidades y sus reglas de consistencia en agregados, garantizando la integridad transaccional del sistema.
+
+* Los rectángulos amarillos son los agregados, que agrupan los comandos y eventos que comparten las mismas reglas de negocio. Son 17, entre ellos *FieldPlot*, *CropCampaign*, *CampaignLedger*, *SatelliteObservation*, *PestReport* y *HarvestBatch*. Por ejemplo, *CropCampaign* no permite abrir una segunda campaña en la misma parcela mientras la anterior siga activa, y *CampaignLedger* no permite registrar gastos en una campaña cerrada.
+
 #### Step 10: Bounded Contexts
-![Evidencia integral de Design-Level Event Storming](assets/img/chapter-4/event-storming/step-10-bounded-contexts.jpg)
+
+![Evidencia integral de Design-Level Event Storming](assets/img/chapter-4/domain-driven-design/event-storming-step-10-bounded-contexts.jpg)
+
+* Los agregados que trabajan con la misma información y el mismo lenguaje se agrupan en seis bounded contexts: *Identity and Access Management*, *Profiles*, *Subscriptions and Payments*, *Field Management*, *Crop Health* y *Harvest Certification*. A estos se suma el contexto *Shared*, que no tiene eventos propios y reúne las clases base que usan todos los demás. Las flechas que cruzan de un contexto a otro son las políticas que los conectan; por ejemplo, cuando se registra la fecha de siembra en *Field Management*, *Crop Health* programa el monitoreo satelital de esa parcela.
 
 * **Enlace interactivo al espacio de trabajo:** [Tablero de Event Storming en Miro](https://miro.com/welcomeonboard/WG5aQ1R0dmR5b0xQWTI5TEZvaXplRmpPTUxmT2pmR1NNVXBVakcxRFI5Yk16dVY3TXpRc0RwbHVKNWFndGJvZDZkZXJrbkN4VFZQdzhHTjV6MWdBNUJtQnhYMVFmcjNLbkxyOWQwZlVuWHVPRUdrWUJzeGVtb1g5cE9UeGFKdjJBd044SHFHaVlWYWk0d3NxeHNmeG9BPT0hdjE=?share_link_id=126689221129)
 
