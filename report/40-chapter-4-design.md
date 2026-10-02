@@ -1360,11 +1360,17 @@ A continuación se presenta la vista general del tablero desarrollado en Miro, e
 * En este paso el equipo hizo una lluvia de ideas con todos los eventos de dominio que ocurren en el negocio, sin preocuparse todavía por el orden. Cada evento se escribió en inglés y en tiempo pasado, por ejemplo *Field Plot Registered* o *Frost Risk Detected*. Al revisar el tablero se eliminaron los eventos repetidos y los que estaban en español, y quedaron 67 eventos que cubren desde el registro del usuario hasta la certificación de la cosecha. Algunos eventos de venta del lote, como *Lot Sale Registered*, aparecieron en esta lluvia de ideas, pero en los pasos siguientes se dejaron fuera del alcance del MVP.
 
 #### Step 2: Timelines
+
 ![event-storming-step-2-timelines.jpg](assets/img/chapter-4/domain-driven-design/event-storming-step-2-timelines.jpg)
-* El segundo paso de Event Storming transforma la lluvia de ideas caótica del Paso 1 en una narrativa operativa coherente, secuenciada cronológicamente de izquierda a derecha bajo el escenario principal o Happy Path.
-#### Step 3: Paints Points
+
+* Con los eventos del paso 1 armamos la línea de tiempo, ordenándolos de izquierda a derecha según cómo ocurren en una campaña real: el usuario se registra, crea su parcela, inicia la campaña, recibe el monitoreo satelital, registra sus gastos y al final certifica la cosecha. En la fila principal quedó el camino feliz y debajo se colocaron los escenarios alternativos, como *Subscription Cancelled*, *Cloudy Imagery Discarded* o *Frost Risk Detected*, que no siempre ocurren pero que el sistema debe contemplar.
+
+#### Step 3: Pain Points
+
 ![event-storming-step-3-paint-points.jpg](assets/img/chapter-4/domain-driven-design/event-storming-step-3-paint-points.jpg)
-* El tercer paso tiene como función principal identificar y visibilizar de forma temprana las fricciones, riesgos, dudas y cuellos de botella existentes en el flujo operativo del negocio agrícola.
+
+* Sobre la línea de tiempo marcamos con rombos morados las dudas y problemas que salieron en las entrevistas con agricultores, cooperativas y agrónomos. Identificamos nueve, entre ellos la resistencia de los adultos mayores a usar el celular, la falta de un catastro formal para mapear las parcelas, el límite de AgroMonitoring para parcelas menores a 1 hectárea, la nubosidad que impide tomar mediciones, la falta de señal móvil para recibir alertas de helada y la pérdida de los cuadernos de costos en papel. Varios de estos puntos se convirtieron después en decisiones de diseño, como el modo sin conexión, las alertas por SMS y WhatsApp y el descarte de imágenes nubladas.
+
 #### Step 4: Pivotal Points
 ![event-storming-step-4-timelines-pivotal-points.jpg](assets/img/chapter-4/domain-driven-design/event-storming-step-4-timelines-pivotal-points.jpg)
 * El cuarto paso tiene como propósito identificar y marcar aquellos eventos de dominio transcendentales que representan cambios de estado irreversibles, puntos de inflexión de alto impacto o transiciones entre diferentes etapas del negocio agrícola.
