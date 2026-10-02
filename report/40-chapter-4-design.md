@@ -1372,17 +1372,29 @@ A continuación se presenta la vista general del tablero desarrollado en Miro, e
 * Sobre la línea de tiempo marcamos con rombos morados las dudas y problemas que salieron en las entrevistas con agricultores, cooperativas y agrónomos. Identificamos nueve, entre ellos la resistencia de los adultos mayores a usar el celular, la falta de un catastro formal para mapear las parcelas, el límite de AgroMonitoring para parcelas menores a 1 hectárea, la nubosidad que impide tomar mediciones, la falta de señal móvil para recibir alertas de helada y la pérdida de los cuadernos de costos en papel. Varios de estos puntos se convirtieron después en decisiones de diseño, como el modo sin conexión, las alertas por SMS y WhatsApp y el descarte de imágenes nubladas.
 
 #### Step 4: Pivotal Points
+
 ![event-storming-step-4-timelines-pivotal-points.jpg](assets/img/chapter-4/domain-driven-design/event-storming-step-4-timelines-pivotal-points.jpg)
-* El cuarto paso tiene como propósito identificar y marcar aquellos eventos de dominio transcendentales que representan cambios de estado irreversibles, puntos de inflexión de alto impacto o transiciones entre diferentes etapas del negocio agrícola.
+
+* Después buscamos los eventos que marcan un cambio de etapa en el negocio y colocamos barras verticales para dividir la línea de tiempo. Quedaron seis secciones: registro, organizaciones y suscripciones; configuración de la parcela y la campaña; monitoreo del cultivo y alertas; asesoría agronómica; contabilidad de costos de campo; y calidad y certificación de la cosecha. Por ejemplo, *Subscription Activated* cierra el registro y *Crop Campaign Started* abre el seguimiento del cultivo. Al final quedó una séptima sección con la comercialización del lote, que marcamos como fuera del alcance del MVP. Estas secciones fueron la primera pista de los bounded contexts.
+
 #### Step 5: Commands
+
 ![event-storming-step-5-Commands.jpg](assets/img/chapter-4/domain-driven-design/event-storming-step-5-Commands.jpg)
-* El paso 5 modela las intenciones directas, acciones de usuario e invocaciones del sistema que provocan la ocurrencia de los eventos de dominio.
+
+* A cada evento le agregamos el comando que lo provoca, escrito en imperativo, y el actor que lo ejecuta. Por ejemplo, el agricultor ejecuta *Register Field Plot* y se produce *Field Plot Registered*, y el agrónomo ejecuta *Issue Technical Prescription* y se produce *Technical Prescription Issued*. Los actores son el visitante, el usuario registrado, el agricultor, el gerente de la cooperativa, el agrónomo y el personal de acopio de la cooperativa (calificador de calidad y catador de café). También aparece el programador del sistema, que ejecuta tareas automáticas como *Fetch Satellite Imagery*. En este paso notamos que varios comandos no tenían un actor porque el sistema los hacía solo, y esos pasaron al paso siguiente.
+
 #### Step 6: Policies
+
 ![event-storming-step-6-policies.jpg](assets/img/chapter-4/domain-driven-design/event-storming-step-6-policies.jpg)
-* El paso 6 define las reglas de negocio reactivas, políticas y automatizaciones que se desencadenan automáticamente tras la ocurrencia de uno o más eventos de dominio.
+
+* Los comandos que se ejecutan solos los convertimos en políticas con la forma *Whenever [evento] Then [comando]*. En el tablero teníamos varias notas sueltas debajo de otras porque no sabíamos dónde ponerlas, y casi todas eran justamente reacciones automáticas del sistema. Quedaron once políticas, por ejemplo: cuando un usuario se registra se le asigna el Plan Semilla, cuando se registra la fecha de siembra se programa el monitoreo satelital, cuando se detecta una anomalía de vegetación, estrés hídrico o riesgo de helada se emite una alerta agroclimática, y cuando se inicia una campaña se abre su libro de costos.
+
 #### Step 7: Read Models
+
 ![event-storming-step-7-read-models.jpg](assets/img/chapter-4/domain-driven-design/event-storming-step-7-read-models.jpg)
-* El paso 7 proyecta los modelos de lectura y vistas de datos necesarios para que los actores e interfaces puedan tomar decisiones informadas antes de ejecutar un comando.
+
+* Luego agregamos los modelos de lectura, es decir, la información que el actor necesita ver antes de ejecutar un comando. Por ejemplo, antes de registrar una parcela el agricultor revisa *My Plots and Plan Quota* para saber cuántos cupos le quedan, antes de emitir una receta el agrónomo revisa *Phytosanitary Diagnosis Inbox* y antes de vender su cosecha el productor consulta el *Breakeven Report*. La mayoría de estos modelos de lectura coinciden con las pantallas que diseñamos para la aplicación web, como la vista de mis parcelas, el visor de salud del cultivo y la sección de gastos.
+
 #### Step 8: External Systems
 ![event-storming-step-8-external-systems-refactorizado.jpg](assets/img/chapter-4/domain-driven-design/event-storming-step-8-external-systems-refactorizado.jpg)
 * El paso 8 identifica e integra los sistemas externos y servicios de terceros que interactúan con el dominio, enviando comandos o reaccionando a los eventos generados.
