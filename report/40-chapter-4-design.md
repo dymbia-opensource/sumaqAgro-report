@@ -396,6 +396,30 @@ Identifica al equipo responsable del diseño, desarrollo y arquitectura de infor
 
 ---
 
+**Web Application – Dashboard Principal**
+
+- **Title:**  
+  `<title>My Plot – SumaqAgro | Crop Monitoring and Management Dashboard</title>`
+
+Este título complementa la identidad de la plataforma con una llamada a la acción orientada a la gestión operativa, enfocándose en la centralización y monitoreo de predios agrícolas desde la vista principal de la aplicación.
+
+- **Meta Description:**  
+  `<meta name="description" content="Access your main SumaqAgro dashboard. View NDVI crop health maps for your plots, record campaign expenses, check the break-even price, and manage phytosanitary requests with your technical advisor.">`
+
+Redactado con un enfoque funcional y operativo que detalla las acciones inmediatas que el usuario puede realizar en la interfaz, destacando la interacción entre agricultor, agrónomo y datos geoespaciales.
+
+- **Meta Keywords:**  
+  `<meta name="keywords" content="agricultural dashboard, my plot, NDVI maps, crop health, agricultural cost control, technical prescriptions, risk alerts, SumaqAgro platform">`
+
+Palabras clave orientadas a la experiencia interna de la aplicación, utilizando términos específicos de uso continuo en la plataforma (ej. “agricultural dashboard”, “NDVI maps”, “technical prescriptions”).
+
+- **Meta Author:**  
+  `<meta name="author" content="Open Source Team – Open Source Software">`
+
+Especifica el equipo de desarrollo web responsable del proyecto para asegurar la vigencia y atribución tecnológica de la aplicación.
+<br>
+<br>
+
 ### 4.2.4. Searching Systems
 
 Dentro de la sección **Mi Parcela** de la aplicación web, el sistema de búsqueda está integrado de forma simple pero efectiva para que el usuario pueda localizar lotes, registros o métricas rápidamente. Se utiliza un campo de búsqueda principal centrado en la parte superior del encabezado del dashboard, acompañado de indicadores de estado de conexión y notificaciones.
