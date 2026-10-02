@@ -1419,75 +1419,122 @@ A continuación se presenta la vista general del tablero desarrollado en Miro, e
 
 #### Alineación con Subdominios SaaS y Bounded Contexts
 
-Considerando la estructura de subdominios recomendada para plataformas SaaS de servicios (gestión de identidades, suscripciones, recursos, ejecución de servicios y analítica) y adaptándola al *Ubiquitous Language* de la cadena de valor agroalimentaria, el dominio se estructuró en 7 Bounded Contexts:
+Considerando la estructura de subdominios recomendada para plataformas SaaS de servicios (gestión de identidades, suscripciones, recursos, ejecución de servicios y analítica) y adaptándola al *Ubiquitous Language* de la cadena de valor agroalimentaria, el dominio se estructuró en 6 Bounded Contexts y un contexto compartido (*Shared Kernel*):
 
-**1. Identity & Access Management (IAM) Context (Generic Subdomain)**
-* **Responsabilidad:** Administrar el ciclo de vida de identidades, perfiles, asignación de roles institucionales y provisión de credenciales seguras mediante tokens criptográficos JWT.
-* **Agregado `UserAccount`:**
-  * *Commands:* `CreateProducerAccount`, `RegisterCooperativeAccount`, `UpdateUserProfile`, `AssignCooperativeRole`, `InviteAgronomistToCooperative`.
-  * *Events:* `ProducerAccountCreated`, `CooperativeAccountRegistered`, `UserProfileUpdated`, `CooperativeRoleAssigned`, `AgronomistInvitationSent`.
-  * *Read Models:* `UserProfileDashboard`, `CooperativeMemberDirectory`.
+**1. Identity and Access Management (IAM) Context (Generic Subdomain)**
 
-**2. Subscriptions & Payments Context (Generic Subdomain)**
-* **Responsabilidad:** Controlar la monetización SaaS, selección de planes comerciales (Semilla, Cooperativa Pro, Asesor Técnico), validación de transacciones y cuotas activas de parcelas.
+* **Responsabilidad:** Registrar a los usuarios, autenticarlos mediante tokens JWT y controlar el acceso a la plataforma.
+* **Agregado `User`:**
+  * *Commands:* `SignUp`, `SignIn`.
+  * *Events:* `UserSignedUp`, `UserSignedIn`.
+  * *Read Models:* `PlansCatalog`.
+
+**2. Profiles Context (Supporting Subdomain)**
+
+* **Responsabilidad:** Gestionar los datos de contacto de cada usuario, el registro de las cooperativas con su padrón de socios y la asignación de agrónomos a las parcelas.
+* **Agregado `Profile`:**
+  * *Commands:* `UpdateProfile`.
+  * *Events:* `ProfileUpdated`.
+  * *Read Models:* `ProfileAndPreferences`.
+* **Agregado `Cooperative`:**
+  * *Commands:* `RegisterCooperative`, `AddCooperativeMember`, `InviteAgronomist`.
+  * *Events:* `CooperativeRegistered`, `CooperativeMemberAdded`, `AgronomistInvited`.
+  * *Read Models:* `MemberDirectory`.
+* **Agregado `AgronomistAssignment`:**
+  * *Commands:* `AssignAgronomistToPlot`.
+  * *Events:* `AgronomistAssignedToPlot`.
+  * *Read Models:* `MembersPlotsList`.
+
+**3. Subscriptions and Payments Context (Generic Subdomain)**
+
+* **Responsabilidad:** Controlar los planes de suscripción (Semilla, Cooperativa Pro y Asesor Técnico), el cobro mediante la pasarela de pagos y la cuota de parcelas que permite cada plan.
 * **Agregado `Subscription`:**
-  * *Commands:* `SelectSubscriptionPlan`, `SubmitPaymentTransaction`, `ActivateSubscriptionPro`, `CancelSubscriptionPlan`.
-  * *Events:* `SubscriptionPlanSelected`, `PaymentTransactionProcessed`, `SubscriptionProActivated`, `SubscriptionPlanCancelled`.
-  * *Read Models:* `PricingCatalogView`, `BillingStatusLedger`.
-  * *External System:* Stripe / Niubiz Payment Gateway.
+  * *Commands:* `AssignSeedPlan`, `SelectSubscriptionPlan`, `SubmitPayment`, `ActivateSubscription`, `CancelSubscription`.
+  * *Events:* `SeedPlanAssigned`, `SubscriptionPlanSelected`, `PaymentConfirmed`, `SubscriptionActivated`, `SubscriptionCancelled`.
+  * *Read Models:* `PlansCatalog`, `BillingSummary`.
+  * *External System:* Niubiz Payment Gateway.
 
-**3. Plot & Crop Management Context (Supporting Subdomain)**
-* **Responsabilidad:** Administrar la georreferenciación física de fundos y parcelas mediante coordenadas perimetrales continuas (polígonos GPS), caracterización de suelo e inicio fenológico.
+**4. Field Management Context (Core Subdomain)**
+
+* **Responsabilidad:** Registrar las parcelas con su polígono GPS, gestionar las campañas agrícolas y llevar el libro de costos de cada campaña (insumos, jornales y fletes) para calcular el punto de equilibrio. Los gastos también se pueden registrar sin conexión y se sincronizan después.
 * **Agregado `FieldPlot`:**
-  * *Commands:* `RegisterFieldPlot`, `DelineatePerimeterCoordinates`, `RecordSoilBaseline`, `SelectCropType`, `SpecifySeedVariety`, `RecordSowingDate`.
-  * *Events:* `FieldPlotRegistered`, `PerimeterCoordinatesDelineated`, `SoilBaselineRecorded`, `CropTypeSelected`, `SeedVarietySpecified`, `SowingDateRecorded`.
-  * *Read Models:* `CadastralGISMap`, `CropPhenologyTimeline`.
-  * *External System:* MIDAGRI Padrón de Productores (PPA) API.
+  * *Commands:* `RegisterFieldPlot`, `DelineatePlotBoundary`, `LinkPlotPolygon`, `RecordSoilBaseline`.
+  * *Events:* `FieldPlotRegistered`, `PlotBoundaryDelineated`, `PlotAreaCalculated`, `PlotPolygonLinked`, `SoilBaselineRecorded`.
+  * *Read Models:* `MyPlotsAndPlanQuota`, `SatelliteMapAndCadastreViewer`.
+  * *External System:* AgroMonitoring API (registro del polígono).
+* **Agregado `CropCampaign`:**
+  * *Commands:* `StartCropCampaign`, `SelectCropType`, `SpecifySeedVariety`, `RecordSowingDate`, `CloseCropCampaign`.
+  * *Events:* `CropCampaignStarted`, `CropTypeSelected`, `SeedVarietySpecified`, `SowingDateRecorded`, `CropCampaignClosed`.
+  * *Read Models:* `SeedVarietyCatalog`, `CampaignSummary`.
+* **Agregado `CampaignLedger`:**
+  * *Commands:* `OpenCampaignLedger`, `RecordInputExpense`, `RecordDailyLaborExpense`, `RecordFieldFreightExpense`, `SetExpectedYield`, `RecalculateBreakevenPrice`, `RecordActualYield`, `ExportCampaignCostReport`.
+  * *Events:* `CampaignLedgerOpened`, `InputExpenseRecorded`, `DailyLaborExpenseRecorded`, `FieldFreightExpenseRecorded`, `ExpectedYieldSet`, `TotalInvestmentCalculated`, `BreakevenPriceCalculated`, `ActualYieldRecorded`, `CampaignCostReportExported`.
+  * *Read Models:* `ExpenseHistory`, `BreakevenReport`, `CostPerHectareReport`.
 
-**4. Satellite Analytics & Alerting Context (Core Subdomain)**
-* **Responsabilidad:** Orquestar la observación terrestre multiespectral mediante Sentinel-2 para deducir vigor foliar (NDVI) y estrés hídrico (NDWI), despachar alertas preventivas y gestionar recetas técnicas de campo.
-* **Agregado `VegetationAnalysis`:**
-  * *Commands:* `FetchMultispectralTiles`, `ComputeVegetationIndexes`, `TriggerAgroclimaticAlert`, `UploadPestEvidencePhoto`, `ScheduleFieldInspection`, `RecordDamageAssessment`, `IssueTechnicalPrescription`, `ConfirmTreatmentApplication`.
-  * *Events:* `MultispectralTilesIngested`, `NDVIIndexComputed`, `NDWIIndexComputed`, `VegetationAnomalyDetected`, `AgroclimaticAlertDispatched`, `PestEvidencePhotoUploaded`, `FieldInspectionScheduled`, `DamageAssessmentRecorded`, `TechnicalPrescriptionIssued`, `TreatmentApplicationConfirmed`.
-  * *Read Models:* `SatelliteVegetationMap`, `MultispectralIndexDashboard`, `PhytosanitaryDiagnosisInbox`.
-  * *External Systems:* Sentinel-2 Open Access API (ESA), SENAMHI Weather API, Twilio SMS / WhatsApp Gateway.
+**5. Crop Health Context (Core Subdomain)**
 
-**5. Field Cost Accounting Context (Core Subdomain)**
-* **Responsabilidad:** Proveer una bitácora contable rural para asentar compras de insumos, jornales diarios y fletes (con soporte de persistencia local desconectada), determinando el costo unitario por lote y el punto de equilibrio financiero.
-* **Agregado `LotFinancialLedger`:**
-  * *Commands:* `RecordAgrochemicalExpense`, `RecordDailyLaborExpense`, `RecordFieldFreightExpense`, `LogOfflineFieldExpense`, `SynchronizeFieldLedger`, `ConsolidateLotExpenses`, `CalculateBreakevenPrice`.
-  * *Events:* `AgrochemicalExpenseRecorded`, `DailyLaborExpenseRecorded`, `FieldFreightExpenseRecorded`, `OfflineFieldExpenseLogged`, `FieldLedgerSynchronized`, `TotalLotInvestmentCalculated`, `BreakevenPriceCalculated`.
-  * *Read Models:* `LotExpenseLogView`, `BreakevenAnalysisReport`.
+* **Responsabilidad:** Monitorear la salud del cultivo con imágenes satelitales (NDVI y NDWI) y el pronóstico del clima, emitir alertas ante anomalías, estrés hídrico o heladas, y gestionar la asesoría del agrónomo: reportes de plagas, visitas de campo y recetas técnicas.
+* **Agregado `SatelliteObservation`:**
+  * *Commands:* `ScheduleSatelliteMonitoring`, `FetchSatelliteImagery`, `RecordVegetationIndexes`.
+  * *Events:* `SatelliteMonitoringScheduled`, `SatelliteImageryIngested`, `CloudyImageryDiscarded`, `NDVIIndexComputed`, `NDWIIndexComputed`, `VegetationAnomalyDetected`, `WaterStressDetected`.
+  * *Read Models:* `LeafHealthDashboard`.
+* **Agregado `ClimateForecast`:**
+  * *Commands:* `FetchClimateForecast`.
+  * *Events:* `ClimateForecastUpdated`, `FrostRiskDetected`.
+* **Agregado `AgroclimaticAlert`:**
+  * *Commands:* `RaiseAgroclimaticAlert`, `NotifyFarmerAndAgronomist`, `CompleteActionStep`, `CloseAlert`.
+  * *Events:* `AgroclimaticAlertRaised`, `AlertNotificationSent`, `ActionStepCompleted`, `AlertMitigated`.
+  * *Read Models:* `AlertDetailAndActionPlan`.
+* **Agregado `RegionalBulletin`:**
+  * *Commands:* `IssueRegionalBulletin`.
+  * *Events:* `RegionalBulletinIssued`.
+  * *Read Models:* `MultiPlotDashboardByUrgency`.
+* **Agregado `PestReport`:**
+  * *Commands:* `UploadPestEvidencePhoto`, `NotifyAssignedAgronomist`, `RecordDamageAssessment`.
+  * *Events:* `PestEvidencePhotoUploaded`, `AgronomistNotified`, `DamageAssessmentRecorded`.
+  * *Read Models:* `AdvisorConsultation`, `PhytosanitaryDiagnosisInbox`.
+* **Agregado `FieldInspection`:**
+  * *Commands:* `ScheduleFieldInspection`, `CompleteFieldInspection`.
+  * *Events:* `FieldInspectionScheduled`, `FieldInspectionCompleted`.
+  * *Read Models:* `VisitSchedule`.
+* **Agregado `TechnicalPrescription`:**
+  * *Commands:* `IssueTechnicalPrescription`, `ConfirmTreatmentApplication`, `ReportFoliageRecovery`, `EvaluateTreatmentEffectiveness`.
+  * *Events:* `TechnicalPrescriptionIssued`, `TreatmentApplicationConfirmed`, `FoliageRecoveryReported`, `TreatmentEffectivenessEvaluated`.
+  * *Read Models:* `MultispectralIndexDashboard`, `ActivePrescriptions`.
+* *External Systems:* AgroMonitoring API (imágenes, índices y clima), Twilio SMS / WhatsApp Gateway.
 
-**6. Harvest Quality & Certification Context (Core Subdomain)**
-* **Responsabilidad:** Controlar la recolección, pesaje formal de acopio, calificación de calibres de tubérculo (MIDAGRI) y protocolos de catación sensorial SCA, emitiendo certificados digitales inmutables con código QR público.
+**6. Harvest Certification Context (Core Subdomain)**
+
+* **Responsabilidad:** Registrar los lotes de cosecha que llegan al acopio, calificar su calidad (calibres de papa según MIDAGRI y catación de café según SCA) y emitir certificados digitales con código QR que cualquier persona puede verificar.
 * **Agregado `HarvestBatch`:**
-  * *Commands:* `RegisterHarvestYield`, `WeighDeliveredLot`, `ExtractRepresentativeSample`, `GradePotatoCaliber`, `PerformCoffeeCuppingSCA`, `AssignQualityScore`, `GenerateDigitalQualityCertificate`, `VerifyLotTraceability`.
-  * *Events:* `HarvestYieldRegistered`, `DeliveredLotWeighed`, `RepresentativeSampleExtracted`, `PotatoCaliberGraded`, `CoffeeCuppingCompleted`, `QualityScoreAssigned`, `DigitalQualityCertificateGenerated`, `TraceabilityQRCodeCreated`, `LotTraceabilityVerified`.
-  * *Read Models:* `HarvestGradingSheet`, `PublicTraceabilityQRView`.
-  * *External System:* Public QR Verification Gateway.
+  * *Commands:* `RegisterHarvestBatch`, `WeighDeliveredBatch`, `ExtractRepresentativeSample`, `GradePotatoCalibers`, `PerformCoffeeCupping`, `AssignQualityScore`.
+  * *Events:* `HarvestBatchRegistered`, `DeliveredBatchWeighed`, `RepresentativeSampleExtracted`, `PotatoCalibersGraded`, `CoffeeCuppingCompleted`, `QualityScoreAssigned`.
+  * *Read Models:* `MemberDirectory`, `HarvestGradingSheet`.
+* **Agregado `QualityCertificate`:**
+  * *Commands:* `IssueQualityCertificate`, `VerifyCertificate`.
+  * *Events:* `QualityCertificateIssued`, `TraceabilityQRCodeCreated`, `CertificateVerified`.
+  * *Read Models:* `CertificateAndQRCodePreview`, `PublicTraceabilityView`.
 
-**7. Commercial Settlement Context (Core Subdomain)**
-* **Responsabilidad:** Publicar lotes certificados en el catálogo comercial, gestionar las posturas de oferta de compradores mayoristas y liquidar la venta garantizando un margen por encima del costo de producción.
-* **Agregado `CommercialSettlement`:**
-  * *Commands:* `SetBaseSettlementPrice`, `PublishCertifiedLot`, `SubmitPurchaseOffer`, `AcceptLotSaleAndLiquidate`, `CalculateFinalNetMargin`.
-  * *Events:* `BaseSettlementPriceSet`, `CertifiedLotPublished`, `PurchaseOfferReceived`, `LotSaleRegistered`, `NetIncomeCalculated`.
-  * *Read Models:* `CertifiedLotCatalog`, `CommercialSettlementLedger`.
+**7. Shared Context (Shared Kernel)**
 
----
+* **Responsabilidad:** Reunir los elementos comunes que reutilizan todos los bounded contexts. No tiene comandos ni eventos de dominio propios.
+* **Contenido:** clases base `AuditableAbstractAggregateRoot` y `AuditableModel`, los value objects `EmailAddress` y `Money`, la estrategia de nombres *snake_case* para la base de datos, el manejo global de excepciones, la configuración de OpenAPI, los mensajes i18n y el adaptador común de notificaciones.
 
 #### Políticas de Automatización Reactivas (Policies)
 
 La orquestación entre los contextos delimitados se rige por políticas eventuales bajo el estándar *Whenever [Domain Event] Then [Command]*:
 
-* **P1:** `Whenever ProducerAccountCreated Then SelectSubscriptionPlan`
-* **P2:** `Whenever SubscriptionProActivated Then RegisterFieldPlot`
-* **P3:** `Whenever SowingDateRecorded Then FetchMultispectralTiles`
-* **P4:** `Whenever VegetationAnomalyDetected Then TriggerAgroclimaticAlert`
-* **P5:** `Whenever TreatmentApplicationConfirmed Then RecordAgrochemicalExpense`
-* **P6:** `Whenever DeliveredLotWeighed Then ConsolidateLotExpenses`
-* **P7:** `Whenever DigitalQualityCertificateGenerated Then PublishCertifiedLot`
-* **P8:** `Whenever BreakevenPriceCalculated Then SetBaseSettlementPrice`
+* **P1:** `Whenever UserSignedUp Then AssignSeedPlan` (IAM → Subscriptions and Payments)
+* **P2:** `Whenever PaymentConfirmed Then ActivateSubscription` (Subscriptions and Payments)
+* **P3:** `Whenever PlotBoundaryDelineated Then LinkPlotPolygon` (Field Management)
+* **P4:** `Whenever SowingDateRecorded Then ScheduleSatelliteMonitoring` (Field Management → Crop Health)
+* **P5:** `Whenever VegetationAnomalyDetected, WaterStressDetected or FrostRiskDetected Then RaiseAgroclimaticAlert` (Crop Health)
+* **P6:** `Whenever AgroclimaticAlertRaised Then NotifyFarmerAndAgronomist` (Crop Health)
+* **P7:** `Whenever PestEvidencePhotoUploaded Then NotifyAssignedAgronomist` (Crop Health)
+* **P8:** `Whenever CropCampaignStarted Then OpenCampaignLedger` (Field Management)
+* **P9:** `Whenever InputExpenseRecorded, DailyLaborExpenseRecorded, FieldFreightExpenseRecorded or ExpectedYieldSet Then RecalculateBreakevenPrice` (Field Management)
+* **P10:** `Whenever DeliveredBatchWeighed Then RecordActualYield` (Harvest Certification → Field Management)
+* **P11:** `Whenever PotatoCalibersGraded or CoffeeCuppingCompleted Then AssignQualityScore` (Harvest Certification)
 
 ### 4.6.2. Software Architecture Context Diagram
 
