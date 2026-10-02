@@ -1552,15 +1552,12 @@ El diagrama sitúa en el centro a **SumaqAgro Platform**, plataforma web distrib
 * **Agricultural Producer (Productor Agrícola):** Agricultor que accede mediante navegadores web o dispositivos móviles para registrar la delimitación geográfica de sus parcelas, monitorear el vigor foliar satelital (NDVI/NDWI) y registrar sus compras de insumos, jornales y fletes en la bitácora de costos.
 * **Cooperative Manager (Directivo de Cooperativa):** Usuario administrativo que utiliza la plataforma desde terminales de escritorio para auditar el volumen de acopio de los socios, monitorear los balances financieros por hectárea y aprobar formalmente la emisión de los certificados de calidad de cosecha.
 * **Technical Field Advisor (Asesor Técnico de Campo):** Ingeniero agrónomo que hace seguimiento a las alertas satelitales tempranas de estrés hídrico o plagas para priorizar sus visitas presenciales en parcelas críticas, emitiendo recetas agronómicas y dosis correctivas desde la aplicación.
-* **Wholesale Buyer (Comprador Mayorista / Exportador):** Usuario comercial que interactúa con la plataforma de forma abierta y sin necesidad de credenciales, escaneando el código QR público de los sacos o lotes para verificar en línea la procedencia geográfica, la variedad botánica y el perfil de calidad certificado.
+* **Visitor (Visitante):** Persona que no necesita una cuenta. Consulta la landing page para conocer la propuesta de valor y los planes, o escanea el código QR de un saco o lote para verificar en línea su procedencia, su variedad y su puntaje de calidad certificado.
 
 ##### 2. Sistemas Externos e Integraciones
-* **Sentinel-2 Open Access API (ESA):** Proveedor satelital que suministra de manera periódica baldosas ópticas multiespectrales. El sistema consume este servicio vía peticiones HTTPS/JSON para computar los índices biofísicos de reflectancia vegetal sin depender de sensores IoT instalados en campo.
-* **SENAMHI Weather API:** Servicio meteorológico nacional consultado por HTTPS/JSON para sincronizar pronósticos climáticos y emitir advertencias tempranas ante eventos de heladas meteorológicas o sequías estacionales en los valles productivos.
+* **AgroMonitoring API:** Servicio de OpenWeather que recibe el polígono de cada parcela y entrega, mediante HTTPS/JSON, las imágenes satelitales de Sentinel-2 y Landsat-8, los índices NDVI y NDWI y el pronóstico del clima. Con esta información el sistema calcula el vigor foliar, detecta estrés hídrico y anticipa heladas sin depender de sensores instalados en campo.
 * **Twilio SMS / WhatsApp Gateway:** Pasarela de mensajería externa utilizada por SumaqAgro para remitir notificaciones prioritarias y alertas agroclimáticas urgentes a productores ubicados en zonas rurales con baja cobertura móvil de datos.
-* **Stripe / Niubiz Payment Gateway:** Pasarela de procesamiento de pagos electrónicos integrada mediante API REST (HTTPS/JSON) para la gestión y cobro transaccional de los planes de suscripción de cooperativas agrarias y asesores técnicos.
-* **MIDAGRI PPA API:** Servicio gubernamental del Padrón de Productores Agrarios consumido mediante HTTPS/JSON para validar la titularidad catastral de predios y la condición formal de los socios agrícolas.
-* **Public QR Verification Gateway:** Punto de acceso web público y liviano que resuelve las peticiones de validación iniciadas por los compradores mayoristas al escanear los códigos QR, certificando la autenticidad e inmutabilidad del lote evaluado.
+* **Niubiz Payment Gateway:** Pasarela de procesamiento de pagos electrónicos integrada mediante API REST (HTTPS/JSON) para la gestión y cobro transaccional de los planes de suscripción de cooperativas agrarias y asesores técnicos.
 
 ---
 
@@ -1580,10 +1577,10 @@ La topología de ejecución del sistema está conformada por cuatro contenedores
   Sitio web público estático desarrollado con HTML5, CSS3 y JavaScript vanilla, alojado en un servicio cloud de distribución estática. Diseñado con una carga ligera para garantizar un rendimiento óptimo en terminales móviles bajo redes rurales 3G/4G. Su propósito es exponer la propuesta de valor del producto, presentar los planes de suscripción comercial (Semilla, Cooperativa Pro y Asesor Técnico) y canalizar prospectos comerciales hacia el backend mediante llamadas asíncronas HTTPS/JSON.
 
 * **Web Application Container (Single Page Application - SPA):**
-  Aplicación web cliente desarrollada sobre el framework Angular 18, utilizando TypeScript y la biblioteca Angular Material. Provee una interfaz reactiva y accesible tanto para productores de campo como para administradores de cooperativas e ingenieros agrónomos. Integra capacidades de almacenamiento local mediante *Service Workers* e *IndexedDB*, lo que permite soportar operaciones en modo desconectado (*offline-first*) para el registro de jornales, compras e insumos en predios rurales sin cobertura de datos móvil, sincronizando la información automáticamente contra la API REST al recuperar la conexión a internet. Asimismo, aloja el visor público interactivo que permite auditar las credenciales y trazabilidad de los lotes cuando un comprador escanea el código QR impreso.
+  Aplicación web cliente desarrollada sobre el framework Angular 18, utilizando TypeScript y la biblioteca Angular Material. Provee una interfaz reactiva y accesible tanto para productores de campo como para administradores de cooperativas e ingenieros agrónomos. Integra capacidades de almacenamiento local mediante *Service Workers* e *IndexedDB*, lo que permite soportar operaciones en modo desconectado (*offline-first*) para el registro de jornales, compras e insumos en predios rurales sin cobertura de datos móvil, sincronizando la información automáticamente contra la API REST al recuperar la conexión a internet. Asimismo, aloja el visor público interactivo que permite auditar las credenciales y trazabilidad de los lotes cuando un visitante escanea el código QR impreso.
 
 * **RESTful API Backend Container:**
-  Servidor de aplicaciones distribuido implementado en Java 21 utilizando el framework Spring Boot 3.x (Spring MVC, Spring Security y Spring Data JPA). Representa el núcleo transaccional del sistema y aloja la lógica de negocio basada en DDD para los 7 Bounded Contexts identificados. Sus responsabilidades abarcan la emisión y validación de tokens criptográficos JWT para el control de accesos, el cómputo de las matrices financieras de costo unitario y punto de equilibrio rural, el procesamiento de reflectancia satelital desacoplado y la exposición de endpoints documentados formalmente bajo OpenAPI 3.0 (Swagger UI).
+  Servidor de aplicaciones distribuido implementado en Java 21 utilizando el framework Spring Boot 3.x (Spring MVC, Spring Security y Spring Data JPA). Representa el núcleo transaccional del sistema y aloja la lógica de negocio basada en DDD para los 6 Bounded Contexts identificados y el Shared Kernel que todos reutilizan. Sus responsabilidades abarcan la emisión y validación de tokens criptográficos JWT para el control de accesos, el cómputo de las matrices financieras de costo unitario y punto de equilibrio rural, el procesamiento de las imágenes e índices satelitales y la exposición de endpoints documentados formalmente bajo OpenAPI 3.0 (Swagger UI).
 
 * **Database Engine Container:**
   Motor relacional MySQL 8.0 configurado como la unidad de persistencia de datos. Almacena las tablas normalizadas del dominio asegurando transacciones atómicas bajo el estándar ACID, soporte de integridad referencial mediante claves foráneas y compatibilidad con tipos de datos espaciales para el resguardo de las geometrías perimetrales de las parcelas agrícolas.
@@ -1593,7 +1590,7 @@ La topología de ejecución del sistema está conformada por cuatro contenedores
 * **Acceso de Usuarios:** Los usuarios finales interactúan con los contenedores web (*Landing Page* y *Web Application*) mediante peticiones seguras sobre el protocolo HTTPS.
 * **Cliente Web a Backend:** La Single Page Application consume la lógica de negocio y envía datos locales sincronizados mediante llamadas asíncronas RESTful sobre HTTPS, transmitiendo datos estructurados en formato JSON protegidos con tokens de autorización Bearer JWT.
 * **Backend a Base de Datos:** Las operaciones transaccionales y de persistencia de los agregados se ejecutan directamente a través de una conexión TCP protegida sobre el puerto 3306 mediante el controlador JDBC de MySQL.
-* **Backend a Servicios Externos:** Las consultas salientes hacia Sentinel-2 API, SENAMHI Weather API, Twilio Gateway, Stripe/Niubiz y MIDAGRI PPA se realizan mediante clientes HTTP desacoplados bajo peticiones seguras HTTPS/JSON.
+* **Backend a Servicios Externos:** Las consultas salientes hacia AgroMonitoring API, Twilio Gateway y Niubiz se realizan mediante assemblers desacoplados bajo peticiones seguras HTTPS/JSON.
 
 ---
 
@@ -1628,7 +1625,7 @@ El contenedor de la aplicación cliente SPA, implementado sobre el framework **A
 ##### Desglose de Componentes de la Web Application:
 * **`Auth & Role Guard`:** Guardia funcional de enrutamiento (`CanActivateFn`) de Angular. Intercepta la navegación hacia rutas protegidas comprobando la vigencia del token JWT almacenado en `sessionStorage`, aplicando el control de acceso basado en roles (RBAC) para productores, directivos y agrónomos.
 * **`Plot Management View Component`:** Interfaz gráfica desarrollada con Angular Material y Formularios Reactivos (`ReactiveFormsModule`). Permite la georreferenciación de predios, la captura interactiva de vértices perimetrales GPS y el registro botánico y fenológico de las campañas agrícolas.
-* **`Vegetation & Alerting View Component`:** Componente analítico que integra la biblioteca Leaflet.js con Angular. Renderiza capas de calor satelitales con series temporales de reflectancia foliar (NDVI y NDWI), canalizando el buzón de alertas agroclimáticas y recetas fitosanitarias emitidas por el extensionista.
+* **`Crop Health View Component`:** Componente analítico que integra la biblioteca Leaflet.js con Angular. Renderiza los mapas satelitales con los índices NDVI y NDWI, las alertas agroclimáticas con su plan de acción, los reportes de plagas con foto y las recetas técnicas emitidas por el agrónomo.
 * **`Field Cost Ledger View Component`:** Módulo de captura contable rural que provee formularios reactivos para el asiento inmediato de compras de fertilizantes, jornales diarios y fletes, alimentando los paneles de estimación de costos unitarios y punto de equilibrio.
 * **`Harvest & Traceability View Component`:** Vistas de calificación física de calibres de tubérculo (norma técnica MIDAGRI) y protocolos de catación sensorial de café (estándar SCA). Incluye el visor público accesible mediante el escaneo del código QR para la auditoría de procedencia de los lotes.
 * **`Client State & Offline Store`:** Capa de almacenamiento transaccional local implementada con *IndexedDB* (mediante Dexie.js) coordinada con estados reactivos basados en `BehaviorSubject` de RxJS. Retiene las operaciones efectuadas en parcelas sin señal de red celular y orquesta la sincronización automática diferida en lote al detectar conectividad a internet.
@@ -1639,7 +1636,7 @@ El contenedor de la aplicación cliente SPA, implementado sobre el framework **A
 
 #### 4.6.4.3. RESTful API Backend Container Components Diagram (Spring Boot)
 
-El contenedor transaccional de backend, desarrollado en **Java 21 con Spring Boot 3.x**, implementa una arquitectura en capas desacopladas orientada al dominio (*Layered Architecture / DDD*), gobernando las reglas de negocio de los 7 Bounded Contexts y agregados de la solución.
+El contenedor transaccional de backend, desarrollado en **Java 21 con Spring Boot 3.x**, implementa una arquitectura en capas desacopladas orientada al dominio (*Layered Architecture / DDD*), gobernando las reglas de negocio de los 6 Bounded Contexts y agregados de la solución, junto con el Shared Kernel que todos reutilizan.
 
 ![C4 Model - Diagrama de Componentes del API Backend (Nivel 3)](assets/img/chapter-4/c4/c4-components-backend-diagram.png)
 
@@ -1647,36 +1644,35 @@ El contenedor transaccional de backend, desarrollado en **Java 21 con Spring Boo
 
 * **Capa de Controladores REST (Inbound Controllers):**
   Controladores anotados con `@RestController` que exponen los endpoints del sistema sobre HTTPS/JSON, interceptan las peticiones desde el cliente Angular, validan los DTOs de entrada mediante Bean Validation (`@Valid`) y delegan la ejecución hacia los servicios de aplicación:
-  * `IamController`: Expone `/api/v1/auth` y `/api/v1/users` para registro, inicio de sesión seguro, emisión de JWT y gestión de perfiles institucionales.
+  * `IamController`: Expone `/api/v1/auth` y `/api/v1/users` para registro, inicio de sesión seguro y emisión de JWT.
+  * `ProfilesController`: Expone `/api/v1/profiles` y `/api/v1/cooperatives` para datos de contacto, registro de cooperativas, padrón de socios y asignación de agrónomos.
   * `SubscriptionController`: Expone `/api/v1/subscriptions` para consulta de membresías y confirmación transaccional de planes comerciales.
-  * `PlotController`: Expone `/api/v1/plots` para catastro de coordenadas GPS, delimitación perimetral y calendarios de siembra.
-  * `MonitoringController`: Expone `/api/v1/monitoring` para mapas multiespectrales, series NDVI/NDWI y recetas agronómicas.
-  * `CostController`: Expone `/api/v1/finances` para la bitácora financiera, sincronización diferida de asientos y cálculo de punto de equilibrio.
-  * `QualityController`: Expone `/api/v1/harvests` para pesaje de acopio, catación SCA, graduación de calibres y certificados.
-  * `SettlementController`: Expone `/api/v1/settlements` para publicación comercial de lotes y liquidaciones de venta.
+  * `FieldManagementController`: Expone `/api/v1/plots`, `/api/v1/campaigns` y `/api/v1/finances` para catastro de coordenadas GPS, campañas agrícolas, bitácora financiera, sincronización diferida de asientos y cálculo de punto de equilibrio.
+  * `CropHealthController`: Expone `/api/v1/monitoring`, `/api/v1/alerts` y `/api/v1/advisory` para mapas satelitales, series NDVI/NDWI, alertas agroclimáticas, reportes de plagas y recetas agronómicas.
+  * `HarvestCertificationController`: Expone `/api/v1/harvests` y `/api/v1/certificates` para pesaje de acopio, catación SCA, graduación de calibres y certificados.
 
 * **Capa de Servicios de Aplicación (Domain Application Services):**
-  Servicios anotados con `@Service` que orquestan las transacciones atómicas, validan las reglas de invariante de cada Agregado y coordinan las llamadas hacia los adaptadores salientes:
-  * `UserAccountService`: Administra el ciclo de vida del agregado `UserAccount`, gestionando el hashing seguro de claves y la asignación de permisos.
+  Servicios anotados con `@Service` que orquestan las transacciones atómicas, validan las reglas de invariante de cada Agregado y coordinan las llamadas hacia los assemblers:
+  * `UserService`: Administra el ciclo de vida del agregado `User`, gestionando el hashing seguro de claves y la emisión de tokens JWT.
+  * `ProfilesService`: Administra los agregados `Profile`, `Cooperative` y `AgronomistAssignment`, controlando el padrón de socios y qué agrónomo supervisa cada parcela.
   * `SubscriptionService`: Gobierna el agregado `Subscription`, controlando la vigencia de membresías y cuotas de predios asignados.
-  * `FieldPlotService`: Administra el agregado `FieldPlot`, validando que los polígonos perimetrales no presenten autointersecciones.
-  * `VegetationAnalysisService`: Gestiona el agregado `VegetationAnalysis`, calculando algoritmos de reflectancia sobre bandas satelitales y despachando alertas preventivas de estrés foliar.
-  * `LotFinancialLedgerService`: Orquesta el agregado `LotFinancialLedger`, calculando la sumatoria de egresos operativos para deducir el costo unitario de producción y el precio de equilibrio.
-  * `HarvestBatchService`: Supervisa el agregado `HarvestBatch`, validando umbrales mínimos de calidad sensorial y física antes de autorizar la emisión de acreditaciones.
-  * `CommercialSettlementService`: Gobierna el agregado `CommercialSettlement`, protegiendo que la postura comercial aceptada cubra el margen mínimo de ganancia sobre el costo acumulado.
+  * `FieldManagementService`: Administra los agregados `FieldPlot`, `CropCampaign` y `CampaignLedger`, validando que los polígonos no presenten autointersecciones, que una parcela no tenga dos campañas activas y calculando el costo unitario de producción y el precio de equilibrio.
+  * `CropHealthService`: Gestiona los agregados `SatelliteObservation`, `ClimateForecast`, `AgroclimaticAlert`, `RegionalBulletin`, `PestReport`, `FieldInspection` y `TechnicalPrescription`, registrando los índices satelitales y despachando alertas preventivas de estrés foliar, estrés hídrico o heladas.
+  * `HarvestCertificationService`: Supervisa los agregados `HarvestBatch` y `QualityCertificate`, validando umbrales mínimos de calidad sensorial y física antes de autorizar la emisión de certificados.
 
-* **Capa de Adaptadores de Infraestructura (Outbound Adapters):**
-  Componentes de integración desacoplados anotados con `@Component` que encapsulan la comunicación técnica con plataformas externas o compilan artefactos binarios:
-  * `StripeClientAdapter`: Consume mediante cliente REST la API de Stripe/Niubiz para la tokenización de cobros y facturación recurrente.
-  * `MidagriClientAdapter`: Consulta el servicio gubernamental del Padrón de Productores Agrarios (PPA) para verificar la titularidad catastral.
-  * `SatelliteClientAdapter`: Descarga baldosas ópticas multiespectrales (Bandas B4, B8 y B8A) desde la API abierta de Sentinel-2 (ESA).
-  * `WeatherClientAdapter`: Consume los pronósticos agroclimáticos y alertas meteorológicas de SENAMHI.
-  * `TwilioNotificationAdapter`: Invoca la API de Twilio para remitir notificaciones prioritarias de emergencia vía SMS y WhatsApp.
-  * `PdfQrGeneratorAdapter`: Compila dinámicamente constancias técnicas en formato PDF y codifica el código QR de validación criptográfica pública.
+* **Capa de Assemblers de Infraestructura:**
+  Componentes de integración desacoplados anotados con `@Component` que se comunican con plataformas externas o generan documentos, y transforman esas respuestas en objetos del dominio:
+  * `NiubizClientAssembler`: Consume la API de Niubiz para el procesamiento de cobros y la facturación recurrente de las suscripciones.
+  * `AgroMonitoringClientAssembler`: Registra el polígono de cada parcela en AgroMonitoring y obtiene sus imágenes satelitales, los índices NDVI y NDWI y el pronóstico del clima.
+  * `TwilioNotificationAssembler`: Invoca la API de Twilio para remitir notificaciones prioritarias de emergencia vía SMS y WhatsApp.
+  * `PdfQrGeneratorAssembler`: Compila dinámicamente los certificados de calidad en formato PDF y codifica el código QR de verificación pública.
+
+* **Shared Kernel:**
+  Componente común que reutilizan todos los servicios. Contiene las clases base auditables (`AuditableAbstractAggregateRoot` y `AuditableModel`), los value objects compartidos, el manejo global de excepciones y la configuración de OpenAPI.
 
 * **Capa de Persistencia (Spring Data JPA Repositories):**
   Interfaces que extienden de `JpaRepository` para mapear los agregados hacia las tablas de la base de datos MySQL 8.0 vía JDBC sobre el puerto TCP 3306:
-  * `UserAccountRepository`, `SubscriptionRepository`, `FieldPlotRepository`, `VegetationAnalysisRepository`, `CostLedgerRepository`, `HarvestBatchRepository` y `CommercialSettlementRepository`.
+  * `UserRepository`, `ProfilesRepository`, `SubscriptionRepository`, `FieldManagementRepository`, `CropHealthRepository` y `HarvestCertificationRepository`.
 
 ---
 
