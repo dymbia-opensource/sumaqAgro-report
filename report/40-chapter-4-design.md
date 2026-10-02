@@ -1328,10 +1328,11 @@ La navegación interactiva traduce de manera directa las decisiones de Arquitect
 
 ![Captura de Reproducción del Video Mobile en Microsoft Stream](assets/img/chapter-4/applications-design/prototypes/video-prototype-mobile.png)
 
-## 4.6. Domain-Driven Software Architecture
-En esta sección se traslada la comprensión del negocio obtenida en el Big Picture Event Storming hacia el diseño de arquitectura de software guiado por el dominio (Domain-Driven Design - DDD) y el modelo de abstracción y comunicación visual C4 Model en sus niveles de Contexto, Contenedores y Componentes. A través de esta aproximación arquitectónica, se divide el espacio del problema en Bounded Contexts independientes y de bajo acoplamiento, estableciendo sus agregados transaccionales (Aggregates), comandos, eventos de dominio, modelos de consulta (Read Models) y políticas de automatización reactivas. Asimismo, se formaliza la topología técnica y modular de la solución distribuida, articulando la aplicación web de cara al usuario, el servicio de backend RESTful en Spring Boot, la base de datos relacional y las interfaces de integración con servicios externos.
-
 ---
+
+## 4.6. Domain-Driven Software Architecture
+
+En esta sección se traslada la comprensión del negocio obtenida en el Big Picture Event Storming hacia el diseño de arquitectura de software guiado por el dominio (Domain-Driven Design - DDD) y el modelo de abstracción y comunicación visual C4 Model en sus niveles de Contexto, Contenedores y Componentes. A través de esta aproximación arquitectónica, se divide el espacio del problema en Bounded Contexts independientes y de bajo acoplamiento, estableciendo sus agregados transaccionales (Aggregates), comandos, eventos de dominio, modelos de consulta (Read Models) y políticas de automatización reactivas. Asimismo, se formaliza la topología técnica y modular de la solución distribuida, articulando la aplicación web de cara al usuario, el servicio de backend RESTful en Spring Boot, la base de datos relacional y las interfaces de integración con servicios externos.
 
 ### 4.6.1. Design-Level Event Storming
 El equipo llevó a cabo una sesión sincrónica de trabajo colaborativo en Miro siguiendo las pautas metodológicas de la guía Design-Level EventStorming (<https://bit.ly/dles-guide>). La dinámica se enfocó en profundizar y refinar el modelo general del dominio de las cadenas de café de especialidad y papa andina, definiendo las reglas de invariante transaccional y la mecánica de ejecución del sistema.
@@ -1351,9 +1352,13 @@ Durante la dinámica colaborativa, el equipo ejecutó las siguientes actividades
 
 #### Evidencia del Modelado en Miro
 A continuación se presenta la vista general del tablero desarrollado en Miro, evidenciando los 10 pasos de la técnica Design-Level Event Storming y la organización de los elementos de modelado por colores y categorías.
-#### Step 1: Domain Events
-![event-storming-step-1-bainstrome.jpg](assets/img/chapter-4/domain-driven-design/event-storming-step-1-bainstrome.jpg)
-* Dentro de la técnica de Event Storming consiste en realizar una lluvia de ideas intensiva para capturar todos los acontecimientos relevantes que ocurren dentro del dominio del negocio.
+
+#### Step 1: Unstructured Exploration
+
+![event-storming-step-1-unstructured-exploration.jpg](assets/img/chapter-4/domain-driven-design/event-storming-step-1-unstructured-exploration.jpg)
+
+* En este paso el equipo hizo una lluvia de ideas con todos los eventos de dominio que ocurren en el negocio, sin preocuparse todavía por el orden. Cada evento se escribió en inglés y en tiempo pasado, por ejemplo *Field Plot Registered* o *Frost Risk Detected*. Al revisar el tablero se eliminaron los eventos repetidos y los que estaban en español, y quedaron 67 eventos que cubren desde el registro del usuario hasta la certificación de la cosecha. Algunos eventos de venta del lote, como *Lot Sale Registered*, aparecieron en esta lluvia de ideas, pero en los pasos siguientes se dejaron fuera del alcance del MVP.
+
 #### Step 2: Timelines
 ![event-storming-step-2-timelines.jpg](assets/img/chapter-4/domain-driven-design/event-storming-step-2-timelines.jpg)
 * El segundo paso de Event Storming transforma la lluvia de ideas caótica del Paso 1 en una narrativa operativa coherente, secuenciada cronológicamente de izquierda a derecha bajo el escenario principal o Happy Path.
