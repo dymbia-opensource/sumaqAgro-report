@@ -724,7 +724,26 @@ Presenta el bloque "What our users say?" con dos tarjetas de testimonios de cinc
 
 ![mockup-what-our-users-say.png](assets/img/chapter-4/landing-page/mock-up/desktop/mockup-what-our-users-say.png)
 
+**Our Team — SumaqAgro**
+
+Presenta un encabezado con el antetítulo en verde "THE PEOPLE BEHIND THE TECHNOLOGY", el título principal "Our Team" y una breve descripción sobre el compromiso de los integrantes con la agricultura de precisión en el Perú. En la parte inferior se organiza una cuadrícula horizontal de tarjetas con bordes redondeados sobre fondo blanco, mostrando las fotografías formales y los nombres completos de los cinco miembros del equipo de desarrollo: Benjamin Solorzano Sullca, Jose Carlos Vargas Enriquez, Drago Derick Duarte Ruffner, Yamil Jared Tejada Pumacayo y Miguel Sanca Condori.
+
+![mockup-our-team.png](assets/img/chapter-4/landing-page/mock-up/desktop/mockup-our-team.png)
+
+**Registration — SumaqAgro**
+
+Presenta una franja de color verde corporativo orientada a incentivar el registro de nuevos usuarios. El bloque incorpora un mensaje de invitación y el botón principal "Sign up for free", facilitando el acceso directo a la plataforma desde la página de aterrizaje.
+
+![mockup-registration.png](assets/img/chapter-4/landing-page/mock-up/desktop/mockup-registration.png)
+
+**Footer — SumaqAgro**
+
+Presenta un pie de página sobre fondo oscuro que agrupa el logotipo de SumaqAgro, enlaces a redes sociales y diferentes columnas de navegación organizadas en las categorías "Products", "Quick Links" y "Support". Finalmente, incorpora los enlaces correspondientes a las políticas legales de privacidad y términos de servicio.
+
+![mockup-footer.png](assets/img/chapter-4/landing-page/mock-up/desktop/mockup-footer.png)
+
 ## 4.4. Web Applications UX/UI Design
+
 
 Esta sección presenta y sustenta la arquitectura de interacción y el diseño visual de la plataforma SaaS de SumaqAgro, desarrollada por la startup Dymbia.
 ### 4.4.1. Web Applications Wireframes
