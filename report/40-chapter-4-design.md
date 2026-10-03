@@ -700,6 +700,18 @@ Presenta el encabezado "Solutions and Features" acompañado del lema de valor pa
 
 ![mockup-solutions-and-features.png](assets/img/chapter-4/landing-page/mock-up/desktop/mockup-solutions-and-features.png)
 
+**Product Demo — SumaqAgro**
+
+Presenta un fondo verde corporativo que enmarca el antetítulo "PRODUCT DEMO", el encabezado central "See SumaqAgro in action" y el subtítulo "Demo video". En la zona inferior destaca un reproductor de video de esquinas redondeadas sobre fondo gris claro con un botón central de reproducción (play) en verde brillante para visualizar la demostración interactiva de la plataforma.
+
+![mockup-product-demo.png](assets/img/chapter-4/landing-page/mock-up/desktop/mockup-product-demo.png)
+
+**Plans — SumaqAgro**
+
+Presenta el titular "Choose the plan that fits your needs" sobre el antetítulo "PLANS" y un conmutador de facturación mensual o anual con descuento. En la zona inferior dispone tres tarjetas de suscripción adaptadas a cada perfil: Seed Plan (gratuito, para 1 parcela con NDVI básico y registro de labores), Pro Cooperative (S/189/mes, destacado como el más popular para 50 productores con certificación y exportación de reportes) y Technical Advisor Plan (S/89/mes, para 20 fincas supervisadas con NDVI avanzado y recomendaciones), cada una con su respectivo botón de acción directo.
+
+![mockup-plans.png](assets/img/chapter-4/landing-page/mock-up/desktop/mockup-plans.png)
+
 ## 4.4. Web Applications UX/UI Design
 
 Esta sección presenta y sustenta la arquitectura de interacción y el diseño visual de la plataforma SaaS de SumaqAgro, desarrollada por la startup Dymbia.
