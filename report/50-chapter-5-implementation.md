@@ -540,12 +540,12 @@ A continuación, se adjuntan las capturas de pantalla de las vistas principales 
 
 ![landinpage-1](assets/img/chapter-5/landing-page/landingpage-1.png)
 ![landinpage-2](assets/img/chapter-5/landing-page/landingpage-2.png)
-![landinpage-3](assets/img/chapter-5/landing-page/landingpage-3.png)
 ![landinpage-4](assets/img/chapter-5/landing-page/landingpage-4.png)
 ![landinpage-5](assets/img/chapter-5/landing-page/landingpage-5.png)
 ![landinpage-6](assets/img/chapter-5/landing-page/landingpage-6.png)
 ![landinpage-7](assets/img/chapter-5/landing-page/landingpage-7.png)
 ![landinpage-8](assets/img/chapter-5/landing-page/landingpage-8.png)
+![landinpage-3](assets/img/chapter-5/landing-page/landingpage-3.png)
 ![landinpage-9](assets/img/chapter-5/landing-page/landingpage-9.png)
 
 **Mobile View:**
