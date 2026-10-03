@@ -688,6 +688,18 @@ Presenta un diseño limpio sobre fondo blanco dividido en dos columnas. A la izq
 
 ![mockup-about-us.png](assets/img/chapter-4/landing-page/mock-up/desktop/mockup-about-us.png)
 
+**Who do we help? — SumaqAgro**
+
+Presenta el antetítulo en verde "OUR COMMUNITY", el encabezado principal "Who do we help?" y el mensaje de valor "We work with those who make the country's food security possible". En la zona inferior dispone tres tarjetas blancas con esquinas redondeadas orientadas a cada segmento clave: agricultores independientes, directivos de cooperativas y asesores técnicos. Cada tarjeta integra un ícono representativo, un resumen de enfoque, una fotografía de campo alusiva y el enlace de acción "Join as an advisor →".
+
+![mockup-who-do-we-help.png](assets/img/chapter-4/landing-page/mock-up/desktop/mockup-who-do-we-help.png)
+
+**Solutions and Features — SumaqAgro**
+
+Presenta el encabezado "Solutions and Features" acompañado del lema de valor para la toma de decisiones en campo. En una cuadrícula de cuatro tarjetas blancas con acentos verdes, detalla sus módulos clave: monitoreo satelital de vigor y humedad, costeo por lote, certificación digital de cosecha y alertas agronómicas, destacando en cada una sus métricas de impacto operativo y económico.
+
+![mockup-solutions-and-features.png](assets/img/chapter-4/landing-page/mock-up/desktop/mockup-solutions-and-features.png)
+
 ## 4.4. Web Applications UX/UI Design
 
 Esta sección presenta y sustenta la arquitectura de interacción y el diseño visual de la plataforma SaaS de SumaqAgro, desarrollada por la startup Dymbia.
