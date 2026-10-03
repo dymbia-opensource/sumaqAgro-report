@@ -314,7 +314,7 @@ Sistema jerárquico accesible desde un menú lateral con iconografía clara. Inc
 - Canal de comunicación directo para dictar diagnósticos, recomendar dosificación de insumos y mantener un historial clínico por cada parcela.
   <br>
   <br>
-- 
+
 ### 4.2.2. Labeling Systems
 
 El sistema de etiquetado de **SumaqAgro** ha sido diseñado para ser claro, directo y fácil de entender por agricultores, cooperativas y agrónomos, usando palabras clave con un número mínimo de términos sin perder precisión. Las etiquetas evitan tecnicismos innecesarios y buscan reducir la carga cognitiva del usuario en el campo.
@@ -343,6 +343,7 @@ El sistema de etiquetado de **SumaqAgro** ha sido diseñado para ser claro, dire
 
 - **Testimonios:** Muestra **“Testimonios de Clientes”** y opiniones de productores que validan el uso de la solución.
 
+- **Footer:** Contiene el logotipo de **SumaqAgro**, enlaces de navegación, redes sociales y accesos a información de soporte y aspectos legales.
 ### Etiquetado en la Aplicación Web
 
 - **Mi Parcela:** Vista principal del dashboard con métricas clave como **“Salud Foliar”**, **“Gasto Total”**, **“Precio para no perder”** y accesos a **“Ver todos mis lotes”**.
@@ -375,22 +376,22 @@ Con el objetivo de mejorar la visibilidad de "SumaqAgro" en los motores de búsq
 **Landing Page**
 
 - **Title:**  
-  `<title>SumaqAgro – Monitoreo Satelital y Gestión Agrícola de Precisión</title>`
+  `<title>SumaqAgro – Satellite Monitoring and Precision Agriculture Management</title>`
 
 Una frase concisa que refleja la propuesta de valor de la plataforma e integra palabras clave estratégicas como "monitoreo satelital", "gestión agrícola" y "precisión", términos frecuentemente utilizados por productores y profesionales del sector agrotecnológico al buscar soluciones digitales.
 
 - **Meta Description:**  
-  `<meta name="description" content="Plataforma de agrotecnología para el campo peruano. Optimiza el rendimiento de tus cultivos con mapas NDVI, control de costos por lote, trazabilidad con QR y alertas de riesgo fitosanitario.">`
+  `<meta name="description" content="Agrotechnology platform for Peruvian agriculture. Optimize crop performance with NDVI maps, plot cost management, QR traceability, and phytosanitary risk alerts.">`
 
 Esta descripción sintetiza el propósito de la herramienta destacando sus beneficios diferenciadores (salud foliar NDVI, control financiero y certificación digital), incorporando términos de búsqueda de alta relevancia como “agrotecnología”, “alertas fitosanitarias” y “código QR”.
 
 - **Meta Keywords:**  
-  `<meta name="keywords" content="SumaqAgro, monitoreo satelital agrícola, índice NDVI, agricultura de precisión Perú, gestión de cooperativas agrícolas, control de gastos agrícolas, certificado QR cosecha, alertas fitosanitarias">`
+  `<meta name="keywords" content="SumaqAgro, agricultural satellite monitoring, NDVI index, precision agriculture Peru, agricultural cooperative management, agricultural cost control, QR harvest certification, phytosanitary alerts">`
 
 Un conjunto seleccionado de palabras clave que abarca los perfiles de usuario objetivo (agricultores, cooperativas, agrónomos) y las funcionalidades centrales de la solución (NDVI, control de gastos, trazabilidad y alertas de riesgo).
 
 - **Meta Author:**  
-  `<meta name="author" content="Equipo de Open Source – Open Source Software">`
+  `<meta name="author" content="Open Source Team – Open Source Software">`
 
 Identifica al equipo responsable del diseño, desarrollo y arquitectura de información del sitio web, reforzando la transparencia y la atribución del proyecto.
 
@@ -399,22 +400,22 @@ Identifica al equipo responsable del diseño, desarrollo y arquitectura de infor
 **Web Application – Dashboard Principal**
 
 - **Title:**  
-  `<title>Mi Parcela – SumaqAgro | Panel de Control y Monitoreo de Cultivos</title>`
+  `<title>My Plot – SumaqAgro | Crop Monitoring and Management Dashboard</title>`
 
 Este título complementa la identidad de la plataforma con una llamada a la acción orientada a la gestión operativa, enfocándose en la centralización y monitoreo de predios agrícolas desde la vista principal de la aplicación.
 
 - **Meta Description:**  
-  `<meta name="description" content="Accede a tu panel principal en SumaqAgro. Visualiza el mapa de salud foliar (NDVI) de tus lotes, registra gastos de campaña, consulta el precio de equilibrio y gestiona solicitudes fitosanitarias con tu asesor técnico.">`
+  `<meta name="description" content="Access your main SumaqAgro dashboard. View NDVI crop health maps for your plots, record campaign expenses, check the break-even price, and manage phytosanitary requests with your technical advisor.">`
 
 Redactado con un enfoque funcional y operativo que detalla las acciones inmediatas que el usuario puede realizar en la interfaz, destacando la interacción entre agricultor, agrónomo y datos geoespaciales.
 
 - **Meta Keywords:**  
-  `<meta name="keywords" content="dashboard agrícola, mi parcela, mapas NDVI, salud del cultivo, control de gastos agrícolas, recetas técnicas, alertas de riesgo, plataforma SumaqAgro">`
+  `<meta name="keywords" content="agricultural dashboard, my plot, NDVI maps, crop health, agricultural cost control, technical prescriptions, risk alerts, SumaqAgro platform">`
 
-Palabras clave orientadas a la experiencia interna de la aplicación, utilizando términos específicos de uso continuo en la plataforma (ej. “dashboard agrícola”, “mapas NDVI”, “recetas técnicas”).
+Palabras clave orientadas a la experiencia interna de la aplicación, utilizando términos específicos de uso continuo en la plataforma (ej. “agricultural dashboard”, “NDVI maps”, “technical prescriptions”).
 
 - **Meta Author:**  
-  `<meta name="author" content="Equipo de Open Source – Open Source Software">`
+  `<meta name="author" content="Open Source Team – Open Source Software">`
 
 Especifica el equipo de desarrollo web responsable del proyecto para asegurar la vigencia y atribución tecnológica de la aplicación.
 <br>
