@@ -712,6 +712,18 @@ Presenta el titular "Choose the plan that fits your needs" sobre el antetítulo 
 
 ![mockup-plans.png](assets/img/chapter-4/landing-page/mock-up/desktop/mockup-plans.png)
 
+**Impact — SumaqAgro**
+
+Presenta el antetítulo en verde "REAL RESULTS", el título principal "Impact" y una breve descripción sobre las métricas que respaldan el compromiso de la plataforma con la pequeña agricultura. A la derecha, distribuye tres tarjetas métricas blancas con íconos de usuario y barras de acento en verde: más de 333 mil hectáreas de papa, más de 223 mil familias cafetaleras y más del 40 % de reducción en la falta de cobertura técnica.
+
+![mockup-impact.png](assets/img/chapter-4/landing-page/mock-up/desktop/mockup-impact.png)
+
+**Testimonials — SumaqAgro**
+
+Presenta el bloque "What our users say?" con dos tarjetas de testimonios de cinco estrellas correspondientes a productores de papa y café. Cada testimonio incorpora la experiencia y valoración de los usuarios sobre el uso de SumaqAgro para mejorar la gestión y el monitoreo de sus cultivos.
+
+![mockup-what-our-users-say.png](assets/img/chapter-4/landing-page/mock-up/desktop/mockup-what-our-users-say.png)
+
 ## 4.4. Web Applications UX/UI Design
 
 Esta sección presenta y sustenta la arquitectura de interacción y el diseño visual de la plataforma SaaS de SumaqAgro, desarrollada por la startup Dymbia.
