@@ -1773,6 +1773,176 @@ Este contexto registra a los usuarios, los autentica con JWT, maneja sus roles y
 ---
 
 
+#### 4.7.1.3. Profiles Context
+
+Este contexto guarda los datos de contacto de cada usuario, registra las cooperativas con su padrón de socios y controla qué agrónomo atiende cada parcela.
+
+##### Web Application (Angular)
+
+![Diagrama de Clases - Profiles - Web Application](assets/img/chapter-4/class-diagrams/web-application/02-profiles-web-class-diagram.png)
+
+* **Dominio:** `Profile`, `Cooperative`, `CooperativeMember`, `AgronomistInvitation` y `AgronomistAssignment` heredan de `BaseEntity`. `PreferredLanguage` indica el idioma del usuario e `InvitationStatus` el estado de una invitación. Los commands son `UpdateProfileCommand`, `RegisterCooperativeCommand`, `AddCooperativeMemberCommand`, `InviteAgronomistCommand` y `AssignAgronomistToPlotCommand`.
+* **Aplicación:** `ProfilesStore` guarda el perfil del usuario, la cooperativa, sus socios y las asignaciones, y ofrece los métodos para cada command.
+* **Infraestructura:** `ProfilesApi` agrupa los endpoints de perfiles, cooperativas, socios y asignaciones; cada endpoint usa su assembler para convertir los recursos de la API en entidades.
+* **Presentación:** `ProfileSettingsView`, `CooperativeRegistrationForm`, `MemberDirectoryView` y `AgronomistAssignmentView`.
+
+**Relaciones principales:**
+* `Cooperative` "1" *-- "0..*" `CooperativeMember`: la cooperativa registra a sus socios y es dueña de ellos.
+* `Cooperative` "1" *-- "0..*" `AgronomistInvitation`: la cooperativa envía invitaciones a los agrónomos.
+* `Cooperative` "1" --> "0..*" `AgronomistAssignment`: la cooperativa gestiona qué agrónomo atiende cada parcela.
+
+##### RESTful API (Spring Boot)
+
+![Diagrama de Clases - Profiles - RESTful API](assets/img/chapter-4/class-diagrams/restful-api/02-profiles-api-class-diagram.png)
+
+* **Dominio:** los agregados son `Profile`, `Cooperative` y `AgronomistAssignment`. `CooperativeMember` y `AgronomistInvitation` son entidades internas de `Cooperative`. Los value objects `PersonName`, `PhoneNumber`, `Ruc` y `Dni` validan los datos de personas y empresas. Los events son `ProfileUpdatedEvent`, `CooperativeRegisteredEvent`, `CooperativeMemberAddedEvent`, `AgronomistInvitedEvent` y `AgronomistAssignedToPlotEvent`.
+* **Servicios:** `ProfileCommandService`, `CooperativeCommandService`, `AgronomistAssignmentCommandService` y `ProfilesQueryService`, cada uno con su implementación. La invitación al agrónomo se envía por correo con `NotificationSender`.
+* **Infraestructura:** repositorios `ProfileRepository`, `CooperativeRepository` y `AgronomistAssignmentRepository`.
+* **Interfaces:** `ProfilesController`, `CooperativesController` y `AgronomistAssignmentsController`. `ProfilesContextFacade` permite que Crop Health encuentre al agrónomo asignado a una parcela y que Harvest Certification valide si un socio pertenece a la cooperativa.
+* **ACL de salida:** `ExternalIamService` asigna el rol de agrónomo en IAM y `ExternalFieldManagementService` valida que la parcela exista en Field Management.
+
+**Relaciones principales:**
+* `Cooperative` "1" *-- "0..*" `CooperativeMember` y "1" *-- "0..*" `AgronomistInvitation`: ambas entidades solo existen dentro de la cooperativa.
+* `Profile` *-- "1" `PersonName` y `PhoneNumber`: el nombre y el teléfono forman parte del perfil.
+* `Cooperative` "1" --> "0..*" `AgronomistAssignment`: una cooperativa puede tener varias asignaciones activas.
+
+---
+
+#### 4.7.1.4. Subscriptions and Payments Context
+
+Este contexto maneja los planes (Semilla, Cooperativa Pro y Asesor Técnico), los pagos con Niubiz y la cuota de parcelas que permite cada plan.
+
+##### Web Application (Angular)
+
+![Diagrama de Clases - Subscriptions and Payments - Web Application](assets/img/chapter-4/class-diagrams/web-application/03-subscriptions-web-class-diagram.png)
+
+* **Dominio:** `Plan`, `Subscription` y `Payment` heredan de `BaseEntity`; los enums `PlanCode`, `SubscriptionStatus`, `BillingCycle` y `PaymentStatus` describen su estado. Los commands son `SelectSubscriptionPlanCommand`, `SubmitPaymentCommand` y `CancelSubscriptionCommand`.
+* **Aplicación:** `SubscriptionsStore` guarda el catálogo de planes, la suscripción actual del usuario y su historial de pagos.
+* **Infraestructura:** `SubscriptionsApi` agrupa los endpoints `PlansApiEndpoint`, `SubscriptionsApiEndpoint` y `PaymentsApiEndpoint`, cada uno con su assembler.
+* **Presentación:** `PlansCatalogView`, `CheckoutView` y `BillingHistoryView`.
+
+**Relaciones principales:**
+* `Subscription` "0..*" --> "1" `Plan`: cada suscripción se basa en un plan.
+* `Subscription` "1" *-- "0..*" `Payment`: los pagos pertenecen a la suscripción.
+
+##### RESTful API (Spring Boot)
+
+![Diagrama de Clases - Subscriptions and Payments - RESTful API](assets/img/chapter-4/class-diagrams/restful-api/03-subscriptions-api-class-diagram.png)
+
+* **Dominio:** `Subscription` es el agregado; `Plan` y `Payment` son entidades y `SubscriptionPeriod` es el value object con las fechas de vigencia. `canRegisterPlot()` responde si el usuario aún tiene cupo de parcelas. Los events son `SeedPlanAssignedEvent`, `SubscriptionPlanSelectedEvent`, `PaymentConfirmedEvent`, `SubscriptionActivatedEvent` y `SubscriptionCancelledEvent`.
+* **Servicios:** `SubscriptionCommandService` y `SubscriptionQueryService` con sus implementaciones. Los event handlers aplican dos políticas: `UserSignedUpEventHandler` (P1) asigna el plan Semilla al registrarse un usuario y `PaymentConfirmedEventHandler` (P2) activa la suscripción cuando el pago se confirma.
+* **Infraestructura:** `SubscriptionRepository`, `PlanRepository` y `NiubizClientAssembler`, que crea el cobro en Niubiz y verifica la firma del webhook.
+* **Interfaces:** `PlansController`, `SubscriptionsController` y `PaymentsWebhookController`, que recibe la confirmación de Niubiz. `SubscriptionsContextFacade` permite que Field Management consulte la cuota de parcelas del plan.
+
+**Relaciones principales:**
+* `Subscription` "1" *-- "0..*" `Payment` y *-- "1" `SubscriptionPeriod`: los pagos y el periodo forman parte del agregado.
+* `Plan` *-- "2" `Money`: cada plan tiene un precio mensual y uno anual.
+
+---
+
+#### 4.7.1.5. Field Management Context
+
+Este contexto registra las parcelas con su polígono GPS, gestiona las campañas agrícolas y lleva el libro de costos de cada campaña para calcular el precio de equilibrio.
+
+##### Web Application (Angular)
+
+![Diagrama de Clases - Field Management - Web Application](assets/img/chapter-4/class-diagrams/web-application/04-field-management-web-class-diagram.png)
+
+* **Dominio:** `FieldPlot`, `CropCampaign`, `CampaignLedger` y `ExpenseEntry` heredan de `BaseEntity`; `GeoCoordinate` y `SoilBaseline` describen el polígono y el análisis de suelo. Los commands siguen los pasos del EventStorming: registrar la parcela, delimitar el polígono, iniciar la campaña, elegir el cultivo y la variedad, registrar la siembra, registrar gastos de insumos, jornales y flete, fijar el rendimiento esperado y exportar el reporte de costos.
+* **Aplicación:** `FieldManagementStore` guarda las parcelas, las campañas y el libro de costos. Cuando no hay conexión, envía los gastos a `OfflineSyncService` para sincronizarlos después.
+* **Infraestructura:** `FieldManagementApi` agrupa los endpoints `FieldPlotsApiEndpoint`, `CropCampaignsApiEndpoint` y `CampaignLedgersApiEndpoint`, cada uno con su assembler.
+* **Presentación:** `MyPlotDashboardView`, `RegisteredPlotsView`, `PlotRegistrationForm`, `PlotBoundaryMapView`, `CampaignFinancesView` y `FieldExpenseForm`.
+
+**Relaciones principales:**
+* `FieldPlot` "1" *-- "3..*" `GeoCoordinate`: un polígono necesita como mínimo tres vértices.
+* `FieldPlot` "1" --> "0..*" `CropCampaign`: una parcela puede tener varias campañas a lo largo del tiempo.
+* `CropCampaign` "1" --> "1" `CampaignLedger` y `CampaignLedger` "1" *-- "0..*" `ExpenseEntry`: cada campaña tiene un libro de costos con sus gastos.
+
+##### RESTful API (Spring Boot)
+
+![Diagrama de Clases - Field Management - RESTful API](assets/img/chapter-4/class-diagrams/restful-api/04-field-management-api-class-diagram.png)
+
+* **Dominio:** los agregados son `FieldPlot`, `CropCampaign` y `CampaignLedger`; `ExpenseEntry` es una entidad del libro de costos. Los value objects `PlotBoundary` y `GeoCoordinate` validan que el polígono esté cerrado y no se cruce, y calculan el área en `Hectares`. `CampaignLedger` calcula la inversión total, el precio de equilibrio y el precio sugerido.
+* **Servicios:** `FieldPlotCommandService`, `CropCampaignCommandService`, `CampaignLedgerCommandService` y `FieldManagementQueryService`. Los event handlers aplican cuatro políticas: `PlotBoundaryDelineatedEventHandler` (P3) registra el polígono en AgroMonitoring, `CropCampaignStartedEventHandler` (P8) abre el libro de costos, `BreakevenRecalculationEventHandler` (P9) recalcula el precio de equilibrio con cada gasto y `DeliveredBatchWeighedEventHandler` (P10) registra el rendimiento real cuando Harvest Certification pesa el lote.
+* **Infraestructura:** repositorios de parcelas, campañas y libros de costos; `AgroMonitoringPolygonAssembler`, que crea el polígono en AgroMonitoring; y `CampaignCostReportGenerator`, que genera el reporte en PDF.
+* **Interfaces:** `FieldPlotsController`, `CropCampaignsController` y `FinancesController`. `FieldManagementContextFacade` entrega a otros contextos el polígono, la región, el origen de la parcela y la variedad sembrada. `ExternalSubscriptionService` consulta el cupo del plan antes de registrar una parcela.
+
+**Relaciones principales:**
+* `PlotBoundary` *-- "3..*" `GeoCoordinate`: el polígono está formado por sus vértices.
+* `CampaignLedger` "1" *-- "0..*" `ExpenseEntry`: los gastos solo existen dentro del libro de costos.
+* `CropCampaignCommandServiceImpl` ..> `SowingDateRecordedEvent`: al registrar la siembra se publica el evento que Crop Health usa para programar el monitoreo satelital (P4).
+
+---
+
+#### 4.7.1.6. Crop Health Context
+
+Este contexto monitorea la salud del cultivo con imágenes satelitales y el clima, emite alertas y gestiona la asesoría del agrónomo: reportes de plagas, inspecciones y recetas técnicas.
+
+##### Web Application (Angular)
+
+![Diagrama de Clases - Crop Health - Web Application](assets/img/chapter-4/class-diagrams/web-application/05-crop-health-web-class-diagram.png)
+
+* **Dominio:** las entidades `SatelliteObservation`, `ClimateForecast`, `AgroclimaticAlert`, `ActionStep`, `RegionalBulletin`, `PestReport`, `FieldInspection` y `TechnicalPrescription` heredan de `BaseEntity`. Los commands son los que ejecuta el usuario: subir la foto de una plaga, registrar la evaluación del daño, programar y completar una inspección, emitir la receta, confirmar el tratamiento, reportar la recuperación del follaje, evaluar la efectividad, completar un paso del plan de acción, cerrar la alerta y emitir un boletín regional.
+* **Aplicación:** `CropHealthStore` guarda las observaciones, el pronóstico, las alertas, los reportes de plagas y las recetas de la parcela seleccionada.
+* **Infraestructura:** `CropHealthApi` agrupa un endpoint por cada entidad, cada uno con su assembler.
+* **Presentación:** `CropHealthView` (mapa NDVI/NDWI), `AgriculturalAlertsView`, `AlertDetailView`, `AdvisorConsultationView`, `PestReportForm`, `DiagnosisInboxView`, `PrescriptionForm` y `RegionalBulletinForm`.
+
+**Relaciones principales:**
+* `AgroclimaticAlert` "1" *-- "1..*" `ActionStep`: cada alerta tiene al menos un paso en su plan de acción.
+* `PestReport` "1" --> "0..*" `FieldInspection` y "1" --> "0..1" `TechnicalPrescription`: un reporte de plaga puede tener varias inspecciones y como máximo una receta.
+
+##### RESTful API (Spring Boot)
+
+![Diagrama de Clases - Crop Health - RESTful API](assets/img/chapter-4/class-diagrams/restful-api/05-crop-health-api-class-diagram.png)
+
+* **Dominio:** los agregados son `SatelliteObservation`, `ClimateForecast`, `AgroclimaticAlert`, `RegionalBulletin`, `PestReport`, `FieldInspection` y `TechnicalPrescription`. `SatelliteObservation` descarta las imágenes nubladas y detecta anomalías y estrés hídrico; `ClimateForecast` detecta el riesgo de helada. Los value objects son `VegetationIndexes` (NDVI y NDWI), `TemperatureRange`, `PhotoEvidence` y `Dosage`.
+* **Servicios:** `SatelliteMonitoringCommandService`, `AgroclimaticAlertCommandService`, `AgronomicAdvisoryCommandService` y `CropHealthQueryService`. Los event handlers aplican cuatro políticas: `SowingDateRecordedEventHandler` (P4) programa el monitoreo, `CropRiskDetectedEventHandler` (P5) levanta la alerta ante anomalía, estrés hídrico o helada, `AgroclimaticAlertRaisedEventHandler` (P6) notifica al productor y al agrónomo, y `PestEvidencePhotoUploadedEventHandler` (P7) avisa al agrónomo asignado. `SatelliteMonitoringScheduler` descarga las imágenes cada cinco días y el pronóstico cada día.
+* **Infraestructura:** un repositorio por agregado, `AgroMonitoringClientAssembler`, que trae las imágenes, los índices y el clima, y `PhotoStorageService` para las fotos de plagas.
+* **Interfaces:** `MonitoringController`, `AlertsController` y `AdvisoryController`. Las notificaciones salen por `NotificationSender` (Twilio).
+* **ACL de salida:** `ExternalFieldManagementService` obtiene el polígono de la parcela y `ExternalProfilesService` obtiene el agrónomo asignado y su teléfono.
+
+**Relaciones principales:**
+* `AgroclimaticAlert` "1" *-- "1..*" `ActionStep`: los pasos solo existen dentro de la alerta.
+* `FieldInspection` "0..*" --> "1" `PestReport` y `TechnicalPrescription` "0..1" --> "1" `PestReport`: las inspecciones y la receta se refieren a un reporte de plaga.
+* `SatelliteObservation` *-- "1" `VegetationIndexes`: cada observación guarda sus índices.
+
+---
+
+#### 4.7.1.7. Harvest Certification Context
+
+Este contexto registra los lotes que llegan al acopio, califica su calidad (calibres de papa según MIDAGRI y catación de café según SCA) y emite certificados con código QR que cualquier persona puede verificar.
+
+##### Web Application (Angular)
+
+![Diagrama de Clases - Harvest Certification - Web Application](assets/img/chapter-4/class-diagrams/web-application/06-harvest-certification-web-class-diagram.png)
+
+* **Dominio:** `HarvestBatch`, `RepresentativeSample`, `PotatoCaliberGrading`, `CoffeeCuppingResult`, `QualityCertificate` y `PublicTraceabilityRecord` heredan de `BaseEntity`. Los commands son registrar el lote, pesarlo, extraer la muestra, calificar los calibres de papa, hacer la catación de café, emitir el certificado y verificarlo por QR.
+* **Aplicación:** `HarvestCertificationStore` guarda los lotes de la cooperativa, los certificados del socio y el resultado de la verificación pública.
+* **Infraestructura:** `HarvestCertificationApi` agrupa `HarvestBatchesApiEndpoint`, `QualityCertificatesApiEndpoint` y `PublicTraceabilityApiEndpoint`, cada uno con su assembler.
+* **Presentación:** `HarvestBatchRegistrationView`, `HarvestGradingSheetView`, `HarvestCertificatesView` y `PublicTraceabilityView`, que se abre al escanear el QR sin necesidad de cuenta.
+
+**Relaciones principales:**
+* `HarvestBatch` "1" *-- "0..1" `RepresentativeSample`, `PotatoCaliberGrading` y `CoffeeCuppingResult`: el lote tiene una muestra y, según el cultivo, una calificación de papa o una de café.
+* `HarvestBatch` "1" --> "0..1" `QualityCertificate`: un lote se certifica como máximo una vez.
+
+##### RESTful API (Spring Boot)
+
+![Diagrama de Clases - Harvest Certification - RESTful API](assets/img/chapter-4/class-diagrams/restful-api/06-harvest-certification-api-class-diagram.png)
+
+* **Dominio:** los agregados son `HarvestBatch` y `QualityCertificate`; `RepresentativeSample` es una entidad del lote. Los value objects `BatchCode`, `BatchWeight`, `PotatoCaliberGrading`, `CoffeeCuppingResult` y `CertificateHash` guardan el código, el peso neto, las calificaciones y la firma del certificado. `QualityCategory` define el resultado: `PREMIUM_GOLD`, `STANDARD`, `B_GRADE_REQUIRES_SORTING`, `SPECIALTY_COFFEE` y `COMMERCIAL_COFFEE`.
+* **Servicios:** `HarvestBatchCommandService`, `QualityCertificateCommandService` y `HarvestCertificationQueryService`. `BatchGradedEventHandler` (P11) asigna el puntaje de calidad cuando termina la calificación de papa o la catación de café.
+* **Infraestructura:** `HarvestBatchRepository`, `QualityCertificateRepository` y `PdfQrGeneratorAssembler`, que genera el PDF del certificado, su código QR y su hash.
+* **Interfaces:** `HarvestBatchesController`, `QualityCertificatesController` y `PublicTraceabilityController`, que verifica el certificado con su número y su hash.
+* **ACL de salida:** `ExternalProfilesService` valida que el socio pertenezca a la cooperativa y `ExternalFieldManagementService` obtiene el origen de la parcela y la variedad sembrada para la vista pública.
+
+**Relaciones principales:**
+* `QualityCertificate` "0..1" --> "1" `HarvestBatch`: cada certificado corresponde a un lote.
+* `QualityCertificate` *-- "1" `CertificateHash`: el hash sella el contenido del certificado.
+* `HarvestBatchCommandServiceImpl` ..> `DeliveredBatchWeighedEvent`: al pesar el lote se publica el evento que Field Management usa para registrar el rendimiento real (P10).
+
+---
+
+
 ## 4.8. Database Design
 
 En esta sección se presenta el diseño lógico y físico de la base de datos relacional para la plataforma **SumaqAgro**. El diseño de persistencia se ha estructurado utilizando **MySQL 8.0** como motor gestor de base de datos (RDBMS), garantizando cumplimiento de propiedades ACID, integridad referencial inmutable y soporte de datos espaciales (GIS) para los polígonos perimetrales GPS de las parcelas agrícolas.
