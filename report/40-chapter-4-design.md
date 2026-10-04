@@ -1588,26 +1588,29 @@ En esta sección se presenta y describe el Diagrama de Contenedores (Nivel 2 del
 
 #### Asignación de Responsabilidades y Decisiones Tecnológicas
 
-La topología de ejecución del sistema está conformada por cuatro contenedores independientes:
+La topología de ejecución del sistema está conformada por cinco contenedores:
+
+* **Static Content Container:**
+  Carpeta con los archivos compilados de la Web Application (HTML, CSS, JavaScript e imágenes), publicada en Cloudflare Pages. Desde aquí el navegador del productor, del directivo y del agrónomo descarga la aplicación Angular. El visitante también la usa para abrir la vista pública del certificado al escanear un código QR.
 
 * **Landing Page Container:**
-  Sitio web público estático desarrollado con HTML5, CSS3 y JavaScript vanilla, alojado en un servicio cloud de distribución estática. Diseñado con una carga ligera para garantizar un rendimiento óptimo en terminales móviles bajo redes rurales 3G/4G. Su propósito es exponer la propuesta de valor del producto, presentar los planes de suscripción comercial (Semilla, Cooperativa Pro y Asesor Técnico) y canalizar prospectos comerciales hacia el backend mediante llamadas asíncronas HTTPS/JSON.
+  Sitio web público estático desarrollado con HTML5, CSS3 y JavaScript vanilla, alojado en un servicio cloud de distribución estática. Diseñado con una carga ligera para garantizar un rendimiento óptimo en terminales móviles bajo redes rurales 3G/4G. Su propósito es exponer la propuesta de valor del producto, presentar los planes de suscripción comercial (Semilla, Cooperativa Pro y Asesor Técnico) y llevar al visitante al registro de la Web Application. No se comunica con el backend: es un sitio estático.
 
 * **Web Application Container (Single Page Application - SPA):**
-  Aplicación web cliente desarrollada sobre el framework Angular 18, utilizando TypeScript y la biblioteca Angular Material. Provee una interfaz reactiva y accesible tanto para productores de campo como para administradores de cooperativas e ingenieros agrónomos. Integra capacidades de almacenamiento local mediante *Service Workers* e *IndexedDB*, lo que permite soportar operaciones en modo desconectado (*offline-first*) para el registro de jornales, compras e insumos en predios rurales sin cobertura de datos móvil, sincronizando la información automáticamente contra la API REST al recuperar la conexión a internet. Asimismo, aloja el visor público interactivo que permite auditar las credenciales y trazabilidad de los lotes cuando un visitante escanea el código QR impreso.
+  Aplicación web cliente desarrollada sobre el framework Angular 18, utilizando TypeScript y la biblioteca Angular Material. Provee una interfaz reactiva y accesible tanto para productores de campo como para administradores de cooperativas e ingenieros agrónomos. Integra capacidades de almacenamiento local mediante *Service Workers* e *IndexedDB*, lo que permite soportar operaciones en modo desconectado (*offline-first*) para el registro de gastos de campo y de reportes de plagas en predios rurales sin cobertura de datos móvil, sincronizando la información automáticamente contra la API REST al recuperar la conexión a internet. Asimismo, aloja el visor público interactivo que permite auditar las credenciales y trazabilidad de los lotes cuando un visitante escanea el código QR impreso.
 
 * **RESTful API Backend Container:**
   Servidor de aplicaciones distribuido implementado en Java 21 utilizando el framework Spring Boot 3.x (Spring MVC, Spring Security y Spring Data JPA). Representa el núcleo transaccional del sistema y aloja la lógica de negocio basada en DDD para los 6 Bounded Contexts identificados y el Shared Kernel que todos reutilizan. Sus responsabilidades abarcan la emisión y validación de tokens criptográficos JWT para el control de accesos, el cómputo de las matrices financieras de costo unitario y punto de equilibrio rural, el procesamiento de las imágenes e índices satelitales y la exposición de endpoints documentados formalmente bajo OpenAPI 3.0 (Swagger UI).
 
-* **Database Engine Container:**
-  Motor relacional MySQL 8.0 configurado como la unidad de persistencia de datos. Almacena las tablas normalizadas del dominio asegurando transacciones atómicas bajo el estándar ACID, soporte de integridad referencial mediante claves foráneas y compatibilidad con tipos de datos espaciales para el resguardo de las geometrías perimetrales de las parcelas agrícolas.
+* **Database Container:**
+  Base de datos relacional MySQL 8.0 (`sumaqagro_db`). Guarda en una sola base las tablas de los 6 bounded contexts, con transacciones ACID y claves primarias y foráneas que mantienen la integridad referencial. Los vértices del polígono de cada parcela se guardan como pares de latitud y longitud.
 
 #### Protocolos de Interoperabilidad y Comunicación
 
-* **Acceso de Usuarios:** Los usuarios finales interactúan con los contenedores web (*Landing Page* y *Web Application*) mediante peticiones seguras sobre el protocolo HTTPS.
-* **Cliente Web a Backend:** La Single Page Application consume la lógica de negocio y envía datos locales sincronizados mediante llamadas asíncronas RESTful sobre HTTPS, transmitiendo datos estructurados en formato JSON protegidos con tokens de autorización Bearer JWT.
-* **Backend a Base de Datos:** Las operaciones transaccionales y de persistencia de los agregados se ejecutan directamente a través de una conexión TCP protegida sobre el puerto 3306 mediante el controlador JDBC de MySQL.
-* **Backend a Servicios Externos:** Las consultas salientes hacia AgroMonitoring API, Twilio Gateway y Niubiz se realizan mediante assemblers desacoplados bajo peticiones seguras HTTPS/JSON. Los correos de recuperación de contraseña e invitación de agrónomos se envían a Brevo mediante SMTP o HTTPS.
+* **Acceso de Usuarios:** Los usuarios entran por HTTPS. El visitante navega la *Landing Page*, y desde ella pasa al registro de la *Web Application*. Los usuarios registrados cargan la *Web Application* desde el *Static Content*.
+* **Cliente Web a Backend:** La Web Application llama a los endpoints REST del backend con JSON sobre HTTPS, enviando el token Bearer JWT en cada petición. Por este mismo canal sincroniza los datos guardados sin conexión.
+* **Backend a Base de Datos:** El backend lee y escribe los agregados mediante el controlador JDBC de MySQL, sobre el puerto 3306.
+* **Backend a Servicios Externos:** El backend se comunica con AgroMonitoring API, Twilio y Niubiz con JSON sobre HTTPS. Niubiz, además, confirma cada pago llamando a un webhook del backend. Los correos de recuperación de contraseña e invitación de agrónomos se envían a Brevo mediante SMTP.
 
 ---
 
@@ -1626,71 +1629,65 @@ El contenedor de la Landing Page descompone la estructura del sitio web estátic
 ![C4 Model - Diagrama de Componentes de la Landing Page (Nivel 3)](assets/img/chapter-4/c4/c4-components-landing-diagram.png)
 
 ##### Desglose de Componentes de la Landing Page:
-* **`Navigation & Hero Component`:** Bloque estructural desarrollado con HTML5 semántico y maquetado responsivo mediante CSS3 Flexbox. Administra la barra de navegación superior, la identidad visual corporativa de SumaqAgro, la propuesta de valor agroclimática orientada a café de especialidad y papa andina, y el llamado a la acción (CTA) que conduce al formulario de registro y demostración.
+* **`Navigation & Hero Component`:** Bloque estructural desarrollado con HTML5 semántico y maquetado responsivo mediante CSS3 Flexbox. Administra la barra de navegación superior, la identidad visual corporativa de SumaqAgro, la propuesta de valor agroclimática orientada a café de especialidad y papa andina, y el llamado a la acción (CTA) que lleva al visitante al registro de la Web Application.
 * **`Pricing & Plans Catalog Component`:** Componente visual maquetado mediante CSS3 Grid. Presenta la matriz comparativa de los planes de suscripción comercial SaaS: el plan *Semilla* (gratuito para pequeños productores familiares), el plan *Cooperativa Pro* (para gremios con monitoreo consolidado de socios) y el plan *Asesor Técnico* (para agrónomos independientes con carteras de clientes).
-* **`Lead Capture Form Component`:** Módulo interactivo implementado en JavaScript vanilla. Intercepta los eventos de ingreso de datos para solicitudes de contacto y demostraciones técnicas, ejecutando validaciones sintácticas del lado del cliente (formato regex de correo electrónico, longitud de número celular y campos obligatorios) para prevenir envíos incompletos a la red.
-* **`Landing HTTP Client`:** Componente de comunicación asíncrona construido sobre la API nativa `Fetch` de JavaScript. Serializa las entradas del formulario hacia una carga útil JSON y despacha la petición POST sobre HTTPS hacia el endpoint `/api/v1/users` del backend transaccional, administrando los estados visuales de confirmación o alerta ante incidencias de conectividad.
 
 ---
 
 #### 4.6.4.2. Web Application Container Components Diagram (Angular SPA)
 
-El contenedor de la aplicación cliente SPA, implementado sobre el framework **Angular 18**, descompone sus módulos para brindar una experiencia de usuario interactiva y garantizar la persistencia local de datos en campo mediante capacidades desconectadas (*offline-first*).
+La Web Application, construida con **Angular 18**, se organiza por bounded context siguiendo DDD. Cada componente del diagrama es una carpeta de Angular dentro de `src/app` y todas tienen las mismas capas: `domain/model` (entidades), `application` (store con el estado), `infrastructure` (llamadas a la API) y `presentation` (vistas). Además existe una carpeta `shared` con lo que usan todos los contextos.
 
 ![C4 Model - Diagrama de Componentes de la Web Application (Nivel 3)](assets/img/chapter-4/c4/c4-components-webapp-diagram.png)
 
 ##### Desglose de Componentes de la Web Application:
-* **`Auth & Role Guard`:** Guardia funcional de enrutamiento (`CanActivateFn`) de Angular. Intercepta la navegación hacia rutas protegidas comprobando la vigencia del token JWT almacenado en `sessionStorage`, aplicando el control de acceso basado en roles (RBAC) para productores, directivos y agrónomos.
-* **`Plot Management View Component`:** Interfaz gráfica desarrollada con Angular Material y Formularios Reactivos (`ReactiveFormsModule`). Permite la georreferenciación de predios, la captura interactiva de vértices perimetrales GPS y el registro botánico y fenológico de las campañas agrícolas.
-* **`Crop Health View Component`:** Componente analítico que integra la biblioteca Leaflet.js con Angular. Renderiza los mapas satelitales con los índices NDVI y NDWI, las alertas agroclimáticas con su plan de acción, los reportes de plagas con foto y las recetas técnicas emitidas por el agrónomo.
-* **`Field Cost Ledger View Component`:** Módulo de captura contable rural que provee formularios reactivos para el asiento inmediato de compras de fertilizantes, jornales diarios y fletes, alimentando los paneles de estimación de costos unitarios y punto de equilibrio.
-* **`Harvest & Traceability View Component`:** Vistas de calificación física de calibres de tubérculo (norma técnica MIDAGRI) y protocolos de catación sensorial de café (estándar SCA). Incluye el visor público accesible mediante el escaneo del código QR para la auditoría de procedencia de los lotes.
-* **`Client State & Offline Store`:** Capa de almacenamiento transaccional local implementada con *IndexedDB* (mediante Dexie.js) coordinada con estados reactivos basados en `BehaviorSubject` de RxJS. Retiene las operaciones efectuadas en parcelas sin señal de red celular y orquesta la sincronización automática diferida en lote al detectar conectividad a internet.
-* **`Service Worker Cache Engine`:** Módulo de Progressive Web App provisto por `@angular/pwa`. Almacena en caché los artefactos estáticos compilados (HTML, CSS, JavaScript e iconografía vectorial), asegurando la operatividad continua de la interfaz web en entornos rurales sin conexión.
-* **`REST API Client Service`:** Servicio Angular centralizado (`@Injectable`) que encapsula la comunicación HTTPS con el backend mediante `HttpClient`. Emplea un `HttpInterceptor` que inyecta automáticamente el encabezado `Authorization: Bearer <JWT>` en cada solicitud saliente y unifica la gestión de excepciones HTTP de red.
+* **`IAM Component`:** Formularios de registro, inicio de sesión y recuperación de contraseña. Contiene el *guard* que protege las rutas privadas según la sesión y el rol, y el *interceptor* que agrega el token JWT a cada petición.
+* **`Profiles Component`:** Configuración del perfil, registro de la cooperativa, padrón de socios y asignación de agrónomos a las parcelas.
+* **`Subscriptions and Payments Component`:** Catálogo de planes, pago (*checkout*) e historial de cobros.
+* **`Field Management Component`:** Registro de parcelas con el mapa para marcar el polígono GPS (Leaflet.js), campañas agrícolas y bitácora de costos, donde los gastos se pueden registrar sin conexión.
+* **`Crop Health Component`:** Mapa con los índices NDVI y NDWI (Leaflet.js), alertas agroclimáticas, reportes de plagas, inspecciones y recetas técnicas.
+* **`Harvest Certification Component`:** Lotes de acopio, fichas de catación SCA para café y de calibres MIDAGRI para papa, certificados de calidad y la vista pública que se abre al escanear el código QR.
+* **`Shared Component`:** Lo que usan todos los contextos: el *layout* con el menú, el selector de idioma, las clases base para llamar a la API, la sincronización sin conexión con IndexedDB (Dexie.js) y la caché del Service Worker (`@angular/pwa`).
+
+##### Relaciones entre Componentes:
+* **Usuarios:** el productor usa Field Management, Crop Health y Subscriptions and Payments; el directivo usa Profiles y Harvest Certification; el agrónomo usa Crop Health; y el visitante se registra en IAM o verifica un certificado en Harvest Certification. La Landing Page envía al visitante al registro en IAM.
+* **IAM:** los otros cinco componentes revisan la sesión y el rol del usuario con el *guard* de IAM antes de abrir sus rutas. Shared también lee el rol desde IAM para mostrar el menú que le corresponde a cada usuario.
+* **Shared:** todos los componentes usan su *layout* y sus clases base de API. Field Management y Crop Health, además, usan su sincronización sin conexión.
+* **RESTful API:** cada componente llama solo al componente de su mismo bounded context en el backend, con JSON sobre HTTPS.
 
 ---
 
 #### 4.6.4.3. RESTful API Backend Container Components Diagram (Spring Boot)
 
-El contenedor transaccional de backend, desarrollado en **Java 21 con Spring Boot 3.x**, implementa una arquitectura en capas desacopladas orientada al dominio (*Layered Architecture / DDD*), gobernando las reglas de negocio de los 6 Bounded Contexts y agregados de la solución, junto con el Shared Kernel que todos reutilizan.
+El backend, desarrollado en **Java 21 con Spring Boot 3.x**, también se organiza por bounded context. Cada componente del diagrama es un bounded context y contiene sus propios controllers REST, servicios de Spring y repositorios de Spring Data JPA. El Shared Kernel agrupa lo que todos comparten.
 
 ![C4 Model - Diagrama de Componentes del API Backend (Nivel 3)](assets/img/chapter-4/c4/c4-components-backend-diagram.png)
 
-##### Desglose de Componentes del Backend por Capa Técnica:
+##### Desglose de Componentes del Backend:
+* **`IAM Component`:** Registro, inicio de sesión, emisión del token JWT, roles y recuperación de contraseña.
+* **`Profiles Component`:** Perfiles de usuario, cooperativas, padrón de socios e invitación y asignación de agrónomos a las parcelas.
+* **`Subscriptions and Payments Component`:** Planes (Semilla, Cooperativa Pro y Asesor Técnico), cobros y cupo de parcelas de cada plan.
+* **`Field Management Component`:** Parcelas con su polígono GPS, campañas agrícolas, bitácora de costos y precio de equilibrio. También recibe los gastos registrados sin conexión.
+* **`Crop Health Component`:** Índices NDVI y NDWI, pronóstico del clima, alertas agroclimáticas, reportes de plagas, inspecciones y recetas técnicas.
+* **`Harvest Certification Component`:** Lotes de acopio, calificación de calibres de papa y catación de café, y emisión de certificados de calidad con código QR.
+* **`Shared Kernel Component`:** Clases base, value objects compartidos, manejo de excepciones, configuración de OpenAPI y el envío de notificaciones que usan los demás contextos.
 
-* **Capa de Controladores REST (Inbound Controllers):**
-  Controladores anotados con `@RestController` que exponen los endpoints del sistema sobre HTTPS/JSON, interceptan las peticiones desde el cliente Angular, validan los DTOs de entrada mediante Bean Validation (`@Valid`) y delegan la ejecución hacia los servicios de aplicación:
-  * `IamController`: Expone `/api/v1/auth` y `/api/v1/users` para registro, inicio de sesión seguro y emisión de JWT.
-  * `ProfilesController`: Expone `/api/v1/profiles` y `/api/v1/cooperatives` para datos de contacto, registro de cooperativas, padrón de socios y asignación de agrónomos.
-  * `SubscriptionController`: Expone `/api/v1/subscriptions` para consulta de membresías y confirmación transaccional de planes comerciales.
-  * `FieldManagementController`: Expone `/api/v1/plots`, `/api/v1/campaigns` y `/api/v1/finances` para catastro de coordenadas GPS, campañas agrícolas, bitácora financiera, sincronización diferida de asientos y cálculo de punto de equilibrio.
-  * `CropHealthController`: Expone `/api/v1/monitoring`, `/api/v1/alerts` y `/api/v1/advisory` para mapas satelitales, series NDVI/NDWI, alertas agroclimáticas, reportes de plagas y recetas agronómicas.
-  * `HarvestCertificationController`: Expone `/api/v1/harvests` y `/api/v1/certificates` para pesaje de acopio, catación SCA, graduación de calibres y certificados.
-
-* **Capa de Servicios de Aplicación (Domain Application Services):**
-  Servicios anotados con `@Service` que orquestan las transacciones atómicas, validan las reglas de invariante de cada Agregado y coordinan las llamadas hacia los assemblers:
-  * `UserService`: Administra el ciclo de vida del agregado `User`, gestionando el hashing seguro de claves y la emisión de tokens JWT.
-  * `ProfilesService`: Administra los agregados `Profile`, `Cooperative` y `AgronomistAssignment`, controlando el padrón de socios y qué agrónomo supervisa cada parcela.
-  * `SubscriptionService`: Gobierna el agregado `Subscription`, controlando la vigencia de membresías y cuotas de predios asignados.
-  * `FieldManagementService`: Administra los agregados `FieldPlot`, `CropCampaign` y `CampaignLedger`, validando que los polígonos no presenten autointersecciones, que una parcela no tenga dos campañas activas y calculando el costo unitario de producción y el precio de equilibrio.
-  * `CropHealthService`: Gestiona los agregados `SatelliteObservation`, `ClimateForecast`, `AgroclimaticAlert`, `RegionalBulletin`, `PestReport`, `FieldInspection` y `TechnicalPrescription`, registrando los índices satelitales y despachando alertas preventivas de estrés foliar, estrés hídrico o heladas.
-  * `HarvestCertificationService`: Supervisa los agregados `HarvestBatch` y `QualityCertificate`, validando umbrales mínimos de calidad sensorial y física antes de autorizar la emisión de certificados.
-
-* **Capa de Assemblers de Infraestructura:**
-  Componentes de integración desacoplados anotados con `@Component` que se comunican con plataformas externas o generan documentos, y transforman esas respuestas en objetos del dominio:
-  * `NiubizClientAssembler`: Consume la API de Niubiz para el procesamiento de cobros y la facturación recurrente de las suscripciones.
-  * `AgroMonitoringClientAssembler`: Registra el polígono de cada parcela en AgroMonitoring y obtiene sus imágenes satelitales, los índices NDVI y NDWI y el pronóstico del clima.
-  * `TwilioNotificationAssembler`: Invoca la API de Twilio para remitir notificaciones prioritarias de emergencia vía SMS y WhatsApp.
-  * `BrevoEmailAssembler`: Arma los correos de recuperación de contraseña (usados por `UserService`) y de invitación de agrónomos (usados por `ProfilesService`) y los envía a través de Brevo.
-  * `PdfQrGeneratorAssembler`: Compila dinámicamente los certificados de calidad en formato PDF y codifica el código QR de verificación pública.
-
-* **Shared Kernel:**
-  Componente común que reutilizan todos los servicios. Contiene las clases base auditables (`AuditableAbstractAggregateRoot` y `AuditableModel`), los value objects compartidos, el manejo global de excepciones y la configuración de OpenAPI.
-
-* **Capa de Persistencia (Spring Data JPA Repositories):**
-  Interfaces que extienden de `JpaRepository` para mapear los agregados hacia las tablas de la base de datos MySQL 8.0 vía JDBC sobre el puerto TCP 3306:
-  * `UserRepository`, `ProfilesRepository`, `SubscriptionRepository`, `FieldManagementRepository`, `CropHealthRepository` y `HarvestCertificationRepository`.
+##### Relaciones entre Componentes:
+* **Domain events (políticas):**
+  * IAM publica `UserSignedUp` y Subscriptions and Payments asigna el plan Semilla (P1).
+  * Field Management publica `SowingDateRecorded` y Crop Health programa el monitoreo satelital (P4).
+  * Harvest Certification publica `DeliveredBatchWeighed` y Field Management registra el rendimiento real (P10).
+* **Consultas mediante ACL (facades):**
+  * Profiles asigna roles mediante IAM y valida las parcelas en Field Management.
+  * Field Management revisa el cupo de parcelas del plan en Subscriptions and Payments.
+  * Crop Health lee los polígonos de las parcelas en Field Management y busca el agrónomo asignado en Profiles.
+  * Harvest Certification valida los socios de la cooperativa en Profiles y lee el origen de la parcela en Field Management.
+* **Sistemas externos:**
+  * Subscriptions and Payments cobra con Niubiz, y Niubiz confirma cada pago llamando a un webhook.
+  * Field Management registra los polígonos de las parcelas en AgroMonitoring.
+  * Crop Health obtiene de AgroMonitoring las imágenes, los índices y el clima, y envía las alertas por SMS o WhatsApp con Twilio.
+  * IAM envía el correo de recuperación de contraseña y Profiles el de invitación al agrónomo, ambos con Brevo mediante SMTP.
+* **Shared Kernel y base de datos:** todos los componentes usan las clases base y los value objects del Shared Kernel, y leen y escriben en la base de datos MySQL mediante JDBC.
 
 ---
 
