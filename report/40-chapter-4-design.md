@@ -1442,6 +1442,7 @@ Considerando la estructura de subdominios recomendada para plataformas SaaS de s
   * *Commands:* `SignUp`, `SignIn`.
   * *Events:* `UserSignedUp`, `UserSignedIn`.
   * *Read Models:* `PlansCatalog`.
+  * *External System:* Brevo Email Service (correo de recuperación de contraseña).
 
 **2. Profiles Context (Supporting Subdomain)**
 
@@ -1454,6 +1455,7 @@ Considerando la estructura de subdominios recomendada para plataformas SaaS de s
   * *Commands:* `RegisterCooperative`, `AddCooperativeMember`, `InviteAgronomist`.
   * *Events:* `CooperativeRegistered`, `CooperativeMemberAdded`, `AgronomistInvited`.
   * *Read Models:* `MemberDirectory`.
+  * *External System:* Brevo Email Service (correo de invitación al agrónomo).
 * **Agregado `AgronomistAssignment`:**
   * *Commands:* `AssignAgronomistToPlot`.
   * *Events:* `AgronomistAssignedToPlot`.
