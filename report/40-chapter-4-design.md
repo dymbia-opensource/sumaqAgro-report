@@ -1976,6 +1976,7 @@ Las principales características que se consideran en los diagramas son:
 * **Relaciones entre contextos:** las relaciones dentro de un contexto se declaran junto con su tabla. Las relaciones hacia otro contexto (por ejemplo, `field_plots.owner_user_id` hacia `users`) se declaran al final del script; en el código estas consultas pasan por los facades de ACL.
 * **Tipos de datos:** `DECIMAL(10,2)` para montos y cantidades, `DECIMAL(10,8)` y `DECIMAL(11,8)` para latitud y longitud, `DECIMAL(5,4)` para los índices NDVI y NDWI, y `VARCHAR` para los estados, con los mismos valores de los enums del backend.
 * **Auditoría:** las tablas principales tienen `created_at` y `updated_at`, que MySQL llena de forma automática.
+* **Tablas por contexto:** para cada tabla se indica qué guarda cada columna y su tipo de dato. Las claves se marcan al inicio de la descripción: **PK** (primary key), **FK** (foreign key, con la tabla a la que apunta) y **UNIQUE** (valor que no se repite).
 
 ---
 
@@ -1999,31 +2000,31 @@ Este contexto guarda las cuentas de usuario, sus roles y los códigos para recup
 
 Cuentas de usuario de la plataforma. La contraseña se guarda cifrada con BCrypt.
 
-| Columna | Tipo | Restricciones |
+| Columna | Tipo | Descripción |
 |---|---|---|
-| `id` | `BIGINT` | **PK**; `NOT NULL AUTO_INCREMENT` |
-| `email` | `VARCHAR(150)` | **UNIQUE**; `NOT NULL` |
-| `password` | `VARCHAR(255)` | `NOT NULL`; BCrypt hash |
-| `created_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP` |
-| `updated_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` |
+| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
+| `email` | `VARCHAR(150)` | **(UNIQUE)** Correo con el que el usuario inicia sesión. No se repite. |
+| `password` | `VARCHAR(255)` | Contraseña cifrada con BCrypt; nunca se guarda en texto plano. |
+| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
+| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
 
 ###### Tabla `roles`
 
 Catálogo de roles: `ROLE_FARMER`, `ROLE_COOPERATIVE_MANAGER` y `ROLE_AGRONOMIST`.
 
-| Columna | Tipo | Restricciones |
+| Columna | Tipo | Descripción |
 |---|---|---|
-| `id` | `BIGINT` | **PK**; `NOT NULL AUTO_INCREMENT` |
-| `name` | `VARCHAR(30)` | **UNIQUE**; `NOT NULL`; ROLE_FARMER, ROLE_COOPERATIVE_MANAGER, ROLE_AGRONOMIST |
+| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
+| `name` | `VARCHAR(30)` | **(UNIQUE)** Nombre del rol: `ROLE_FARMER`, `ROLE_COOPERATIVE_MANAGER` o `ROLE_AGRONOMIST`. |
 
 ###### Tabla `user_roles`
 
 Tabla intermedia que asigna uno o varios roles a cada usuario.
 
-| Columna | Tipo | Restricciones |
+| Columna | Tipo | Descripción |
 |---|---|---|
-| `user_id` | `BIGINT` | **PK**; **FK** → `users(id)` ON DELETE CASCADE; `NOT NULL` |
-| `role_id` | `BIGINT` | **PK**; **FK** → `roles(id)`; `NOT NULL` |
+| `user_id` | `BIGINT` | **(PK; FK → `users`)** Usuario al que se le asigna el rol. |
+| `role_id` | `BIGINT` | **(PK; FK → `roles`)** Rol asignado al usuario. |
 
 Clave primaria compuesta: `(user_id, role_id)`.
 
@@ -2031,15 +2032,15 @@ Clave primaria compuesta: `(user_id, role_id)`.
 
 Códigos temporales que se envían por correo (Brevo) para cambiar la contraseña.
 
-| Columna | Tipo | Restricciones |
+| Columna | Tipo | Descripción |
 |---|---|---|
-| `id` | `BIGINT` | **PK**; `NOT NULL AUTO_INCREMENT` |
-| `user_id` | `BIGINT` | **FK** → `users(id)` ON DELETE CASCADE; `NOT NULL` |
-| `token` | `VARCHAR(255)` | **UNIQUE**; `NOT NULL` |
-| `expires_at` | `TIMESTAMP` | `NOT NULL` |
-| `used` | `BOOLEAN` | `NOT NULL DEFAULT FALSE` |
-| `created_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP` |
-| `updated_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` |
+| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
+| `user_id` | `BIGINT` | **(FK → `users`)** Usuario que pidió recuperar su contraseña. |
+| `token` | `VARCHAR(255)` | **(UNIQUE)** Código que se envía por correo (Brevo) para cambiar la contraseña. |
+| `expires_at` | `TIMESTAMP` | Fecha y hora en que el código deja de ser válido. |
+| `used` | `BOOLEAN` | Indica si el código ya se usó, para que no sirva dos veces. |
+| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
+| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
 
 **Relaciones principales:**
 * `users` 1 — N `user_roles` N — 1 `roles`: un usuario tiene uno o varios roles.
@@ -2057,47 +2058,47 @@ Este contexto guarda el perfil de cada usuario, las cooperativas con su padrón 
 
 Datos de contacto de cada usuario. Hay un solo perfil por usuario.
 
-| Columna | Tipo | Restricciones |
+| Columna | Tipo | Descripción |
 |---|---|---|
-| `id` | `BIGINT` | **PK**; `NOT NULL AUTO_INCREMENT` |
-| `user_id` | `BIGINT` | **FK** → `users(id)` (otro contexto); **UNIQUE**; `NOT NULL` |
-| `first_name` | `VARCHAR(100)` | `NOT NULL` |
-| `last_name` | `VARCHAR(100)` | `NOT NULL` |
-| `phone_number` | `VARCHAR(20)` | `NULL` |
-| `photo_url` | `VARCHAR(255)` | `NULL` |
-| `preferred_language` | `VARCHAR(2)` | `NOT NULL DEFAULT 'ES'`; ES, EN |
-| `created_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP` |
-| `updated_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` |
+| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
+| `user_id` | `BIGINT` | **(FK → `users`, otro contexto; UNIQUE)** Cuenta de usuario a la que pertenece el perfil. |
+| `first_name` | `VARCHAR(100)` | Nombres del usuario. |
+| `last_name` | `VARCHAR(100)` | Apellidos del usuario. |
+| `phone_number` | `VARCHAR(20)` | Celular donde recibe las alertas por SMS o WhatsApp. |
+| `photo_url` | `VARCHAR(255)` | Dirección de la foto de perfil. |
+| `preferred_language` | `VARCHAR(2)` | Idioma de la interfaz: `ES` (español) o `EN` (inglés). |
+| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
+| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
 
 ###### Tabla `cooperatives`
 
 Cooperativas registradas, identificadas por su RUC.
 
-| Columna | Tipo | Restricciones |
+| Columna | Tipo | Descripción |
 |---|---|---|
-| `id` | `BIGINT` | **PK**; `NOT NULL AUTO_INCREMENT` |
-| `ruc` | `CHAR(11)` | **UNIQUE**; `NOT NULL` |
-| `business_name` | `VARCHAR(150)` | `NOT NULL` |
-| `region` | `VARCHAR(100)` | `NOT NULL` |
-| `manager_user_id` | `BIGINT` | **FK** → `users(id)` (otro contexto); `NOT NULL` |
-| `created_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP` |
-| `updated_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` |
+| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
+| `ruc` | `CHAR(11)` | **(UNIQUE)** RUC de la cooperativa (11 dígitos). |
+| `business_name` | `VARCHAR(150)` | Razón social de la cooperativa. |
+| `region` | `VARCHAR(100)` | Región donde trabaja la cooperativa. |
+| `manager_user_id` | `BIGINT` | **(FK → `users`, otro contexto)** Directivo que administra la cooperativa en la plataforma. |
+| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
+| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
 
 ###### Tabla `cooperative_members`
 
 Padrón de socios de cada cooperativa. Un mismo DNI no se repite dentro de una cooperativa.
 
-| Columna | Tipo | Restricciones |
+| Columna | Tipo | Descripción |
 |---|---|---|
-| `id` | `BIGINT` | **PK**; `NOT NULL AUTO_INCREMENT` |
-| `cooperative_id` | `BIGINT` | **FK** → `cooperatives(id)` ON DELETE CASCADE; `NOT NULL` |
-| `dni` | `CHAR(8)` | `NOT NULL` |
-| `first_name` | `VARCHAR(100)` | `NOT NULL` |
-| `last_name` | `VARCHAR(100)` | `NOT NULL` |
-| `community` | `VARCHAR(100)` | `NULL` |
-| `joined_at` | `DATE` | `NOT NULL` |
-| `created_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP` |
-| `updated_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` |
+| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
+| `cooperative_id` | `BIGINT` | **(FK → `cooperatives`)** Cooperativa a la que pertenece el socio. |
+| `dni` | `CHAR(8)` | DNI del socio (8 dígitos). |
+| `first_name` | `VARCHAR(100)` | Nombres del socio. |
+| `last_name` | `VARCHAR(100)` | Apellidos del socio. |
+| `community` | `VARCHAR(100)` | Comunidad o caserío donde vive el socio. |
+| `joined_at` | `DATE` | Fecha en que el socio entró a la cooperativa. |
+| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
+| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
 
 Restricción única compuesta: `(cooperative_id, dni)`.
 
@@ -2105,31 +2106,31 @@ Restricción única compuesta: `(cooperative_id, dni)`.
 
 Invitaciones que la cooperativa envía por correo a los agrónomos.
 
-| Columna | Tipo | Restricciones |
+| Columna | Tipo | Descripción |
 |---|---|---|
-| `id` | `BIGINT` | **PK**; `NOT NULL AUTO_INCREMENT` |
-| `cooperative_id` | `BIGINT` | **FK** → `cooperatives(id)` ON DELETE CASCADE; `NOT NULL` |
-| `email` | `VARCHAR(150)` | `NOT NULL` |
-| `invitation_token` | `VARCHAR(255)` | **UNIQUE**; `NOT NULL` |
-| `status` | `VARCHAR(20)` | `NOT NULL DEFAULT 'PENDING'`; PENDING, ACCEPTED, EXPIRED |
-| `sent_at` | `TIMESTAMP` | `NOT NULL` |
-| `created_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP` |
-| `updated_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` |
+| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
+| `cooperative_id` | `BIGINT` | **(FK → `cooperatives`)** Cooperativa que envía la invitación. |
+| `email` | `VARCHAR(150)` | Correo del agrónomo invitado. |
+| `invitation_token` | `VARCHAR(255)` | **(UNIQUE)** Código del enlace de invitación que se envía por correo (Brevo). |
+| `status` | `VARCHAR(20)` | Estado de la invitación: `PENDING`, `ACCEPTED` o `EXPIRED`. |
+| `sent_at` | `TIMESTAMP` | Fecha y hora en que se envió la invitación. |
+| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
+| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
 
 ###### Tabla `agronomist_assignments`
 
 Indica qué agrónomo atiende cada parcela de la cooperativa.
 
-| Columna | Tipo | Restricciones |
+| Columna | Tipo | Descripción |
 |---|---|---|
-| `id` | `BIGINT` | **PK**; `NOT NULL AUTO_INCREMENT` |
-| `cooperative_id` | `BIGINT` | **FK** → `cooperatives(id)`; `NOT NULL` |
-| `agronomist_user_id` | `BIGINT` | **FK** → `users(id)` (otro contexto); `NOT NULL` |
-| `plot_id` | `BIGINT` | **FK** → `field_plots(id)` (otro contexto); `NOT NULL` |
-| `assigned_at` | `TIMESTAMP` | `NOT NULL` |
-| `active` | `BOOLEAN` | `NOT NULL DEFAULT TRUE` |
-| `created_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP` |
-| `updated_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` |
+| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
+| `cooperative_id` | `BIGINT` | **(FK → `cooperatives`)** Cooperativa que hace la asignación. |
+| `agronomist_user_id` | `BIGINT` | **(FK → `users`, otro contexto)** Agrónomo que atenderá la parcela. |
+| `plot_id` | `BIGINT` | **(FK → `field_plots`, otro contexto)** Parcela que se le asigna al agrónomo. |
+| `assigned_at` | `TIMESTAMP` | Fecha y hora de la asignación. |
+| `active` | `BOOLEAN` | Indica si la asignación sigue vigente. |
+| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
+| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
 
 **Relaciones principales:**
 * `cooperatives` 1 — N `cooperative_members`, `agronomist_invitations` y `agronomist_assignments`.
@@ -2148,50 +2149,50 @@ Este contexto guarda los planes, la suscripción de cada usuario y los pagos hec
 
 Catálogo de planes (Semilla, Cooperativa Pro y Asesor Técnico) con su precio y su cupo de parcelas.
 
-| Columna | Tipo | Restricciones |
+| Columna | Tipo | Descripción |
 |---|---|---|
-| `id` | `BIGINT` | **PK**; `NOT NULL AUTO_INCREMENT` |
-| `code` | `VARCHAR(30)` | **UNIQUE**; `NOT NULL`; SEED, COOPERATIVE_PRO, TECHNICAL_ADVISOR |
-| `name` | `VARCHAR(100)` | `NOT NULL` |
-| `monthly_price_amount` | `DECIMAL(10,2)` | `NOT NULL` |
-| `annual_price_amount` | `DECIMAL(10,2)` | `NOT NULL` |
-| `currency` | `CHAR(3)` | `NOT NULL DEFAULT 'PEN'` |
-| `plot_quota` | `INT` | `NOT NULL` |
-| `created_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP` |
-| `updated_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` |
+| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
+| `code` | `VARCHAR(30)` | **(UNIQUE)** Código del plan: `SEED`, `COOPERATIVE_PRO` o `TECHNICAL_ADVISOR`. |
+| `name` | `VARCHAR(100)` | Nombre comercial del plan (Semilla, Cooperativa Pro o Asesor Técnico). |
+| `monthly_price_amount` | `DECIMAL(10,2)` | Precio del plan con pago mensual. |
+| `annual_price_amount` | `DECIMAL(10,2)` | Precio del plan con pago anual. |
+| `currency` | `CHAR(3)` | Moneda de los precios (por defecto `PEN`). |
+| `plot_quota` | `INT` | Cantidad máxima de parcelas que permite el plan. |
+| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
+| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
 
 ###### Tabla `subscriptions`
 
 Suscripción vigente de cada usuario. Hay una sola suscripción por usuario.
 
-| Columna | Tipo | Restricciones |
+| Columna | Tipo | Descripción |
 |---|---|---|
-| `id` | `BIGINT` | **PK**; `NOT NULL AUTO_INCREMENT` |
-| `user_id` | `BIGINT` | **FK** → `users(id)` (otro contexto); **UNIQUE**; `NOT NULL` |
-| `plan_id` | `BIGINT` | **FK** → `plans(id)`; `NOT NULL` |
-| `status` | `VARCHAR(20)` | `NOT NULL`; ACTIVE, CANCELLED |
-| `billing_cycle` | `VARCHAR(10)` | `NOT NULL`; MONTHLY, ANNUAL |
-| `start_date` | `DATE` | `NOT NULL` |
-| `end_date` | `DATE` | `NULL` |
-| `auto_renew` | `BOOLEAN` | `NOT NULL DEFAULT TRUE` |
-| `created_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP` |
-| `updated_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` |
+| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
+| `user_id` | `BIGINT` | **(FK → `users`, otro contexto; UNIQUE)** Usuario dueño de la suscripción. Cada usuario tiene una sola. |
+| `plan_id` | `BIGINT` | **(FK → `plans`)** Plan contratado. |
+| `status` | `VARCHAR(20)` | Estado de la suscripción: `ACTIVE` o `CANCELLED`. |
+| `billing_cycle` | `VARCHAR(10)` | Frecuencia de cobro: `MONTHLY` o `ANNUAL`. |
+| `start_date` | `DATE` | Fecha de inicio del periodo vigente. |
+| `end_date` | `DATE` | Fecha de fin del periodo vigente. Está vacía en el plan gratuito. |
+| `auto_renew` | `BOOLEAN` | Indica si la suscripción se renueva sola al terminar el periodo. |
+| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
+| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
 
 ###### Tabla `payments`
 
 Pagos de cada suscripción con el token de transacción que devuelve Niubiz.
 
-| Columna | Tipo | Restricciones |
+| Columna | Tipo | Descripción |
 |---|---|---|
-| `id` | `BIGINT` | **PK**; `NOT NULL AUTO_INCREMENT` |
-| `subscription_id` | `BIGINT` | **FK** → `subscriptions(id)` ON DELETE CASCADE; `NOT NULL` |
-| `amount` | `DECIMAL(10,2)` | `NOT NULL` |
-| `currency` | `CHAR(3)` | `NOT NULL DEFAULT 'PEN'` |
-| `transaction_token` | `VARCHAR(255)` | **UNIQUE**; `NOT NULL`; Niubiz transaction token |
-| `status` | `VARCHAR(20)` | `NOT NULL DEFAULT 'PENDING'`; PENDING, COMPLETED, REJECTED |
-| `paid_at` | `TIMESTAMP` | `NULL` |
-| `created_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP` |
-| `updated_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` |
+| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
+| `subscription_id` | `BIGINT` | **(FK → `subscriptions`)** Suscripción a la que corresponde el pago. |
+| `amount` | `DECIMAL(10,2)` | Monto cobrado. |
+| `currency` | `CHAR(3)` | Moneda del cobro (por defecto `PEN`). |
+| `transaction_token` | `VARCHAR(255)` | **(UNIQUE)** Token de la transacción que devuelve Niubiz. No se repite, así el webhook no registra dos veces el mismo pago. |
+| `status` | `VARCHAR(20)` | Estado del pago: `PENDING`, `COMPLETED` o `REJECTED`. |
+| `paid_at` | `TIMESTAMP` | Fecha y hora en que Niubiz confirmó el pago. |
+| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
+| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
 
 **Relaciones principales:**
 * `plans` 1 — N `subscriptions`: varios usuarios pueden tener el mismo plan.
@@ -2210,33 +2211,33 @@ Este contexto guarda las parcelas con su polígono GPS, las campañas agrícolas
 
 Parcelas registradas. El análisis de suelo (value object `SoilBaseline`) se guarda en las columnas `soil_*`.
 
-| Columna | Tipo | Restricciones |
+| Columna | Tipo | Descripción |
 |---|---|---|
-| `id` | `BIGINT` | **PK**; `NOT NULL AUTO_INCREMENT` |
-| `owner_user_id` | `BIGINT` | **FK** → `users(id)` (otro contexto); `NOT NULL` |
-| `name` | `VARCHAR(100)` | `NOT NULL` |
-| `region` | `VARCHAR(100)` | `NOT NULL` |
-| `area_hectares` | `DECIMAL(10,4)` | `NULL` |
-| `status` | `VARCHAR(20)` | `NOT NULL DEFAULT 'WITHOUT_POLYGON'`; WITHOUT_POLYGON, ACTIVE_MONITORING |
-| `agromonitoring_polygon_id` | `VARCHAR(50)` | `NULL` |
-| `soil_ph` | `DECIMAL(4,2)` | `NULL` |
-| `soil_texture` | `VARCHAR(50)` | `NULL` |
-| `soil_organic_matter_percentage` | `DECIMAL(5,2)` | `NULL` |
-| `soil_recorded_at` | `DATE` | `NULL` |
-| `created_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP` |
-| `updated_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` |
+| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
+| `owner_user_id` | `BIGINT` | **(FK → `users`, otro contexto)** Productor dueño de la parcela. |
+| `name` | `VARCHAR(100)` | Nombre que el productor le da a la parcela. |
+| `region` | `VARCHAR(100)` | Región donde está la parcela. |
+| `area_hectares` | `DECIMAL(10,4)` | Área calculada a partir del polígono, en hectáreas. |
+| `status` | `VARCHAR(20)` | Estado de la parcela: `WITHOUT_POLYGON` (sin polígono) o `ACTIVE_MONITORING` (con monitoreo satelital). |
+| `agromonitoring_polygon_id` | `VARCHAR(50)` | Identificador del polígono registrado en AgroMonitoring. |
+| `soil_ph` | `DECIMAL(4,2)` | pH del suelo según el análisis inicial. |
+| `soil_texture` | `VARCHAR(50)` | Textura del suelo (por ejemplo, franco o arcilloso). |
+| `soil_organic_matter_percentage` | `DECIMAL(5,2)` | Porcentaje de materia orgánica del suelo. |
+| `soil_recorded_at` | `DATE` | Fecha del análisis de suelo. |
+| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
+| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
 
 ###### Tabla `plot_coordinates`
 
 Vértices del polígono GPS de cada parcela, en orden.
 
-| Columna | Tipo | Restricciones |
+| Columna | Tipo | Descripción |
 |---|---|---|
-| `id` | `BIGINT` | **PK**; `NOT NULL AUTO_INCREMENT` |
-| `field_plot_id` | `BIGINT` | **FK** → `field_plots(id)` ON DELETE CASCADE; `NOT NULL` |
-| `vertex_order` | `INT` | `NOT NULL` |
-| `latitude` | `DECIMAL(10,8)` | `NOT NULL` |
-| `longitude` | `DECIMAL(11,8)` | `NOT NULL` |
+| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
+| `field_plot_id` | `BIGINT` | **(FK → `field_plots`)** Parcela a la que pertenece el vértice. |
+| `vertex_order` | `INT` | Posición del vértice dentro del polígono. |
+| `latitude` | `DECIMAL(10,8)` | Latitud GPS del vértice. |
+| `longitude` | `DECIMAL(11,8)` | Longitud GPS del vértice. |
 
 Restricción única compuesta: `(field_plot_id, vertex_order)`.
 
@@ -2244,53 +2245,53 @@ Restricción única compuesta: `(field_plot_id, vertex_order)`.
 
 Campañas agrícolas de cada parcela, con el cultivo, la variedad y la fecha de siembra.
 
-| Columna | Tipo | Restricciones |
+| Columna | Tipo | Descripción |
 |---|---|---|
-| `id` | `BIGINT` | **PK**; `NOT NULL AUTO_INCREMENT` |
-| `field_plot_id` | `BIGINT` | **FK** → `field_plots(id)`; `NOT NULL` |
-| `season` | `VARCHAR(20)` | `NOT NULL` |
-| `crop_type` | `VARCHAR(20)` | `NULL`; ANDEAN_POTATO, SPECIALTY_COFFEE |
-| `seed_variety_name` | `VARCHAR(100)` | `NULL` |
-| `seed_variety_custom` | `BOOLEAN` | `NOT NULL DEFAULT FALSE` |
-| `sowing_date` | `DATE` | `NULL` |
-| `status` | `VARCHAR(20)` | `NOT NULL DEFAULT 'IN_PROGRESS'`; IN_PROGRESS, FINISHED |
-| `created_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP` |
-| `updated_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` |
+| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
+| `field_plot_id` | `BIGINT` | **(FK → `field_plots`)** Parcela donde se hace la campaña. |
+| `season` | `VARCHAR(20)` | Temporada agrícola (por ejemplo, 2026-A). |
+| `crop_type` | `VARCHAR(20)` | Cultivo: `ANDEAN_POTATO` (papa andina) o `SPECIALTY_COFFEE` (café de especialidad). |
+| `seed_variety_name` | `VARCHAR(100)` | Variedad sembrada. |
+| `seed_variety_custom` | `BOOLEAN` | Indica si la variedad la escribió el productor porque no estaba en la lista. |
+| `sowing_date` | `DATE` | Fecha de siembra. Al registrarla se programa el monitoreo satelital. |
+| `status` | `VARCHAR(20)` | Estado de la campaña: `IN_PROGRESS` o `FINISHED`. |
+| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
+| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
 
 ###### Tabla `campaign_ledgers`
 
 Libro de costos de cada campaña, con el rendimiento esperado y el real.
 
-| Columna | Tipo | Restricciones |
+| Columna | Tipo | Descripción |
 |---|---|---|
-| `id` | `BIGINT` | **PK**; `NOT NULL AUTO_INCREMENT` |
-| `crop_campaign_id` | `BIGINT` | **FK** → `crop_campaigns(id)`; **UNIQUE**; `NOT NULL` |
-| `expected_yield_quantity` | `DECIMAL(10,2)` | `NULL` |
-| `expected_yield_unit` | `VARCHAR(10)` | `NULL`; SACK, QUINTAL |
-| `actual_yield_quantity` | `DECIMAL(10,2)` | `NULL` |
-| `actual_yield_unit` | `VARCHAR(10)` | `NULL`; SACK, QUINTAL |
-| `frozen` | `BOOLEAN` | `NOT NULL DEFAULT FALSE` |
-| `created_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP` |
-| `updated_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` |
+| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
+| `crop_campaign_id` | `BIGINT` | **(FK → `crop_campaigns`; UNIQUE)** Campaña a la que pertenece el libro de costos. Cada campaña tiene uno solo. |
+| `expected_yield_quantity` | `DECIMAL(10,2)` | Rendimiento que el productor espera cosechar. |
+| `expected_yield_unit` | `VARCHAR(10)` | Unidad del rendimiento esperado: `SACK` (saco) o `QUINTAL`. |
+| `actual_yield_quantity` | `DECIMAL(10,2)` | Rendimiento real, que se registra cuando se pesa el lote en el acopio. |
+| `actual_yield_unit` | `VARCHAR(10)` | Unidad del rendimiento real: `SACK` o `QUINTAL`. |
+| `frozen` | `BOOLEAN` | Indica si el libro está cerrado y ya no acepta gastos. |
+| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
+| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
 
 ###### Tabla `expense_entries`
 
 Gastos del libro de costos: insumos, jornales y flete. `client_sync_id` evita duplicar los gastos registrados sin conexión.
 
-| Columna | Tipo | Restricciones |
+| Columna | Tipo | Descripción |
 |---|---|---|
-| `id` | `BIGINT` | **PK**; `NOT NULL AUTO_INCREMENT` |
-| `campaign_ledger_id` | `BIGINT` | **FK** → `campaign_ledgers(id)` ON DELETE CASCADE; `NOT NULL` |
-| `category` | `VARCHAR(10)` | `NOT NULL`; INPUTS, LABOR, FREIGHT |
-| `description` | `VARCHAR(255)` | `NOT NULL` |
-| `quantity` | `DECIMAL(10,2)` | `NOT NULL` |
-| `unit_price_amount` | `DECIMAL(10,2)` | `NOT NULL` |
-| `currency` | `CHAR(3)` | `NOT NULL DEFAULT 'PEN'` |
-| `expense_date` | `DATE` | `NOT NULL` |
-| `notes` | `VARCHAR(255)` | `NULL` |
-| `client_sync_id` | `CHAR(36)` | **UNIQUE**; `NULL`; UUID generated offline, avoids duplicates on sync |
-| `created_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP` |
-| `updated_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` |
+| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
+| `campaign_ledger_id` | `BIGINT` | **(FK → `campaign_ledgers`)** Libro de costos al que pertenece el gasto. |
+| `category` | `VARCHAR(10)` | Tipo de gasto: `INPUTS` (insumos), `LABOR` (jornales) o `FREIGHT` (flete). |
+| `description` | `VARCHAR(255)` | Detalle del gasto (por ejemplo, el nombre del insumo). |
+| `quantity` | `DECIMAL(10,2)` | Cantidad comprada o número de jornales. |
+| `unit_price_amount` | `DECIMAL(10,2)` | Precio por unidad. |
+| `currency` | `CHAR(3)` | Moneda del gasto (por defecto `PEN`). |
+| `expense_date` | `DATE` | Fecha en que se hizo el gasto. |
+| `notes` | `VARCHAR(255)` | Notas adicionales del productor. |
+| `client_sync_id` | `CHAR(36)` | **(UNIQUE)** Código generado en el celular cuando el gasto se registra sin conexión. No se repite, así el gasto no se duplica al sincronizar. |
+| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
+| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
 
 **Relaciones principales:**
 * `field_plots` 1 — N `plot_coordinates` y `crop_campaigns`.
@@ -2309,34 +2310,34 @@ Este contexto guarda las observaciones satelitales, el pronóstico del clima, la
 
 Imágenes de AgroMonitoring con sus índices NDVI y NDWI. Las imágenes con mucha nubosidad se marcan como descartadas.
 
-| Columna | Tipo | Restricciones |
+| Columna | Tipo | Descripción |
 |---|---|---|
-| `id` | `BIGINT` | **PK**; `NOT NULL AUTO_INCREMENT` |
-| `plot_id` | `BIGINT` | **FK** → `field_plots(id)` (otro contexto); `NOT NULL` |
-| `polygon_id` | `VARCHAR(50)` | `NOT NULL` |
-| `captured_at` | `TIMESTAMP` | `NOT NULL` |
-| `source` | `VARCHAR(15)` | `NOT NULL`; SENTINEL_2, LANDSAT_8 |
-| `cloud_coverage` | `DECIMAL(5,2)` | `NOT NULL` |
-| `ndvi` | `DECIMAL(5,4)` | `NULL` |
-| `ndwi` | `DECIMAL(5,4)` | `NULL` |
-| `discarded` | `BOOLEAN` | `NOT NULL DEFAULT FALSE` |
-| `created_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP` |
-| `updated_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` |
+| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
+| `plot_id` | `BIGINT` | **(FK → `field_plots`, otro contexto)** Parcela observada. |
+| `polygon_id` | `VARCHAR(50)` | Identificador del polígono en AgroMonitoring. |
+| `captured_at` | `TIMESTAMP` | Fecha y hora en que el satélite tomó la imagen. |
+| `source` | `VARCHAR(15)` | Satélite de origen: `SENTINEL_2` o `LANDSAT_8`. |
+| `cloud_coverage` | `DECIMAL(5,2)` | Porcentaje de nubes en la imagen. |
+| `ndvi` | `DECIMAL(5,4)` | Índice de vigor de la vegetación (NDVI). |
+| `ndwi` | `DECIMAL(5,4)` | Índice de agua en la vegetación (NDWI). |
+| `discarded` | `BOOLEAN` | Indica si la imagen se descartó por tener demasiadas nubes. |
+| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
+| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
 
 ###### Tabla `climate_forecasts`
 
 Pronóstico diario de cada parcela. Solo hay un pronóstico por parcela y fecha.
 
-| Columna | Tipo | Restricciones |
+| Columna | Tipo | Descripción |
 |---|---|---|
-| `id` | `BIGINT` | **PK**; `NOT NULL AUTO_INCREMENT` |
-| `plot_id` | `BIGINT` | **FK** → `field_plots(id)` (otro contexto); `NOT NULL` |
-| `forecast_date` | `DATE` | `NOT NULL` |
-| `min_celsius` | `DECIMAL(5,2)` | `NOT NULL` |
-| `max_celsius` | `DECIMAL(5,2)` | `NOT NULL` |
-| `precipitation_mm` | `DECIMAL(6,2)` | `NOT NULL` |
-| `created_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP` |
-| `updated_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` |
+| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
+| `plot_id` | `BIGINT` | **(FK → `field_plots`, otro contexto)** Parcela a la que corresponde el pronóstico. |
+| `forecast_date` | `DATE` | Día pronosticado. |
+| `min_celsius` | `DECIMAL(5,2)` | Temperatura mínima esperada, en °C. Sirve para detectar riesgo de helada. |
+| `max_celsius` | `DECIMAL(5,2)` | Temperatura máxima esperada, en °C. |
+| `precipitation_mm` | `DECIMAL(6,2)` | Lluvia esperada, en milímetros. |
+| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
+| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
 
 Restricción única compuesta: `(plot_id, forecast_date)`.
 
@@ -2344,98 +2345,99 @@ Restricción única compuesta: `(plot_id, forecast_date)`.
 
 Alertas por anomalía de vegetación, estrés hídrico o riesgo de helada.
 
-| Columna | Tipo | Restricciones |
+| Columna | Tipo | Descripción |
 |---|---|---|
-| `id` | `BIGINT` | **PK**; `NOT NULL AUTO_INCREMENT` |
-| `plot_id` | `BIGINT` | **FK** → `field_plots(id)` (otro contexto); `NOT NULL` |
-| `type` | `VARCHAR(20)` | `NOT NULL`; VEGETATION_ANOMALY, WATER_STRESS, FROST_RISK |
-| `severity` | `VARCHAR(10)` | `NOT NULL`; LOW, MEDIUM, CRITICAL |
-| `status` | `VARCHAR(10)` | `NOT NULL DEFAULT 'ACTIVE'`; ACTIVE, MITIGATED |
-| `raised_at` | `TIMESTAMP` | `NOT NULL` |
-| `created_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP` |
-| `updated_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` |
+| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
+| `plot_id` | `BIGINT` | **(FK → `field_plots`, otro contexto)** Parcela afectada. |
+| `type` | `VARCHAR(20)` | Tipo de alerta: `VEGETATION_ANOMALY`, `WATER_STRESS` o `FROST_RISK`. |
+| `severity` | `VARCHAR(10)` | Gravedad: `LOW`, `MEDIUM` o `CRITICAL`. |
+| `status` | `VARCHAR(10)` | Estado: `ACTIVE` o `MITIGATED`. |
+| `raised_at` | `TIMESTAMP` | Fecha y hora en que se generó la alerta. |
+| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
+| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
 
 ###### Tabla `action_steps`
 
 Pasos del plan de acción de cada alerta.
 
-| Columna | Tipo | Restricciones |
+| Columna | Tipo | Descripción |
 |---|---|---|
-| `id` | `BIGINT` | **PK**; `NOT NULL AUTO_INCREMENT` |
-| `agroclimatic_alert_id` | `BIGINT` | **FK** → `agroclimatic_alerts(id)` ON DELETE CASCADE; `NOT NULL` |
-| `description` | `VARCHAR(255)` | `NOT NULL` |
-| `scheduled_at` | `TIMESTAMP` | `NOT NULL` |
-| `completed` | `BOOLEAN` | `NOT NULL DEFAULT FALSE` |
-| `created_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP` |
-| `updated_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` |
+| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
+| `agroclimatic_alert_id` | `BIGINT` | **(FK → `agroclimatic_alerts`)** Alerta a la que pertenece el paso. |
+| `description` | `VARCHAR(255)` | Acción que debe hacer el productor (por ejemplo, regar o cubrir el cultivo). |
+| `scheduled_at` | `TIMESTAMP` | Fecha y hora en que se debe hacer la acción. |
+| `completed` | `BOOLEAN` | Indica si el productor ya hizo la acción. |
+| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
+| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
 
 ###### Tabla `regional_bulletins`
 
 Boletines preventivos que el agrónomo emite para una región.
 
-| Columna | Tipo | Restricciones |
+| Columna | Tipo | Descripción |
 |---|---|---|
-| `id` | `BIGINT` | **PK**; `NOT NULL AUTO_INCREMENT` |
-| `agronomist_user_id` | `BIGINT` | **FK** → `users(id)` (otro contexto); `NOT NULL` |
-| `region` | `VARCHAR(100)` | `NOT NULL` |
-| `title` | `VARCHAR(150)` | `NOT NULL` |
-| `preventive_measures` | `TEXT` | `NOT NULL` |
-| `issued_at` | `TIMESTAMP` | `NOT NULL` |
-| `created_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP` |
-| `updated_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` |
+| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
+| `agronomist_user_id` | `BIGINT` | **(FK → `users`, otro contexto)** Agrónomo que emite el boletín. |
+| `region` | `VARCHAR(100)` | Región a la que va dirigido el boletín. |
+| `title` | `VARCHAR(150)` | Título del boletín. |
+| `preventive_measures` | `TEXT` | Medidas preventivas que recomienda el agrónomo. |
+| `issued_at` | `TIMESTAMP` | Fecha y hora de publicación. |
+| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
+| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
 
 ###### Tabla `pest_reports`
 
-Reportes de plaga con foto. `farmer_user_id` es quien reporta y `assigned_agronomist_user_id` es el agrónomo que lo revisa; las dos columnas apuntan a `users`.
+Reportes de plaga con foto. `farmer_user_id` es quien reporta y `assigned_agronomist_user_id` es el agrónomo que lo revisa; las dos columnas apuntan a `users`. `client_sync_id` evita duplicar los reportes hechos sin conexión.
 
-| Columna | Tipo | Restricciones |
+| Columna | Tipo | Descripción |
 |---|---|---|
-| `id` | `BIGINT` | **PK**; `NOT NULL AUTO_INCREMENT` |
-| `plot_id` | `BIGINT` | **FK** → `field_plots(id)` (otro contexto); `NOT NULL` |
-| `farmer_user_id` | `BIGINT` | **FK** → `users(id)` (otro contexto); `NOT NULL` |
-| `assigned_agronomist_user_id` | `BIGINT` | **FK** → `users(id)` (otro contexto); `NULL` |
-| `photo_url` | `VARCHAR(255)` | `NOT NULL` |
-| `photo_uploaded_at` | `TIMESTAMP` | `NOT NULL` |
-| `comments` | `VARCHAR(500)` | `NULL` |
-| `damage_assessment` | `VARCHAR(500)` | `NULL` |
-| `status` | `VARCHAR(15)` | `NOT NULL DEFAULT 'SUBMITTED'`; SUBMITTED, UNDER_REVIEW, PRESCRIBED, IN_FOLLOW_UP, RESOLVED, REOPENED |
-| `created_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP` |
-| `updated_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` |
+| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
+| `plot_id` | `BIGINT` | **(FK → `field_plots`, otro contexto)** Parcela donde se encontró la plaga. |
+| `farmer_user_id` | `BIGINT` | **(FK → `users`, otro contexto)** Productor que hace el reporte. |
+| `assigned_agronomist_user_id` | `BIGINT` | **(FK → `users`, otro contexto)** Agrónomo que revisa el reporte. Puede estar vacío hasta que se asigne. |
+| `photo_url` | `VARCHAR(255)` | Dirección de la foto de la plaga. |
+| `photo_uploaded_at` | `TIMESTAMP` | Fecha y hora en que se subió la foto. |
+| `comments` | `VARCHAR(500)` | Comentarios del productor sobre lo que observó. |
+| `damage_assessment` | `VARCHAR(500)` | Evaluación del daño hecha por el agrónomo. |
+| `status` | `VARCHAR(15)` | Estado del reporte: `SUBMITTED`, `UNDER_REVIEW`, `PRESCRIBED`, `IN_FOLLOW_UP`, `RESOLVED` o `REOPENED`. |
+| `client_sync_id` | `CHAR(36)` | **(UNIQUE)** Código generado en el celular cuando el reporte se hace sin conexión. No se repite, así el reporte no se duplica al sincronizar. |
+| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
+| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
 
 ###### Tabla `field_inspections`
 
 Visitas de campo programadas a partir de un reporte de plaga.
 
-| Columna | Tipo | Restricciones |
+| Columna | Tipo | Descripción |
 |---|---|---|
-| `id` | `BIGINT` | **PK**; `NOT NULL AUTO_INCREMENT` |
-| `pest_report_id` | `BIGINT` | **FK** → `pest_reports(id)`; `NOT NULL` |
-| `agronomist_user_id` | `BIGINT` | **FK** → `users(id)` (otro contexto); `NOT NULL` |
-| `scheduled_at` | `TIMESTAMP` | `NOT NULL` |
-| `completed_at` | `TIMESTAMP` | `NULL` |
-| `findings` | `VARCHAR(500)` | `NULL` |
-| `status` | `VARCHAR(10)` | `NOT NULL DEFAULT 'SCHEDULED'`; SCHEDULED, COMPLETED |
-| `created_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP` |
-| `updated_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` |
+| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
+| `pest_report_id` | `BIGINT` | **(FK → `pest_reports`)** Reporte de plaga que origina la visita. |
+| `agronomist_user_id` | `BIGINT` | **(FK → `users`, otro contexto)** Agrónomo que hace la visita. |
+| `scheduled_at` | `TIMESTAMP` | Fecha y hora programada de la visita. |
+| `completed_at` | `TIMESTAMP` | Fecha y hora en que se terminó la visita. |
+| `findings` | `VARCHAR(500)` | Lo que encontró el agrónomo en la parcela. |
+| `status` | `VARCHAR(10)` | Estado: `SCHEDULED` o `COMPLETED`. |
+| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
+| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
 
 ###### Tabla `technical_prescriptions`
 
 Receta técnica emitida para un reporte de plaga. Hay como máximo una por reporte.
 
-| Columna | Tipo | Restricciones |
+| Columna | Tipo | Descripción |
 |---|---|---|
-| `id` | `BIGINT` | **PK**; `NOT NULL AUTO_INCREMENT` |
-| `pest_report_id` | `BIGINT` | **FK** → `pest_reports(id)`; **UNIQUE**; `NOT NULL` |
-| `agronomist_user_id` | `BIGINT` | **FK** → `users(id)` (otro contexto); `NOT NULL` |
-| `product` | `VARCHAR(150)` | `NOT NULL` |
-| `dosage_quantity` | `DECIMAL(10,2)` | `NOT NULL` |
-| `dosage_unit` | `VARCHAR(20)` | `NOT NULL` |
-| `dosage_per` | `VARCHAR(20)` | `NOT NULL` |
-| `frequency` | `VARCHAR(100)` | `NOT NULL` |
-| `waiting_period_days` | `INT` | `NOT NULL` |
-| `status` | `VARCHAR(20)` | `NOT NULL DEFAULT 'PENDING_APPLICATION'`; PENDING_APPLICATION, APPLIED, EVALUATED |
-| `created_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP` |
-| `updated_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` |
+| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
+| `pest_report_id` | `BIGINT` | **(FK → `pest_reports`; UNIQUE)** Reporte de plaga que se trata. Cada reporte tiene como máximo una receta. |
+| `agronomist_user_id` | `BIGINT` | **(FK → `users`, otro contexto)** Agrónomo que emite la receta. |
+| `product` | `VARCHAR(150)` | Producto recomendado. |
+| `dosage_quantity` | `DECIMAL(10,2)` | Cantidad del producto por aplicación. |
+| `dosage_unit` | `VARCHAR(20)` | Unidad de la dosis (por ejemplo, ml o g). |
+| `dosage_per` | `VARCHAR(20)` | Base de la dosis (por ejemplo, por litro o por mochila). |
+| `frequency` | `VARCHAR(100)` | Cada cuánto se aplica el producto. |
+| `waiting_period_days` | `INT` | Días que se deben esperar antes de cosechar. |
+| `status` | `VARCHAR(20)` | Estado: `PENDING_APPLICATION`, `APPLIED` o `EVALUATED`. |
+| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
+| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
 
 **Relaciones principales:**
 * `agroclimatic_alerts` 1 — N `action_steps`.
@@ -2454,63 +2456,65 @@ Este contexto guarda los lotes que llegan al acopio, su calificación de calidad
 
 Lotes de cosecha. El peso, los calibres de papa y la catación de café (value objects) se guardan en sus columnas; solo se llenan las que corresponden al cultivo.
 
-| Columna | Tipo | Restricciones |
+| Columna | Tipo | Descripción |
 |---|---|---|
-| `id` | `BIGINT` | **PK**; `NOT NULL AUTO_INCREMENT` |
-| `code` | `VARCHAR(20)` | **UNIQUE**; `NOT NULL` |
-| `cooperative_id` | `BIGINT` | **FK** → `cooperatives(id)` (otro contexto); `NOT NULL` |
-| `member_id` | `BIGINT` | **FK** → `cooperative_members(id)` (otro contexto); `NOT NULL` |
-| `plot_id` | `BIGINT` | **FK** → `field_plots(id)` (otro contexto); `NOT NULL` |
-| `campaign_id` | `BIGINT` | **FK** → `crop_campaigns(id)` (otro contexto); `NOT NULL` |
-| `crop_type` | `VARCHAR(20)` | `NOT NULL`; ANDEAN_POTATO, SPECIALTY_COFFEE |
-| `collected_at` | `DATE` | `NOT NULL` |
-| `gross_kg` | `DECIMAL(10,2)` | `NULL` |
-| `tare_kg` | `DECIMAL(10,2)` | `NULL` |
-| `potato_first_percentage` | `DECIMAL(5,2)` | `NULL` |
-| `potato_second_percentage` | `DECIMAL(5,2)` | `NULL` |
-| `potato_third_percentage` | `DECIMAL(5,2)` | `NULL` |
-| `potato_weevil_damage_pct` | `DECIMAL(5,2)` | `NULL` |
-| `coffee_aroma` | `DECIMAL(4,2)` | `NULL` |
-| `coffee_flavor` | `DECIMAL(4,2)` | `NULL` |
-| `coffee_acidity` | `DECIMAL(4,2)` | `NULL` |
-| `coffee_body` | `DECIMAL(4,2)` | `NULL` |
-| `quality_category` | `VARCHAR(30)` | `NULL`; PREMIUM_GOLD, STANDARD, B_GRADE_REQUIRES_SORTING, SPECIALTY_COFFEE, COMMERCIAL_COFFEE |
-| `status` | `VARCHAR(20)` | `NOT NULL DEFAULT 'PENDING_GRADING'`; PENDING_GRADING, GRADED, CERTIFIED |
-| `created_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP` |
-| `updated_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` |
+| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
+| `code` | `VARCHAR(20)` | **(UNIQUE)** Código del lote. No se repite. |
+| `cooperative_id` | `BIGINT` | **(FK → `cooperatives`, otro contexto)** Cooperativa que recibe el lote. |
+| `member_id` | `BIGINT` | **(FK → `cooperative_members`, otro contexto)** Socio que entrega el lote. |
+| `plot_id` | `BIGINT` | **(FK → `field_plots`, otro contexto)** Parcela de donde viene la cosecha. |
+| `campaign_id` | `BIGINT` | **(FK → `crop_campaigns`, otro contexto)** Campaña en la que se cosechó. |
+| `crop_type` | `VARCHAR(20)` | Cultivo: `ANDEAN_POTATO` o `SPECIALTY_COFFEE`. |
+| `collected_at` | `DATE` | Fecha en que el lote llegó al acopio. |
+| `gross_kg` | `DECIMAL(10,2)` | Peso bruto del lote, en kg. |
+| `tare_kg` | `DECIMAL(10,2)` | Peso de los envases (tara), en kg. El peso neto es bruto menos tara. |
+| `potato_first_percentage` | `DECIMAL(5,2)` | Papa: porcentaje de primera calidad según el calibre (MIDAGRI). |
+| `potato_second_percentage` | `DECIMAL(5,2)` | Papa: porcentaje de segunda calidad. |
+| `potato_third_percentage` | `DECIMAL(5,2)` | Papa: porcentaje de tercera calidad. |
+| `potato_weevil_damage_pct` | `DECIMAL(5,2)` | Papa: porcentaje de tubérculos dañados por gorgojo. |
+| `coffee_aroma` | `DECIMAL(4,2)` | Café: puntaje de aroma en la catación (SCA). |
+| `coffee_flavor` | `DECIMAL(4,2)` | Café: puntaje de sabor. |
+| `coffee_acidity` | `DECIMAL(4,2)` | Café: puntaje de acidez. |
+| `coffee_body` | `DECIMAL(4,2)` | Café: puntaje de cuerpo. |
+| `quality_category` | `VARCHAR(30)` | Resultado de la calificación: `PREMIUM_GOLD`, `STANDARD`, `B_GRADE_REQUIRES_SORTING`, `SPECIALTY_COFFEE` o `COMMERCIAL_COFFEE`. |
+| `status` | `VARCHAR(20)` | Estado del lote: `PENDING_GRADING`, `GRADED` o `CERTIFIED`. |
+| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
+| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
 
 ###### Tabla `representative_samples`
 
 Muestra extraída de cada lote para calificarlo.
 
-| Columna | Tipo | Restricciones |
+| Columna | Tipo | Descripción |
 |---|---|---|
-| `id` | `BIGINT` | **PK**; `NOT NULL AUTO_INCREMENT` |
-| `harvest_batch_id` | `BIGINT` | **FK** → `harvest_batches(id)` ON DELETE CASCADE; **UNIQUE**; `NOT NULL` |
-| `weight_kg` | `DECIMAL(8,2)` | `NOT NULL` |
-| `extracted_at` | `TIMESTAMP` | `NOT NULL` |
-| `created_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP` |
-| `updated_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` |
+| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
+| `harvest_batch_id` | `BIGINT` | **(FK → `harvest_batches`; UNIQUE)** Lote del que se extrajo la muestra. Cada lote tiene una sola. |
+| `weight_kg` | `DECIMAL(8,2)` | Peso de la muestra, en kg. |
+| `extracted_at` | `TIMESTAMP` | Fecha y hora en que se tomó la muestra. |
+| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
+| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
 
 ###### Tabla `quality_certificates`
 
 Certificados de calidad. `sha256_hash` sella el contenido y permite verificarlo al escanear el QR.
 
-| Columna | Tipo | Restricciones |
+| Columna | Tipo | Descripción |
 |---|---|---|
-| `id` | `BIGINT` | **PK**; `NOT NULL AUTO_INCREMENT` |
-| `harvest_batch_id` | `BIGINT` | **FK** → `harvest_batches(id)`; **UNIQUE**; `NOT NULL` |
-| `certificate_number` | `VARCHAR(30)` | **UNIQUE**; `NOT NULL` |
-| `sha256_hash` | `CHAR(64)` | `NOT NULL` |
-| `qr_code_url` | `VARCHAR(255)` | `NOT NULL` |
-| `issued_by_user_id` | `BIGINT` | **FK** → `users(id)` (otro contexto); `NOT NULL` |
-| `issued_at` | `TIMESTAMP` | `NOT NULL` |
-| `status` | `VARCHAR(10)` | `NOT NULL DEFAULT 'ACTIVE'`; ACTIVE, REVOKED |
-| `revoked_reason` | `VARCHAR(255)` | `NULL` |
-| `created_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP` |
-| `updated_at` | `TIMESTAMP` | `NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP` |
+| `id` | `BIGINT` | **(PK)** Identificador único del registro, generado automáticamente. |
+| `harvest_batch_id` | `BIGINT` | **(FK → `harvest_batches`; UNIQUE)** Lote certificado. Cada lote tiene como máximo un certificado. |
+| `certificate_number` | `VARCHAR(30)` | **(UNIQUE)** Número del certificado. No se repite. |
+| `sha256_hash` | `CHAR(64)` | Huella SHA-256 del contenido del certificado; permite comprobar que no fue alterado. |
+| `qr_code_url` | `VARCHAR(255)` | Enlace que abre el código QR hacia la vista pública del certificado. |
+| `issued_by_user_id` | `BIGINT` | **(FK → `users`, otro contexto)** Directivo que emitió el certificado. |
+| `issued_at` | `TIMESTAMP` | Fecha y hora de emisión. |
+| `status` | `VARCHAR(10)` | Estado: `ACTIVE` o `REVOKED`. |
+| `revoked_reason` | `VARCHAR(255)` | Motivo de la anulación, si el certificado fue revocado. |
+| `created_at` | `TIMESTAMP` | Fecha y hora en que se creó el registro. |
+| `updated_at` | `TIMESTAMP` | Fecha y hora de la última modificación del registro. |
 
 **Relaciones principales:**
 * `harvest_batches` 1 — 0..1 `representative_samples` y 1 — 0..1 `quality_certificates`.
 * `cooperative_id` → `cooperatives`, `member_id` → `cooperative_members` (Profiles), `plot_id` → `field_plots` y `campaign_id` → `crop_campaigns` (Field Management).
 * `quality_certificates.issued_by_user_id` → `users` (IAM).
+
+---
