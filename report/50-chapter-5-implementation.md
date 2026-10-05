@@ -628,3 +628,31 @@ A pesar de que el despliegue principal se gestionó a través de Cloudflare Page
 Durante la ejecución de este Sprint, se emplearon las analíticas de **GitHub Insights** para auditar y monitorear la dinámica colaborativa del equipo **Dymbia**. Se registró una participación equitativa y constante de todos los integrantes en sus roles asignados, destacando un enfoque ágil basado en la revisión cruzada de código. Aunque las modificaciones en la Landing Page se concentraron en ajustes menores de contenido, diseño e internacionalización, la comunicación fluida, el alineamiento en las ceremonias y la retroalimentación constructiva permitieron mantener un flujo de trabajo altamente eficiente, garantizando la integración continua y el cumplimiento oportuno de los entregables del Sprint.
 
 ![Insights](assets/img/chapter-5/sprint-1/insigths.png)
+
+---
+
+### 5.2.2. Sprint 2
+
+
+#### 5.2.2.1. Sprint Planning 2
+
+
+#### 5.2.2.2. Aspect Leaders and Collaborators
+
+
+#### 5.2.2.3. Sprint Backlog 2
+
+
+#### 5.2.2.4. Development Evidence for Sprint Review
+
+
+#### 5.2.2.5. Execution Evidence for Sprint Review
+
+
+#### 5.2.2.6. Services Documentation Evidence for Sprint Review
+
+
+#### 5.2.2.7. Software Deployment Evidence for Sprint Review
+
+
+#### 5.2.2.8. Team Collaboration Insights during Sprint
