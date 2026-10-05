@@ -1986,7 +1986,7 @@ El modelo se elaboró en **Hackolade Studio** a partir del script `SumaqAgro_db.
 
 **Herramientas utilizadas:** Hackolade Studio y DataGrip.
 
-![Database Diagram - SumaqAgro](assets/img/chapter-4/database/sumaqagro-db-diagram.png)
+![Database Diagram - SumaqAgro](assets/img/chapter-4/database/sumaqagro-db-diagram.png) 
 
 ---
 
@@ -1994,7 +1994,7 @@ El modelo se elaboró en **Hackolade Studio** a partir del script `SumaqAgro_db.
 
 Este contexto guarda las cuentas de usuario, sus roles y los códigos para recuperar la contraseña.
 
-![Database Diagram - Identity and Access Management (IAM) Context](assets/img/chapter-4/database/01-iam-db-diagram.png)
+![Database Diagram - Identity and Access Management (IAM) Context](assets/img/chapter-4/database/01-iam-db-diagram.png) 
 
 ###### Tabla `users`
 
