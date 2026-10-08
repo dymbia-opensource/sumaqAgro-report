@@ -18,7 +18,9 @@
 * Ministerio de Desarrollo Agrario y Riego [MIDAGRI]. (2021). *Decreto Supremo N.º 017-2021-MIDAGRI: Aprueban la Política Nacional Agraria 2021-2030*. Diario Oficial El Peruano. https://busquedas.elperuano.pe/dispositivo/NL/1975873-14
 * Ministerio de Desarrollo Agrario y Riego [MIDAGRI]. (2023). *Informe Técnico Sectorial: Análisis de vulnerabilidad ante sequías y heladas en la producción de papa en sierra central y sur*. https://www.gob.pe/midagri
 * Postman. (s. f.). Postman [Software de computación / Aplicación web]. https://www.postman.com/
+* ProInnóvate. (2021, 19 de agosto). *Startup agrotecnológica Space AG recibe inversión de más de un millón de dólares para expandirse en América Latina*. Ministerio de la Producción. https://www.gob.pe/institucion/proinnovate/noticias/512241-startup-agrotecnologica-space-ag-recibe-inversion-de-mas-de-un-millon-de-dolares-para-expandirse-en-america-latina
 * Railway Corp. (s. f.). Railway: Instant deployments, effortless scale. Recuperado https://railway.com/
+* Redacción Gestión. (2019, 10 de junio). *Conoce la startup peruana que apunta a optimizar la agricultura mundial*. Diario Gestión. https://gestion.pe/economia/empresas/conoce-startup-peruana-apunta-optimizar-agricultura-mundial-269178-noticia/
 * SpaceAG. (s.f.). Leading the digitalization of agriculture. Recuperado el 7 de octubre de 2026, de https://www.spaceag.co/
 * Structurizr. (s. f.). Structurizr: Diagrams as code for software architecture. Recuperado https://structurizr.com/
 * Uxpressia (s. f.). Mapa de experiencia del cliente. https://uxpressia.com/w/ojG2k
