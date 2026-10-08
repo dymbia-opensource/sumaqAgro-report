@@ -660,8 +660,54 @@ En esta sección se especifican las decisiones y acuerdos establecidos durante l
 
 #### 5.2.2.2. Aspect Leaders and Collaborators
 
+En esta sección se presenta la matriz **Leadership-and-Collaboration Matrix (LACX)** correspondiente al **Sprint 2**. Para esta iteración, el trabajo de desarrollo frontend de la Web Application se dividió en 5 aspectos técnicos clave vinculados a la arquitectura DDD y al Bounded Context de Salud del Cultivo.
+
+Bajo este modelo, cada integrante del equipo asumió el rol de **Aspect Leader (L)** sobre un aspecto técnico específico, siendo responsable de velar por la calidad arquitectónica y el cumplimiento de las Historias de Usuario asociadas, mientras actuó como **Collaborator (C)** en los demás aspectos desarrollados por sus compañeros.
+
+##### Leadership-and-Collaboration Matrix (LACX) — Sprint 2
+
+| Team Member (Last Name, First Name) | GitHub Username | Aspect 1: DDD Domain Models & Entities (US-48, US-51) | Aspect 2: Leaflet Interactive Map & Multispectral Layers (US-44) | Aspect 3: Signal Store & Fake REST API Integration (US-45, US-49) | Aspect 4: Pest Reports & Prescription Forms UI (US-48, US-50, US-51) | Aspect 5: i18n & Angular Standalone Routing (US-44, US-45) |
+| ------ |-----------------| ------ | ------ | ------ | ------ | ------ |
+| **Duarte Ruffner, Drago Derick** | Drago0724       | **L** | **C** | **C** | **C** | **C** |
+| **Sanca Condori, Miguel** | MiguelSanca     | **C** | **C** | **L** | **C** | **C** |
+| **Solorzano Sullca, Benjamin** | benjass2        | **C** | **C** | **C** | **L** | **C** |
+| **Vargas Enriquez, Jose Carlos** | JoseAngelKyo    | **C** | **C** | **C** | **C** | **L** |
+| **Tejada Pumacayo, Yamil Jared** | YamilTejada     | **C** | **L** | **C** | **C** | **C** |
+
+***Leyenda: L = Leader (Líder del Aspecto Técnico) | C = Collaborator (Colaborador en el Desarrollo)***
+
+---
+
 
 #### 5.2.2.3. Sprint Backlog 2
+
+En esta sección se detalla la descomposición técnica del **Sprint Backlog 2**. Las 6 Historias de Usuario seleccionadas del **EPIC-06 (32 Story Points)** se desglosaron en 23 tareas técnicas de desarrollo frontend, abarcando el modelado de dominio DDD, la integración de la librería georreferenciada Leaflet.js, el manejo de estado reactivo con Angular Signals, los formularios reactivos tipados y la internacionalización con `ngx-translate`.
+
+| User Story ID | User Story Title                                          | Task ID    | Task Title                                     | Task Description                                                                                                  | Estimation (Hours) | Assigned To                  | Status   |
+| ------------- | --------------------------------------------------------- | ---------- | ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------ | ---------------------------- | -------- |
+| **US-44**     | Visualización de mapas de calor NDVI y NDWI               | **TSK-01** | Integración de Leaflet.js y tipados TypeScript | Integrar Leaflet.js (`@types/leaflet`) en Angular e inicializar el componente base de mapa georreferenciado.      | 4 h                | Tejada Pumacayo, Yamil Jared | **Done** |
+| **US-44**     | Visualización de mapas de calor NDVI y NDWI               | **TSK-02** | Renderizado de polígonos y capas sim.          | Configurar las capas de prueba (GeoJSON / baldosas mock) para proyectar la vegetación sobre la parcela.           | 4 h                | Tejada Pumacayo, Yamil Jared | **Done** |
+| **US-44**     | Visualización de mapas de calor NDVI y NDWI               | **TSK-03** | Selector de capas multiespectrales             | Desarrollar el componente `spectral-layer-toggle` para alternar entre el mapa de vigor (NDVI) y humedad (NDWI).   | 4 h                | Tejada Pumacayo, Yamil Jared | **Done** |
+| **US-44**     | Visualización de mapas de calor NDVI y NDWI               | **TSK-04** | Leyenda cromática de reflectancia              | Maquetar la barra flotante con la escala cromática (verde a rojo) para interpretar la salud del cultivo.          | 3 h                | Tejada Pumacayo, Yamil Jared | **Done** |
+| **US-45**     | Pronóstico agrometeorológico y heladas                    | **TSK-05** | Entidad de Dominio `ClimateForecastEntity`     | Definir la entidad `ClimateForecastEntity` y los Value Objects para las métricas climáticas en la capa Domain.    | 3 h                | Duarte Ruffner, Drago Derick | **Done** |
+| **US-45**     | Pronóstico agrometeorológico y heladas                    | **TSK-06** | Assembler y datos mock de clima                | Crear `climate-forecast.assembler.ts` para mapear los datos meteorológicos simulados desde `db.json`.             | 3 h                | Sanca Condori, Miguel        | **Done** |
+| **US-45**     | Pronóstico agrometeorológico y heladas                    | **TSK-07** | Tarjetas de pronóstico agrometeorológico       | Diseñar las tarjetas con Angular Material (`mat-card`) mostrando temperatura, precipitación y humedad.            | 4 h                | Sanca Condori, Miguel        | **Done** |
+| **US-45**     | Pronóstico agrometeorológico y heladas                    | **TSK-08** | Banner preventivo de riesgo de heladas         | Desarrollar el banner de advertencia destacado en rojo/amarillo para notificar alertas de helada o sequía.        | 3 h                | Sanca Condori, Miguel        | **Done** |
+| **US-48**     | Carga de evidencias fotográficas de síntomas de plagas    | **TSK-09** | Modelado DDD de `PestReportEntity`             | Definir la entidad `PestReportEntity` y la interfaz del comando `UploadPestEvidencePhotoCommand`.                 | 4 h                | Duarte Ruffner, Drago Derick | **Done** |
+| **US-48**     | Carga de evidencias fotográficas de síntomas de plagas    | **TSK-10** | Formulario Reactivo `pest-report-form`         | Crear el formulario tipado para seleccionar parcela, tipo de afección y nivel de severidad de la plaga.           | 5 h                | Solorzano Sullca, Benjamin   | **Done** |
+| **US-48**     | Carga de evidencias fotográficas de síntomas de plagas    | **TSK-11** | Carga de fotos con previsualización local      | Implementar la zona de carga de archivos fotográficos con vista previa local en el navegador antes del envío.     | 4 h                | Solorzano Sullca, Benjamin   | **Done** |
+| **US-48**     | Carga de evidencias fotográficas de síntomas de plagas    | **TSK-12** | Persistencia offline con Dexie.js              | Conectar el formulario con `OfflineSyncService` (IndexedDB) para guardar reportes cuando no haya conexión.        | 4 h                | Solorzano Sullca, Benjamin   | **Done** |
+| **US-49**     | Bandeja de recepción de reportes de plagas para agrónomos | **TSK-13** | Estado reactivo `crop-health.store.ts`         | Configurar las señales reactivas (`signal()`) en el Store para gestionar el listado y filtrado de incidencias.    | 4 h                | Sanca Condori, Miguel        | **Done** |
+| **US-49**     | Bandeja de recepción de reportes de plagas para agrónomos | **TSK-14** | Vista de tabla `diagnosis-inbox-view`          | Maquetar la tabla de datos (`MatTableModule`) con paginación y filtros por severidad para el agrónomo.            | 4 h                | Sanca Condori, Miguel        | **Done** |
+| **US-49**     | Bandeja de recepción de reportes de plagas para agrónomos | **TSK-15** | Modal de detalle de evidencia fotográfica      | Implementar el cuadro modal (`MatDialog`) para que el agrónomo examine la foto ampliada y notas del caso.         | 4 h                | Vargas Enriquez, Jose Carlos | **Done** |
+| **US-50**     | Agendamiento y registro de inspecciones de campo          | **TSK-16** | Entidad de Dominio `FieldInspectionEntity`     | Modelar la entidad `FieldInspectionEntity` y los enums de estado de inspección en la capa Domain.                 | 3 h                | Duarte Ruffner, Drago Derick | **Done** |
+| **US-50**     | Agendamiento y registro de inspecciones de campo          | **TSK-17** | Diálogo modal de agendamiento de visita        | Desarrollar el formulario modal con `MatDatepicker` para seleccionar la fecha y hora de la inspección técnica.    | 4 h                | Solorzano Sullca, Benjamin   | **Done** |
+| **US-50**     | Agendamiento y registro de inspecciones de campo          | **TSK-18** | Notificación de confirmación de cita           | Configurar el aviso flotante (`MatSnackBar`) para notificar al agricultor que la visita ha sido agendada.         | 3 h                | Vargas Enriquez, Jose Carlos | **Done** |
+| **US-51**     | Emisión y envío de prescripciones/recetas agronómicas     | **TSK-19** | Entidad `TechnicalPrescriptionEntity`          | Definir la entidad de receta agronómica y Value Objects para dosificación e ingrediente activo.                   | 4 h                | Duarte Ruffner, Drago Derick | **Done** |
+| **US-51**     | Emisión y envío de prescripciones/recetas agronómicas     | **TSK-20** | Formulario Reactivo `prescription-form`        | Desarrollar el formulario técnico para que el agrónomo prescriba el tratamiento, producto y dosificación.         | 5 h                | Solorzano Sullca, Benjamin   | **Done** |
+| **US-51**     | Emisión y envío de prescripciones/recetas agronómicas     | **TSK-21** | Cálculo automático de volumen por hectárea     | Programar la lógica en Angular para calcular el volumen total de insumo según el área en hectáreas de la parcela. | 3 h                | Solorzano Sullca, Benjamin   | **Done** |
+| **US-51**     | Emisión y envío de prescripciones/recetas agronómicas     | **TSK-22** | Ficha digital de receta imprimible             | Diseñar el componente `prescription-card` en formato de receta digital lista para impresión o vista previa.       | 4 h                | Solorzano Sullca, Benjamin   | **Done** |
+| **US-51**     | Emisión y envío de prescripciones/recetas agronómicas     | **TSK-23** | Rutas, diccionarios i18n y datos seed          | Configurar `crop-health.routes.ts`, agregar claves en `es.json`/`en.json` y actualizar datos en `server/db.json`. | 5 h                | Vargas Enriquez, Jose Carlos | **Done** |
 
 
 #### 5.2.2.4. Development Evidence for Sprint Review
