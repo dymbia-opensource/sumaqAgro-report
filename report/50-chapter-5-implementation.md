@@ -447,7 +447,7 @@ Bajo este modelo, cada integrante del equipo asume el rol de **Aspect Leader (L)
 | **Sanca Condori, Miguel** |  `MiguelSanca`  |                     **C**                      | **L** | **C** |                        **C**                        |                         **C**                         |
 | **Solorzano Sullca, Benjamin** |   `benjass2`    |                     **C**                      | **C** | **L** |                        **C**                        |                         **C**                         |
 | **Vargas Enriquez, Jose Carlos** | `JoseAngelKyo`  |                     **C**                      | **C** | **C** |                        **C**                        |                         **L**                         |
-| **Tejada Pumacayo, Yamil Jared** | `miguel-sanca`  |                     **L**                      | **C** | **C** |                        **C**                        |                         **C**                         |
+| **Tejada Pumacayo, Yamil Jared** |  `YamilTejada`  |                     **L**                      | **C** | **C** |                        **C**                        |                         **C**                         |
 
 *Leyenda: **L** = Leader (Líder del Aspecto Técnico) | **C** = Collaborator (Colaborador en el Desarrollo)*
 
@@ -667,12 +667,12 @@ Bajo este modelo, cada integrante del equipo asumió el rol de **Aspect Leader (
 ##### Leadership-and-Collaboration Matrix (LACX) — Sprint 2
 
 | Team Member (Last Name, First Name) | GitHub Username | Aspect 1: DDD Domain Models & Entities (US-48, US-51) | Aspect 2: Leaflet Interactive Map & Multispectral Layers (US-44) | Aspect 3: Signal Store & Fake REST API Integration (US-45, US-49) | Aspect 4: Pest Reports & Prescription Forms UI (US-48, US-50, US-51) | Aspect 5: i18n & Angular Standalone Routing (US-44, US-45) |
-| ------ |-----------------| ------ | ------ | ------ | ------ | ------ |
-| **Duarte Ruffner, Drago Derick** | Drago0724       | **L** | **C** | **C** | **C** | **C** |
-| **Sanca Condori, Miguel** | MiguelSanca     | **C** | **C** | **L** | **C** | **C** |
-| **Solorzano Sullca, Benjamin** | benjass2        | **C** | **C** | **C** | **L** | **C** |
-| **Vargas Enriquez, Jose Carlos** | JoseAngelKyo    | **C** | **C** | **C** | **C** | **L** |
-| **Tejada Pumacayo, Yamil Jared** | YamilTejada     | **C** | **L** | **C** | **C** | **C** |
+| ------ |---------------| ------ | ------ | ------ | ------ | ------ |
+| **Duarte Ruffner, Drago Derick** | `Drago0724`     | **L** | **C** | **C** | **C** | **C** |
+| **Sanca Condori, Miguel** | `MiguelSanca`   | **C** | **C** | **L** | **C** | **C** |
+| **Solorzano Sullca, Benjamin** | `benjass2`      | **C** | **C** | **C** | **L** | **C** |
+| **Vargas Enriquez, Jose Carlos** | `JoseAngelKyo`  | **C** | **C** | **C** | **C** | **L** |
+| **Tejada Pumacayo, Yamil Jared** | `YamilTejada`   | **C** | **L** | **C** | **C** | **C** |
 
 ***Leyenda: L = Leader (Líder del Aspecto Técnico) | C = Collaborator (Colaborador en el Desarrollo)***
 
