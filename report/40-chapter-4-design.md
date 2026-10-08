@@ -16,6 +16,11 @@ El logo principal de **SumaqAgro**, un nombre que evoca la unión entre la natur
   <img src="assets/img/chapter-4/logo-sumaqagro.png" alt="SumaqAgro-Logo" width="350px" height="auto"/>
 </p>
 
+**Imagotipo Horizontal (Versión Web / Sidebar):** Diseñado específicamente para integrarse en la barra lateral (*sidebar*) e interfaz principal de la plataforma web, esta versión organiza de manera lineal el isotipo de la marca, el tipograma **SumaqAgro** y el eslogan *"Cultivando un mejor mañana"*, optimizando el espacio horizontal para garantizar máxima legibilidad, elegancia y un reconocimiento de marca inmediato en pantallas de alta resolución.
+<p align="center">
+  <img src="assets/img/chapter-4/logo SumaqAgro Web.png" alt="SumaqAgroaa-LogoWeb" width="350px" height="auto"/>
+</p>
+
 **Typography**
 
 La identidad tipográfica de SumaqAgro utiliza fuentes sans-serif seleccionadas de Google Fonts, elegidas por su alta legibilidad, apariencia moderna y óptima compatibilidad con entornos digitales navegables. La combinación de **Poppins** como tipografía principal e **Inter** como tipografía secundaria permite establecer una jerarquía visual clara e intuitiva entre títulos, contenidos informativos y elementos de interfaz, garantizando el cumplimiento de los estándares de accesibilidad web (a11y).
