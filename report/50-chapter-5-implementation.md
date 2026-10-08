@@ -633,8 +633,29 @@ Durante la ejecución de este Sprint, se emplearon las analíticas de **GitHub I
 
 ### 5.2.2. Sprint 2
 
+El **Sprint 2** representa el hito de transición fundamental para el desarrollo del producto digital de la startup **Dymbia**, pasando de la maquetación estática de la Landing Page (Sprint 1) hacia la implementación activa del **Frontend Web Application** de **SumaqAgro** en **Angular 18+**. Esta iteración se estructuró bajo los principios de la arquitectura **Domain-Driven Design (DDD)** modularizada en cuatro capas (*domain/model*, *application*, *infrastructure* y *presentation*), el manejo reactivo de estado mediante **Angular Signals**, el diseño de componentes adaptables con **Angular Material** y la integración georreferenciada con **Leaflet.js**.
+
 
 #### 5.2.2.1. Sprint Planning 2
+
+En esta sección se especifican las decisiones y acuerdos establecidos durante la sesión de planificación del **Sprint 2** (*Sprint Planning Meeting*) realizada por el equipo de la startup **Dymbia**. Durante esta reunión se seleccionaron 6 Historias de Usuario pertenecientes al **EPIC-06 (Salud del Cultivo)**, acumulando una velocidad total comprometida de **32 Story Points**.
+
+| Sprint # | Sprint 2 |
+| ------ | ------ |
+| **Sprint Planning Background** | |
+| Date | 2026-10-02 |
+| Time | 10:00 AM |
+| Location | Discord / GitHub |
+| Prepared By | Tejada Pumacayo, Yamil Jared |
+| Attendees (to planning meeting) | Tejada Pumacayo, Yamil Jared / Duarte Ruffner, Drago Derick / Sanca Condori, Miguel / Solorzano Sullca, Benjamin / Vargas Enriquez, Jose Carlos |
+| Sprint 1 Review Summary | Se completó y desplegó exitosamente la versión v1.0.0 del Landing Page en Cloudflare Pages (16 SP), validando la propuesta de valor, planes comerciales, perfiles de los fundadores y políticas legales. |
+| Sprint 1 Retrospective Summary | Se identificó la necesidad de definir anticipadamente las entidades TypeScript de dominio (DDD) y los contratos mock en `json-server` para acelerar la construcción paralela de componentes Standalone en Angular. |
+| **Sprint Goal & User Stories** | |
+| Sprint 2 Goal | Our focus is on delivering a fully functional, responsive, and deployed Web Application MVP for the Crop Health module of SumaqAgro using Angular 18+, Leaflet.js, and Angular Signals. We aim to empower agricultural producers and agronomists with interactive multispectral satellite maps (NDVI/NDWI), real-time agroclimatic weather alerts, pest evidence photo uploads, and digital agronomic prescription workflows. We believe this delivers immediate diagnostic value and remote technical assistance to Peruvian farmers. This will be confirmed when users can render satellite heatmaps on their plots, submit pest reports, receive agronomic prescriptions, and access the live Web Application on Cloudflare Pages. |
+| Sprint 2 Velocity | 32 Story Points |
+| Sum of Story Points | 32 Story Points |
+
+---
 
 
 #### 5.2.2.2. Aspect Leaders and Collaborators
