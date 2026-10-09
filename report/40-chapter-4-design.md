@@ -933,6 +933,25 @@ El flujo inicia en la sección Costos, donde se muestra una tabla con los datos 
 
 El flujo inicia en la sección Salud de Parcelas, donde se muestra un mapa con las parcelas y sus respectivos estados. Al seleccionar una parcela marcada en rojo, se despliega su información, incluyendo los datos del socio y el estado actual de su terreno. Posteriormente, al presionar el botón “Despachar Alerta SMS a Socio”, se abre una ventana donde se muestra el mensaje que será enviado al socio. Finalmente, al seleccionar “Enviar Alerta SMS Ahora”, se envía la notificación y se muestra un mensaje de confirmación, indicando que la alerta fue enviada correctamente.
 
+
+**Wireflow 1: Emisión y transmisión de boletín fitosanitario regional**
+* User Persona: Juan Antonio Morales (Segmento 3: Asesor Agrónomo y Técnico de Campo).
+* User Goal 1: Redactar y despachar masivamente un boletín fitosanitario de alerta regional a todos los productores de un valle o cuenca para prevenir la propagación de plagas epidémicas.
+
+![Wireflow3 User Goal 1](assets/img/chapter-4/wireflows/wireflow3-ug1.png)
+
+El flujo inicia en el panel principal del tercer segmento, donde el usuario selecciona la opción “Nuevo Boletín Informativo”. Al ingresar, se despliega una ventana con un formulario en el que deberá completar la información solicitada. Finalmente, una vez ingresados todos los datos, el usuario presiona el botón “Registrar” para guardar la información.
+
+
+**Wireflow 2: Agendamiento y confirmación de visitas de inspección en campo**
+* User Persona: Juan Antonio Morales (Segmento 3: Asesor Agrónomo y Técnico de Campo).
+* User Goal 2: Programar salidas de inspección técnica presencial en un calendario interactivo para estructurar las rutas de viaje entre fundos rurales y notificar automáticamente al agricultor la fecha y hora de la visita.
+
+![Wireflow3 User Goal 2](assets/img/chapter-4/wireflows/wireflow3-ug2.png)
+
+El flujo inicia en la sección **Agendamiento de Visitas de Campo**, donde el asesor puede visualizar sus visitas programadas y seleccionar la opción para agregar una nueva. Al hacerlo, se abre un formulario donde deberá completar los datos del productor, la parcela, el motivo de la visita, la fecha, el horario y la ubicación. Finalmente, al confirmar el registro, se envía una notificación por SMS al agricultor y la nueva visita aparece en la lista de visitas programadas.
+
+
 ### 4.4.3. Web Applications Mock-ups
 
 En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**, los cuales representan de manera visual y detallada las principales funcionalidades de la solución. Estos diseños fueron elaborados tomando como base los wireframes desarrollados previamente, permitiendo definir con mayor precisión la estructura, distribución de elementos, estilos visuales y flujo de interacción de la interfaz antes de su implementación final.
