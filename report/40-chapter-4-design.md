@@ -1035,6 +1035,11 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
   <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-setting-report3.png" width="600px" height="auto"/>
 </p>
 
+### OFFLINE MODE
+
+<p align="center">
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-offline-report1.png" width="600px" height="auto"/>
+</p>
 
 ### SEGMENTO 3
 
