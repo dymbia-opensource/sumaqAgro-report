@@ -994,6 +994,16 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
   <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-crog-report4.png" width="600px" height="auto"/>
 </p>
 
+### EARNING
+
+<p align="center">
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-earning-report1.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-earning-report2.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-earning-report3.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-earning-report4.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-earning-report5.png" width="600px" height="auto"/>
+</p>
+
 ### SEGMENTO 3
 
 ### DASHBOARD
