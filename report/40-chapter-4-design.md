@@ -736,6 +736,12 @@ Presenta un encabezado con el antetítulo en verde "THE PEOPLE BEHIND THE TECHNO
 
 ![mockup-our-team.png](assets/img/chapter-4/landing-page/mock-up/desktop/mockup-our-team.png)
 
+**Video About the Team — SumaqAgro**
+
+Presenta un encabezado con el antetítulo en verde "Video About the Team", el título principal "Video About the Team" y una breve descripción sobre la presentación de los integrantes, sus roles y las responsabilidades asumidas durante el desarrollo de SumaqAgro. En la parte inferior se muestra un área de reproducción con bordes redondeados y un botón central para iniciar el video de presentación del equipo.
+
+![mockup-video-about-the-team.png](assets/img/chapter-4/landing-page/mock-up/desktop/mockup-video-about-the-team.png)
+
 **Registration — SumaqAgro**
 
 Presenta una franja de color verde corporativo orientada a incentivar el registro de nuevos usuarios. El bloque incorpora un mensaje de invitación y el botón principal "Sign up for free", facilitando el acceso directo a la plataforma desde la página de aterrizaje.
@@ -967,57 +973,116 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
   <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-register.png"  width="600px" height="auto"/>
 </p>
 
-### MY PLOTS
+### SEGMENTO 1
+
+### PLOTS
 
 <p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-my-plots.png"  width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-our-plots.png"  width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-dashboard.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plot-report1.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plot-report2.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plot-report3.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plot-report4.png" width="600px" height="auto"/>
 </p>
 
-### REGISTER A PLOT OF LAND
+### CROP HEALTH
 
 <p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-register-plots.png"  width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-maps-plots.png"  width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-modal-accept-plots.png"  width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-crog-report2.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-crog-report3.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-crog-report4.png" width="600px" height="auto"/>
 </p>
 
-### FINANCES
+### EARNING
 
 <p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-finances.png" width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-expense-success-modal.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-earning-report1.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-earning-report2.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-earning-report3.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-earning-report4.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-earning-report5.png" width="600px" height="auto"/>
 </p>
 
 ### CONSULT
 
 <p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-asesor.png" width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-asesor-report-form-modal.png" width="600px" height="auto"/>
-    <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-asesor-success-modal.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-consult-report1.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-consult-report2.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-consult-report3.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-consult-report4.png" width="600px" height="auto"/>
+</p>
+
+### CERTIFICATE
+
+<p align="center">
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-certificate-report1.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-certificate-report2.png" width="600px" height="auto"/>
 </p>
 
 ### AGRICULTURAL ALERTS
 
 <p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alert-home.png"  width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alert-details.png"  width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alert-task.png"  width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alert-modal-check.png"  width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alerta-report1.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alerta-report2.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alerta-report3.png" width="600px" height="auto"/>
 </p>
-
 
 ### SETTINGS
 
 <p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-setting-details-plot.png"  width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-setting-account.png"  width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-setting-help-manuals.png"  width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-setting-report1.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-setting-report2.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-setting-report3.png" width="600px" height="auto"/>
 </p>
 
-### MODE OFFLINE
+### OFFLINE MODE
+
 <p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-offline-mode.png"  width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-offline-report1.png" width="600px" height="auto"/>
+</p>
+
+### SEGMENTO 2
+
+
+### SEGMENTO 3
+
+### DASHBOARD
+<p align="center">
+ <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-dash.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-bol.png" width="600px" height="auto"/>
+</p>
+
+### PLOTS
+
+<p align="center">
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plots.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plots2.png" width="600px" height="auto"/>
+</p>
+
+### REPORT
+
+<p align="center">
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-report.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-report-diagnostic.png" width="600px" height="auto"/>
+</p>
+
+### VISITOR
+
+<p align="center">
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-visitor.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-visitor-schedule.png" width="600px" height="auto"/>
+</p>
+
+## AGRONOMIC
+
+<p align="center">
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-agronomic.png" width="600px" height="auto"/>
+</p>
+
+### REGIONAL
+
+<p align="center">
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-regional.png" width="600px" height="auto"/>
 </p>
 
 
