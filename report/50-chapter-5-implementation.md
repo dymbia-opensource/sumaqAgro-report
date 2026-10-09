@@ -919,9 +919,9 @@ Para evidenciar el funcionamiento de la Web Application de SumaqAgro, se present
 
 * **Vista Previa del Video:**
 
-![Vista Previa del Video Demostrativo](img-video-preview.png)
+![Vista Previa del Video Demostrativo](assets/img/chapter-5/img-about-the-product-app.png)
 
-* **Enlace de Reproducción (Microsoft Stream):** [Video "Video de Exposición AV1"](https://web.microsoftstream.com/video/tu-enlace-aqui)
+* **Enlace de Reproducción (Microsoft Stream):** [Video "Video de Exposición AV1"](https://upcedupe-my.sharepoint.com/personal/u202422128_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202422128%5Fupc%5Fedu%5Fpe%2FDocuments%2FRecording%2D20261009%5F092557%2Ewebm&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E418bacb5%2D22ff%2D4d75%2Daa54%2Db24e02149c8b)
 
 
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
