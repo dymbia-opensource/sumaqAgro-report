@@ -10,16 +10,11 @@ En esta sección, detallaremos cada uno de los elementos visuales y de estilo qu
 **Branding**
 
 El logo principal de **SumaqAgro**, un nombre que evoca la unión entre la naturaleza y la tecnología aplicada al sector agrícola. Nuestro propósito es ser un puente tecnológico para el campo, ofreciendo una solución integral de monitoreo satelital de precisión para agricultores, cooperativas e ingenieros agrónomos. El branding se enfoca en transmitir innovación, sostenibilidad, confianza y cercanía, valores esenciales para quienes buscan integrar la tecnología en el desarrollo del sector agrotecnológico.
-<br>
 
-<p align="center">
-  <img src="assets/img/chapter-4/logo-sumaqagro.png" alt="SumaqAgro-Logo" width="350px" height="auto"/>
-</p>
+![SumaqAgro-Logo](assets/img/chapter-4/logo-sumaqagro.png)
 
 **Imagotipo Horizontal (Versión Web / Sidebar):** Diseñado específicamente para integrarse en la barra lateral (*sidebar*) e interfaz principal de la plataforma web, esta versión organiza de manera lineal el isotipo de la marca, el tipograma **SumaqAgro** y el eslogan *"Cultivando un mejor mañana"*, optimizando el espacio horizontal para garantizar máxima legibilidad, elegancia y un reconocimiento de marca inmediato en pantallas de alta resolución.
-<p align="center">
-  <img src="assets/img/chapter-4/logo SumaqAgro Web.png" alt="SumaqAgroaa-LogoWeb" width="350px" height="auto"/>
-</p>
+![SumaqAgroaa-LogoWeb](assets/img/chapter-4/logo SumaqAgro Web.png)
 
 **Typography**
 
@@ -41,13 +36,10 @@ Se utiliza en bloques de lectura, etiquetas, botones, formularios y componentes 
 - **Botones y llamadas a la acción (Button Text / CTA):** Inter SemiBold, 16 px.
 - **Etiquetas de formularios o elementos de interfaz (Labels):** Inter Medium, 14 px.
 
-<p align="center">
-  <img src="assets/img/chapter-4/typography-poppins.png" alt="typography-poppins" width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/typography-inter.png" alt="typography-inter" width="600px" height="auto"/>
-</p>
+![typography-poppins](assets/img/chapter-4/typography-poppins.png)
+![typography-inter](assets/img/chapter-4/typography-inter.png)
 
 Esta combinación y jerarquía tipográfica permite mantener una experiencia de usuario consistente, altamente accesible, clara y profesional a través de los distintos dispositivos y secciones de la plataforma.
-
 
 **Colors**
 
@@ -70,10 +62,7 @@ La interfaz web utilizará una paleta de colores basada principalmente en tonos 
 
 - **Contraste y legibilidad:** los colores oscuros serán utilizados principalmente para textos y elementos destacados, mientras que los tonos claros servirán como fondos y superficies, buscando mantener un contraste adecuado y una lectura sencilla en toda la aplicación.
 
-<p align="center">
-  <img src="assets/img/chapter-4/colors.png" alt="color-pallete" width="600px" height="auto"/>
-</p>
-
+![color-pallete](assets/img/chapter-4/colors.png)
 
 **Spacing**
 
@@ -87,7 +76,6 @@ SumaqAgro utiliza un sistema de espaciado basado en múltiplos de 8 px, permitie
 *   **48 px – 2XL:** Utilizado para separar bloques importantes dentro de una misma sección.
 *   **64 px – 3XL:** Recomendado para la separación vertical entre secciones principales de la página.
 *   **80 px – 4XL:** Puede utilizarse en secciones amplias como Hero, Features o Call to Action en versión Desktop.
-
 
 **Tono de Comunicación**
 
@@ -118,7 +106,7 @@ Esta sección define las pautas visuales, de maquetación y de componentes de in
 
 El enfoque está centrado en garantizar una experiencia visual y de interacción consistente, accesible (**a11y**) y adaptable a cualquier dispositivo utilizado en campo u oficina.
 
-### Responsive Design
+#### Responsive Design
 
 La interfaz de **SumaqAgro** se adapta de forma fluida a las pantallas de teléfonos móviles, tabletas y computadoras de escritorio mediante un sistema de cuadrícula (*Grid System*) y puntos de interrupción (*breakpoints*) estandarizados:
 
@@ -134,7 +122,7 @@ Para el **Landing Page**, la adaptabilidad se logra mediante *CSS Flexbox*, *CSS
 
 Para la **Web Application en Angular**, la maquetación se gestiona mediante directivas de diseño responsivo y bibliotecas de componentes adaptables.
 
-### Componentes y patrones compatibles
+#### Componentes y patrones compatibles
 
 - **Navegación (*Navbar / Menu*):** En la aplicación web se utiliza `<mat-toolbar>` en combinación con `<mat-menu>` o `<mat-sidenav>` para la barra lateral responsiva, integrada con el módulo de enrutamiento mediante `routerLink`. En el Landing Page se emplea una barra superior fija (*sticky*) construida con elementos semánticos `<header>` y `<nav>`.
 
@@ -147,7 +135,7 @@ Para la **Web Application en Angular**, la maquetación se gestiona mediante dir
 
 - **Diálogos y Notificaciones:** Uso de `MatSnackBar` para la confirmación de registros de gastos o avisos preventivos, y `MatDialog` para el despliegue contextual de fichas técnicas de lotes, recetas fitosanitarias o vista previa de certificados de cosecha en PDF.
 
-### Accesibilidad (a11y)
+#### Accesibilidad (a11y)
 
 Con el fin de asegurar que la plataforma sea inclusiva para todos los perfiles de usuario, incluyendo agricultores, dirigentes de cooperativas y agrónomos, se consideran las siguientes pautas:
 
@@ -156,7 +144,6 @@ Con el fin de asegurar que la plataforma sea inclusiva para todos los perfiles d
 - **Navegación por teclado:** Compatibilidad completa de foco e interacción mediante secuencias de teclado estándar como `Tab`, `Enter`, `Space` y `Escape`.
 
 - **Contraste y escalabilidad:** Cumplimiento de los niveles de contraste de color según la norma **WCAG 2.1 AA**, con un ratio mínimo de **4.5:1** para texto normal, y uso de unidades relativas como `rem` y `em` para garantizar el escalado de tipografías sin distorsión de la interfaz.
-
 
 ### 4.1.3. Mobile Style Guidelines
 
@@ -188,7 +175,6 @@ Esta sección define las pautas de la aplicación móvil de **SumaqAgro**, dise�
 
 ![iconography.png](assets/img/chapter-4/mobile-style-guidelines/iconography.png)
 
-
 ## 4.2. Information Architecture
 
 ### 4.2.1. Organization Systems
@@ -201,7 +187,6 @@ La organización jerárquica del Landing Page de "SumaqAgro" ha sido diseñada c
 
 - **Contenido**: Propuesta de valor en el banner principal y llamadas a la acción directas.
 
-
 **Información explicativa**
 
 - **Nosotros:** Presentación del propósito de la plataforma y el equipo detrás de la solución.
@@ -212,28 +197,21 @@ La organización jerárquica del Landing Page de "SumaqAgro" ha sido diseñada c
 
 - **Demo del Producto:** Video demostrativo sobre el funcionamiento en campo de la plataforma.
 
-
 **Conversión y Validación**
 
 - **Planes:** Detalle de las opciones de suscripción diseñadas para cada perfil (Plan Semilla, Cooperativa Pro y Plan Asesor Técnico).
 
 - **Impacto y Testimonios:** Presentación de métricas de alcance y testimonios reales de clientes que validan la experiencia.
 
-<p align="center">
-  <img src="assets/img/chapter-4/organization-landing-page.png">
-</p>
+![organization-landing-page](assets/img/chapter-4/organization-landing-page.png)
 
-> <p align="center">Organización en el landing page</p>
-
+> Organización en el landing page
 
 Además, la arquitectura jerárquica en la interfaz de la aplicación web de "SumaqAgro" ha sido diseñada para facilitar el acceso y gestión eficiente de las múltiples funcionalidades del sistema. Esta estructura permite una distribución lógica del contenido, reduciendo la carga cognitiva del usuario en campo y mejorando su capacidad para encontrar rápidamente las herramientas que necesita.
 
+![organization-web-app](assets/img/chapter-4/organization-web-app.png)
 
-<p align="center">
-  <img src="assets/img/chapter-4/organization-web-app.png">
-</p>
-
-> <p align="center">Organización en la aplicación</p>
+> Organización en la aplicación
 
 **Pantalla de inicio (Mi Parcela)**
 
@@ -317,20 +295,18 @@ Sistema jerárquico accesible desde un menú lateral con iconografía clara. Inc
 - Enfoque en la asistencia técnica distribuida, optimización de visitas a terreno e intervención precisa ante plagas o heladas.
 
 - Canal de comunicación directo para dictar diagnósticos, recomendar dosificación de insumos y mantener un historial clínico por cada parcela.
-  <br>
-  <br>
 
 ### 4.2.2. Labeling Systems
 
 El sistema de etiquetado de **SumaqAgro** ha sido diseñado para ser claro, directo y fácil de entender por agricultores, cooperativas y agrónomos, usando palabras clave con un número mínimo de términos sin perder precisión. Las etiquetas evitan tecnicismos innecesarios y buscan reducir la carga cognitiva del usuario en el campo.
 
-### Principios
+#### Principios
 
 - **Consistencia:** Se usan las mismas etiquetas en botones, menús y mensajes relacionados. Por ejemplo: **“Ver todos mis lotes”**, **“Consultar con el Asesor”** y **“Descargar Ficha PDF”**.
 
 - **Simplicidad:** Se evita el uso de jergas técnicas complejas, empleando términos agrícolas cotidianos. Ejemplos: **“Vigor del Follaje (NDVI)”**, **“Déficit de Humedad”** y **“Precio para no perder”**.
 
-### Etiquetado en el Landing Page
+#### Etiquetado en el Landing Page
 
 - **Inicio:** Es la primera sección que el usuario ve al entrar. Presenta la propuesta de valor **“Cultiva con Información. Decide con Precisión”** y botones directos.
 
@@ -349,7 +325,7 @@ El sistema de etiquetado de **SumaqAgro** ha sido diseñado para ser claro, dire
 - **Testimonios:** Muestra **“Testimonios de Clientes”** y opiniones de productores que validan el uso de la solución.
 
 - **Footer:** Contiene el logotipo de **SumaqAgro**, enlaces de navegación, redes sociales y accesos a información de soporte y aspectos legales.
-### Etiquetado en la Aplicación Web
+#### Etiquetado en la Aplicación Web
 
 - **Mi Parcela:** Vista principal del dashboard con métricas clave como **“Salud Foliar”**, **“Gasto Total”**, **“Precio para no perder”** y accesos a **“Ver todos mis lotes”**.
 
@@ -365,7 +341,7 @@ El sistema de etiquetado de **SumaqAgro** ha sido diseñado para ser claro, dire
 
 - **Configuración y Ayuda:** Sección para gestionar **“Datos de mi parcela”**, **“Cuenta”**, **“Manuales de ayuda”** y el botón directo **“Llamar a Soporte SumaqAgro”**.
 
-### Etiquetado en la Aplicación Móvil
+#### Etiquetado en la Aplicación Móvil
 
 La aplicación móvil mantiene las mismas etiquetas del Lenguaje Ubicuo, con textos más cortos para pantallas de 360 px:
 
@@ -400,8 +376,6 @@ Un conjunto seleccionado de palabras clave que abarca los perfiles de usuario ob
 
 Identifica al equipo responsable del diseño, desarrollo y arquitectura de información del sitio web, reforzando la transparencia y la atribución del proyecto.
 
----
-
 **Web Application – Dashboard Principal**
 
 - **Title:**  
@@ -423,8 +397,6 @@ Palabras clave orientadas a la experiencia interna de la aplicación, utilizando
   `<meta name="author" content="Open Source Team – Open Source Software">`
 
 Especifica el equipo de desarrollo web responsable del proyecto para asegurar la vigencia y atribución tecnológica de la aplicación.
-<br>
-<br>
 
 ### 4.2.4. Searching Systems
 
@@ -432,9 +404,7 @@ Dentro de la sección **Mi Parcela** de la aplicación web, el sistema de búsqu
 
 Este campo permite buscar por nombre de parcela, tipo de cultivo o sector. Por ejemplo: **“Papa Canchán”** o **“Lote 2”**.
 
-<p align="center">
-  <img src="assets/img/chapter-4/searching-sumaqagro.png" alt="Searching System SumaqAgro">
-</p>
+![Searching System SumaqAgro](assets/img/chapter-4/searching-sumaqagro.png)
 
 #### Búsqueda en la parcela
 
@@ -525,12 +495,9 @@ La navegación en **SumaqAgro** está diseñada para facilitar el recorrido del 
 - **Sign In / Register:** Botones de acceso y registro a la plataforma.
 - **Selector de Idioma (EN):** Opción para cambiar la localización del sitio.
 
-<p align="center">
-  <img src="assets/img/chapter-4/navigation-landing-page.png">
-</p>
+![navigation-landing-page](assets/img/chapter-4/navigation-landing-page.png)
 
-> <p align="center">Navegación del sitio web (Landing Page)</p>
-
+> Navegación del sitio web (Landing Page)
 
 Además, en la aplicación web se implementa un menú lateral fijo (sidenav) organizado por categorías principales, el cual permite el acceso directo a las funcionalidades de gestión y monitoreo del sistema:
 
@@ -549,11 +516,9 @@ Además, en la aplicación web se implementa un menú lateral fijo (sidenav) org
 
 Cada sección está representada con un ícono claro y una etiqueta visible, asegurando una navegación fluida e intuitiva dentro de la consola de trabajo.
 
-<p align="center">
-  <img src="assets/img/chapter-4/navigation-web-app.png">
-</p>
+![navigation-web-app](assets/img/chapter-4/navigation-web-app.png)
 
-> <p align="center">Navegación de la aplicación web (Sidenav)</p>
+> Navegación de la aplicación web (Sidenav)
 
 En la **aplicación móvil** el menú lateral se sustituye por una barra de navegación inferior (*Bottom Navigation Bar*) con cinco destinos fijos, ubicada en la zona del pulgar:
 
@@ -565,59 +530,44 @@ En la **aplicación móvil** el menú lateral se sustituye por una barra de nave
 
 Las vistas de detalle y los formularios se recorren con una flecha de retroceso en la barra superior, y las acciones frecuentes aparecen como accesos rápidos en el Inicio (*Consultar con el Asesor*, *Mis Certificados* y *Enviar foto de plaga*).
 
-
-<br>
-
 ## 4.3. Landing Page UI Design
 El landing page representa el primer punto de contacto entre los usuarios y la plataforma, por lo que su diseño debe comunicar de manera clara el propósito y los principales beneficios del servicio. En esta sección se presenta el diseño de la interfaz del landing page, considerando una organización visual atractiva, una navegación sencilla y elementos que faciliten la comprensión de la información y orienten al usuario hacia las acciones principales.
 
 ### 4.3.1. Landing Page Wireframe
-### Desktop Web Browser
+#### Desktop Web Browser
 El wireframe del landing page de **SumaqAgro** muestra la estructura inicial de la página y la forma en que se organizan sus principales elementos antes de aplicar el diseño visual definitivo. Su propósito es definir una distribución ordenada y funcional que sirva como base para el desarrollo posterior de la interfaz.
 
 **Nav y Hero**
 
 La sección Hero de la Landing Page presenta en su cabecera superior (Navbar) el isotipo y nombre de marca a la izquierda, los enlaces de anclaje (*Inicio*, *Nosotros*, *Soluciones*, *Planes*, *Impacto*), los botones de acceso (*Iniciar sesión* y *Registrarse*) y el selector de internacionalización (*ES*); seguidamente, el área principal de impacto despliega el subtítulo en mayúsculas *«AGRICULTURA INTELIGENTE PARA UN MEJOR MAÑANA»*, el encabezado principal (H1) *«Cultiva con Información. Decide con Precisión»*, un párrafo descriptivo que sintetiza la transformación de datos satelitales para el monitoreo de cultivos, costos y valor de la producción, y dos llamados a la acción primarios representados por los botones *Explorar* y *Cómo funciona* sobre un fondo fotográfico agrícola de campo.
 
-<p align="center">
-  <img src="assets/img/chapter-4/landing-page/wireframe/desktop/wireframe-hero.png" alt="wireframe-hero" width="600px" height="auto"/>
-</p>
+![wireframe-hero](assets/img/chapter-4/landing-page/wireframe/desktop/wireframe-hero.png)
 
 **About**
 
 La sección **Nosotros** (*About Us*) presenta una distribución asimétrica compuesta por un bloque textual a la izquierda y un recurso gráfico a la derecha; el área informativa incluye el kicker superior en mayúsculas *«SOBRE SUMAQAGRO»*, el encabezado de sección (H2) *«Nosotros»*, el subtítulo destacado (H3) *«Democratizamos la agricultura de precisión en el Perú»* y un párrafo institucional que detalla la misión de reducir la brecha de tecnificación en las cuencas de papa y café mediante datos satelitales abiertos y herramientas accesibles de monitoreo, costeo y certificación; mientras que a la derecha se exhibe una composición fotográfica con esquinas redondeadas que muestra una parcela de cultivo tecnificado junto a una mano sosteniendo un smartphone con la interfaz móvil del sistema desplegada.
 
-<p align="center">
-  <img src="assets/img/chapter-4/landing-page/wireframe/desktop/wireframe-about.png" alt="wireframe-about" width="600px" height="auto"/>
-</p>
-
+![wireframe-about](assets/img/chapter-4/landing-page/wireframe/desktop/wireframe-about.png)
 
 **Solutions**
 
 La sección **¿A quién ayudamos?** organiza la propuesta de valor mediante tres tarjetas (*cards*) de autoselección por perfil orientadas a *Agricultores independientes*, *Líderes de cooperativas* y *Asesores técnicos y agrónomos*, detallando en cada una su enfoque productivo, una fotografía representativa de campo y un botón de llamado a la acción específico (*Registrar mi parcela*, *Gestionar cooperativa* y *Unirme como asesor*); inmediatamente después, la sección **Soluciones y Características** expone las cuatro capacidades tecnológicas clave del sistema mediante una grilla de tarjetas que describen el monitoreo satelital de vigor y humedad (*Satellite Monitoring of Vigor and Moisture*), la contabilidad de costos por lote (*Batch Cost Accounting*), la certificación digital de cosecha (*Digital Certification of Harvest Quality*) y el sistema de prescripciones agronómicas (*Agronomic Prescriptions and Alerts*), complementando cada bloque funcional con un indicador del impacto operativo directo que genera en campo.
 
-<p align="center">
-  <img src="assets/img/chapter-4/landing-page/wireframe/desktop/wireframe-solutions.png" alt="wireframe-solutions" width="600px" height="auto"/>
-</p>
+![wireframe-solutions](assets/img/chapter-4/landing-page/wireframe/desktop/wireframe-solutions.png)
 
 **Video and Plans**
 
 La sección **Conoce SumaqAgro en acción** presenta un contenedor central con fondo verde oscuro que alberga el reproductor del video demostrativo (*About-the-Product*) para evidenciar el funcionamiento en campo; inmediatamente después, la sección **Planes** (*Pricing*) introduce un conmutador de facturación mensual y anual (*«Ahorra 2 meses con el plan anual»*) junto a una grilla de tres tarjetas de suscripción que estructuran el modelo SaaS freemium y B2B: el **Plan Semilla** (S/ 0 para 1 parcela con NDVI básico y botón *«Empezar gratis»*), el **Plan Cooperativa Pro** (destacado con la etiqueta *«Más popular»* a S/ 189/mes para 50 productores con certificación de calidad y botón *«Suscribir cooperativa»*), y el **Plan Asesor Técnico** (S/ 89/mes para supervisar 20 fundos con recetas técnicas y botón *«Prueba de 14 días»*).
 
-<p align="center">
-  <img src="assets/img/chapter-4/landing-page/wireframe/desktop/wireframe-plans.png" alt="wireframe-plans" width="600px" height="auto"/>
-</p>
+![wireframe-plans](assets/img/chapter-4/landing-page/wireframe/desktop/wireframe-plans.png)
 
 **Testimonials , Impact and Footer**
 
 La sección **Impacto** y el cierre del Landing Page se estructuran en tres bloques consecutivos orientados a la credibilidad y la conversión: en primer lugar, el área de métricas cuantitativas presenta tres tarjetas superiores con indicadores clave de respaldo agrario (*333k+ Has. de papa*, *223k+ Familias cafeteras* y *>40% Sin cobertura técnica*), acompañadas en la parte inferior por el bloque testimonial *«Lo que dicen nuestros usuarios»* con tarjetas que incluyen avatar, calificación por estrellas y citas de validación de Juan Huamán (productor de papa) y Elena Vargas (cooperativa cafetalera); a continuación, se ubica el banner final de conversión (*Bottom CTA*) en verde oscuro con el titular *«Empieza a decidir con precisión hoy»*, un texto de apoyo y el botón principal de acción *Registrarse gratis*; finalmente, el pie de página (*Footer*) organiza sobre fondo oscuro el isotipo horizontal de SumaqAgro con su propuesta de valor a la izquierda, junto a una distribución de navegación en tres columnas de enlaces (*Products*, *Quick Links* y *Support*) para centralizar recursos, documentación y canales de soporte de la plataforma.
 
-<p align="center">
-  <img src="assets/img/chapter-4/landing-page/wireframe/desktop/wireframe-testimonials-impact-footer.png" alt="wireframe-testimonials-impact-footer" width="600px" height="auto"/>
-</p>
+![wireframe-testimonials-impact-footer](assets/img/chapter-4/landing-page/wireframe/desktop/wireframe-testimonials-impact-footer.png)
 
-
-### Mobile Web Browser
+#### Mobile Web Browser
 Para garantizar una experiencia de usuario inclusiva y accesible, el diseño responsivo de la Landing Page de SumaqAgro se fundamenta en un sistema de rejilla fluido adaptado a dispositivos móviles (*Mobile Web Browser*), utilizando una retícula de 4 columnas y una escala de espaciado basada en múltiplos de 8 px.
 
 En esta vista, los componentes de escritorio se reorganizan de manera progresiva en una sola columna (*single-column layout*), condensando la barra de navegación superior en un menú colapsable tipo hamburguesa (*nav-toggle*) y apilando los bloques informativos, tarjetas de segmentos, matrices de soluciones y llamados a la acción (CTAs) de forma lineal para facilitar el desplazamiento continuo (*scrolling*) y la interacción con una sola mano sin pérdida de contexto ni funcionalidad.
@@ -626,58 +576,36 @@ En esta vista, los componentes de escritorio se reorganizan de manera progresiva
 
 En la vista móvil, la cabecera superior compacta el menú de navegación horizontal bajo un botón tipo hamburguesa (`nav-toggle`) ubicado en el extremo superior derecho, manteniendo a la izquierda el isotipo circular y el nombre de marca SumaqAgro; inmediatamente abajo, el área principal apila el contenido verticalmente en una sola columna centrada de cuatro retículas, encabezada por el *kicker* introductorio en mayúsculas, el titular principal (H1) distribuido en dos líneas de alto impacto y un bloque de tres líneas de texto descriptivo con la propuesta de valor satelital; finalmente, la zona inferior de interacción organiza dos botones de llamado a la acción (CTAs) de ancho adaptativo dispuestos lado a lado en posición horizontal para facilitar el acceso táctil inmediato con una sola mano.
 
-<p align="center">
-  <img src="assets/img/chapter-4/landing-page/wireframe/mobile/wireframe-mobile-hero.png" alt="wireframe-testimonials-impact-footer" width="600px" height="auto"/>
-</p>
-
+![wireframe-testimonials-impact-footer](assets/img/chapter-4/landing-page/wireframe/mobile/wireframe-mobile-hero.png)
 
 **About**
 
 En la vista móvil (**Mobile Web Browser**) de las secciones institucionales, el contenido se reorganiza en una columna lineal: el bloque superior **Nosotros** (*About Us*) apila verticalmente el kicker, el encabezado principal, el subtítulo y el texto de la propuesta de valor junto al contenedor de la imagen representativa del cultivo tecnificado; inmediatamente abajo, la sección **Nuestro equipo** sitúa el titular y su párrafo descriptivo para dar paso a una disposición adaptada en dos columnas que agrupa las cinco tarjetas (*cards*) con fotografía, nombre de cada integrante y un icono de acción rápida en la esquina superior derecha, rematando con el último perfil centrado al pie para optimizar el espacio vertical en pantallas compactas.
 
-<p align="center">
-  <img src="assets/img/chapter-4/landing-page/wireframe/mobile/wireframe-mobile-about.png" alt="wireframe-testimonials-impact-footer" width="600px" height="auto"/>
-</p>
-
+![wireframe-testimonials-impact-footer](assets/img/chapter-4/landing-page/wireframe/mobile/wireframe-mobile-about.png)
 
 **Solutions**
 
 En la vista móvil (**Mobile Web Browser**) de las secciones comerciales y funcionales, el contenido se adapta a una columna única vertical: en la parte superior, la sección **¿A quién ayudamos?** apila secuencialmente las tres tarjetas de autoselección por rol (*Agricultores independientes*, *Líderes de cooperativas* y *Asesores técnicos*), situando en cada una su icono, titular, descripción de enfoque, vista previa gráfica y el botón de acción (*CTA*) con ancho completo al pie para facilitar el toque con una sola mano; a continuación, la sección **Soluciones y Características** transforma la grilla de escritorio en un apilamiento lineal de cuatro tarjetas de funcionalidades (monitoreo satelital NDVI, costos por lote, certificación de calidad y prescripciones agronómicas), cada una con su barra decorativa superior, icono de módulo, título, párrafo descriptivo y una tarjeta inferior de impacto cuantificable orientada al valor en campo.
 
-<p align="center">
-  <img src="assets/img/chapter-4/landing-page/wireframe/mobile/wireframe-mobile-help.png" alt="wireframe-testimonials-impact-footer" width="600px" height="auto"/>
-
-</p>
-<p align="center">
-  <img src="assets/img/chapter-4/landing-page/wireframe/mobile/wireframe-mobile-solutions.png" alt="wireframe-testimonials-impact-footer" width="592px" height="auto"/>
-</p>
-
+![wireframe-testimonials-impact-footer](assets/img/chapter-4/landing-page/wireframe/mobile/wireframe-mobile-help.png)
+![wireframe-testimonials-impact-footer](assets/img/chapter-4/landing-page/wireframe/mobile/wireframe-mobile-solutions.png)
 
 **Video and Plans**
 
 En la vista móvil (**Mobile Web Browser**) de los bloques de demostración y monetización, la interfaz se compacta en una sola columna vertical: en la parte superior, la sección **Conoce SumaqAgro en acción** (*About-the-Product*) enmarca el contenedor del reproductor de video demostrativo centrado sobre un bloque de fondo verde oscuro (#233413) que incluye el botón de reproducción (*Play*) para evidenciar el funcionamiento en campo; inmediatamente después, la sección **Planes** (*Pricing*) sitúa el encabezado de sección, el texto descriptivo y un conmutador de facturación mensual/anual (*switch toggle*), dando paso al apilamiento secuencial de las tres tarjetas de suscripción (*Plan Semilla*, *Plan Cooperativa Pro* y *Plan Asesor Técnico*), donde cada una presenta su nombre de plan, tarifa destacada en Soles, resumen de características y su botón de llamado a la acción (*CTA*) en ancho completo al pie para una pulsación táctil accesible con una sola mano.
 
-<p align="center">
-  <img src="assets/img/chapter-4/landing-page/wireframe/mobile/wireframe-mobile-video.png" alt="wireframe-testimonials-impact-footer" width="600px" height="auto"/>
+![wireframe-testimonials-impact-footer](assets/img/chapter-4/landing-page/wireframe/mobile/wireframe-mobile-video.png)
 
-</p>
-
-<p align="center">
-  <img src="assets/img/chapter-4/landing-page/wireframe/mobile/wireframe-mobile-plans.png" alt="wireframe-testimonials-impact-footer" width="592px" height="auto"/>
-</p>
-
+![wireframe-testimonials-impact-footer](assets/img/chapter-4/landing-page/wireframe/mobile/wireframe-mobile-plans.png)
 
 **Impact, Testimonials and Footer**
 
 En la vista móvil (**Mobile Web Browser**) del cierre de la página, los componentes se reorganizan en una secuencia vertical de cuatro bloques lineales: en la parte superior, la sección **Impacto** apila las tres tarjetas de métricas agrarias (*333k+ Has. de papa*, *223k+ Familias cafeteras* y *>40% Sin cobertura técnica*); inmediatamente después, el bloque de testimonios (*«Lo que dicen nuestros usuarios»*) presenta de forma vertical las dos tarjetas de validación social con el avatar, nombre, rol y cita de cada usuario; a continuación, el banner final de conversión (*Bottom CTA*) condensa el titular, el texto de apoyo y el botón de acción *«Registrarse gratis»* adaptado a pantalla completa para facilitar la pulsación táctil con una sola mano; finalmente, el pie de página (*Footer*) sobre fondo oscuro (#031416) apila el isotipo de la marca, la descripción institucional y una botonera de enlaces sociales, rematando con tres columnas colapsadas verticalmente (*Products*, *Quick Links* y *Support*) que distribuyen el acceso a los recursos y enlaces ético-legales del sistema.
 
-<p align="center">
-  <img src="assets/img/chapter-4/landing-page/wireframe/mobile/wireframe-mobile-impact.png" alt="wireframe-testimonials-impact-footer" width="592px" height="auto"/>
-</p>
+![wireframe-testimonials-impact-footer](assets/img/chapter-4/landing-page/wireframe/mobile/wireframe-mobile-impact.png)
 
-<p align="center">
-  <img src="assets/img/chapter-4/landing-page/wireframe/mobile/wireframe-mobile-testimonials-and-footer.png" alt="wireframe-testimonials-impact-footer" width="600px" height="auto"/>
-</p>
+![wireframe-testimonials-impact-footer](assets/img/chapter-4/landing-page/wireframe/mobile/wireframe-mobile-testimonials-and-footer.png)
 
 ### 4.3.2. Landing Page Mock-up
 El mock-up de la página de aterrizaje de Dymbia plasma la apariencia visual definitiva, integrando la paleta cromática, los estilos tipográficos, el material gráfico y la iconografía finales. De este modo, traslada de forma coherente la identidad visual de SumaqAgro a lo largo de cada uno de los bloques y componentes del sitio.
@@ -756,58 +684,43 @@ Presenta un pie de página sobre fondo oscuro que agrupa el logotipo de SumaqAgr
 
 ## 4.4. Web Applications UX/UI Design
 
-
 Esta sección presenta y sustenta la arquitectura de interacción y el diseño visual de la plataforma SaaS de SumaqAgro, desarrollada por la startup Dymbia.
 ### 4.4.1. Web Applications Wireframes
 
-### Desktop Web Browser
+#### Desktop Web Browser
 
 **Aplicación de Principios de Diseño y Arquitectura de Información:** Para la conceptualización de este Wireframe (*Desktop Web Browser*), nos centramos en una Arquitectura de Información basada en el patrón de escaneo en "F" (*F-Pattern*), disponiendo la barra lateral (*Sidebar*) a la izquierda para organizar jerárquicamente los módulos de operación agrícola y configuración del sistema sin perder el contexto de navegación, mientras que la cabecera superior centraliza la búsqueda rápida y los indicadores de estado global (conectividad, notificaciones y perfil). Aplicamos el principio de Región Común y Proximidad de la Gestalt agrupando los datos clave en tres tarjetas de indicadores (*KPI Cards*) de alto nivel para supervisar la salud foliar, el gasto acumulado y el punto de equilibrio financiero, conectándolos directamente con las representaciones analíticas inferiores (gráfico de evolución vegetal NDVI y distribución circular de costos). A nivel de diseño inclusivo y accesibilidad (*a11y*), garantizamos áreas táctiles mínimas de 48 px en los botones de acción rápida (*View Satellite Map*, *View My Expenses* y el CTA primario *View All My Lots*), reforzando una jerarquía visual clara mediante contenedores bien delimitados y contraste tipográfico que agilizan la lectura y toma de decisiones del productor en campo.
 
 A continuación, se presentan los wireframes principales de la aplicación web correspondientes:
 
 **My Plot**: en la vista inicial (*Dashboard*), la interfaz organiza la supervisión del cultivo mediante una fila de tres tarjetas métricas (*KPI Cards*) de alto nivel que sintetizan la salud foliar (NDVI), la inversión acumulada y el punto de equilibrio financiero, complementadas en la sección inferior por un gráfico de barras para la evolución temporal del vigor vegetal y un gráfico circular (*Donut Chart*) para el desglose porcentual de costos operativos. Seguidamente, el flujo de interacción transiciona hacia la vista de gestión de parcelas al interactuar con el llamado a la acción superior, donde el usuario accede a una retícula de administración con los cupos disponibles de su plan, permitiéndole supervisar el estado de sus lotes activos o incorporar un nuevo predio agrícola mediante un formulario asistido de georreferenciación y delimitación cartográfica por coordenadas GPS.
-<p align="center">
-  <img src="assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-my-plot.png"  width="592px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-my-plot-config.png"  width="592px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-mi-new-plot-map.png"  width="592px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-my-new-plot-forms.png"  width="592px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-my-new-plot-modal.png"  width="592px" height="auto"/>
-</p>
+![wireframe-app-my-plot](assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-my-plot.png)
+![wireframe-app-my-plot-config](assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-my-plot-config.png)
+![wireframe-app-mi-new-plot-map](assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-mi-new-plot-map.png)
+![wireframe-app-my-new-plot-forms](assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-my-new-plot-forms.png)
+![wireframe-app-my-new-plot-modal](assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-my-new-plot-modal.png)
 
 **Crop Health:** Esta vista centraliza la inspección agronómica y espacial del predio mediante un visor cartográfico interactivo que proyecta el polígono georreferenciado del lote junto con capas multiespectrales (NDVI para vigor vegetal y NDWI para humedad de suelo), complementado por un panel lateral de diagnóstico técnico preliminar y recomendaciones de manejo en campo; asimismo, la interfaz integra en su cabecera un selector conmutador de predios (*«Cambiar Parcela»*) que permite alternar fluidamente entre los diferentes terrenos registrados del productor sin perder el contexto operativo ni reiniciar los filtros de supervisión.
-<p align="center">
-  <img src="assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-my-plots-health.png" alt="wireframe-testimonials-impact-footer" width="600px" height="auto"/>
-</p>
-
+![wireframe-testimonials-impact-footer](assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-my-plots-health.png)
 
 **My Expenses and Earnings:** Este módulo organiza la gestión financiera del predio mediante una fila superior de tres tarjetas métricas (*KPI Cards*) que sintetizan el gasto total acumulado, el volumen proyectado de cosecha y el precio de equilibrio calculado para evitar pérdidas comerciales, complementadas en la sección inferior por una tabla detallada de desembolsos con opciones de filtrado cronológico y por categoría (insumos, jornales y flete); asimismo, incorpora en su cabecera el botón de acción primario *«Anotar Nuevo Gasto»*, el cual despliega el formulario de registro ágil de costos diarios para asegurar que ningún egreso operativo quede fuera de la contabilidad de la campaña.
-<p align="center">
-  <img src="assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-earning.png"  width="600px" height="auto"/>
-</p>
+![wireframe-app-earning](assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-earning.png)
 
 **Consult the Advisor:** La plataforma complementa la operación agrícola mediante la sección **Phytosanitary Assistance and Prescriptions**, la cual exhibe la prescripción técnica activa del agrónomo con su dosificación exacta y el historial cronológico de consultas, permitiendo reportar nuevas incidencias fitosanitarias mediante carga fotográfica; de manera complementaria, el módulo **My Harvest Certificates** organiza los expedientes de acreditación comercial del lote, reflejando el nombre del cultivo, el desglose de calibres de cosecha, el sello digital de respaldo cooperativo y el código QR de trazabilidad pública para respaldar el valor del producto ante intermediarios y compradores.
-<p align="center">
-  <img src="assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-asesor.png"  width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-certificate.png"  width="600px" height="auto"/>
-</p>
+![wireframe-app-asesor](assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-asesor.png)
+![wireframe-app-certificate](assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-certificate.png)
 
 **Agricultural Alerts:** Este módulo centraliza la vigilancia agroclimática y sanitaria de las parcelas del productor (US-13, US-31), estructurándose a través de una secuencia de tarjetas informativas que detallan el incidente detectado (tales como caídas críticas de vigor foliar, estrés hídrico o riesgos de helada); cada reporte integra un panel de medidas técnicas detalladas, la cronología temporal de tareas requeridas para mitigar la anomalía y un indicador de plan de acción finalizado con confirmación de cumplimiento en campo, permitiendo auditar y cerrar el ciclo de contingencia del cultivo de manera ordenada y oportuna.
-<p align="center">
-  <img src="assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-alert.png"  width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-statistics.png"  width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-alert-report.png"  width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-alert-modal.png"  width="600px" height="auto"/>
-</p>
-
+![wireframe-app-alert](assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-alert.png)
+![wireframe-app-statistics](assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-statistics.png)
+![wireframe-app-alert-report](assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-alert-report.png)
+![wireframe-app-alert-modal](assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-alert-modal.png)
 
 - **Settings and Help:** Esta vista técnica expone los parámetros operativos y de soporte del productor a través de un contenedor modal organizado en pestañas contextuales (*Tabs*), permitiendo la actualización de datos agronómicos del predio (nombre de la parcela, tipo de cultivo y área declarada), la gestión de información de contacto (teléfono y credenciales de acceso) y el acceso a manuales interactivos de usuario con línea directa de asistencia técnica; asimismo, el módulo integra la funcionalidad de **Offline Mode**, respaldada por la historia técnica TS-05, la cual permite al agricultor alternar conscientemente hacia un modo de trabajo en almacenamiento local para registrar labores e insumos en sectores profundos de la chacra donde la señal celular desaparece por completo, garantizando que los datos queden retenidos en la memoria del navegador y se sincronicen de manera diferida y automática una vez recuperada la cobertura de red.
-<p align="center">
-  <img src="assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-config-account.png"  width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-offline.png"  width="600px" height="auto"/>
-</p>
+![wireframe-app-config-account](assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-config-account.png)
+![wireframe-app-offline](assets/img/chapter-4/applications-design/wireframe/desktop/wireframe-app-offline.png)
 
-### Mobile Web Browser
+#### Mobile Web Browser
 
 **Aplicación de Principios de Diseño y Arquitectura de Información:** Los wireframes móviles adaptan los módulos de la aplicación de escritorio a una sola columna de 360 × 800 px, pensada para el uso con una mano en campo. El menú lateral se reemplaza por una barra de navegación inferior de cinco destinos, las tablas se convierten en listas y tarjetas, y los indicadores más importantes se ubican en el primer tercio de la pantalla. Los wireframes W-01 a W-07 cubren los flujos del productor.
 
@@ -846,8 +759,6 @@ Flujo de acceso e identificación institucional que permite a agricultores y ase
 
 ![Wireframe W-07: Flujo de Autenticación e Identidad](assets/img/chapter-4/applications-design/wireframe/mobile/wireframe-autenticacion-iam.png)
 
----
-
 #### Sustento de Principios y Elementos de Diseño
 
 * **Jerarquía Visual y Patrón de Escaneo Vertical:** Dado el factor de forma compacto de las pantallas móviles, se organizó la información bajo un patrón de lectura vertical estricto. Los indicadores de mayor impacto para la toma de decisiones inmediatas (estado NDVI, costos acumulados y nivel de alerta) ocupan tarjetas prominentes en el tercio superior de la pantalla, relegando las series temporales y desgloses detallados hacia la zona de desplazamiento (*scroll*).
@@ -855,16 +766,12 @@ Flujo de acceso e identificación institucional que permite a agricultores y ase
 * **Convenciones Móviles y Zona Ergonómica del Pulgar (*Thumb Zone*):** Se sustituyó el menú lateral de escritorio (*sidebar*) por una barra de navegación inferior (*Bottom Navigation Bar*) permanente de 5 accesos directos principales. Asimismo, en la vista contable se adoptó un botón flotante de acción destacada (*Floating Action Button - FAB*) situado en la esquina inferior derecha para agilizar el registro recurrente de gastos.
 * **Contraste Tipográfico y Claridad Estructural:** A pesar de mantenerse en una escala de grises estricta para baja fidelidad, se establecieron diferencias marcadas de peso tipográfico (*Bold* para métricas cuantitativas e importes en soles, y *Regular* para etiquetas y leyendas descriptivas), garantizando un escaneo ágil bajo luz solar.
 
----
-
 #### Aplicación de Principios de Diseño Inclusivo y Accesibilidad
 
 * **Dimensionamiento de Áreas Táctiles (*Touch Targets*):** Conforme a las recomendaciones internacionales de accesibilidad móvil (WCAG / a11y), los botones de confirmación, campos de formulario y controles de navegación cuentan con dimensiones mínimas de 48 × 48 dp/px, evitando pulsaciones accidentales por parte de agricultores que operan el dispositivo con guantes o dedos fatigados por faenas de campo.
 * **Reducción de la Sobrecarga Cognitiva:** Se eliminaron las tablas extensas de escritorio, reemplazándolas por listas condensadas y estados cualitativos claros ("Óptimo", "Bajo Control", "Alerta") que acompañan a las cifras científicas (como el valor numérico de NDVI), facilitando la interpretación técnica a productores de baja escolaridad.
 * **Soporte de Arquitectura *Offline-First*:** Las pantallas de cabecera incorporan un indicador persistente de conectividad (*Connected / Offline Mode*). Esto brinda retroalimentación clara de que las anotaciones de jornales e insumos en la chacra se almacenan de forma local en la memoria del dispositivo y se transmitirán sin pérdida al recobrar cobertura celular.
 * **Simplificación en la Entrada de Datos:** Los formularios de campo priorizan campos numéricos automáticos, menús desplegables preestablecidos y captura fotográfica de recibos, disminuyendo al mínimo la necesidad de redactar textos extensos sobre el teclado virtual.
-
----
 
 #### Alineación con la Arquitectura de Información
 
@@ -887,7 +794,6 @@ Para construir un wireflow, primero se identifica el objetivo que el usuario des
 
 El flujo comienza en el módulo Registro de Parcelas, donde el agricultor presiona el botón «Registrar Parcela» para acceder al formulario de datos agronómicos e ingresar el nombre, cultivo y fecha de siembra. A continuación, el usuario pasa a la etapa de delimitación y traza los vértices del predio sobre un mapa cartográfico interactivo, permitiendo validar la geometría y calcular la superficie del terreno. Finalmente, tras confirmar la operación, el sistema guarda la información, despliega una notificación de éxito y redirige al listado general de parcelas actualizado.
 
-
 **Wireflow 2: Registro de egresos operacionales y cálculo de punto de equilibrio**
 * User Persona: Guillermo Cortés (Segmento 1: Pequeño agricultor independiente)
 * User Goal 2: Anotar los desembolsos de la campaña (compra de fertilizantes/insumos, pago de peones/jornales o flete) para actualizar automáticamente el costo total acumulado y consultar el precio de venta mínimo sugerido por saco/kilo para negociar en el mercado.
@@ -903,7 +809,6 @@ El flujo inicia en el panel financiero, donde el agricultor revisa su resumen de
 ![Wireflow User Goal 3](assets/img/chapter-4/wireflows/wireflow-ug3.png)
 
 El flujo inicia en el módulo Alertas Agrícolas, donde el usuario revisa los avisos emitidos y accede a la sección de Medidas Detalladas. En este apartado, encuentra toda la información técnica necesaria para tomar acciones inmediatas ante la problemática detectada. Una vez completadas las recomendaciones, el usuario presiona el botón «Finalizar Plan de Acción», lo que despliega una ventana modal con el resumen general de las actividades realizadas y la opción para retornar a la bandeja principal de alertas.
-
 
 **Wireflow 1: Consulta y auditoría del padrón consolidado de socios**
 * User Persona: Cristian Santana (Segmento 2: Gerente de Operaciones de Cooperativa Agraria).
@@ -921,7 +826,6 @@ El flujo inicia en la sección Padrón de Socios, donde se muestra una tabla con
 
 El flujo inicia en la sección Padrón de Socios, donde se muestra una tabla con todos los socios registrados. Al seleccionar el botón “Asignar o agregar socio”, se despliega un formulario que permite ingresar y completar los datos correspondientes al nuevo socio para su posterior registro en el sistema.
 
-
 **Wireflow 3: Auditoría de la matriz consolidada de costos por hectárea y balance de campaña**
 * User Persona: Cristian Santana (Segmento 2: Gerente de Operaciones de Cooperativa Agraria).
 * User Goal 3: Analizar la matriz comparativa de egresos operacionales de todos los socios afiliados para identificar desviaciones financieras en insumos/jornales y exportar el balance contable consolidado para la asamblea general.
@@ -929,7 +833,6 @@ El flujo inicia en la sección Padrón de Socios, donde se muestra una tabla con
 ![Wireflow2 User Goal 3](assets/img/chapter-4/wireflows/wireflow2-ug3.png)
 
 El flujo inicia en la sección Costos, donde se muestra una tabla con los datos registrados. Al seleccionar la opción “Auditar usuario”, se accede a una vista que presenta el listado completo de los últimos asientos contables reportados. Posteriormente, al presionar el botón “Ver” en la columna “Comprobante” del registro correspondiente, se despliega una ventana modal que permite revisar y configurar la información necesaria para gestionar correctamente el balance financiero.
-
 
 **Wireflow 4: Monitoreo de salud foliar y despacho de alerta agroclimática en SMS**
 * User Persona: Cristian Santana (Segmento 2: Gerente de Operaciones de Cooperativa Agraria).
@@ -939,7 +842,6 @@ El flujo inicia en la sección Costos, donde se muestra una tabla con los datos 
 
 El flujo inicia en la sección Salud de Parcelas, donde se muestra un mapa con las parcelas y sus respectivos estados. Al seleccionar una parcela marcada en rojo, se despliega su información, incluyendo los datos del socio y el estado actual de su terreno. Posteriormente, al presionar el botón “Despachar Alerta SMS a Socio”, se abre una ventana donde se muestra el mensaje que será enviado al socio. Finalmente, al seleccionar “Enviar Alerta SMS Ahora”, se envía la notificación y se muestra un mensaje de confirmación, indicando que la alerta fue enviada correctamente.
 
-
 **Wireflow 1: Emisión y transmisión de boletín fitosanitario regional**
 * User Persona: Juan Antonio Morales (Segmento 3: Asesor Agrónomo y Técnico de Campo).
 * User Goal 1: Redactar y despachar masivamente un boletín fitosanitario de alerta regional a todos los productores de un valle o cuenca para prevenir la propagación de plagas epidémicas.
@@ -947,7 +849,6 @@ El flujo inicia en la sección Salud de Parcelas, donde se muestra un mapa con l
 ![Wireflow3 User Goal 1](assets/img/chapter-4/wireflows/wireflow3-ug1.png)
 
 El flujo inicia en el panel principal del tercer segmento, donde el usuario selecciona la opción “Nuevo Boletín Informativo”. Al ingresar, se despliega una ventana con un formulario en el que deberá completar la información solicitada. Finalmente, una vez ingresados todos los datos, el usuario presiona el botón “Registrar” para guardar la información.
-
 
 **Wireflow 2: Agendamiento y confirmación de visitas de inspección en campo**
 * User Persona: Juan Antonio Morales (Segmento 3: Asesor Agrónomo y Técnico de Campo).
@@ -957,104 +858,85 @@ El flujo inicia en el panel principal del tercer segmento, donde el usuario sele
 
 El flujo inicia en la sección **Agendamiento de Visitas de Campo**, donde el asesor puede visualizar sus visitas programadas y seleccionar la opción para agregar una nueva. Al hacerlo, se abre un formulario donde deberá completar los datos del productor, la parcela, el motivo de la visita, la fecha, el horario y la ubicación. Finalmente, al confirmar el registro, se envía una notificación por SMS al agricultor y la nueva visita aparece en la lista de visitas programadas.
 
-
 ### 4.4.3. Web Applications Mock-ups
 
 En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**, los cuales representan de manera visual y detallada las principales funcionalidades de la solución. Estos diseños fueron elaborados tomando como base los wireframes desarrollados previamente, permitiendo definir con mayor precisión la estructura, distribución de elementos, estilos visuales y flujo de interacción de la interfaz antes de su implementación final.
 
 **Aplicación del Design System, principios de diseño e inclusión:** Los mock-ups aplican el Design System de la sección 4.1 (paleta teal/verde/neutros, tipografía Poppins e Inter, espaciado base 8 px y componentes de Angular Material). Se aplica jerarquía visual con tarjetas de indicadores (*KPI Cards*) y el principio de proximidad y región común de la Gestalt para agrupar datos relacionados. Los estados se comunican con color, ícono y texto, y se mantienen contrastes AA y áreas táctiles de al menos 48 px. La navegación lateral (*sidebar*) y las etiquetas siguen la arquitectura de información de la sección 4.2.
 
-### Desktop Web Browser
+#### Desktop Web Browser
 
-### LOGIN / REGISTER
+##### LOGIN / REGISTER
 
-<p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-login-segment-1.png"  width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-register.png"  width="600px" height="auto"/>
-</p>
+![mockup-app-login-segment-1](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-login-segment-1.png)
+![mockup-app-register](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-register.png)
 
-### SEGMENTO 1
+##### SEGMENTO 1
 
-### PLOTS
+###### PLOTS
 
-<p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-dashboard.png" width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plot-report1.png" width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plot-report2.png" width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plot-report3.png" width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plot-report4.png" width="600px" height="auto"/>
-</p>
+![mockup-app-dashboard](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-dashboard.png)
+![mockup-app-plot-report1](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plot-report1.png)
+![mockup-app-plot-report2](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plot-report2.png)
+![mockup-app-plot-report3](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plot-report3.png)
+![mockup-app-plot-report4](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plot-report4.png)
 
-### CROP HEALTH
+###### CROP HEALTH
 
-<p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-crog-report2.png" width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-crog-report3.png" width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-crog-report4.png" width="600px" height="auto"/>
-</p>
+![mockup-app-crog-report2](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-crog-report2.png)
+![mockup-app-crog-report3](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-crog-report3.png)
+![mockup-app-crog-report4](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-crog-report4.png)
 
-### EARNING
+###### EARNING
 
-<p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-earning-report1.png" width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-earning-report2.png" width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-earning-report3.png" width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-earning-report4.png" width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-earning-report5.png" width="600px" height="auto"/>
-</p>
+![mockup-app-earning-report1](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-earning-report1.png)
+![mockup-app-earning-report2](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-earning-report2.png)
+![mockup-app-earning-report3](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-earning-report3.png)
+![mockup-app-earning-report4](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-earning-report4.png)
+![mockup-app-earning-report5](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-earning-report5.png)
 
-### CONSULT
+###### CONSULT
 
-<p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-consult-report1.png" width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-consult-report2.png" width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-consult-report3.png" width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-consult-report4.png" width="600px" height="auto"/>
-</p>
+![mockup-app-consult-report1](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-consult-report1.png)
+![mockup-app-consult-report2](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-consult-report2.png)
+![mockup-app-consult-report3](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-consult-report3.png)
+![mockup-app-consult-report4](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-consult-report4.png)
 
-### CERTIFICATE
+###### CERTIFICATE
 
-<p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-certificate-report1.png" width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-certificate-report2.png" width="600px" height="auto"/>
-</p>
+![mockup-app-certificate-report1](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-certificate-report1.png)
+![mockup-app-certificate-report2](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-certificate-report2.png)
 
-### AGRICULTURAL ALERTS
+###### AGRICULTURAL ALERTS
 
-<p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alerta-report1.png" width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alerta-report2.png" width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alerta-report3.png" width="600px" height="auto"/>
-</p>
+![mockup-app-alerta-report1](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alerta-report1.png)
+![mockup-app-alerta-report2](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alerta-report2.png)
+![mockup-app-alerta-report3](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alerta-report3.png)
 
-### SETTINGS
+###### SETTINGS
 
-<p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-setting-report1.png" width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-setting-report2.png" width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-setting-report3.png" width="600px" height="auto"/>
-</p>
+![mockup-app-setting-report1](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-setting-report1.png)
+![mockup-app-setting-report2](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-setting-report2.png)
+![mockup-app-setting-report3](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-setting-report3.png)
 
-### OFFLINE MODE
+###### OFFLINE MODE
 
-<p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-offline-report1.png" width="600px" height="auto"/>
-</p>
+![mockup-app-offline-report1](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-offline-report1.png)
 
-### Semento 2
+##### Semento 2
 
-### LOGIN / REGISTER
+###### LOGIN / REGISTER
 
 ![mockup-app-login.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-login.png)
 ![mockup-app-register.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-register.png)
 
-### Dashboard
+###### Dashboard
 
 ![mockup-app-dashboard.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-dashboard.png)
 ![mockup-app-dashboard-conrol-panel.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-dashboard-conrol-panel.png)
 ![mockup-app-dashboard-rapid.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-dashboard-rapid.png)
 
-### member directory
+###### member directory
 ![mockup-app-member-directory.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-member-directory.png)
 ![mockup-app-member-directory-register-plots.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-member-directory-register-plots.png)
 ![mockup-app-member-directory-register-new.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-member-directory-register-new.png)
@@ -1062,78 +944,62 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
 ![mockup-app-register-satellite-polygon-mapping.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-register-satellite-polygon-mapping.png)
 ![mockup-app-register-edite-memeber.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-register-edite-memeber.png)
 
-
-### Plots Health
+###### Plots Health
 ![mockup-app-plot-health.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plot-health.png)
 ![mockup-app-plot-health-satellite-map-zoommed.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plot-health-satellite-map-zoommed.png)
 ![mockup-app-plot-health-rural-sms-agro.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plot-health-rural-sms-agro.png)
 
-### Costs
+###### Costs
 ![mockup-app-costs.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-costs.png)
 ![mockup-app-costs-disbursement-audit.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-costs-disbursement-audit.png)
 ![mockup-app-costs-export-season-financial-satatement.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-costs-export-season-financial-satatement.png)
 
-### certificates
+###### certificates
 ![mockup-app-certificates.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-certificates.png)
 ![mockup-app-certificates-technical-quality.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-certificates-technical-quality.png)
 ![mockup-app-certificates-technical-quality-assessment.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-certificates-technical-quality-assessment.png)
 
-### Alerts
+###### Alerts
 ![mockup-app-alerts.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alerts.png)
 ![mockup-app-alerts-regional-agro.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alerts-regional-agro.png)
 ![mockup-app-alerts-critical-incident-detail.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alerts-critical-incident-detail.png)
 
-### Settings
+###### Settings
 ![mockup-app-settings.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-settings.png)
 ![mockup-app-setting-institutional-config.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-setting-institutional-config.png)
 ![mockup-app-setting-sending-of-credential.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-setting-sending-of-credential.png)
 ![mockup-app-setting-corparte.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-setting-corparte.png)
 
-### SEGMENTO 3
+##### SEGMENTO 3
 
-### DASHBOARD
-<p align="center">
- <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-dash.png" width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-bol.png" width="600px" height="auto"/>
-</p>
+###### DASHBOARD
+![mockup-app-dash](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-dash.png)
+![mockup-app-bol](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-bol.png)
 
-### PLOTS
+###### PLOTS
 
-<p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plots.png" width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plots2.png" width="600px" height="auto"/>
-</p>
+![mockup-app-plots](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plots.png)
+![mockup-app-plots2](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plots2.png)
 
-### REPORT
+###### REPORT
 
-<p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-report.png" width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-report-diagnostic.png" width="600px" height="auto"/>
-</p>
+![mockup-app-report](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-report.png)
+![mockup-app-report-diagnostic](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-report-diagnostic.png)
 
-### VISITOR
+###### VISITOR
 
-<p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-visitor.png" width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-visitor-schedule.png" width="600px" height="auto"/>
-</p>
+![mockup-app-visitor](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-visitor.png)
+![mockup-app-visitor-schedule](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-visitor-schedule.png)
 
-## AGRONOMIC
+###### AGRONOMIC
 
-<p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-agronomic.png" width="600px" height="auto"/>
-</p>
+![mockup-app-agronomic](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-agronomic.png)
 
-### REGIONAL
+###### REGIONAL
 
-<p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-regional.png" width="600px" height="auto"/>
-</p>
+![mockup-app-regional](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-regional.png)
 
-
-
-
-### Mobile Web Browser
+#### Mobile Web Browser
 
 Los mock-ups de la aplicación móvil se elaboraron en Figma (página *Mobile*) sobre un frame Android de 360 × 800 px, a partir de los wireframes móviles y aplicando las Mobile Style Guidelines de la sección 4.1.3. A continuación se presentan las pantallas principales del productor.
 
@@ -1141,34 +1007,34 @@ Los mock-ups de la aplicación móvil se elaboraron en Figma (página *Mobile*) 
 
 **Aplicación del Design System, principios de diseño e inclusión:** Se usa la misma paleta teal/verde, las tipografías Poppins e Inter y el espaciado base 8 px de la web. La jerarquía visual destaca la tarjeta de *Salud Foliar* en teal oscuro, seguida de *Gasto Total* y *Precio para no perder*. Las tarjetas agrupan los datos relacionados (proximidad y región común), la navegación inferior de cinco destinos queda en la zona del pulgar y las acciones principales usan botones de ancho completo. Para la inclusión se emplean áreas táctiles de 48 px, contraste AA, estados cualitativos junto a las cifras (por ejemplo "Optimal"), formularios con chips y foto de recibo en lugar de texto largo, y un indicador de conexión visible para el modo sin conexión. Las etiquetas respetan la arquitectura de información de la sección 4.2.
 
-### LOGIN, REGISTER AND HOME
+##### LOGIN, REGISTER AND HOME
 
 ![Mobile mock-up - Login](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-login.png)
 ![Mobile mock-up - Sign up](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-signup.png)
 ![Mobile mock-up - Home - My Plot](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-home.png)
 
-### MY PLOTS, REGISTER A PLOT AND MONITORING
+##### MY PLOTS, REGISTER A PLOT AND MONITORING
 
 ![Mobile mock-up - My Plots](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-my-plots.png)
 ![Mobile mock-up - Register plot - map](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-register-plot-map.png)
 ![Mobile mock-up - Monitoring - NDVI viewer](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-monitoring-ndvi.png)
 
-### FINANCES
+##### FINANCES
 
 ![Mobile mock-up - Campaign Finances](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-finances.png)
 ![Mobile mock-up - Log expense](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-log-expense.png)
 
-### AGRICULTURAL ALERTS
+##### AGRICULTURAL ALERTS
 
 ![Mobile mock-up - Agricultural Alerts](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-alerts.png)
 ![Mobile mock-up - Detailed Measures](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-detailed-measures.png)
 
-### ADVISOR AND HARVEST CERTIFICATES
+##### ADVISOR AND HARVEST CERTIFICATES
 
 ![Mobile mock-up - Advisor Consultation](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-advisor.png)
 ![Mobile mock-up - Harvest Certificates](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-certificates.png)
 
-### SETTINGS AND OFFLINE MODE
+##### SETTINGS AND OFFLINE MODE
 
 ![Mobile mock-up - Profile - Settings & Help](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-settings.png)
 ![Mobile mock-up - Offline mode](assets/img/chapter-4/applications-design/mockups/mobile/mockup-mobile-offline.png)
@@ -1178,8 +1044,6 @@ Los mock-ups de la aplicación móvil se elaboraron en Figma (página *Mobile*) 
 En esta sección se presentan los diagramas de flujo de usuario (*User Flows*) de la aplicación web de la plataforma **SumaqAgro**. De acuerdo con las directrices metodológicas del proyecto, los User Flows derivan de los Wireflows preliminares y formalizan la experiencia de interacción integrando tanto los Mock-ups de alta fidelidad con sus elementos interactivos como los diagramas lógicos resumidos de navegación.
 
 Para cada User Goal se modela la ruta de éxito principal (*happy path*) junto con las rutas alternas o de contingencia (*unhappy paths*), vinculándolas a los User Persona oficiales del sistema (Guillermo Cortés como productor independiente y Cristian Santana como gestor cooperativo).
-
----
 
 #### User Flow 01 (UG-01): Registro y Creación de Nueva Cuenta de Usuario
 
@@ -1204,8 +1068,6 @@ Para cada User Goal se modela la ruta de éxito principal (*happy path*) junto c
   * *Correo electrónico preexistente:* Si la dirección ingresada ya figura en el sistema, la interfaz muestra una alerta informando que el correo ya está en uso y sugiere iniciar sesión o restablecer la contraseña.
   * *Términos legales sin aceptar:* Si la casilla de términos y privacidad no es marcada, el botón de envío permanece inactivo o emite un aviso de obligatoriedad legal.
 
----
-
 #### User Flow 02 (UG-02): Inicio de Sesión y Autenticación de Usuario
 
 * **User Goal:** Iniciar sesión en la plataforma web mediante credenciales de acceso registradas para ingresar al panel de control agronómico y financiero.
@@ -1227,8 +1089,6 @@ Para cada User Goal se modela la ruta de éxito principal (*happy path*) junto c
 * **Unhappy Paths (Rutas alternativas y de excepción):**
   * *Credenciales no válidas:* Si el correo o la contraseña no coinciden con los registros del sistema, se despliega una notificación de error en color rojo (*"Usuario o contraseña incorrectos"*), manteniendo el correo ingresado pero vaciando el campo de clave para reintentar.
   * *Exceso de reintentos fallidos:* Si se ingresan contraseñas incorrectas de manera reiterada, la plataforma bloquea temporalmente el formulario por seguridad y recomienda utilizar el flujo de recuperación de clave.
-
----
 
 #### User Flow 03 (UG-03): Recuperación y Restablecimiento de Contraseña
 
@@ -1252,8 +1112,6 @@ Para cada User Goal se modela la ruta de éxito principal (*happy path*) junto c
   * *Correo electrónico no registrado:* Si el usuario introduce una dirección que no figura en la base de datos, el formulario permanece en la pantalla actual y despliega un mensaje de error indicando que no se encontró ninguna cuenta asociada.
   * *Código de verificación incorrecto o expirado:* Si el código ingresado no coincide con el token despachado o si supera el tiempo límite de vigencia (10 minutos), las casillas se resaltan con borde rojo y se habilita un enlace para solicitar un reenvío del código OTP.
 
----
-
 #### User Flow 04 (UG-04): Consulta y Administración del Inventario de Parcelas Registradas
 
 * **User Goal:** Consultar desde el Dashboard operativo la totalidad de parcelas agrícolas dadas de alta en el sistema para monitorear su estado y verificar los cupos disponibles de nuevos lotes.
@@ -1275,8 +1133,6 @@ Para cada User Goal se modela la ruta de éxito principal (*happy path*) junto c
 * **Unhappy Paths (Rutas alternativas y de excepción):**
   * *Límite de cupos de parcelas alcanzado:* Si el usuario cuenta con los 3 lotes registrados y pulsa sobre agregar uno nuevo, el sistema no abre el catastro GPS; en su lugar, despliega un cuadro modal informando que ha copado el límite de su plan gratuito y ofrece un botón de actualización hacia el plan comercial.
   * *Ausencia total de registros (Empty State):* Si el agricultor aún no hubiera configurado su primer lote o hubiera borrado sus datos, la pantalla reemplaza las tarjetas activas por una guía informativa orientada al trazado inicial del polígono georreferenciado.
-
----
 
 #### User Flow 05 (UG-05): Gestión y Ejecución de Medidas por Alerta Climática Crítica
 
@@ -1301,8 +1157,6 @@ Para cada User Goal se modela la ruta de éxito principal (*happy path*) junto c
 * **Unhappy Paths (Rutas alternativas y de excepción):**
   * *Intento de finalización prematura:* Si el agricultor pulsa "Finalizar Plan de Acción" sin haber marcado o registrado el cumplimiento de las labores de campo (como el riego de emergencia o la colocación de coberturas), el sistema despliega un mensaje modal de confirmación advirtiendo que aún existen labores críticas sin verificar antes de archivar la alerta.
   * *Pérdida de enlace al sincronizar:* Si el cierre de la alerta se efectúa en condiciones de baja señal móvil, la acción se registra en la memoria local (*IndexedDB*) y se programa para su envío diferido cuando el dispositivo restablezca la conectividad.
-
----
 
 #### User Flow 06 (UG-06): Registro Contable de Costos Operativos de Campo
 
@@ -1329,9 +1183,6 @@ Para cada User Goal se modela la ruta de éxito principal (*happy path*) junto c
   * *Datos contables incompletos o no válidos:* Si el usuario omite seleccionar el tipo de costo, deja el monto vacío o ingresa una cifra numérica menor o igual a cero (`S/ 0.00`), la interfaz muestra alertas visuales de validación en rojo debajo de los campos afectados y deshabilita el envío hasta subsanar la entrada.
   * *Pérdida de conectividad en parcela (Offline-First):* Si el desembolso se anota directamente en campo sin cobertura 4G/WiFi, el *Service Worker* captura la transacción y persiste el registro en *IndexedDB*. La aplicación muestra un banner informativo indicando que el gasto se guardó en el dispositivo y se sincronizará con la base de datos central al detectar conexión, visualizándose temporalmente en el historial con un icono ámbar de sincronización pendiente.
 
-
----
-
 #### User Flow 07 (UG-07): Envío de Reporte de Plaga al Asesor
 
 * **User Goal:** Reportar una incidencia fitosanitaria con evidencia fotográfica para que el asesor técnico asignado emita un diagnóstico.
@@ -1353,8 +1204,6 @@ Para cada User Goal se modela la ruta de éxito principal (*happy path*) junto c
   * *Sin foto adjunta:* el formulario resalta el campo de evidencia y no permite el envío hasta adjuntar una imagen.
   * *Sin señal:* el reporte se guarda en el dispositivo, se muestra el estado "Reporte en cola" y se envía automáticamente al recuperar la conexión.
 
----
-
 #### User Flow 08 (UG-08): Cambio de Parcela en el Visor Satelital Multiespectral
 
 * **User Goal:** Alternar entre las parcelas registradas dentro del visor satelital para revisar los índices NDVI y NDWI de cada una.
@@ -1375,12 +1224,9 @@ Para cada User Goal se modela la ruta de éxito principal (*happy path*) junto c
 * **Unhappy Paths (Rutas alternativas y de excepción):**
   * *Parcela sin imagen reciente (nubosidad):* el visor muestra un aviso indicando que no hay una imagen satelital utilizable para esa parcela.
 
-
 ## 4.5. Web Applications Prototyping
 
 En esta sección se presentan y sustentan los prototipos interactivos de alta fidelidad (*high-fidelity*) desarrollados para la plataforma **SumaqAgro**, abarcando las experiencias de usuario para **Desktop Web Browser** y **Mobile Web Browser**. La interactividad simula las rutas principales (*happy paths*) y rutas alternativas formalizadas en los diagramas de flujos de usuario (*User Flow Diagrams*).
-
----
 
 #### 1. Criterios para las Decisiones de Interacción
 
@@ -1392,8 +1238,6 @@ Las decisiones de interacción se fundamentan en los diferentes entornos de uso 
   * *En Mobile:* Se restringieron los eventos a pulsaciones simples (*on tap*), evitando gestos complejos propensos a error en campo. Se incorporaron microinteracciones con retroalimentación visual inmediata (transiciones *Instant* y *Dissolve* de 200 ms) en selectores de lote, botones de acción flotante (FAB) y filtros rápidos (*chips*).
 * **Simulación de Comportamiento Desconectado (*Offline-First*):** En la experiencia móvil, las interacciones en formularios de bitácora y egresos simulan la persistencia local inmediata mediante avisos de confirmación en pantalla, actualizando la cabecera con el estado de cola de sincronización diferida hasta simular la reconexión a la red.
 
----
-
 #### 2. Relación con la Arquitectura de Información
 
 La navegación interactiva traduce de manera directa las decisiones de Arquitectura de Información establecidas en el proyecto:
@@ -1404,8 +1248,6 @@ La navegación interactiva traduce de manera directa las decisiones de Arquitect
 * **Sistema de Organización (*Organization System*):** Ambas interfaces aplican una organización jerárquica orientada a tareas. El punto de entrada es un panel de control consolidado (*Dashboard* con indicadores de salud vegetal NDVI y costos), desde el cual las tarjetas (*cards*) funcionan como disparadores interactivos para profundizar en vistas de detalle analítico o formularios transaccionales.
 * **Sistema de Rotulado (*Labeling System*):** La rotulación interactiva mantiene una correspondencia biunívoca con el Lenguaje Ubicuo del dominio ("Mi Parcela", "Salud Foliar", "Insumos", "Jornales", "Punto de Equilibrio", "Certificado QR"), garantizando que cada botón o enlace anticipe con exactitud el resultado de la acción.
 * **Sistema de Búsqueda y Filtrado (*Searching System*):** Las vistas de alertas y bitácoras contables integran selectores horizontales (*chips*) e interacciones de filtrado instantáneo por severidad, fecha o campaña fenológica, reduciendo la fricción en la localización de anomalías agronómicas.
-
----
 
 #### 3. Prototipo y Demostración en Video: Desktop Web Browser
 
@@ -1422,8 +1264,6 @@ La navegación interactiva traduce de manera directa las decisiones de Arquitect
 ![Captura de Reproducción del Video Desktop en Microsoft Stream](assets/img/chapter-4/applications-design/prototypes/video-prototype-desktop.png)
 
 *Figura 4.5.1: Cuadro representativo de la sesión en video demostrando la navegación del prototipo Desktop en Microsoft Stream.*
-
----
 
 #### 4. Prototipo y Demostración en Video: Mobile Web Browser
 
@@ -1442,8 +1282,6 @@ La navegación interactiva traduce de manera directa las decisiones de Arquitect
 
 ![Captura de Reproducción del Video Mobile en Microsoft Stream](assets/img/chapter-4/applications-design/prototypes/video-prototype-mobile.png)
 
----
-
 ## 4.6. Domain-Driven Software Architecture
 
 En esta sección se traslada la comprensión del negocio obtenida en el Big Picture Event Storming hacia el diseño de arquitectura de software guiado por el dominio (Domain-Driven Design - DDD) y el modelo de abstracción y comunicación visual C4 Model en sus niveles de Contexto, Contenedores y Componentes. A través de esta aproximación arquitectónica, se divide el espacio del problema en Bounded Contexts independientes y de bajo acoplamiento, estableciendo sus agregados transaccionales (Aggregates), comandos, eventos de dominio, modelos de consulta (Read Models) y políticas de automatización reactivas. Asimismo, se formaliza la topología técnica y modular de la solución distribuida, articulando la aplicación web de cara al usuario, el servicio de backend RESTful en Spring Boot, la base de datos relacional y las interfaces de integración con servicios externos.
@@ -1461,8 +1299,6 @@ Durante la dinámica colaborativa, el equipo ejecutó las siguientes actividades
 * **Integración de proyecciones y actores (Read Models - Verde):** Identificación de las vistas de datos, reportes y tableros que los usuarios requieren para tomar decisiones antes de ejecutar un comando.
 * **Mapeo de sistemas externos (External Systems - Rosa):** Identificación de pasarelas y servicios satelitales o gubernamentales ajenos a la solución que interactúan como emisores o receptores de datos.
 * **Definición de reglas de negocio e invariantes (Aggregates - Amarillo):** Agrupación de datos y comportamientos transaccionales atómicos bajo raíces de agregación (Aggregate Roots) para garantizar la consistencia del estado del sistema en todo momento.
-
----
 
 #### Evidencia del Modelado en Miro
 A continuación se presenta la vista general del tablero desarrollado en Miro, evidenciando los 10 pasos de la técnica Design-Level Event Storming y la organización de los elementos de modelado por colores y categorías.
@@ -1528,8 +1364,6 @@ A continuación se presenta la vista general del tablero desarrollado en Miro, e
 * Los agregados que trabajan con la misma información y el mismo lenguaje se agrupan en seis bounded contexts: *Identity and Access Management*, *Profiles*, *Subscriptions and Payments*, *Field Management*, *Crop Health* y *Harvest Certification*. A estos se suma el contexto *Shared*, que no tiene eventos propios y reúne las clases base que usan todos los demás. Las flechas que cruzan de un contexto a otro son las políticas que los conectan; por ejemplo, cuando se registra la fecha de siembra en *Field Management*, *Crop Health* programa el monitoreo satelital de esa parcela.
 
 * **Enlace interactivo al espacio de trabajo:** [Tablero de Event Storming en Miro](https://miro.com/welcomeonboard/WG5aQ1R0dmR5b0xQWTI5TEZvaXplRmpPTUxmT2pmR1NNVXBVakcxRFI5Yk16dVY3TXpRc0RwbHVKNWFndGJvZDZkZXJrbkN4VFZQdzhHTjV6MWdBNUJtQnhYMVFmcjNLbkxyOWQwZlVuWHVPRUdrWUJzeGVtb1g5cE9UeGFKdjJBd044SHFHaVlWYWk0d3NxeHNmeG9BPT0hdjE=?share_link_id=126689221129)
-
----
 
 #### Alineación con Subdominios SaaS y Bounded Contexts
 
@@ -1676,8 +1510,6 @@ El diagrama sitúa en el centro a **SumaqAgro Platform**, plataforma web distrib
 * **Niubiz Payment Gateway:** Pasarela de procesamiento de pagos electrónicos integrada mediante API REST (HTTPS/JSON) para la gestión y cobro transaccional de los planes de suscripción de cooperativas agrarias y asesores técnicos.
 * **Brevo Email Service:** Servicio de correo transaccional que SumaqAgro usa, mediante SMTP o HTTPS, para enviar el enlace de recuperación de contraseña y la invitación que recibe un agrónomo cuando una cooperativa lo agrega a su equipo.
 
----
-
 ### 4.6.3. Software Architecture Container Diagrams
 
 En esta sección se presenta y describe el Diagrama de Contenedores (Nivel 2 del modelo C4) de la plataforma **SumaqAgro**, el cual profundiza en la frontera del sistema para exponer su arquitectura técnica distribuida. Este diagrama muestra las unidades de despliegue y ejecución independientes que componen la solución, la distribución de responsabilidades entre ellas, las principales decisiones de tecnología adoptadas y los protocolos de red empleados para la comunicación interna y con sistemas externos. El modelado fue estructurado y generado formalmente mediante la especificación DSL de la herramienta **Structurizr**.
@@ -1712,15 +1544,11 @@ La topología de ejecución del sistema está conformada por cinco contenedores:
 * **Backend a Base de Datos:** El backend lee y escribe los agregados mediante el controlador JDBC de MySQL, sobre el puerto 3306.
 * **Backend a Servicios Externos:** El backend se comunica con AgroMonitoring API, Twilio y Niubiz con JSON sobre HTTPS. Niubiz, además, confirma cada pago llamando a un webhook del backend. Los correos de recuperación de contraseña e invitación de agrónomos se envían a Brevo mediante SMTP.
 
----
-
 ### 4.6.4. Software Architecture Components Diagrams
 
 En esta sección se presentan y explican los Diagramas de Componentes (Nivel 3 del modelo C4) correspondientes a cada uno de los contenedores de software ejecutables que integran la plataforma **SumaqAgro**: la **Landing Page**, la **Web Application (Single Page Application en Angular 18)** y el **RESTful API Backend (Spring Boot 3.x)**. A través de estos diagramas se detalla la descomposición estructural interna de cada unidad de despliegue, identificando la naturaleza de sus componentes, sus responsabilidades de negocio asignadas, los detalles de implementación tecnológica y sus flujos de interacción internos y externos. El modelado fue desarrollado en **Structurizr** siguiendo la especificación formal de Structurizr DSL.
 
 **Herramienta utilizada:** Structurizr (*Diagrams as Code*, mediante Structurizr DSL).
-
----
 
 #### 4.6.4.1. Landing Page Container Components Diagram
 
@@ -1731,8 +1559,6 @@ El contenedor de la Landing Page descompone la estructura del sitio web estátic
 ##### Desglose de Componentes de la Landing Page:
 * **`Navigation & Hero Component`:** Bloque estructural desarrollado con HTML5 semántico y maquetado responsivo mediante CSS3 Flexbox. Administra la barra de navegación superior, la identidad visual corporativa de SumaqAgro, la propuesta de valor agroclimática orientada a café de especialidad y papa andina, y el llamado a la acción (CTA) que lleva al visitante al registro de la Web Application.
 * **`Pricing & Plans Catalog Component`:** Componente visual maquetado mediante CSS3 Grid. Presenta la matriz comparativa de los planes de suscripción comercial SaaS: el plan *Semilla* (gratuito para pequeños productores familiares), el plan *Cooperativa Pro* (para gremios con monitoreo consolidado de socios) y el plan *Asesor Técnico* (para agrónomos independientes con carteras de clientes).
-
----
 
 #### 4.6.4.2. Web Application Container Components Diagram (Angular SPA)
 
@@ -1754,8 +1580,6 @@ La Web Application, construida con **Angular 18**, se organiza por bounded conte
 * **IAM:** los otros cinco componentes revisan la sesión y el rol del usuario con el *guard* de IAM antes de abrir sus rutas. Shared también lee el rol desde IAM para mostrar el menú que le corresponde a cada usuario.
 * **Shared:** todos los componentes usan su *layout* y sus clases base de API. Field Management y Crop Health, además, usan su sincronización sin conexión.
 * **RESTful API:** cada componente llama solo al componente de su mismo bounded context en el backend, con JSON sobre HTTPS.
-
----
 
 #### 4.6.4.3. RESTful API Backend Container Components Diagram (Spring Boot)
 
@@ -1789,8 +1613,6 @@ El backend, desarrollado en **Java 21 con Spring Boot 3.x**, también se organiz
   * IAM envía el correo de recuperación de contraseña y Profiles el de invitación al agrónomo, ambos con Brevo mediante SMTP.
 * **Shared Kernel y base de datos:** todos los componentes usan las clases base y los value objects del Shared Kernel, y leen y escriben en la base de datos MySQL mediante JDBC.
 
----
-
 ## 4.7. Software Object-Oriented Design
 
 En esta sección se presenta el diseño orientado a objetos de SumaqAgro a nivel de clases. Los diagramas toman como base los 6 bounded contexts y el Shared Kernel definidos en el Design-Level EventStorming, y los llevan al código de los dos productos de software que los implementan: la **Web Application** en Angular y la **RESTful API** en Spring Boot.
@@ -1807,13 +1629,9 @@ Las principales características que se consideran en los diagramas son:
 
 **Herramienta utilizada:** PlantUML (*Diagrams as Code*).
 
----
-
 ### 4.7.1. Class Diagrams
 
 A continuación se presentan los diagramas de clases de cada bounded context, primero para la Web Application y luego para la RESTful API. En la Web Application los nombres de archivo siguen la convención *kebab-case* de Angular (por ejemplo, `field-plot.entity.ts` o `field-management.store.ts`), y se muestran junto a cada clase. Cada contexto de la Web Application, salvo IAM, tiene su archivo de rutas (`*.routes.ts`), que usa `IamGuard` para revisar la sesión y el rol antes de abrir sus vistas.
-
----
 
 #### 4.7.1.1. Shared Kernel
 
@@ -1853,8 +1671,6 @@ El Shared Kernel reúne las clases comunes que reutilizan todos los bounded cont
 * `TwilioNotificationAssembler` y `BrevoEmailNotificationAssembler` ..|> `NotificationSender`: los demás contextos dependen solo de la interfaz, así se puede cambiar de proveedor sin tocar su código.
 * `NotificationRequest` --> "1" `NotificationChannel`: cada notificación sale por un canal (SMS, WhatsApp o correo).
 
----
-
 #### 4.7.1.2. Identity and Access Management (IAM) Context
 
 Este contexto registra a los usuarios, los autentica con JWT, maneja sus roles y la recuperación de contraseña.
@@ -1887,9 +1703,6 @@ Este contexto registra a los usuarios, los autentica con JWT, maneja sus roles y
 * `User` "1" --> "0..*" `PasswordResetToken`: un usuario puede pedir varios códigos de recuperación.
 * `UserCommandServiceImpl` "1" --> "1" `NotificationSender`: IAM depende solo de la interfaz para enviar el correo, sin conocer a Brevo.
 * `UserCommandServiceImpl` ..> `UserSignedUpEvent`: al registrarse un usuario se publica el evento que Subscriptions and Payments escucha para asignarle el plan Semilla (política P1).
-
----
-
 
 #### 4.7.1.3. Profiles Context
 
@@ -1925,8 +1738,6 @@ Este contexto guarda los datos de contacto de cada usuario, registra las coopera
 * `Cooperative` "1" --> "0..*" `AgronomistAssignment`: una cooperativa puede tener varias asignaciones activas.
 * `CooperativeCommandServiceImpl` "1" --> "1" `NotificationSender`: la invitación al agrónomo sale por correo mediante la interfaz del Shared Kernel (Brevo).
 
----
-
 #### 4.7.1.4. Subscriptions and Payments Context
 
 Este contexto maneja los planes (Semilla, Cooperativa Pro y Asesor Técnico), los pagos con Niubiz y la cuota de parcelas que permite cada plan.
@@ -1956,8 +1767,6 @@ Este contexto maneja los planes (Semilla, Cooperativa Pro y Asesor Técnico), lo
 **Relaciones principales:**
 * `Subscription` "1" *-- "0..*" `Payment` y *-- "1" `SubscriptionPeriod`: los pagos y el periodo forman parte del agregado.
 * `Plan` *-- "2" `Money`: cada plan tiene un precio mensual y uno anual.
-
----
 
 #### 4.7.1.5. Field Management Context
 
@@ -1991,8 +1800,6 @@ Este contexto registra las parcelas con su polígono GPS, gestiona las campañas
 * `CampaignLedger` "1" *-- "0..*" `ExpenseEntry`: los gastos solo existen dentro del libro de costos.
 * `CropCampaignCommandServiceImpl` ..> `SowingDateRecordedEvent`: al registrar la siembra se publica el evento que Crop Health usa para programar el monitoreo satelital (P4).
 
----
-
 #### 4.7.1.6. Crop Health Context
 
 Este contexto monitorea la salud del cultivo con imágenes satelitales y el clima, emite alertas y gestiona la asesoría del agrónomo: reportes de plagas, inspecciones y recetas técnicas.
@@ -2024,8 +1831,6 @@ Este contexto monitorea la salud del cultivo con imágenes satelitales y el clim
 * `AgroclimaticAlert` "1" *-- "1..*" `ActionStep`: los pasos solo existen dentro de la alerta.
 * `FieldInspection` "0..*" --> "1" `PestReport` y `TechnicalPrescription` "0..1" --> "1" `PestReport`: las inspecciones y la receta se refieren a un reporte de plaga.
 * `SatelliteObservation` *-- "1" `VegetationIndexes`: cada observación guarda sus índices.
-
----
 
 #### 4.7.1.7. Harvest Certification Context
 
@@ -2059,9 +1864,6 @@ Este contexto registra los lotes que llegan al acopio, califica su calidad (cali
 * `QualityCertificate` *-- "1" `CertificateHash`: el hash sella el contenido del certificado.
 * `HarvestBatchCommandServiceImpl` ..> `DeliveredBatchWeighedEvent`: al pesar el lote se publica el evento que Field Management usa para registrar el rendimiento real (P10).
 
----
-
-
 ## 4.8. Database Design
 
 En esta sección se presenta el diseño de la base de datos relacional de SumaqAgro. Los diagramas toman como base los agregados, entidades y value objects de los diagramas de clases de la RESTful API (sección 4.7) y los llevan a tablas de MySQL.
@@ -2078,8 +1880,6 @@ Las principales características que se consideran en los diagramas son:
 * **Auditoría:** las tablas principales tienen `created_at` y `updated_at`, que MySQL llena de forma automática.
 * **Tablas por contexto:** para cada tabla se indica qué guarda cada columna y su tipo de dato. Las claves se marcan al inicio de la descripción: **PK** (primary key), **FK** (foreign key, con la tabla a la que apunta) y **UNIQUE** (valor que no se repite).
 
----
-
 ### 4.8.1. Database Diagrams
 
 El modelo se elaboró en **Hackolade Studio** a partir del script `SumaqAgro_db.sql`, y las pruebas de creación de tablas se hicieron en **DataGrip** conectado a MySQL 8.0. Primero se muestra el diagrama completo de la base de datos y luego el detalle de cada bounded context.
@@ -2087,8 +1887,6 @@ El modelo se elaboró en **Hackolade Studio** a partir del script `SumaqAgro_db.
 **Herramientas utilizadas:** Hackolade Studio y DataGrip.
 
 ![Database Diagram - SumaqAgro](assets/img/chapter-4/database/sumaqagro-db-diagram.png) 
-
----
 
 #### 4.8.1.1. Identity and Access Management (IAM) Context
 
@@ -2145,8 +1943,6 @@ Códigos temporales que se envían por correo (Brevo) para cambiar la contraseñ
 **Relaciones principales:**
 * `users` 1 — N `user_roles` N — 1 `roles`: un usuario tiene uno o varios roles.
 * `users` 1 — N `password_reset_tokens`: un usuario puede pedir varios códigos de recuperación.
-
----
 
 #### 4.8.1.2. Profiles Context
 
@@ -2237,8 +2033,6 @@ Indica qué agrónomo atiende cada parcela de la cooperativa.
 * `profiles.user_id`, `cooperatives.manager_user_id` y `agronomist_assignments.agronomist_user_id` → `users` (IAM).
 * `agronomist_assignments.plot_id` → `field_plots` (Field Management).
 
----
-
 #### 4.8.1.3. Subscriptions and Payments Context
 
 Este contexto guarda los planes, la suscripción de cada usuario y los pagos hechos con Niubiz.
@@ -2298,8 +2092,6 @@ Pagos de cada suscripción con el token de transacción que devuelve Niubiz.
 * `plans` 1 — N `subscriptions`: varios usuarios pueden tener el mismo plan.
 * `subscriptions` 1 — N `payments`: una suscripción acumula sus pagos.
 * `subscriptions.user_id` → `users` (IAM).
-
----
 
 #### 4.8.1.4. Field Management Context
 
@@ -2397,8 +2189,6 @@ Gastos del libro de costos: insumos, jornales y flete. `client_sync_id` evita du
 * `field_plots` 1 — N `plot_coordinates` y `crop_campaigns`.
 * `crop_campaigns` 1 — 1 `campaign_ledgers` 1 — N `expense_entries`.
 * `field_plots.owner_user_id` → `users` (IAM).
-
----
 
 #### 4.8.1.5. Crop Health Context
 
@@ -2544,8 +2334,6 @@ Receta técnica emitida para un reporte de plaga. Hay como máximo una por repor
 * `pest_reports` 1 — N `field_inspections` y 1 — 0..1 `technical_prescriptions`.
 * `plot_id` → `field_plots` (Field Management) y las columnas `*_user_id` → `users` (IAM).
 
----
-
 #### 4.8.1.6. Harvest Certification Context
 
 Este contexto guarda los lotes que llegan al acopio, su calificación de calidad y los certificados con código QR.
@@ -2617,4 +2405,3 @@ Certificados de calidad. `sha256_hash` sella el contenido y permite verificarlo 
 * `cooperative_id` → `cooperatives`, `member_id` → `cooperative_members` (Profiles), `plot_id` → `field_plots` y `campaign_id` → `crop_campaigns` (Field Management).
 * `quality_certificates.issued_by_user_id` → `users` (IAM).
 
----
