@@ -873,102 +873,32 @@ Un **wireflow** o flujo de pantallas es una representación visual que conecta d
 
 Para construir un wireflow, primero se identifica el objetivo que el usuario desea lograr. Después, se establece la secuencia de tareas necesarias para completar dicho objetivo dentro de la aplicación. Finalmente, estas tareas se representan mediante las pantallas correspondientes y se conectan a través de las acciones disponibles en botones, enlaces u otros elementos interactivos del wireframe.
 
-**User Goal 1:** Usuario desea registrarse en la aplicación
+**Wireflow 1: Georreferenciación y delimitación cartográfica de parcela**
+* User Persona: Guillermo Cortés (Segmento 1: Pequeño agricultor independiente)
+* User Goal 1: Registrar y delimitar los vértices geográficos de un nuevo predio agrícola mediante coordenadas GPS/mapa interactivo para habilitar el cálculo de superficie y la sincronización de analítica satelital.
 
-Flujo normal:
-<p align="center">
-  <img src="assets/img/chapter-4/wireflows/ug-1-resumido.png"  width="600px" height="auto"/>
-</p>
+![Wireflow User Goal 1](assets/img/chapter-4/wireflows/wireflow-ug1.png)
 
-El flujo de interacción inicia en la pantalla principal de la aplicación cuando el usuario selecciona la opción de registrarse, lo que lo dirige a la vista del formulario donde debe elegir su rol correspondiente (Agricultor, Cooperativa o Asesor) y completar los campos obligatorios de datos personales, correo electrónico y contraseña; una vez validados los campos y enviado el registro, el sistema genera las credenciales de acceso y redirige automáticamente al usuario hacia el panel de bienvenida de su módulo
-<p align="center">
-  <img src="assets/img/chapter-4/wireflows/ug-1.png"  width="600px" height="auto"/>
-</p>
-
-**User Goal 2:** Usuario desea ingresar con su cuenta en la aplicación
-
-Flujo normal:
-<p align="center">
-  <img src="assets/img/chapter-4/wireflows/ug-2-resumido.png"  width="600px" height="auto"/>
-</p>
-
-El flujo de interacción inicia cuando el usuario registrado accede a la pantalla de autenticación (/login) e ingresa sus credenciales de acceso (correo electrónico y contraseña); tras enviar el formulario, el sistema valida la información mediante el servicio de autenticación (TS-02), genera el token de sesión JWT y redirige automáticamente al usuario hacia el panel principal (dashboard) correspondiente a su rol dentro de la plataforma.
-<p align="center">
-  <img src="assets/img/chapter-4/wireflows/ug-2.png"  width="600px" height="auto"/>
-</p>
+El flujo comienza en el módulo Registro de Parcelas, donde el agricultor presiona el botón «Registrar Parcela» para acceder al formulario de datos agronómicos e ingresar el nombre, cultivo y fecha de siembra. A continuación, el usuario pasa a la etapa de delimitación y traza los vértices del predio sobre un mapa cartográfico interactivo, permitiendo validar la geometría y calcular la superficie del terreno. Finalmente, tras confirmar la operación, el sistema guarda la información, despliega una notificación de éxito y redirige al listado general de parcelas actualizado.
 
 
-**User Goal 3:** Usuario desea cambiar su contraseña
+**Wireflow 2: Registro de egresos operacionales y cálculo de punto de equilibrio**
+* User Persona: Guillermo Cortés (Segmento 1: Pequeño agricultor independiente)
+* User Goal 2: Anotar los desembolsos de la campaña (compra de fertilizantes/insumos, pago de peones/jornales o flete) para actualizar automáticamente el costo total acumulado y consultar el precio de venta mínimo sugerido por saco/kilo para negociar en el mercado.
 
-Flujo normal:
-<p align="center">
-  <img src="assets/img/chapter-4/wireflows/ug-3-resumido.png"  width="600px" height="auto"/>
-</p>
+![Wireflow User Goal 2](assets/img/chapter-4/wireflows/wireflow-ug2.png)
 
-El flujo de interacción comienza en la pantalla de inicio de sesión cuando el usuario hace clic en el enlace «¿Olvidaste tu contraseña?» (/forgot-password), desplegando el formulario de recuperación donde ingresa su correo electrónico registrado y presiona el botón de envío; tras validar la existencia de la cuenta, el sistema transiciona la pantalla a un estado de confirmación visual mediante un mensaje informativo en pantalla y despacha un correo con el enlace y token temporal para el restablecimiento seguro de sus credenciales.
-<p align="center">
-  <img src="assets/img/chapter-4/wireflows/ug-3.png"  width="600px" height="auto"/>
-</p>
+El flujo inicia en el panel financiero, donde el agricultor revisa su resumen de gastos y presiona la opción para registrar un nuevo egreso. A continuación, completa un formulario con la categoría, parcela, concepto y monto correspondiente; en caso de no contar con internet en el campo, la información se guarda localmente para sincronizarse después, y si olvida ingresar datos obligatorios, el sistema le solicitará corregirlos. Finalmente, al guardar la información, el gasto se añade al historial y los indicadores clave del panel principal se actualizan de forma automática, permitiendo al usuario visualizar el impacto inmediato en sus finanzas.
 
-**User Goal 4:** Usuario desea revisar sus parcelas
+**Wireflow 3: Recepción e inspección de alertas agrícolas (Clima y Riesgo Sanitario)**
+* User Persona: Guillermo Cortés (Segmento 1: Pequeño agricultor independiente)
+* User Goal 3: Consultar la seccion avisos climáticos (heladas/sequías) para tomar medidas preventivas antes de sufrir pérdidas en la cosecha.
 
-Flujo normal:
-<p align="center">
-  <img src="assets/img/chapter-4/wireflows/ug-4-resumido.png"  width="600px" height="auto"/>
-</p>
+![Wireflow User Goal 3](assets/img/chapter-4/wireflows/wireflow-ug3.png)
 
-El flujo de interacción se inicia en el panel principal (dashboard) del agricultor, donde visualiza las tarjetas de métricas generales y pulsa el botón de acción rápida «Ver Todos Mis Lotes»; en respuesta a este evento, el sistema efectúa la transición hacia la vista de catálogo general «Mis Parcelas Registradas» (/parcels), renderizando el listado completo de predios georreferenciados mediante tarjetas informativas que exponen el nombre del fundo, el cultivo monitoreado, el área calculada y los accesos para inspeccionar la salud satelital.
-<p align="center">
-  <img src="assets/img/chapter-4/wireflows/ug-4.png"  width="600px" height="auto"/>
-</p>
+El flujo inicia en el módulo Alertas Agrícolas, donde el usuario revisa los avisos emitidos y accede a la sección de Medidas Detalladas. En este apartado, encuentra toda la información técnica necesaria para tomar acciones inmediatas ante la problemática detectada. Una vez completadas las recomendaciones, el usuario presiona el botón «Finalizar Plan de Acción», lo que despliega una ventana modal con el resumen general de las actividades realizadas y la opción para retornar a la bandeja principal de alertas.
 
-**User Goal 5:** Usuario desea revisar alertas agrícolas y finalizar su plan de acción
 
-Flujo normal:
-<p align="center">
-  <img src="assets/img/chapter-4/wireflows/ug-5-resumido.png" width="600px" height="auto"/>
-</p>
-
-El flujo de interacción comienza en el módulo «Alertas Agrícolas» (Avisos y Riesgos Notificados), donde el usuario identifica un riesgo o aviso y hace clic en el botón «Medidas Detalladas»; esto lo redirige a la vista detallada del plan de acción donde revisa los indicadores y las recomendaciones sugeridas; tras ejecutar las tareas preventivas, presiona el botón «Finalizar Plan de Acción», lo que despliega una ventana modal con el informe de ejecución confirmado y un resumen visual del estado final de las medidas aplicadas.
-<p align="center">
-  <img src="assets/img/chapter-4/wireflows/ug-5.png" width="600px" height="auto"/>
-</p>
-
-**User Goal 6:** Usuario desea registrar un gasto de campo en finanzas de la campaña
-
-Flujo normal:
-<p align="center">
-  <img src="assets/img/chapter-4/wireflows/ug-6-resumido.png" width="600px" height="auto"/>
-</p>
-
-El flujo de interacción se inicia en el módulo «Finanzas de la Campaña» (Mis Gastos y Ganancias), donde el usuario hace clic en el botón de acción rápida «Añadir Nuevo Gasto»; tras este evento, el sistema lo redirige a la vista del formulario «Registrar Gasto de Campo» para seleccionar el tipo de costo operativo (Insumos y Abono, Mano de Obra o Flete), asignar la parcela correspondiente, ingresar el monto desembolsado y la fecha; finalmente, al pulsar el botón «Guardar Gasto», se procesa la información y se muestra una ventana modal de confirmación con el resumen del registro exitoso.
-<p align="center">
-  <img src="assets/img/chapter-4/wireflows/ug-6.png" width="600px" height="auto"/>
-</p>
-
-**User Goal 7:** Usuario desea enviar un reporte de plaga a su asesor
-
-Flujo normal:
-<p align="center">
-  <img src="assets/img/chapter-4/wireflows/ug-7-resumido.png" width="600px" height="auto"/>
-</p>
-
-El flujo de interacción se inicia en la sección «Asistencia Fitosanitaria y Recetas» (Consulta al Asesor), donde el usuario presiona el botón de acción rápida «Enviar Foto de Plaga»; tras este evento, se despliega una ventana modal con el formulario «Enviar Reporte de Plaga» donde selecciona su parcela, adjunta la fotografía de la evidencia y añade observaciones opcionales; finalmente, al hacer clic en «Enviar Reporte», el sistema procesa la solicitud y muestra una pantalla modal de confirmación informando que el reporte fue enviado con éxito al ingeniero asignado.
-<p align="center">
-  <img src="assets/img/chapter-4/wireflows/ug-7.png" width="600px" height="auto"/>
-</p>
-
-**User Goal 8:** Usuario desea cambiar de parcela en el visor satelital multispectral
-
-Flujo normal:
-<p align="center">
-  <img src="assets/img/chapter-4/wireflows/ug-8-resumido.png" width="600px" height="auto"/>
-</p>
-
-El flujo de interacción se inicia en el módulo «Visor Satelital Multispectral» (Salud del Cultivo), donde el usuario hace clic en el botón «Cambiar Parcela»; tras este evento, se despliega una ventana modal que muestra el listado de terrenos disponibles para que seleccione la parcela deseada; finalmente, el sistema solicita una confirmación mediante una ventana emergente y, al pulsar «Confirmar», la interfaz actualiza los datos e índices multiespectrales correspondientes al nuevo predio seleccionado.
-<p align="center">
-  <img src="assets/img/chapter-4/wireflows/ug-8.png" width="600px" height="auto"/>
-</p>
 
 ### 4.4.3. Web Applications Mock-ups
 
