@@ -1043,4 +1043,17 @@ La documentación presentada corresponde a la configuración y los contratos imp
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
 
 
+
 #### 5.2.2.8. Team Collaboration Insights during Sprint
+
+En esta sección se describe la colaboración del equipo **Dymbia** durante la implementación de la **Web Application de SumaqAgro** correspondiente al **Sprint 2**. Se presentan las evidencias de participación mediante el historial de commits y los analíticos de contribución disponibles en GitHub.
+
+Las actividades se distribuyeron entre la configuración de Angular, los componentes compartidos, el modelado de entidades, la integración con la Fake REST API y el desarrollo de las interfaces de los Bounded Contexts **Profiles**, **Field Management**, **Crop Health** y **Harvest Certification**.
+
+El trabajo se organizó mediante ramas `feature/*`, cuyas implementaciones se integraron en `develop`. Posteriormente, la versión del producto se consolidó en `main` mediante la integración de la rama `release/v1.0.0`. Este flujo permitió desarrollar funcionalidades en paralelo y mantener la trazabilidad de las entregas.
+
+##### Analíticos de participación del equipo
+
+En la imagen se evidencia las contribuciones registradas por cada integrante. Esta evidencia se utiliza para identificar la participación del equipo en la implementación y complementar la distribución de responsabilidades definida en la matriz Leadership-and-Collaboration Matrix del sprint.
+
+![Insights → Contributors](../report/assets/img/chapter-5/sprint-2/img-collaboration.png)
