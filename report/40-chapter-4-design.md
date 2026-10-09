@@ -929,7 +929,7 @@ El flujo inicia en la sección Costos, donde se muestra una tabla con los datos 
 * User Persona: Cristian Santana (Segmento 2: Gerente de Operaciones de Cooperativa Agraria).
 * User Goal 4: Supervisar la salud vegetativa de los predios afiliados mediante mapas satelitales y despachar avisos preventivos por SMS a los socios para mitigar pérdidas por sequías o plagas.
 
-![Wireflow2 User Goal 4](dassets/img/chapter-4/wireflows/wireflow2-ug4.png)
+![Wireflow2 User Goal 4](assets/img/chapter-4/wireflows/wireflow2-ug4.png)
 
 El flujo inicia en la sección Salud de Parcelas, donde se muestra un mapa con las parcelas y sus respectivos estados. Al seleccionar una parcela marcada en rojo, se despliega su información, incluyendo los datos del socio y el estado actual de su terreno. Posteriormente, al presionar el botón “Despachar Alerta SMS a Socio”, se abre una ventana donde se muestra el mensaje que será enviado al socio. Finalmente, al seleccionar “Enviar Alerta SMS Ahora”, se envía la notificación y se muestra un mensaje de confirmación, indicando que la alerta fue enviada correctamente.
 
