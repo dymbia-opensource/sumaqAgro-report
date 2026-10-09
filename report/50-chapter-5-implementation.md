@@ -711,6 +711,65 @@ En esta sección se detalla la descomposición técnica de las seis historias re
 
 #### 5.2.2.4. Development Evidence for Sprint Review
 
+En esta sección se explican y presentan los avances en la implementación con relación a los productos de la solución según el alcance del **Sprint 2**. Durante esta iteración, el esfuerzo del equipo Dymbia se centró en el desarrollo de la **Web Application** de SumaqAgro en Angular, sus contextos funcionales y la integración con una API de prueba.
+
+Para garantizar la trazabilidad y la calidad del código, el equipo ha seguido un flujo de trabajo colaborativo basado en **GitFlow**, empleando ramas `feature/*` para el desarrollo de cada historia de usuario y consolidando las entregas hacia la rama `develop` y finalmente a `main`. Asimismo, los mensajes de los commits se conservan literalmente como están registrados en Git, incluyendo los commits de integración de ramas.
+
+A continuación, se detalla la evidencia de los commits integrados en el repositorio de la Web Application durante el Sprint 2, seleccionando 50 de los 165 commits ordenándolos desde la fecha más antigua hasta la más reciente:
+
+Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `dymbia-opensource/sumaqAgro-appweb` | `develop` | `2ba53bf` | chore: initial project setup with angular cli | --- | 05/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/add-angular-material` | `3c0ff51` | chore: add angular material dependency and global theme | --- | 05/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/configure-environments` | `99e867e` | chore: add environment files for api configuration | --- | 05/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/configure-i18n-http` | `3db6099` | feat(i18n): configure http client and ngx-translate with en/es resources | --- | 05/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/fake-api` | `335cd2a` | chore: add json-server fake api with field management data | --- | 05/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/shared-base` | `87573c0` | feat(shared): add base resource, response and assembler contracts | --- | 05/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/shared-base` | `7988165` | feat(shared): add generic crud base api endpoint | --- | 05/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/shared-presentation` | `2c246ff` | feat(shared): use layout as app shell and add root routes | --- | 05/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/field-management-domain` | `fbdbfdb` | feat(field-management): add field plot, crop campaign, campaign ledger and expense entry entities | --- | 06/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/field-management-application` | `069824d` | feat(field-management): add field management store with plot, campaign and ledger state | --- | 06/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/field-management-presentation` | `e6e224d` | feat(field-management): add my plot dashboard with spend and breakeven cards and cost chart | --- | 06/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-domain` | `fd8d1df` | feat(entities): add domain entities for agroclimatic alerts, climate forecasts, field inspections, pest reports, and satellite observations | --- | 06/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-domain` | `77522fd` | feat(entities): add TechnicalPrescription entity for agronomist's pest treatment prescriptions | --- | 06/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-domain` | `3bfabee` | feat(commands): add RecordPestReportCommand to handle pest report submissions | --- | 06/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-domain` | `15525d5` | feat(commands): add ScheduleFieldInspectionCommand to schedule agronomist visits for pest issues | --- | 06/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-domain` | `7112c03` | feat(commands): add IssueTechnicalPrescriptionCommand and RecordClimateForecastCommand for pest treatment prescriptions and climate predictions | --- | 06/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-infrastructure` | `4824b8a` | feat(responses): add response interfaces for agroclimatic alerts, climate forecasts, field inspections, pest reports, satellite observations, and technical prescriptions | --- | 07/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-infrastructure` | `67fe690` | feat(assemblers): add assemblers for agroclimatic alerts, climate forecasts, field inspections, pest reports, satellite observations, and technical prescriptions | --- | 07/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-infrastructure` | `d4b8f8e` | feat(endpoints): add HTTP endpoints for agroclimatic alerts, climate forecasts, field inspections, pest reports, satellite observations, and technical prescriptions | --- | 07/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-application` | `90a387a` | feat(application): implement CropHealthStore and CropHealthApi for managing crop health data | --- | 07/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-presentation` | `fe4ef72` | feat(view): add Crop Health monitoring view with satellite observations and diagnostics | --- | 07/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-presentation` | `329a634` | feat(view): add Agroclimatic Alerts view for displaying active weather and environmental alerts | --- | 07/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-presentation` | `d272ef4` | feat(view): add Pest Report Form for submitting pest and disease observations | --- | 07/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-presentation` | `8ff9dd1` | feat(view): add Diagnosis Inbox view for managing pest and disease reports | --- | 07/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-presentation` | `e06d364` | feat(view): add Prescription Form for issuing agrochemical prescriptions | --- | 07/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-presentation` | `d40b79b` | feat(view): add Prescriptions View for displaying issued agrochemical prescriptions | --- | 07/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-presentation` | `1729451` | feat(view): integrate Leaflet map for crop health visualization | --- | 07/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/profiles-context` | `dfe32bd` | feat(profiles): configure routes, fake api, and i18n support | --- | 07/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/deployment-firebase` | `089c425` | chore: point production environment to the fake api on render | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/deployment-firebase` | `0959f0b` | chore: add firebase hosting configuration and deployment guide | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/harvest-certification-domain-infrastructure` | `6cd5e07` | feat(harvest): add command interfaces and entities for managing harvest batches and quality certificates | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/harvest-certification-application` | `4162ed1` | feat(harvest): implement HarvestCertificationStore for managing batches and certificates | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/harvest-certification-presentation` | `3e2c19b` | feat(harvest): add harvest certificates view component with template and styles | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/harvest-certification-presentation` | `745c890` | feat(harvest): add public traceability view component with template, styles, and logic | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/update-field-management` | `9861be8` | feat(field-management): add registered plots, plot registration and boundary map views | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/update-shared` | `5549584` | refactor(shared): split translations by bounded context, translate the paginator and default to english | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/demo-user-session` | `0e081f1` | fix: use the demo access user instead of a fixed environment user | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-improvements` | `cbd2a34` | "fix(crop-health): correct map initialization" | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-improvements` | `47d379d` | fix(crop-health): replace fabricated fallback data with explicit states | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-improvements` | `5424302` | fix(server): reconcile demo data and add crop health collections | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-improvements` | `97975de` | feat(crop-health): connect reports inspections and prescriptions to API | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-improvements` | `ed1b66e` | feat(crop-health): enhance demo user roles and add field inspection features | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-improvements` | `8533b6f` | feat(crop-health): enhance plot dashboard with satellite observation data and NDVI chart | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-improvements` | `ffe9936` | feat(crop-health): add plot boundary features and enhance map display options | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-improvements` | `ea59d1f` | feat(crop-health): add report deletion functionality and enhance image download feature | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-improvements` | `84a9bde` | feat(crop-health): remove report download functionality and update README for image download changes | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/default-language-en` | `6703ec1` | feat(crop-health): update report label logic and simplify language switcher functionality | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/demo-access-set-english` | `1c240ec` | feat(demo-access): update text to English for demo access page | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/field-management-components` | `d661d15` | feat(field-management): add campaign finances and field expense views with their routes | --- | 09/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `main` | `277ea58` | Merge branch 'release/v1.0.0' into main | --- | 09/10/2026
+
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
 
