@@ -1034,6 +1034,12 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
   <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-bol.png" width="600px" height="auto"/>
 </p>
 
+### PLOTS
+
+<p align="center">
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plots.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plots2.png" width="600px" height="auto"/>
+</p>
 
 ### Mobile Web Browser
 
