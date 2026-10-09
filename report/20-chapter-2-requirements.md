@@ -363,6 +363,7 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
   <b>Tecnología, marcas y canales:</b>
   <ul>
     <li><b>Dispositivos habituales:</b> Teléfono inteligente de gama media (Xiaomi Redmi Note) valorando el rendimiento y la utilidad de las herramientas para la gestión diaria.</li>
+    <li><b> Navegación web:</b> Utiliza Google Chrome para consultar precios de referencia en el Mercado Mayorista de Lima y grupos de WhatsApp para coordinar con compradores y transportistas.</li>
     <li><b>Canales actuales:</b> WhatsApp para coordinaciones comerciales con fletes y compradores, aplicaciones bancarias y de pago (Yape, BCP), redes sociales (Facebook, Instagram) y aplicaciones meteorológicas (AccuWeather).</li>
     <li><b>Conectividad:</b> Cobertura móvil inestable e intermitente en las parcelas de Chupaca y Satipo (con caída a 3G/Edge o pérdida total de señal), dependiendo de la sincronización nocturna al retornar a Huancayo.</li>
     <li><b>Disposición tecnológica:</b> Alta apertura para adoptar plataformas móviles agrícolas y actuar como puente tecnológico generacional para capacitar y apoyar a sus familiares mayores.</li>
@@ -391,6 +392,7 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
   <b>Tecnología, marcas y canales:</b>
   <ul>
     <li><b>Dispositivos habituales:</b> Teléfono inteligente (Samsung Galaxy A14) valorando la autonomía de la batería para jornadas en campo.</li>
+    <li><b>Navegación web:</b> Utiliza Google Chrome para realizar búsquedas de información agrícola, consultar precios, revisar condiciones climáticas y acceder a páginas o servicios digitales cuando dispone de conexión.</li>
     <li><b>Canales actuales:</b> WhatsApp para coordinaciones comerciales con fletes y compradores, Yape para pagos/cobros rápidos y redes sociales (Facebook e Instagram).</li>
     <li><b>Conectividad:</b> Cobertura móvil inestable e intermitente en la parcela (Claro y Bitel), con pérdida total de señal en quebradas, dependiendo de la sincronización nocturna al retornar a Quillabamba.</li>
     <li><b>Disposición tecnológica:</b> Alta apertura para adoptar la plataforma móvil y actuar como puente tecnológico generacional para su padre.</li>
@@ -418,10 +420,11 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
 </ul><br>
 <b>Tecnología, marcas y canales:</b>
 <ul>
-<li><b>Dispositivos habituales:</b> Teléfono inteligente de gama media (Xiaomi Redmi Note) valorando el rendimiento de la batería para jornadas en campo.</li>
-<li><b>Canales actuales:</b> WhatsApp para coordinaciones comerciales con fletes y acopiadores, banca móvil (Yape, BCP), redes sociales (Facebook) y aplicaciones meteorológicas.</li>
-<li><b>Conectividad:</b> Cobertura móvil inestable o nula en las parcelas de Kishuará (caídas a 3G o zonas sin cobertura), dependiendo de la sincronización nocturna al retornar a la ciudad.</li>
-<li><b>Disposición tecnológica:</b> Alta apertura para adoptar la plataforma móvil y actuar como puente tecnológico generacional para capacitar y apoyar a sus familiares mayores.</li>
+  <li><b>Dispositivos habituales:</b> Teléfono inteligente de gama media (Xiaomi Redmi Note) valorando el rendimiento de la batería para jornadas en campo.</li>
+  <li><b>Navegación web:</b> Emplea Google Chrome para consultar precios del mercado mayorista, buscar información técnica sobre cultivos y acceder a información meteorológica y financiera.</li>
+  <li><b>Canales actuales:</b> WhatsApp para coordinaciones comerciales con fletes y acopiadores, banca móvil (Yape, BCP), redes sociales (Facebook) y aplicaciones meteorológicas.</li>
+  <li><b>Conectividad:</b> Cobertura móvil inestable o nula en las parcelas de Kishuará (caídas a 3G o zonas sin cobertura), dependiendo de la sincronización nocturna al retornar a la ciudad.</li>
+  <li><b>Disposición tecnológica:</b> Alta apertura para adoptar la plataforma móvil y actuar como puente tecnológico generacional para capacitar y apoyar a sus familiares mayores.</li>
 </ul>
 </td></tr>
 </table>
@@ -448,6 +451,7 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
   <b>Tecnología, marcas y canales:</b>
   <ul>
     <li><b>Canales actuales:</b> WhatsApp para coordinación virtual y radioemisoras provinciales para avisos masivos.</li>
+    <li><b>Navegación web:</b> Utiliza Google Chrome para consultar información sobre normativas, certificaciones, temas comerciales, SUNAT y condiciones climáticas.</li>
     <li><b>Dispositivos habituales:</b> Teléfono inteligente (smartphone).</li>
     <li><b>Registro actual:</b> Notas y libretas físicas de campo por parte de los socios.</li>
     <li><b>Disposición tecnológica:</b> Alta apertura hacia una plataforma móvil que agilice los controles de calidad y simplifique las auditorías.</li>
@@ -465,19 +469,22 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
   <tr><td>Link</td><td>https://lix.li/l3F5</td></tr>
   <tr><td>Timing donde inicia la entrevista</td><td> 26:05 min</td></tr>
   <tr><td>Duración de la entrevista</td><td>29:46 min</td></tr>
-  <tr><td>Resumen</td><td> El entrevistado, se desempeña como gerente de una cooperativa agrícola en el distrito de San Martín de las Cumbres, Arequipa. Representa a 300 socios y tiene como prioridad asegurar su rentabilidad. Señaló que actualmente advierten sobre amenazas climáticas mediante grupos de WhatsApp, recurriendo a SMS, radio local y técnicos de campo para las zonas altas sin internet, aunque con el riesgo de que la alerta llegue tarde. Durante el acopio, bonifican económicamente por quintal a quienes superan estándares de calidad y penalizan a los deficientes pagándoles el precio mínimo del mercado convencional, lo que les hace perder los beneficios cooperativos. Respecto a la digitalización, indicó que la principal barrera es cultural, dado que la mayoría de los socios superan los 50 años, temen equivocarse en el celular y prefieren su cuaderno físico; a esto se suma la falta de conectividad en las chacras. En el ámbito comercial, cerca del 10% de sus ventas sufre castigos en el precio debido a cuadernos de campo incompletos, lo que ocasiona la pérdida de sellos de certificación (como el Orgánico). Finalmente, expresó una total disposición para que la cooperativa asuma económicamente una plataforma tecnológica como gasto operativo, siempre que esta reduzca las semanas de papeleo previas a las auditorías y garantice la conservación de las primas económicas. <br><br>
+  <tr><td>Resumen</td><td> El entrevistado, se desempeña como gerente de una cooperativa agrícola en el distrito de San Martín de las Cumbres, Arequipa. Representa a 300 socios y tiene como prioridad asegurar su rentabilidad. Señaló que actualmente advierten sobre amenazas climáticas mediante grupos de WhatsApp, recurriendo a SMS, radio local y técnicos de campo para las zonas altas sin internet, aunque con el riesgo de que la alerta llegue tarde. Durante el acopio, bonifican económicamente por quintal a quienes superan estándares de calidad y penalizan a los deficientes pagándoles el precio mínimo del mercado convencional, lo que les hace perder los beneficios cooperativos. Respecto a la digitalización, indicó que la principal barrera es cultural, dado que la mayoría de los socios superan los 50 años, temen equivocarse en el celular y prefieren su cuaderno físico; a esto se suma la falta de conectividad en las chacras. En el ámbito comercial, cerca del 10% de sus ventas sufre castigos en el precio debido a cuadernos de field incompletos, lo que ocasiona la pérdida de sellos de certificación (como el Orgánico). Finalmente, expresó una total disposición para que la cooperativa asuma económicamente una plataforma tecnológica como gasto operativo, siempre que esta reduzca las semanas de papeleo previas a las auditorías y garantice la conservación de las primas económicas. <br><br>
   <b>Comportamiento y necesidades:</b>
-
-- Alertas climáticas oportunas: Requiere un sistema de comunicación que evite los retrasos actuales al notificar a las zonas más altas y desconectadas de internet.
-- Protección de certificaciones: Necesita asegurar que los datos de trazabilidad estén completos para mantener sellos orgánicos y evitar el castigo en el precio de sus lotes.
-- Eficiencia administrativa: Demanda reducir drásticamente las semanas de papeleo manual que actualmente exigen las auditorías.
-- Accesibilidad e inclusión digital: Necesita herramientas muy intuitivas que superen la desconfianza tecnológica de los productores mayores de 50 años y que puedan operar en fincas sin cobertura..<br><br>
+<ul>
+<li><b>Alertas climáticas oportunas:</b> Requiere un sistema de comunicación que evite los retrasos actuales al notificar a las zonas más altas y desconectadas de internet.</li>
+<li><b>Protección de certificaciones:</b> Necesita asegurar que los datos de trazabilidad estén completos para mantener sellos orgánicos y evitar el castigo en el precio de sus lotes.</li>
+<li><b>Eficiencia administrativa:</b> Demanda reducir drásticamente las semanas de papeleo manual que actualmente exigen las auditorías.</li>
+<li><b>Accesibilidad e inclusión digital:</b> Necesita herramientas muy intuitivas que superen la desconfianza tecnológica de los productores mayores de 50 años y que puedan operar en fincas sin cobertura..<br><br>
   <b>Tecnología, marcas y canales:</b>
 
-- Canales actuales: WhatsApp, mensajes de texto (SMS), radio local en las madrugadas y visitas presenciales de técnicos de campo.
-- Dispositivos habituales: Teléfonos inteligentes (smartphones) en zonas conectadas y celulares básicos o radios en zonas remotas.
-- Registro actual: Cuadernos físicos de campo y papeleo manual.
-- Disposición tecnológica: Muy alta y con respaldo de inversión; perciben la adopción de una plataforma como un gasto operativo justificable que "se paga solo" al salvar las primas de certificación y agilizar el trabajo.</td></tr>
+<li><b>Canales actuales:</b> WhatsApp, mensajes de texto (SMS), radio local en las madrugadas y visitas presenciales de técnicos de campo.</li>
+<li><b>Navegación web:</b> Emplea Google Chrome para revisar información vinculada con certificaciones, mercados, condiciones climáticas y requisitos administrativos de la cooperativa.</li>
+<li><b>Dispositivos habituales:</b> Teléfonos inteligentes (smartphones) en zonas conectadas y celulares básicos o radios en zonas remotas.</li>
+<li><b>Registro actual:</b> Cuadernos físicos de field y papeleo manual.</li>
+<li><b>Disposición tecnológica:</b> Muy alta y con respaldo de inversión; perciben la adopción de una plataforma como un gasto operativo justificable que "se paga solo" al salvar las primas de certificación y agilizar el trabajo.</li>
+</ul>
+</td></tr>
 </table>
 
 <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
@@ -500,8 +507,10 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
   <b>Tecnología, marcas y canales:</b>
   <ul>
     <li><b>Canales actuales:</b> Comunidades temáticas en WhatsApp divididas regionalmente y comunicaciones móviles directas con enlaces sectoriales.</li>
-    <li><b>Registro actual y barreras:</b> Inclinación hacia libretas de papel por arraigo cultural, sensación de resguardo físico y dificultades de adaptabilidad tecnológica en afiliados mayores.</li>
-    <li><b>Disposición tecnológica:</b> Disposición favorable del grupo para asumir la suscripción de un software portátil si mitiga la inversión de tiempo en trámites de certificación.</li>
+    <li><b>Navegación web:</b> Utiliza Google Chrome para consultar información comercial, requisitos de certificación, precios y documentación relacionada con la trazabilidad del producto.</li>
+    <li><b>Dispositivos habituales:</b> Teléfono inteligente para comunicación, coordinación y acceso a información digital.</li>
+    <li><b>Registro actual:</b> Inclinación hacia libretas de papel por arraigo cultural, sensación de resguardo físico y dificultades de adaptabilidad tecnológica en afiliados mayores.</li>
+    <li><b>Disposición tecnológica:</b> Disposición favorable del grupo para asumir la suscripción de un software portátil si reduce el tiempo invertido en trámites de certificación.</li>
   </ul>
   </td></tr>
 </table>
@@ -520,17 +529,22 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
   <tr><td>Duración de la entrevista</td><td> 47:06 min</td></tr>
   <tr><td>Resumen</td><td>El entrevistado es un ingeniero agrónomo de Oxapampa (egresado de la UNDAC) con experiencia en asistencia técnica para cultivos perennes como café, palto y granadilla en zonas de selva central como Pozuzo. Destaca que la topografía abrupta, las quebradas y el clima lluvioso reducen la capacidad operativa real de un asesor a un rango de entre 15 y 25 productores mensuales para mantener visitas continuas (mínimo cada 30 días). Enfatiza la dificultad de erradicar el hábito empírico de fumigar por calendario sin presencia real de plagas, y señala que la evaluación de daños climáticos se realiza de forma manual y visual mediante recorridos en patrones (X, M, Z). Valora el uso de herramientas digitales básicas para coordinar y dosificar, destacando la georreferenciación vinculada al Padrón de Productores Agrarios (PPA).<br><br>
   <b>Comportamiento y necesidades:</b>
-
-- Capacidad operativa condicionada: La cobertura técnica efectiva cae a 15–25 productores al mes debido a caminatas de hasta 3 horas por quebradas y demoras por lluvias intensas.
-- Justificación de impacto por contraste: Demuestra el valor de su asesoría comparando visualmente parcelas de productores que acataron las pautas técnicas frente a los que no las aplicaron.
-- Resistencia al cambio en fitosanidad: Enfrenta la costumbre del productor de aplicar agroquímicos de forma fija por calendario (cada 8–10 días) sin leer etiquetas ni verificar síntomas previos.
-- Evaluación visual de siniestros: Requiere recorrer físicamente toda el área en patrones (X, M, Z) para estimar daños por heladas, lluvias o sequías según la etapa fenológica del cultivo.<br><br>
-  <b>Tecnología, marcas y canales:</b>
-
-- Dispositivos y apps genéricas: Emplea WhatsApp como canal primario de contacto directo con los agricultores que cuentan con señal o wifi en sus localidades.
-- Herramientas de cálculo: Utiliza hojas de cálculo en Excel para estructurar y entregar tablas de dosificación nutricional foliar y edáfica.
-- Sistemas de información geográfica: Se apoya en Google Maps y resalta la georreferenciación de parcelas ligada al Padrón de Productores Agrarios (PPA).
-- Entorno de conectividad: Cobertura de red presente en caseríos, pero nula o restringida en quebradas y áreas de tránsito a pie.</td></tr>
+<ul>
+<li><b>Capacidad operativa condicionada:</b> La cobertura técnica efectiva cae a 15–25 productores al mes debido a caminatas de hasta 3 horas por quebradas y demoras por lluvias intensas.
+<li><b> Justificación de impacto por contraste:</b> Demuestra el valor de su asesoría comparando visualmente parcelas de productores que acataron las pautas técnicas frente a los que no las aplicaron.
+<li><b> Resistencia al cambio en fitosanidad: </b>Enfrenta la costumbre del productor de aplicar agroquímicos de forma fija por calendario (cada 8–10 días) sin leer etiquetas ni verificar síntomas previos.
+<li><b> Evaluación visual de siniestros: </b>Requiere recorrer físicamente toda el área en patrones (X, M, Z) para estimar daños por heladas, lluvias o sequías según la etapa fenológica del cultivo.<br><br>
+</ul><br>
+<b>Tecnología, marcas y canales:</b>
+<ul>
+    <li><b>Dispositivos habituales:</b> Teléfono inteligente y computadora para comunicación, elaboración de tablas y gestión de información técnica.</li>
+    <li><b>Canales y apps genéricas:</b> Emplea WhatsApp como canal primario de contacto directo con los agricultores que cuentan con señal o wifi en sus localidades.</li>
+    <li><b>Navegación web:</b>Utiliza Google Chrome para consultar información técnica agrícola, acceder a plataformas institucionales y revisar información relacionada con el Padrón de Productores Agrarios (PPA).</li>
+    <li><b>Herramientas de cálculo:</b> Inclinación hacia libretas de papel por arraigo cultural, sensación de resguardo físico y dificultades de adaptabilidad tecnológica en afiliados mayores.</li>
+    <li><b>Sistemas de información geográfica:</b> Se apoya en Google Maps y en la georreferenciación de parcelas vinculada al PPA.</li>
+    <li><b>Entorno de conectividad:</b> Cobertura de red presente en caseríos, pero nula o restringida en quebradas y áreas de tránsito a pie.</li> 
+  </ul>
+</td></tr>
 </table>
 
 <table border="1" cellpadding="8" cellspacing="0" style="width: 100%; border-collapse: collapse;">
@@ -552,8 +566,10 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
   </ul><br>
   <b>Tecnología, marcas y canales:</b>
   <ul>
-    <li><b>Canales actuales:</b> Intercambio de fotografías por WhatsApp para consultas fitosanitarias y geolocalización puntual con Google Maps.</li>
-    <li><b>Registro actual y barreras:</b> Hojas de cálculo en Excel para consolidación administrativa y fichas manuscritas durante las inspecciones presenciales.</li>
+    <li><b>Dispositivos habituales:</b> Teléfono inteligente y computadora para el seguimiento de predios, comunicación con productores y consolidación de informes.</li>
+    <li><b>Canales actuales: </b> Intercambio de fotografías por WhatsApp para consultas fitosanitarias y geolocalización puntual con Google Maps.</li>
+    <li><b>Navegación web:</b> Emplea Google Chrome para buscar información técnica, consultar productos agrícolas, revisar documentación y acceder a plataformas relacionadas con su trabajo de campo.</li>
+    <li><b>Registro actual y barreras:</b>Hojas de cálculo en Excel para consolidación administrativa y fichas manuscritas durante las inspecciones presenciales.</li>
     <li><b>Disposición tecnológica:</b> Elevado interés en adoptar soluciones de agricultura de precisión que unifiquen la gestión de datos y mitiguen la dosificación empírica de agroquímicos.</li>
   </ul>
   </td></tr>
@@ -571,94 +587,128 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
   <tr><td>Duración de la entrevista</td><td> 56:29 min </td></tr>
   <tr><td>Resumen</td><td>El entrevistado es un ingeniero agrónomo residente en Piura, de 30 años. A lo largo de la entrevista, manifiesta que mediante métodos tradicionales (libreta y camioneta) puede supervisar eficientemente a un máximo de 30 a 40 productores o 300 hectáreas, límite a partir del cual la prevención decae y el trabajo se vuelve reactivo. Para organizar su día a día y documentar sus visitas, utiliza herramientas genéricas como WhatsApp, Excel y Google Maps, aunque reconoce que la información resulta muy fragmentada. Revela además que cuantificar el rendimiento salvado tras una intervención es un reto constante que aborda mediante fotografías de "antes y después" y comparaciones con "lotes testigo" o históricos, asumiendo un margen de subjetividad. Destaca que la mayor dificultad con el agricultor empírico es erradicar la sobredosificación de agroquímicos y lograr el cumplimiento de los tiempos de carencia y uso de protección. Finalmente, evalúa los daños climáticos mediante muestreos físicos en zigzag, dependiendo fuertemente de su experiencia visual para estimar porcentajes de pérdida.<br><br>
   <b>Comportamiento y necesidades:</b>
-
-- Gestión y control de cobertura: Administra y limita su alcance a un máximo de 40 productores o 300 hectáreas para mantener la calidad preventiva de su asesoría, evitando que la saturación lo obligue a simplemente "apagar incendios".
-- Demostración de resultados: Necesita elaborar reportes visuales y comparativos (lote tratado vs. lote testigo o histórico) para sustentar ante la gerencia de la cooperativa el impacto real de sus visitas, buscando minimizar la subjetividad de sus estimaciones.
-- Capacitación y corrección de hábitos: Enfrenta el desafío constante de educar al agricultor empírico en la calibración precisa de equipos de fumigación, el respeto estricto de los periodos de carencia pre-cosecha y el uso de equipos de protección personal (EPP).
-- Evaluación de campo y muestreo: Requiere realizar recorridos presenciales estandarizados (en "X" o zigzag) para tomar muestras aleatorias y diagnosticar visualmente el estrés hídrico o daño foliar, dependiendo de su "ojo" y experiencia agronómica.<br><br>
-
+<ul>
+<li><b> Gestión y control de cobertura: </b>Administra y limita su alcance a un máximo de 40 productores o 300 hectáreas para mantener la calidad preventiva de su asesoría, evitando que la saturación lo obligue a simplemente "apagar incendios".</li>
+<li><b>Demostración de resultados:</b> Necesita elaborar reportes visuales y comparativos (lote tratado vs. lote testigo o histórico) para sustentar ante la gerencia de la cooperativa el impacto real de sus visitas, buscando minimizar la subjetividad de sus estimaciones.</li>
+<li><b>Capacitación y corrección de hábitos:</b> Enfrenta el desafío constante de educar al agricultor empírico en la calibración precisa de equipos de fumigación, el respeto estricto de los periodos de carencia pre-cosecha y el uso de equipos de protección personal (EPP).</li>
+<li><b>Evaluación de campo y muestreo:</b> Requiere realizar recorridos presenciales estandarizados (en "X" o zigzag) para tomar muestras aleatorias y diagnosticar visualmente el estrés hídrico o daño foliar, dependiendo de su "ojo" y experiencia agronómica.</li>
+</ul><br>
 <b> Tecnología, marcas y canales:</b>
-
-- Dispositivos y software habituales: Uso intensivo de teléfono inteligente y computadora para combinar hojas de cálculo (Excel) en la gestión de cronogramas y software de mapeo (Google Maps/Earth) para ubicar los predios.
-- Canales de comunicación: WhatsApp es la herramienta central y más ágil de su día a día, utilizada para recibir alertas tempranas, fotos de hojas dañadas y audios con consultas directas de los productores.
-- Gestión de datos fragmentada: La dependencia de un ecosistema de aplicaciones genéricas no conectadas entre sí genera una necesidad subyacente de centralizar y estructurar la información técnica que actualmente se dispersa.
-- Diagnóstico visual sin sensores: A pesar del uso de herramientas digitales para la organización, la toma de datos biométricos en campo (grado de marchitamiento, caída de flores, cuajado) sigue siendo un proceso 100% analógico, visual y basado en la experiencia personal.</td></tr>
+<ul>
+<li><b>Dispositivos y software habituales: </b>Uso intensivo de teléfono inteligente y computadora para combinar hojas de cálculo (Excel) en la gestión de cronogramas y software de mapeo (Google Maps/Earth) para ubicar los predios.
+<li><b>Canales de comunicación: </b>WhatsApp es la herramienta central y más ágil de su día a día, utilizada para recibir alertas tempranas, fotos de hojas dañadas y audios con consultas directas de los productores.
+<li><b>Gestión de datos fragmentada: </b>La dependencia de un ecosistema de aplicaciones genéricas no conectadas entre sí genera una necesidad subyacente de centralizar y estructurar la información técnica que actualmente se dispersa.
+<li><b>Diagnóstico visual sin sensores: </b>A pesar del uso de herramientas digitales para la organización, la toma de datos biométricos en campo (grado de marchitamiento, caída de flores, cuajado) sigue siendo un proceso 100% analógico, visual y basado en la experiencia personal.</td></tr>
+  </ul>
+  </td></tr>
 </table>
 
 ### 2.2.3. Análisis de entrevistas
 
 #### Segmento 1: Pequeños y medianos agricultores independientes de papa y café
-Se analizó la información cualitativa obtenida de productores agrícolas independientes para identificar las características operativas, financieras y de adopción digital clave que configuran el arquetipo de este segmento.
+Se analizaron tres entrevistas realizadas a jóvenes agricultores que participan activamente en la administración de parcelas familiares de papa y café. El análisis permitió identificar patrones relacionados con la gestión económica de la producción, la exposición a riesgos climáticos, la dependencia de intermediarios, las limitaciones de conectividad y la adopción de herramientas digitales.
 
 #### Características
 
-| Característica                                       | Mención | % | Evidencia |
-| :---------------------------------------------------- |:---:  | :---: | :-------------------------------------------------------------------------------------------------------- |
-| Coadministración familiar de la parcela               |  3/3  | 100%  | Gestión y labores compartidas con el padre o núcleo familiar directo                                      |
-| Pérdidas severas por clima y plagas críticas          |  3/3  | 100%  | Impactos graves por heladas, sequías recurrentes, roya amarilla y rancha                                  |
-| Intermediación y presión en el precio de venta        |  3/3  | 100%  | Sujeción a las tarifas y condiciones impuestas por acopiadores locales                                    |
-| Conectividad móvil deficiente o nula en campo         |  3/3  | 100%  | Caídas a 3G/Edge o pérdida total de señal en parcelas y quebradas rurales                                 |
-| Rol de puente tecnológico generacional                |  3/3  | 100%  | Disposición activa de hijos jóvenes para capacitar y digitalizar a sus padres                             |
-| Uso de canales y aplicaciones móviles cotidianas      |  3/3  | 100%  | Coordinaciones vía WhatsApp, billeteras/banca móvil (Yape, BCP) y redes sociales                          |
-| Preferencia de hardware para trabajo de campo         |  3/3  | 100%  | Teléfonos inteligentes Android (Xiaomi Redmi Note, Samsung Galaxy) priorizando batería                    |
-| Demanda de prevención y soporte sin sensores costosos |  3/3  | 100%  | Requerimiento de alertas tempranas y monitoreo satelital (clima, NDVI, humedad)                           |
-| Cálculo estructurado de costos de producción          |  2/3  | 66.7% | Registro digital de insumos y jornales por kilo/quintal; un caso mantiene cálculo al tanteo               |
-| Acceso a financiamiento agrícola formal               |  2/3  | 66.7% | Uso de créditos en Agrobanco, Cajas Municipales o reinversión propia; uno depende de adelantos informales |
-| Consulta de precios de referencia mayoristas          |  2/3  | 66.7% | Verificación previa de cotizaciones del Mercado Mayorista de Lima por internet/WhatsApp                   |
+| Característica                                     | Mención |   %   | Evidencia                                                                                                                                                       |
+|----------------------------------------------------|:-------:|:-----:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Coadministración familiar de la parcela            |   3/3   | 100%  | Los entrevistados participan en la gestión agrícola junto con sus padres o familiares directos.                                                                 |
+| Pérdidas por fenómenos climáticos y plagas         |   3/3   | 100%  | Reportan afectaciones por heladas, sequías, roya y rancha, dependiendo del cultivo y ubicación.                                                                 |
+| Influencia de intermediarios en el precio de venta |   3/3   | 100%  | Los productores negocian con acopiadores que tienen una fuerte influencia sobre el precio final de la cosecha.                                                  |
+| Conectividad móvil inestable o nula en campo       |   3/3   | 100%  | Existen caídas de señal, reducción a 3G/Edge o pérdida total de cobertura en parcelas y quebradas.                                                              |
+| Uso de smartphones como herramienta principal      |   3/3   | 100%  | Utilizan teléfonos inteligentes de gama media, como Xiaomi Redmi Note y Samsung Galaxy A14.                                                                     |
+| Uso de WhatsApp para coordinación comercial        |   3/3   | 100%  | Se emplea para coordinar con compradores, acopiadores, transporte y consultar información relacionada con precios.                                              |
+| Uso de Google Chrome para consultas web            |   3/3   | 100%  | Se utiliza para consultar precios, información agrícola, condiciones climáticas y otros servicios digitales.                                                    |
+| Uso de aplicaciones y servicios digitales          |   3/3   | 100%  | Emplean herramientas como Yape, BCP, Facebook, Instagram y aplicaciones meteorológicas.                                                                         |
+| Necesidad de funcionamiento offline                |   3/3   | 100%  | Requieren registrar información en campo sin internet y sincronizarla posteriormente al recuperar cobertura.                                                    |
+| Apertura hacia nuevas soluciones digitales         |   3/3   | 100%  | Los entrevistados muestran disposición para utilizar plataformas agrícolas móviles y apoyar a familiares mayores en su adopción.                                |
+| Registro estructurado de costos                    |   2/3   | 66.7% | Dos entrevistados registran digitalmente fertilizantes, semillas y jornales; uno realiza estimaciones principalmente por volumen cosechado.                     |
+| Uso de financiamiento agrícola formal              |   2/3   | 66.7% | Dos entrevistados mencionan directamente Agrobanco, Cajas Municipales o reinversión; el tercero enfrenta dificultades de acceso y también depende de adelantos. |
+| Consulta de precios mayoristas por internet        |   2/3   | 66.7% | Dos entrevistados consultan precios de referencia del Mercado Mayorista de Lima mediante internet o WhatsApp.                                                   |
 
-##### Insights
+#### Insights
 
-1) La brecha entre el costeo estructurado y la imposición del intermediario: Existe un contraste evidente en el segmento: mientras el productor tradicional estima sus mermas al tanteo y por volumen de sacos, el agricultor joven tecnificado registra digitalmente insumos, semillas y jornales para fijar su costo por kilo. Respaldar la producción con datos reales y referencias del Mercado Mayorista de Lima es el único mecanismo con el que logran defender un precio equitativo frente a las deducciones arbitrarias de los acopiadores.
-2) La conectividad nula en chacra condiciona la arquitectura offline-first: Tanto en las quebradas de selva como en las laderas andinas, la cobertura celular se degrada a 3G o desaparece por completo durante las labores de campo. Para que la herramienta sea adoptada, debe operar de manera 100% autónoma fuera de línea, almacenando registros de fertilización, labores y costos en la memoria del dispositivo y sincronizándolos automáticamente en segundo plano cuando el usuario retorna al centro urbano.
-3) Demanda de telemetría y alertas satelitales sin inversión en hardware: Los productores enfrentan contingencias fitosanitarias y climáticas de alto impacto (heladas, sequías, roya y rancha), pero no disponen de capital para instalar estaciones meteorológicas o sensores en sus lotes. Existe una necesidad homogénea de recibir alertas tempranas predictivas e información de salud foliar o estrés hídrico directamente en el celular, aprovechando datos satelitales abiertos para actuar antes de perder la inversión de la campaña.
-4) El relevo generacional como catalizador de modernización rural :Los hijos agricultores manejan fluidamente smartphones, aplicaciones de mensajería y servicios financieros digitales. Este segmento actúa como el habilitador tecnológico natural del núcleo familiar: absorben la solución técnica, asumen la carga del registro digital y traducen las recomendaciones agronómicas para sus padres o parientes mayores arraigados a las prácticas tradicionales.
+1. **El registro de costos fortalece la capacidad de negociación frente a intermediarios:**  
+   Existe una diferencia entre los agricultores que calculan detalladamente sus costos de producción y quienes continúan estimando las pérdidas principalmente por cantidad de sacos obtenidos. Registrar fertilizantes, semillas, jornales y otros gastos permite conocer el costo real por kilo o quintal y establecer una referencia más sólida al momento de negociar con los acopiadores.
+
+2. **La conectividad limitada convierte el funcionamiento offline en una necesidad:**  
+   Los tres entrevistados enfrentan zonas con conexión inestable o inexistente durante las labores agrícolas. Por ello, una solución dirigida a este segmento debería permitir registrar costos, labores, incidencias y datos de producción sin conexión, conservando la información localmente hasta poder sincronizarla posteriormente.
+
+3. **Existe una necesidad común de anticiparse a riesgos climáticos y fitosanitarios:**  
+   Heladas, sequías, roya y rancha generan pérdidas importantes. Los productores muestran interés en recibir información preventiva y alertas desde el celular sin tener que invertir directamente en estaciones meteorológicas o sensores de campo costosos.
+
+4. **Los agricultores jóvenes funcionan como puente tecnológico dentro de la familia:**  
+   Los entrevistados utilizan smartphones, WhatsApp, servicios financieros digitales, redes sociales y navegación web mediante Google Chrome. Esta familiaridad tecnológica facilita que puedan adoptar nuevas herramientas y posteriormente apoyar a padres o familiares mayores en su utilización.
 
 #### Segmento 2: Productores organizados y directivos de cooperativas agrícolas
 
-Se analizaron 3 entrevistas aplicadas a líderes, gerentes de operaciones y socios cooperativistas (Cusco, Arequipa y Cañete) para consolidar los factores críticos de gestión de acopio, fiscalización y requerimientos tecnológicos del sector organizado.
+Se analizaron tres entrevistas realizadas a representantes de organizaciones agrícolas, incluyendo gerentes, responsables operativos y socios cooperativistas. Se identificaron patrones relacionados con la comunicación de alertas, el control de calidad durante el acopio, la trazabilidad, las auditorías, las dificultades de digitalización y la disposición institucional para financiar soluciones tecnológicas.
 
 #### Características
 
-| Característica                                    | Mención    | %     | Evidencia                                                                                     |
-| ------------------------------------------------- | ---------- | ----- | --------------------------------------------------------------------------------------------- |
-| Gestión de acopio con premios y castigos          |   3/3      | 100%  | Bonifican lotes de alta calidad y penalizan o pagan precio mínimo a los deficientes           |
-| Uso de canales tradicionales de comunicación      |   3/3      | 100%  | Envío de alertas mediante WhatsApp, SMS, radio local matutina y técnicos presenciales         |
-| Alertas climáticas desfasadas o vulnerables       |   3/3      | 100%  | Los avisos se cortan por mal clima o llegan tarde a las zonas altas desconectadas             |
-| Castigo económico por cuadernos incompletos       |   3/3      | 100%  | Reportan pérdidas de cerca del 10% en ventas/cargas por vacíos en trazabilidad y sellos       | 
-| Barrera etaria y resistencia cultural al cambio   |   3/3      | 100%  | Socios mayores de 50 años habituados al papel que temen equivocarse en el celular             |
-| Sobrecarga de trabajo por auditorías anuales      |   3/3      | 100%  | Señalan semanas de trabajo manual y trámites lentos para sostener certificaciones             |
-| Disposición a financiar la plataforma digital     |   3/3      | 100%  | Las cooperativas asumen el software como gasto operativo que "se paga solo" al salvar primas  |
-| Canales y medios utilizados                       |   3/3      | 100%  | Grupos de WhatsApp regionales, radio provincial y llamadas directas                           |
-| Tecnología usada                                  |   3/3      | 100%  | Teléfonos inteligentes (Android), computadoras de oficina con Excel y radios portátiles       |
+| Característica                                              | Mención |   %   | Evidencia                                                                                                                                   |
+|-------------------------------------------------------------|:-------:|:-----:|---------------------------------------------------------------------------------------------------------------------------------------------|
+| Gestión de acopio mediante premios y penalizaciones         |   3/3   |  100% | Los lotes con mejores parámetros de calidad reciben bonificaciones, mientras que aquellos deficientes reciben descuentos o menores precios. |
+| Uso de WhatsApp como canal de coordinación                  |   3/3   |  100% | Los tres entrevistados utilizan grupos o comunidades de WhatsApp para coordinar y transmitir información.                                   |
+| Uso de canales alternativos por falta de conectividad       |   3/3   |  100% | Se complementa WhatsApp con radio, SMS, llamadas telefónicas o comunicación mediante representantes de sector.                              |
+| Problemas en la recepción oportuna de alertas               |   3/3   |  100% | Las condiciones climáticas y la falta de cobertura pueden retrasar o interrumpir la transmisión de información.                             |
+| Dependencia de registros físicos                            |   3/3   |  100% | Los productores continúan utilizando cuadernos, notas y documentación física para registrar información agrícola.                           |
+| Barrera cultural y generacional para la digitalización      |   3/3   |  100% | Existe resistencia al cambio entre socios de mayor edad acostumbrados al papel y con temor a equivocarse utilizando herramientas digitales. |
+| Necesidad de mejorar trazabilidad y auditorías              |   3/3   |  100% | Los tres casos presentan dificultades administrativas, de certificación o trazabilidad relacionadas con los registros de producción.        |
+| Disposición institucional para adoptar una plataforma       |   3/3   |  100% | Existe interés en implementar una solución que reduzca procesos manuales y mejore el control de información.                                |
+| Uso habitual de smartphones                                 |   3/3   |  100% | El teléfono inteligente es el principal dispositivo digital empleado por responsables y socios con conectividad.                            |
+| Uso de Google Chrome para consultas web                     |   3/3   |  100% | Se utiliza para consultar información relacionada con certificaciones, requisitos administrativos, mercados y condiciones climáticas.       |
+| Uso de radio y comunicación telefónica como respaldo        |   3/3   |  100% | Se utilizan especialmente para zonas rurales con baja o nula conectividad.                                                                  |
+| Impacto económico o comercial por problemas de trazabilidad |   2/3   | 66.7% | Un entrevistado reporta castigos cercanos al 10% de las ventas y otro demoras aproximadas en el 10% de cargas por vacíos de información.    |
 
-###### Insights
+#### Insights
 
-1) Riesgo financiero directo por trazabilidad deficiente: El uso continuado de libretas de papel genera omisiones de datos que conllevan el castigo de hasta un 10% del valor de exportación y la pérdida de sobreprecios por sellos orgánicos. La digitalización es vista por la gerencia como una salvaguarda de ingresos antes que como un simple gasto administrativo.
-2) Modelo de financiamiento B2B viable y justificado: A diferencia del productor individual, la cooperativa cuenta con solvencia y disposición formal de presupuesto para financiar la suscripción tecnológica, siempre que el sistema reduzca semanas de consolidación manual previas a las fiscalizaciones y auditorías.
-3) Inclusión de la base social mediante usabilidad simplificada: Dado que el promedio etario de los socios supera los 50 años, la interfaz de captura debe erradicar la complejidad técnica, emplear flujos intuitivos y estar respaldada por capacitaciones presenciales que venzan la desconfianza hacia los entornos móviles.
+1. **La trazabilidad incompleta puede generar consecuencias económicas y administrativas:**  
+   Los registros físicos dificultan la consolidación de información requerida durante auditorías y procesos comerciales. En dos de las entrevistas se mencionan impactos cuantificables cercanos al 10%, ya sea mediante castigos sobre ventas o retrasos en cargas ocasionados por vacíos de información.
+
+2. **Existe disposición de las cooperativas para financiar una solución digital:**  
+   Los responsables entrevistados consideran justificable invertir en una plataforma si permite reducir trabajo administrativo, agilizar auditorías, proteger certificaciones y conservar beneficios económicos asociados a la calidad de la producción.
+
+3. **La simplicidad de uso es determinante para lograr adopción:**  
+   La resistencia tecnológica se concentra principalmente entre socios de mayor edad acostumbrados a los registros físicos. Una solución destinada a este segmento debe presentar procesos simples, comprensibles y acompañados de capacitación.
+
+4. **La comunicación debe contemplar escenarios de baja conectividad:**  
+   WhatsApp es el principal canal digital, pero no puede funcionar como único mecanismo de comunicación. Radio, SMS, llamadas y representantes locales continúan siendo necesarios cuando las parcelas se encuentran fuera de cobertura.
 
 #### Segmento 3: Ingenieros agrónomos y asesores técnicos de campo
 
-Se analizaron 3 entrevistas a ingenieros agrónomos y extensionistas rurales (Oxapampa/Pozuzo, Cañete/Mala y Piura) para caracterizar su desempeño operativo, limitantes de cobertura geográfica y herramientas de diagnóstico.
+Se analizaron tres entrevistas realizadas a ingenieros agrónomos y asesores técnicos que trabajan en Oxapampa/Pozuzo, Mala/Cañete y Piura. El análisis permitió identificar limitaciones en la cantidad de productores que pueden supervisar, problemas derivados de los desplazamientos, fragmentación de herramientas digitales y una fuerte dependencia de evaluaciones visuales durante los diagnósticos agrícolas.
+
 #### Características
 
-| Característica                                     |   Mención  |   %   | Evidencia                                                                                     |
-| -------------------------------------------------- | ---------- | ----- | --------------------------------------------------------------------------------------------- |
-| Límite de cobertura condicionado por topografía    |   3/3      | 100%  | Supervisan 15–25 productores/mes en selva alta, 35–40 en valles costeros o un tope de 300 ha antes de volverse reactivos          |
-| Caminatas prolongadas y demoras climáticas         |   3/3      | 100%  | Marchas a pie de 2 a 3 horas en quebradas bajo lluvia en selva y extensos traslados en camioneta en costa/norte        |
-| Uso de herramientas digitales genéricas y dispersas|   3/3      | 100%  | Emplean de forma desarticulada WhatsApp, hojas de cálculo en Excel y Google Maps / Earth              |
-| Dificultad para demostrar impacto ante gerencia    |   3/3      | 100%  | Justifican su labor con fotos de "antes y después", lotes testigo o comparaciones empíricas con sesgo de subjetividad          | 
-| Lucha contra la sobredosis y malas prácticas fitosanitarias |   3/3      | 100%  | Productores aplican agroquímicos fijos (cada 8–10 días) sin signos reales de plagas           |
-| Evaluación visual subjetiva de siniestros          |   3/3      | 100%  | Muestreos pedestres en patrones (zigzag, X, M, Z) dependiendo del "ojo" técnico para estimar mermas y estrés hídrico            |
-| Adopción de georreferenciación y cartografía digital  |   3/3      | 100%  | Valoran la georreferenciación vinculada al PPA y usan mapas digitales para rastrear predios dispersos                    |
-| Canales y medios utilizados                        |   3/3      | 100%  | WhatsApp para consultas fitosanitarias y coordinación en caseríos con cobertura               |
-| Tecnología usada                                   |   3/3      | 100%  | Teléfonos inteligentes con GPS integrado, computadoras portátiles y Excel                     |
+| Característica                                                  | Mención |   %   | Evidencia                                                                                                                                                                                             |
+|-----------------------------------------------------------------|:-------:|:-----:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Capacidad limitada de productores supervisados                  |   3/3   | 100%  | La cobertura efectiva se encuentra entre 15–25 productores en zonas complejas y alrededor de 30–40 productores en otras zonas; un entrevistado menciona además un límite aproximado de 300 hectáreas. |
+| Traslado y dispersión geográfica como limitante                 |   3/3   | 100%  | La distancia entre parcelas, quebradas, lluvias y desplazamientos prolongados reducen la capacidad de atención técnica.                                                                               |
+| Uso conjunto de WhatsApp, Excel y Google Maps/Earth             |   3/3   | 100%  | Las tres entrevistas evidencian el uso de estas herramientas de manera independiente para comunicación, registros y localización.                                                                     |
+| Fragmentación de la información digital                         |   3/3   | 100%  | La información queda distribuida entre mensajería, hojas de cálculo, mapas y registros manuales.                                                                                                      |
+| Dificultad para demostrar objetivamente el impacto técnico      |   3/3   | 100%  | Se utilizan comparaciones visuales, fotografías, lotes tratados/testigo o antecedentes históricos para sustentar resultados.                                                                          |
+| Problemas de sobredosificación y malas prácticas fitosanitarias |   3/3   | 100%  | Los agricultores pueden aplicar agroquímicos sin verificar correctamente presencia de plagas, dosis o periodos de carencia.                                                                           |
+| Diagnóstico basado principalmente en observación visual         |   3/3   | 100%  | Utilizan recorridos en zigzag, X, M o Z y estimaciones visuales para determinar daños y pérdidas.                                                                                                     |
+| Uso de cartografía y geolocalización digital                    |   3/3   | 100%  | Google Maps/Earth se utiliza para localizar parcelas y apoyar el seguimiento territorial.                                                                                                             |
+| WhatsApp como principal canal de comunicación                   |   3/3   | 100%  | Reciben fotografías, audios, consultas y alertas directamente desde los productores.                                                                                                                  |
+| Uso de Google Chrome para consultas profesionales               |   3/3   | 100%  | Se emplea para buscar información agronómica, consultar documentación técnica y acceder a plataformas digitales.                                                                                      |
+| Uso de smartphone para actividades de campo                     |   3/3   | 100%  | Permite comunicación, fotografías, geolocalización y acceso a herramientas digitales.                                                                                                                 |
+| Uso explícito de computadora                                    |   1/3   | 33.3% | Solo la tercera entrevista menciona expresamente el uso intensivo de teléfono inteligente y computadora.                                                                                              |
 
-###### Insights
+#### Insights
 
-1) Saturación operativa y transición de labor preventiva a reactiva: Los métodos tradicionales de supervisión presencial (libreta, recorridos a pie o camioneta) tienen un techo infranqueable: entre 15 y 25 productores en selva abrupta y un máximo de 30 a 40 productores (o 300 ha) en zonas planas. Superar este umbral degrada el acompañamiento técnico preventivo y convierte al extensionista en un gestor que solo "apaga incendios" fitosanitarios de forma reactiva.
-2) Subjetividad metodológica en la evaluación de daños y cálculo de retorno: Tanto el diagnóstico de siniestros climáticos como la justificación del impacto de las visitas técnicas se realizan mediante inspecciones pedestres en zigzag, fotografías de "antes y después" y comparación empírica con lotes testigo. Esta dependencia del "ojo" técnico genera reportes con alto margen de sesgo humano, haciendo indispensable el uso de índices de vegetación satelitales (como NDVI o estrés hídrico) para cuantificar mermas con respaldo numérico ante la gerencia.
-3) Fragmentación crítica del ecosistema digital de campo: El agrónomo depende de un flujo de trabajo desarticulado: resuelve consultas urgentes por WhatsApp, calcula dosis y calendarios en Excel y geolocaliza parcelas en Google Maps o Google Earth. Esta dispersión no solo provoca retrabajo administrativo y pérdida de trazabilidad, sino que mantiene la toma de datos agronómicos (calibración de mochilas, periodos de carencia y fenología) en un plano analógico y desestructurado.
+1. **La supervisión presencial establece un límite operativo para el asesor técnico:**  
+   La capacidad de atención disminuye conforme aumentan las distancias y dificultades de acceso. En la selva central se reporta una cobertura aproximada de 15 a 25 productores mensuales, mientras que en otras zonas se mencionan límites cercanos a 30 o 40 productores y hasta aproximadamente 300 hectáreas. Al superar estos niveles, el trabajo preventivo comienza a convertirse en atención reactiva.
+
+2. **La evaluación de daños presenta un alto componente de subjetividad:**  
+   Los asesores realizan recorridos físicos en patrones como zigzag, X, M o Z y dependen de su experiencia visual para estimar daños por estrés hídrico, lluvias, sequías u otros factores. Del mismo modo, el impacto de una intervención suele demostrarse mediante fotografías o comparación con parcelas testigo.
+
+3. **El principal problema tecnológico no es la ausencia de herramientas, sino su fragmentación:**  
+   Los ingenieros agrónomos ya utilizan WhatsApp, Excel, Google Maps/Earth y navegación web mediante Google Chrome. Sin embargo, estas herramientas funcionan de forma separada. Las consultas llegan por WhatsApp, los cálculos se realizan en Excel y las parcelas se ubican mediante aplicaciones cartográficas, generando retrabajo y dispersión de información.
+
+4. **Existe una oportunidad clara de centralizar la gestión técnica de campo:**  
+   Una plataforma que integre ubicación de parcelas, historial de visitas, fotografías, recomendaciones, seguimiento de tratamientos y datos técnicos podría reducir la dependencia de registros dispersos y facilitar la generación de evidencia para productores y gerencias.
 
 ### 2.3. Needfinding
 
