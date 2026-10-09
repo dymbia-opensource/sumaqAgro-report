@@ -736,6 +736,12 @@ Presenta un encabezado con el antetítulo en verde "THE PEOPLE BEHIND THE TECHNO
 
 ![mockup-our-team.png](assets/img/chapter-4/landing-page/mock-up/desktop/mockup-our-team.png)
 
+**Video About the Team — SumaqAgro**
+
+Presenta un encabezado con el antetítulo en verde "Video About the Team", el título principal "Video About the Team" y una breve descripción sobre la presentación de los integrantes, sus roles y las responsabilidades asumidas durante el desarrollo de SumaqAgro. En la parte inferior se muestra un área de reproducción con bordes redondeados y un botón central para iniciar el video de presentación del equipo.
+
+![mockup-video-about-the-team.png](assets/img/chapter-4/landing-page/mock-up/desktop/mockup-video-about-the-team.png)
+
 **Registration — SumaqAgro**
 
 Presenta una franja de color verde corporativo orientada a incentivar el registro de nuevos usuarios. El bloque incorpora un mensaje de invitación y el botón principal "Sign up for free", facilitando el acceso directo a la plataforma desde la página de aterrizaje.
