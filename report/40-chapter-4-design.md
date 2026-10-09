@@ -1055,6 +1055,18 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
   <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-visitor-schedule.png" width="600px" height="auto"/>
 </p>
 
+## AGRONOMIC
+
+<p align="center">
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-agronomic.png" width="600px" height="auto"/>
+</p>
+
+### REGIONAL
+
+<p align="center">
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-regional.png" width="600px" height="auto"/>
+</p>
+
 ### Mobile Web Browser
 
 Los mock-ups de la aplicación móvil se elaboraron en Figma (página *Mobile*) sobre un frame Android de 360 × 800 px, a partir de los wireframes móviles y aplicando las Mobile Style Guidelines de la sección 4.1.3. A continuación se presentan las pantallas principales del productor.
