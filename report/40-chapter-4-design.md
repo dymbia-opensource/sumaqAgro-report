@@ -973,57 +973,16 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
   <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-register.png"  width="600px" height="auto"/>
 </p>
 
-### MY PLOTS
+### SEGMENTO 1
+
+### PLOTS
 
 <p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-my-plots.png"  width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-our-plots.png"  width="600px" height="auto"/>
-</p>
-
-### REGISTER A PLOT OF LAND
-
-<p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-register-plots.png"  width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-maps-plots.png"  width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-modal-accept-plots.png"  width="600px" height="auto"/>
-</p>
-
-### FINANCES
-
-<p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-finances.png" width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-expense-success-modal.png" width="600px" height="auto"/>
-</p>
-
-### CONSULT
-
-<p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-asesor.png" width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-asesor-report-form-modal.png" width="600px" height="auto"/>
-    <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-asesor-success-modal.png" width="600px" height="auto"/>
-</p>
-
-### AGRICULTURAL ALERTS
-
-<p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alert-home.png"  width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alert-details.png"  width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alert-task.png"  width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alert-modal-check.png"  width="600px" height="auto"/>
-</p>
-
-
-### SETTINGS
-
-<p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-setting-details-plot.png"  width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-setting-account.png"  width="600px" height="auto"/>
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-setting-help-manuals.png"  width="600px" height="auto"/>
-</p>
-
-### MODE OFFLINE
-<p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-offline-mode.png"  width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-dashboard.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plot-report1.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plot-report2.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plot-report3.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plot-report4.png" width="600px" height="auto"/>
 </p>
 
 ### SEGMENTO 3
