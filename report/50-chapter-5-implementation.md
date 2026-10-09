@@ -913,8 +913,129 @@ Esta captura documenta la estructura del perfil y su estado vacío. La evidencia
 
 ![Bandeja de diagnóstico](../report/assets/img/chapter-5/app-angular/img-3.1.png)
 
+##### Evidencia Funcional: Video Demostrativo de Navegación
+
+Para evidenciar el funcionamiento de la Web Application de SumaqAgro, se presenta un video demostrativo de la navegación entre las vistas de Angular y la interacción con los componentes de la aplicación. El recorrido muestra el dashboard del agricultor independiente, la gestión y delimitación de parcelas, la consulta de indicadores NDVI/NDWI, los gastos de campaña y la bandeja de reportes de plagas. También presenta el cambio de idioma y los avances de las interfaces del director de cooperativa y del ingeniero agrónomo.
+
+* **Vista Previa del Video:**
+
+  ![Vista Previa del Video Demostrativo](img-video-preview.png)
+
+* **Enlace de Reproducción (Microsoft Stream):** [Video "Video de Exposición AV1"](https://web.microsoftstream.com/video/tu-enlace-aqui)
+
 
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
+
+En esta sección se presenta la documentación de los servicios utilizados por la Web Application de **SumaqAgro** durante el **Sprint 2**. Para esta iteración se empleó una **Fake REST API implementada con `json-server`**, que administra los datos de demostración almacenados en `server/db.json`.
+
+La aplicación Angular consume estos servicios mediante `HttpClient` y las clases de la capa **infrastructure** de cada Bounded Context. Esta integración permite desarrollar las operaciones de consulta, registro, actualización y eliminación de información mientras se prepara el backend definitivo en **Spring Boot**.
+
+##### Configuración y ejecución del servicio
+
+La Fake REST API se inicia mediante el comando definido en `package.json`:
+
+```bash
+npm run api
+```
+
+Este comando ejecuta:
+
+```bash
+json-server --watch server/db.json --routes server/routes.json --port 3000
+```
+
+El archivo `server/routes.json` establece el prefijo de acceso a los recursos:
+
+```json
+{
+  "/api/v1/*": "/$1"
+}
+```
+
+Las direcciones de conexión configuradas en el proyecto son:
+
+| Entorno | URL base | Archivo de configuración |
+| :--- | :--- | :--- |
+| Desarrollo local | `http://localhost:3000/api/v1` | `src/environments/environment.development.ts` |
+| Producción | `https://sumaqagro-fake-api.onrender.com/api/v1` | `src/environments/environment.ts` |
+
+La aplicación Angular se ejecuta en una terminal independiente mediante `npm start`.
+
+##### Documentación de endpoints
+
+Los endpoints se organizan según los Bounded Contexts del proyecto. Las rutas indicadas son relativas a la URL base y los métodos corresponden a las operaciones expuestas por las fachadas de infraestructura del frontend.
+
+| Bounded Context | Endpoint | Métodos HTTP | Descripción |
+| :--- | :--- | :--- | :--- |
+| Profiles | `/profiles` | GET, PUT | Consulta y actualización del perfil del agricultor. |
+| Profiles | `/cooperatives` | GET, PUT | Consulta y actualización de la cooperativa. |
+| Profiles | `/cooperative-members` | GET | Consulta de socios de una cooperativa. |
+| Profiles | `/cooperative-dashboards` | GET | Consulta de los datos del panel institucional. |
+| Profiles | `/agronomist-assignments` | GET, POST, PUT, DELETE | Consulta y gestión de asignaciones de ingenieros agrónomos. |
+| Field Management | `/field-plots` | GET, POST, PUT, DELETE | Consulta, registro, actualización y eliminación de parcelas. |
+| Field Management | `/crop-campaigns` | GET, POST, PUT | Consulta, registro y actualización de campañas agrícolas. |
+| Field Management | `/campaign-ledgers` | GET, POST, PUT | Consulta, registro y actualización del libro de gastos de una campaña. |
+| Crop Health | `/satellite-observations` | GET | Consulta de observaciones e indicadores registrados por parcela. |
+| Crop Health | `/agroclimatic-alerts` | GET | Consulta de alertas agroclimáticas por región. |
+| Crop Health | `/climate-forecasts` | GET | Consulta de pronósticos climáticos por región. |
+| Crop Health | `/pest-reports` | GET, POST, PUT, DELETE | Consulta, registro, actualización y eliminación de reportes de plagas. |
+| Crop Health | `/field-inspections` | GET, POST, PUT | Consulta, programación y actualización de inspecciones de campo. |
+| Crop Health | `/technical-prescriptions` | GET, POST | Consulta y emisión de prescripciones técnicas. |
+| Harvest Certification | `/harvest-batches` | GET, POST, PUT | Consulta, registro y actualización de lotes de cosecha. |
+| Harvest Certification | `/quality-certificates` | GET, POST | Consulta y emisión de certificados de calidad, incluyendo búsqueda por token. |
+
+Las operaciones sobre registros individuales utilizan el identificador del recurso en la ruta, por ejemplo, `PUT /api/v1/pest-reports/{id}` y `DELETE /api/v1/pest-reports/{id}`.
+
+La trazabilidad pública se construye en Angular mediante la consulta del certificado por su token y del lote de cosecha asociado. En la implementación actual no se utiliza una colección independiente `/public-traceability` en `server/db.json`.
+
+##### Consultas mediante parámetros
+
+El frontend utiliza parámetros de consulta para recuperar los registros asociados a un propietario, parcela, campaña, región o reporte.
+
+| Petición | Descripción |
+| :--- | :--- |
+| `GET /api/v1/field-plots?ownerUserId=1` | Consulta las parcelas de un propietario. |
+| `GET /api/v1/crop-campaigns?plotId=1` | Consulta las campañas de una parcela. |
+| `GET /api/v1/campaign-ledgers?campaignId=1` | Consulta el libro de gastos de una campaña. |
+| `GET /api/v1/satellite-observations?plotId=1` | Consulta las observaciones registradas de una parcela. |
+| `GET /api/v1/pest-reports?plotId=1` | Consulta los reportes de plagas de una parcela. |
+| `GET /api/v1/agroclimatic-alerts?region=Ayacucho` | Consulta las alertas registradas para Ayacucho. |
+| `GET /api/v1/field-inspections?reportId=1` | Consulta las inspecciones asociadas a un reporte. |
+| `GET /api/v1/technical-prescriptions?reportId=1` | Consulta las prescripciones asociadas a un reporte. |
+
+##### Estructura de los datos intercambiados
+
+Los recursos se intercambian en formato **JSON**. Las consultas a colecciones retornan arreglos, mientras que la consulta mediante `/{id}` retorna un objeto individual. Cuando una consulta no contiene registros, la API retorna un arreglo vacío `[]`.
+
+El siguiente objeto corresponde a un registro de demostración existente en la colección `satellite-observations` de `server/db.json`:
+
+```json
+{
+  "id": 1,
+  "plotId": 1,
+  "date": "2026-09-12T10:00:00Z",
+  "ndviMean": 0.74,
+  "ndwiMean": 0.65,
+  "surfaceTempKelvin": 295.15,
+  "cloudCoveragePercent": 5,
+  "stressAreaHectares": 0.4,
+  "recommendation": "Check the area for signs of the onset of wilting."
+}
+```
+
+Este registro relaciona una observación con una parcela e incluye la fecha de captura, los indicadores NDVI y NDWI, la temperatura superficial, la cobertura nubosa, el área de estrés y una recomendación.
+
+Los valores son datos simulados para la demostración. En el archivo revisado, las colecciones `agroclimatic-alerts`, `climate-forecasts`, `field-inspections` y `technical-prescriptions` se encuentran vacías.
+
+##### Integración con el frontend Angular
+
+El archivo `app.config.ts` habilita la comunicación HTTP mediante `provideHttpClient(withFetch())`. Las fachadas `ProfilesApi`, `FieldManagementApi`, `CropHealthApi` y `HarvestCertificationApi` agrupan las operaciones de acceso a datos de sus respectivos contextos.
+
+La clase compartida `BaseApiEndpoint` implementa las operaciones generales de consulta, creación, actualización y eliminación. Los **assemblers** convierten los recursos JSON recibidos en entidades de dominio y transforman las entidades en recursos para enviarlos a la API.
+
+Por ejemplo, el método `CropHealthApi.getObservationsByPlot(plotId)` delega la consulta al endpoint de observaciones satelitales. Este envía una petición GET con el parámetro `plotId` y transforma los registros recibidos en entidades `SatelliteObservation`.
+
+La documentación presentada corresponde a la configuración y los contratos implementados en el proyecto para la Fake REST API del Sprint 2.
 
 
 
