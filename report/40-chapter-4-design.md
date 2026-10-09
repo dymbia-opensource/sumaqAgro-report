@@ -969,7 +969,7 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
 ### LOGIN / REGISTER
 
 <p align="center">
-  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-login.png"  width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-login-segment-1.png"  width="600px" height="auto"/>
   <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-register.png"  width="600px" height="auto"/>
 </p>
 
@@ -1084,6 +1084,55 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
 <p align="center">
   <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-regional.png" width="600px" height="auto"/>
 </p>
+
+
+### Semento 2 
+
+### LOGIN / REGISTER
+
+![mockup-app-login.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-login.png)
+![mockup-app-register.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-register.png)
+
+### Dashboard
+
+![mockup-app-dashboard.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-dashboard.png)
+![mockup-app-dashboard-conrol-panel.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-dashboard-conrol-panel.png)
+![mockup-app-dashboard-rapid.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-dashboard-rapid.png)
+
+### member directory
+![mockup-app-member-directory.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-member-directory.png)
+![mockup-app-member-directory-register-plots.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-member-directory-register-plots.png)
+![mockup-app-member-directory-register-new.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-member-directory-register-new.png)
+![mockup-app-register-satellite-polygon.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-register-satellite-polygon.png)
+![mockup-app-register-satellite-polygon-mapping.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-register-satellite-polygon-mapping.png)
+![mockup-app-register-edite-memeber.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-register-edite-memeber.png)
+
+
+### Plots Health
+![mockup-app-plot-health.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plot-health.png)
+![mockup-app-plot-health-satellite-map-zoommed.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plot-health-satellite-map-zoommed.png)
+![mockup-app-plot-health-rural-sms-agro.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plot-health-rural-sms-agro.png)
+
+### Costs 
+![mockup-app-costs.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-costs.png)
+![mockup-app-costs-disbursement-audit.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-costs-disbursement-audit.png)
+![mockup-app-costs-export-season-financial-satatement.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-costs-export-season-financial-satatement.png)
+
+### certificates
+![mockup-app-certificates.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-certificates.png)
+![mockup-app-certificates-technical-quality.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-certificates-technical-quality.png)
+![mockup-app-certificates-technical-quality-assessment.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-certificates-technical-quality-assessment.png)
+
+### Alerts
+![mockup-app-alerts.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alerts.png)
+![mockup-app-alerts-regional-agro.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alerts-regional-agro.png)
+![mockup-app-alerts-critical-incident-detail.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alerts-critical-incident-detail.png)
+
+### Settings
+![mockup-app-settings.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-settings.png)
+![mockup-app-setting-institutional-config.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-setting-institutional-config.png)
+![mockup-app-setting-sending-of-credential.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-setting-sending-of-credential.png)
+![mockup-app-setting-corparte.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-setting-corparte.png)
 
 ### Mobile Web Browser
 
