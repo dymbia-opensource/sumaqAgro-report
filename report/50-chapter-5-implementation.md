@@ -447,7 +447,7 @@ Bajo este modelo, cada integrante del equipo asume el rol de **Aspect Leader (L)
 | **Sanca Condori, Miguel** |  `MiguelSanca`  |                     **C**                      | **L** | **C** |                        **C**                        |                         **C**                         |
 | **Solorzano Sullca, Benjamin** |   `benjass2`    |                     **C**                      | **C** | **L** |                        **C**                        |                         **C**                         |
 | **Vargas Enriquez, Jose Carlos** | `JoseAngelKyo`  |                     **C**                      | **C** | **C** |                        **C**                        |                         **L**                         |
-| **Tejada Pumacayo, Yamil Jared** | `miguel-sanca`  |                     **L**                      | **C** | **C** |                        **C**                        |                         **C**                         |
+| **Tejada Pumacayo, Yamil Jared** |  `YamilTejada`  |                     **L**                      | **C** | **C** |                        **C**                        |                         **C**                         |
 
 *Leyenda: **L** = Leader (Líder del Aspecto Técnico) | **C** = Collaborator (Colaborador en el Desarrollo)*
 
@@ -628,3 +628,518 @@ A pesar de que el despliegue principal se gestionó a través de Cloudflare Page
 Durante la ejecución de este Sprint, se emplearon las analíticas de **GitHub Insights** para auditar y monitorear la dinámica colaborativa del equipo **Dymbia**. Se registró una participación equitativa y constante de todos los integrantes en sus roles asignados, destacando un enfoque ágil basado en la revisión cruzada de código. Aunque las modificaciones en la Landing Page se concentraron en ajustes menores de contenido, diseño e internacionalización, la comunicación fluida, el alineamiento en las ceremonias y la retroalimentación constructiva permitieron mantener un flujo de trabajo altamente eficiente, garantizando la integración continua y el cumplimiento oportuno de los entregables del Sprint.
 
 ![Insights](assets/img/chapter-5/sprint-1/insigths.png)
+
+---
+
+### 5.2.2. Sprint 2
+
+El **Sprint 2** representa la transición de la Landing Page hacia el MVP frontend de **SumaqAgro**, implementado en **Angular 22** (Angular 18+), con **Angular Material**, **Leaflet.js**, **Angular Signals** y una API de prueba con **json-server**. Se mantiene la organización en cuatro capas: *domain/model*, *application*, *infrastructure* y *presentation*. El alcance revisado comprende consulta de parcelas e índices registrados, alertas regionales almacenadas, reportes textuales, bandeja, inspecciones y recetas consultables. 
+
+
+#### 5.2.2.1. Sprint Planning 2
+
+En esta sección se conserva la planificación original del **Sprint 2**, realizada el 2 de octubre de 2026, y se ajusta su contenido a las seis Historias de Usuario revisadas del **EPIC-06 (Salud del Cultivo)**: US-44, US-45, US-48, US-49, US-50 y US-51. 
+
+| Sprint # | Sprint 2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ------ |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Sprint Planning Background** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Date | 2026-10-02                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Time | 10:00 AM                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Location | Discord / GitHub                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Prepared By | Tejada Pumacayo, Yamil Jared                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Attendees (to planning meeting) | Tejada Pumacayo, Yamil Jared / Duarte Ruffner, Drago Derick / Sanca Condori, Miguel / Solorzano Sullca, Benjamin / Vargas Enriquez, Jose Carlos                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Sprint 1 Review Summary | Se completó y desplegó exitosamente la versión v1.0.0 del Landing Page en Cloudflare Pages (16 SP), validando la propuesta de valor, planes comerciales, perfiles de los fundadores y políticas legales.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Sprint 1 Retrospective Summary | Se identificó la necesidad de definir anticipadamente las entidades TypeScript de dominio (DDD) y los contratos mock en `json-server` para acelerar la construcción paralela de componentes Standalone en Angular.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Sprint Goal & User Stories** |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Sprint 2 Goal | Our focus is on delivering a demonstrable Crop Health frontend MVP for SumaqAgro using Angular 22, Leaflet.js, Angular Signals and a fake REST API. Producers and agricultural engineers will consult plot boundaries and recorded NDVI/NDWI values, view stored regional alerts, submit textual pest reports, manage a simple inbox, schedule and complete field inspections, and issue and consult agronomic prescriptions. This will be confirmed through verified user flows, clear loading, empty and error states, and consistent demo data. Public deployment requires separate evidence; live satellite processing, weather forecasts, photo uploads, external messaging and signed prescription PDFs remain future work. |
+| Sprint 2 Velocity | 32 Story Points                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| Sum of Story Points | 32 Story Points                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+
+---
+
+
+#### 5.2.2.2. Aspect Leaders and Collaborators
+
+En esta sección se presenta la matriz **Leadership-and-Collaboration Matrix (LACX)** correspondiente al **Sprint 2**, conservando la asignación de líderes y colaboradores proporcionada por el equipo y ajustando los cinco aspectos técnicos al alcance frontend revisado.
+
+Bajo este modelo, cada integrante tiene una responsabilidad prevista como **Aspect Leader (L)** y participa como **Collaborator (C)** en los demás aspectos. La matriz representa la distribución de planificación; la contribución efectiva debe respaldarse con commits, revisiones y acuerdos del equipo.
+
+##### Leadership-and-Collaboration Matrix (LACX) — Sprint 2
+
+| Team Member (Last Name, First Name) | GitHub Username | Aspect 1: Domain Models & Validation (US-48, US-50, US-51) | Aspect 2: Leaflet Plot Viewer & PNG Report (US-44) | Aspect 3: Signal Store & Fake REST API Integration (US-45, US-49) | Aspect 4: Reports, Inspections & Prescription Forms UI (US-48, US-50, US-51) | Aspect 5: i18n & Angular Standalone Routing (US-44, US-45, US-49) |
+| ------ |---------------| ------ | ------ | ------ | ------ | ------ |
+| **Duarte Ruffner, Drago Derick** | `Drago0724`     | **L** | **C** | **C** | **C** | **C** |
+| **Sanca Condori, Miguel** | `MiguelSanca`   | **C** | **C** | **L** | **C** | **C** |
+| **Solorzano Sullca, Benjamin** | `benjass2`      | **C** | **C** | **C** | **L** | **C** |
+| **Vargas Enriquez, Jose Carlos** | `JoseAngelKyo`  | **C** | **C** | **C** | **C** | **L** |
+| **Tejada Pumacayo, Yamil Jared** | `YamilTejada`   | **C** | **L** | **C** | **C** | **C** |
+
+***Leyenda: L = Leader (Líder del Aspecto Técnico) | C = Collaborator (Colaborador en el Desarrollo)***
+
+---
+
+
+#### 5.2.2.3. Sprint Backlog 2
+
+En esta sección se detalla la descomposición técnica de las seis historias revisadas del **EPIC-06** en **23 tareas**. Se conservan los IDs, responsables y estimaciones del documento original: **88 horas históricas**, sujetas a revisión para el alcance ajustado. Los títulos y descripciones se actualizaron el 9 de octubre de 2026; no se presentan como acuerdos retrospectivos de la reunión original. El estado **Implementado** indica soporte existente en el código y no equivale automáticamente a **Done** ni a aceptación de la historia; **Parcial**, **Pendiente** y **Pendiente de validación** identifican el trabajo restante. Antes del cierre deben prepararse alertas demo, corregirse las relaciones de parcelas y socios y documentarse el circuito productor–ingeniero–productor. US-16 queda fuera de esta revisión.
+
+| User Story ID | User Story Title                                          | Task ID    | Task Title                                     | Task Description                                                                                                  | Estimation (Hours) | Assigned To                  | Status   |
+| ------------- | --------------------------------------------------------- | ---------- | ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------ | ---------------------------- | -------- |
+| **US-44** | Consulta geográfica de parcelas e índices NDVI y NDWI | **TSK-01** | Inicialización del visor Leaflet | Integrar Leaflet y sus tipados; inicializar y destruir el mapa en el ciclo de vida del componente. | 4 h | Tejada Pumacayo, Yamil Jared | Implementado |
+| **US-44** | Consulta geográfica de parcelas e índices NDVI y NDWI | **TSK-02** | Polígono registrado y selección de parcela | Dibujar los límites existentes, ajustar el encuadre y mantener la selección compartida sin crear geometrías ficticias. | 4 h | Tejada Pumacayo, Yamil Jared | Implementado |
+| **US-44** | Consulta geográfica de parcelas e índices NDVI y NDWI | **TSK-03** | Selector de índice y fondo del mapa | Alternar NDVI/NDWI para el color del contorno y Satélite híbrido/Mapa para el fondo, sin afirmar que son mapas de calor. | 4 h | Tejada Pumacayo, Yamil Jared | Implementado |
+| **US-44** | Consulta geográfica de parcelas e índices NDVI y NDWI | **TSK-04** | Panel de observación y ficha PNG | Mostrar fecha, índices, área de estrés y recomendación; gestionar ausencia/error y descargar una ficha PNG solo con datos válidos. | 3 h | Tejada Pumacayo, Yamil Jared | Implementado |
+| **US-45** | Consulta de alertas agroclimáticas registradas por región | **TSK-05** | Modelo de alerta agroclimática | Definir AgroclimaticAlert con región, severidad, fecha, fuente, título y descripción; validar sus datos. | 3 h | Duarte Ruffner, Drago Derick | Implementado |
+| **US-45** | Consulta de alertas agroclimáticas registradas por región | **TSK-06** | Endpoint, assembler y consulta por región | Consultar agroclimatic-alerts mediante HttpClient y transformar las respuestas para la parcela seleccionada. | 3 h | Sanca Condori, Miguel | Implementado |
+| **US-45** | Consulta de alertas agroclimáticas registradas por región | **TSK-07** | Tarjetas regionales y estados de consulta | Mostrar alertas con distinción de severidad y separar carga, lista vacía y fallo de consulta. | 4 h | Sanca Condori, Miguel | Implementado |
+| **US-45** | Consulta de alertas agroclimáticas registradas por región | **TSK-08** | Datos y demostración de alertas regionales | Preparar alertas simuladas para regiones de parcelas demo y documentar cambio de región, lista vacía y error. | 3 h | Sanca Condori, Miguel | Pendiente |
+| **US-48** | Registro de reportes textuales de plagas o enfermedades | **TSK-09** | Modelo y comando de reporte textual | Definir PestReport y RecordPestReportCommand para parcela, productor, descripción y severidad; estado inicial Pendiente. | 4 h | Duarte Ruffner, Drago Derick | Implementado |
+| **US-48** | Registro de reportes textuales de plagas o enfermedades | **TSK-10** | Formulario reactivo de reporte | Seleccionar parcela propia e ingresar descripción y severidad; validar longitud mínima y bloquear envíos inválidos o repetidos. | 5 h | Solorzano Sullca, Benjamin | Implementado |
+| **US-48** | Registro de reportes textuales de plagas o enfermedades | **TSK-11** | Confirmación y reinicio del formulario | Mostrar confirmación tras el POST exitoso, ofrecer acceso a la bandeja y reiniciar el estado de envío sin errores rojos residuales. | 4 h | Solorzano Sullca, Benjamin | Implementado |
+| **US-48** | Registro de reportes textuales de plagas o enfermedades | **TSK-12** | Conservación de datos tras error | Conservar los campos si falla el guardado y permitir reintentar, sin anunciar persistencia offline ni sincronización automática. | 4 h | Solorzano Sullca, Benjamin | Implementado |
+| **US-49** | Consulta y gestión básica de la Bandeja de Plagas | **TSK-13** | Estado reactivo y ámbito de reportes | Gestionar la bandeja con Signals y limitar registros a parcelas disponibles para la sesión demo; cancelar lecturas obsoletas. | 4 h | Sanca Condori, Miguel | Implementado |
+| **US-49** | Consulta y gestión básica de la Bandeja de Plagas | **TSK-14** | Bandeja sencilla con tarjetas | Mostrar parcela, descripción, severidad y estado; ordenar por ID descendente y ofrecer navegación a reportes, inspecciones y recetas. | 4 h | Sanca Condori, Miguel | Implementado |
+| **US-49** | Consulta y gestión básica de la Bandeja de Plagas | **TSK-15** | Eliminación confirmada y retroalimentación | Permitir al productor eliminar reportes propios pendientes sin visitas ni recetas; conservar registros si cancela o falla la API. | 4 h | Vargas Enriquez, Jose Carlos | Implementado |
+| **US-50** | Programación y registro de inspecciones de campo | **TSK-16** | Modelo y validaciones de inspección | Definir FieldInspection con estados Programada/Completada, fecha, notas e identidad del inspector; controlar fecha y duplicados. | 3 h | Duarte Ruffner, Drago Derick | Implementado |
+| **US-50** | Programación y registro de inspecciones de campo | **TSK-17** | Formulario y listado de visitas | Programar una visita con fecha y hora futuras mediante datetime-local; mostrar las visitas y acceso a la bandeja. | 4 h | Solorzano Sullca, Benjamin | Implementado |
+| **US-50** | Programación y registro de inspecciones de campo | **TSK-18** | Finalización y sincronización de inspección | Guardar resultados, marcar visita Completada y reporte Inspeccionado; ofrecer reintento de sincronización si falla el segundo guardado. | 3 h | Vargas Enriquez, Jose Carlos | Implementado |
+| **US-51** | Emisión y consulta de recetas agronómicas | **TSK-19** | Modelo de receta agronómica | Definir TechnicalPrescription e IssueTechnicalPrescriptionCommand con reporte, emisor, producto, instrucciones y fecha. | 4 h | Duarte Ruffner, Drago Derick | Implementado |
+| **US-51** | Emisión y consulta de recetas agronómicas | **TSK-20** | Formulario y guardado de receta | Registrar producto, dosis, instrucciones y fecha válida únicamente para reportes inspeccionados y el emisor disponible en sesión. | 5 h | Solorzano Sullca, Benjamin | Implementado |
+| **US-51** | Emisión y consulta de recetas agronómicas | **TSK-21** | Consulta del historial de recetas | Mostrar las recetas del ámbito disponible con producto, reporte, emisor, fecha e instrucciones y retorno a la bandeja. | 3 h | Solorzano Sullca, Benjamin | Implementado |
+| **US-51** | Emisión y consulta de recetas agronómicas | **TSK-22** | Demostración integrada de asistencia técnica | Verificar con datos coherentes el circuito productor–ingeniero: reporte, visita, resultados y receta visible para el productor. | 4 h | Solorzano Sullca, Benjamin | Pendiente de validación |
+| **US-51** | Emisión y consulta de recetas agronómicas | **TSK-23** | Rutas, traducciones y datos relacionados | Mantener rutas y diccionarios ES/EN; preparar relaciones consistentes entre parcelas, socios, ingeniero, reportes, visitas y recetas. | 5 h | Vargas Enriquez, Jose Carlos | Parcial |
+
+#### 5.2.2.4. Development Evidence for Sprint Review
+
+En esta sección se explican y presentan los avances en la implementación con relación a los productos de la solución según el alcance del **Sprint 2**. Durante esta iteración, el esfuerzo del equipo Dymbia se centró en el desarrollo de la **Web Application** de SumaqAgro en Angular, sus contextos funcionales y la integración con una API de prueba.
+
+Para garantizar la trazabilidad y la calidad del código, el equipo ha seguido un flujo de trabajo colaborativo basado en **GitFlow**, empleando ramas `feature/*` para el desarrollo de cada historia de usuario y consolidando las entregas hacia la rama `develop` y finalmente a `main`. Asimismo, los mensajes de los commits se conservan literalmente como están registrados en Git, incluyendo los commits de integración de ramas.
+
+A continuación, se detalla la evidencia de los commits integrados en el repositorio de la Web Application durante el Sprint 2, seleccionando 50 de los 165 commits ordenándolos desde la fecha más antigua hasta la más reciente:
+
+Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `dymbia-opensource/sumaqAgro-appweb` | `develop` | `2ba53bf` | chore: initial project setup with angular cli | --- | 05/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/add-angular-material` | `3c0ff51` | chore: add angular material dependency and global theme | --- | 05/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/configure-environments` | `99e867e` | chore: add environment files for api configuration | --- | 05/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/configure-i18n-http` | `3db6099` | feat(i18n): configure http client and ngx-translate with en/es resources | --- | 05/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/fake-api` | `335cd2a` | chore: add json-server fake api with field management data | --- | 05/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/shared-base` | `87573c0` | feat(shared): add base resource, response and assembler contracts | --- | 05/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/shared-base` | `7988165` | feat(shared): add generic crud base api endpoint | --- | 05/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/shared-presentation` | `2c246ff` | feat(shared): use layout as app shell and add root routes | --- | 05/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/field-management-domain` | `fbdbfdb` | feat(field-management): add field plot, crop campaign, campaign ledger and expense entry entities | --- | 06/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/field-management-application` | `069824d` | feat(field-management): add field management store with plot, campaign and ledger state | --- | 06/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/field-management-presentation` | `e6e224d` | feat(field-management): add my plot dashboard with spend and breakeven cards and cost chart | --- | 06/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-domain` | `fd8d1df` | feat(entities): add domain entities for agroclimatic alerts, climate forecasts, field inspections, pest reports, and satellite observations | --- | 06/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-domain` | `77522fd` | feat(entities): add TechnicalPrescription entity for agronomist's pest treatment prescriptions | --- | 06/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-domain` | `3bfabee` | feat(commands): add RecordPestReportCommand to handle pest report submissions | --- | 06/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-domain` | `15525d5` | feat(commands): add ScheduleFieldInspectionCommand to schedule agronomist visits for pest issues | --- | 06/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-domain` | `7112c03` | feat(commands): add IssueTechnicalPrescriptionCommand and RecordClimateForecastCommand for pest treatment prescriptions and climate predictions | --- | 06/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-infrastructure` | `4824b8a` | feat(responses): add response interfaces for agroclimatic alerts, climate forecasts, field inspections, pest reports, satellite observations, and technical prescriptions | --- | 07/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-infrastructure` | `67fe690` | feat(assemblers): add assemblers for agroclimatic alerts, climate forecasts, field inspections, pest reports, satellite observations, and technical prescriptions | --- | 07/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-infrastructure` | `d4b8f8e` | feat(endpoints): add HTTP endpoints for agroclimatic alerts, climate forecasts, field inspections, pest reports, satellite observations, and technical prescriptions | --- | 07/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-application` | `90a387a` | feat(application): implement CropHealthStore and CropHealthApi for managing crop health data | --- | 07/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-presentation` | `fe4ef72` | feat(view): add Crop Health monitoring view with satellite observations and diagnostics | --- | 07/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-presentation` | `329a634` | feat(view): add Agroclimatic Alerts view for displaying active weather and environmental alerts | --- | 07/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-presentation` | `d272ef4` | feat(view): add Pest Report Form for submitting pest and disease observations | --- | 07/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-presentation` | `8ff9dd1` | feat(view): add Diagnosis Inbox view for managing pest and disease reports | --- | 07/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-presentation` | `e06d364` | feat(view): add Prescription Form for issuing agrochemical prescriptions | --- | 07/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-presentation` | `d40b79b` | feat(view): add Prescriptions View for displaying issued agrochemical prescriptions | --- | 07/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-presentation` | `1729451` | feat(view): integrate Leaflet map for crop health visualization | --- | 07/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/profiles-context` | `dfe32bd` | feat(profiles): configure routes, fake api, and i18n support | --- | 07/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/deployment-firebase` | `089c425` | chore: point production environment to the fake api on render | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/deployment-firebase` | `0959f0b` | chore: add firebase hosting configuration and deployment guide | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/harvest-certification-domain-infrastructure` | `6cd5e07` | feat(harvest): add command interfaces and entities for managing harvest batches and quality certificates | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/harvest-certification-application` | `4162ed1` | feat(harvest): implement HarvestCertificationStore for managing batches and certificates | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/harvest-certification-presentation` | `3e2c19b` | feat(harvest): add harvest certificates view component with template and styles | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/harvest-certification-presentation` | `745c890` | feat(harvest): add public traceability view component with template, styles, and logic | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/update-field-management` | `9861be8` | feat(field-management): add registered plots, plot registration and boundary map views | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/update-shared` | `5549584` | refactor(shared): split translations by bounded context, translate the paginator and default to english | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/demo-user-session` | `0e081f1` | fix: use the demo access user instead of a fixed environment user | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-improvements` | `cbd2a34` | "fix(crop-health): correct map initialization" | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-improvements` | `47d379d` | fix(crop-health): replace fabricated fallback data with explicit states | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-improvements` | `5424302` | fix(server): reconcile demo data and add crop health collections | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-improvements` | `97975de` | feat(crop-health): connect reports inspections and prescriptions to API | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-improvements` | `ed1b66e` | feat(crop-health): enhance demo user roles and add field inspection features | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-improvements` | `8533b6f` | feat(crop-health): enhance plot dashboard with satellite observation data and NDVI chart | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-improvements` | `ffe9936` | feat(crop-health): add plot boundary features and enhance map display options | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-improvements` | `ea59d1f` | feat(crop-health): add report deletion functionality and enhance image download feature | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/crop-health-improvements` | `84a9bde` | feat(crop-health): remove report download functionality and update README for image download changes | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/default-language-en` | `6703ec1` | feat(crop-health): update report label logic and simplify language switcher functionality | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/demo-access-set-english` | `1c240ec` | feat(demo-access): update text to English for demo access page | --- | 08/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `feature/field-management-components` | `d661d15` | feat(field-management): add campaign finances and field expense views with their routes | --- | 09/10/2026 |
+| `dymbia-opensource/sumaqAgro-appweb` | `main` | `277ea58` | Merge branch 'release/v1.0.0' into main | --- | 09/10/2026
+
+
+#### 5.2.2.5. Execution Evidence for Sprint Review
+
+
+En esta sección se presentan las evidencias de ejecución de la Web Application de SumaqAgro desarrollada durante el Sprint 2. Las capturas muestran las interfaces y los flujos de uso de la aplicación en un entorno local, utilizando datos de demostración.
+
+Las evidencias se organizan en tres segmentos según el perfil del usuario: agricultor independiente, director de cooperativa e ingeniero agrónomo. A continuación, se documenta el primer segmento, correspondiente al agricultor independiente.
+
+---
+
+##### 1. Agricultor independiente
+
+El perfil del agricultor independiente, representado por Guillermo, reúne las interfaces para consultar el estado de sus cultivos, revisar los gastos de campaña, gestionar sus parcelas y acceder a la asistencia agronómica. Las capturas presentan la navegación de la aplicación con el idioma inglés seleccionado.
+
+###### 1.1. Dashboard principal — Mi parcela
+
+La pantalla My Plot presenta un resumen de la parcela seleccionada y de su campaña agrícola. Se muestran el índice NDVI registrado, la inversión acumulada y el precio de equilibrio por saco. Además, incluye un gráfico de evolución del vigor vegetal y la distribución de costos entre insumos, mano de obra y transporte.
+
+En la evidencia se observa la parcela de demostración de Ayacucho, con un NDVI de 0.76, una inversión de S/ 4,870.00 y un punto de equilibrio de S/ 16.23 por saco.
+
+![Dashboard principal — Mi parcela](assets/img/chapter-5/app-angular/img-1.1.png)
+
+###### 1.2. Salud del cultivo — Parcela de Apurímac
+
+La pantalla Crop Health muestra los límites de la parcela de Apurímac sobre un mapa con fondo satelital. El usuario dispone de un selector de parcela, controles de zoom y opciones para alternar entre NDVI y NDWI, así como entre las vistas de satélite híbrido y mapa.
+
+El panel lateral presenta la fecha de captura y los valores de demostración: NDVI de 0.58, NDWI de 0.18 y 0.9 hectáreas de estrés registrado. También se muestran una recomendación y los botones para consultar al asesor y descargar una ficha en formato PNG. El texto de la interfaz aclara que el color del polígono identifica el índice seleccionado y no representa un mapa de calor calculado.
+
+![Salud del cultivo — Parcela de Apurímac](assets/img/chapter-5/app-angular/img-1.2.png)
+
+###### 1.3. Gastos de campaña y precio de equilibrio
+
+La pantalla My Expenses and Earnings organiza los gastos de la campaña por categorías y presenta una tabla con la fecha, el tipo de gasto, la descripción, la cantidad, el precio unitario y el total de cada registro.
+
+Para la parcela de Apurímac se muestra una inversión de S/ 4,670.00, distribuida en S/ 3,000.00 de insumos, S/ 1,320.00 de mano de obra y S/ 350.00 de transporte. El panel de equilibrio presenta un rendimiento esperado de 280 sacos y un precio mínimo calculado de S/ 16.68 por saco. La interfaz incluye las acciones para registrar gastos y actualizar el rendimiento esperado.
+
+![Gastos de campaña y precio de equilibrio](assets/img/chapter-5/app-angular/img-1.3.png)
+
+###### 1.4. Bandeja de reportes de plagas
+
+La pantalla Diagnosis Inbox presenta los reportes asociados a las parcelas del agricultor. Cada tarjeta identifica la parcela, el número del reporte, su estado, la descripción de los síntomas y la severidad.
+
+La captura muestra el reporte #1 de la parcela de Apurímac, con estado Pending y severidad Low. También se observan las acciones para agregar un reporte, eliminar el registro y acceder a las inspecciones de campo o al historial de recetas.
+
+![Bandeja de reportes de plagas](assets/img/chapter-5/app-angular/img-1.4.png)
+
+###### 1.5. Consulta de certificados de cosecha
+
+La pantalla Official Quality and Origin Certificates presenta un certificado asociado al lote BATCH-2026-08. La tarjeta muestra el cultivo, el predio de origen, la fecha de emisión y la distribución de la clasificación técnica de la cosecha.
+
+La interfaz ofrece las opciones para mostrar el código QR al comprador, descargar el certificado en PDF y consultar su registro web. Esta captura documenta la presentación del certificado y sus acciones disponibles.
+
+![Consulta de certificados de cosecha](assets/img/chapter-5/app-angular/img-1.5.png)
+
+###### 1.6. Consulta de alertas agrícolas
+
+La pantalla Agricultural Alerts permite seleccionar una parcela y consultar las alertas correspondientes a su región. En la captura se encuentra seleccionada la parcela de Ayacucho y se presenta el mensaje “No alerts are recorded for this region”.
+
+Esta evidencia muestra el estado de la interfaz cuando no existen alertas registradas para la región consultada.
+
+![Consulta de alertas agrícolas](assets/img/chapter-5/app-angular/img-1.6.png)
+
+###### 1.7. Configuración de la cuenta
+
+La pantalla Account Settings and Farmer Support presenta los datos de contacto del agricultor, mediante campos de teléfono y correo electrónico, junto con el botón Save.
+
+La sección de seguridad muestra los campos de contraseña deshabilitados y un mensaje que indica que el cambio de contraseña estará disponible cuando se incorpore la autenticación de la plataforma.
+
+![Configuración de la cuenta](assets/img/chapter-5/app-angular/img-1.7.png)
+
+###### 1.8. Consulta de parcelas registradas
+
+La pantalla My Registered Plots presenta las parcelas del agricultor mediante tarjetas con su nombre, cultivo, superficie, ubicación y acceso al monitoreo.
+
+En la evidencia se muestran las parcelas de demostración de Ayacucho y Apurímac, además de Parcela San Jerónimo – Lote 1, con superficies de 4.83, 4.82 y 2.81 hectáreas, respectivamente. La interfaz también informa que se han utilizado los tres espacios del plan gratuito.
+
+![Consulta de parcelas registradas](assets/img/chapter-5/app-angular/img-1.8.png)
+
+###### 1.9. Registro de una nueva parcela — Datos del cultivo
+
+El primer paso del registro presenta un formulario para ingresar el nombre de la parcela, el tipo y la variedad del cultivo, la región o valle, la fecha estimada de siembra, el rendimiento esperado y el área declarada.
+
+La captura muestra el registro de Parcela San Jerónimo – Lote 1, con cultivo Papa Canchán, ubicación en Apurímac – Valle de Chumbao, rendimiento esperado de 450 sacos y área declarada de 1.5 hectáreas. El botón Next permite continuar hacia la delimitación del terreno.
+
+![Registro de una nueva parcela — Datos del cultivo](assets/img/chapter-5/app-angular/img-1.9.png)
+
+###### 1.10. Delimitación geográfica y cálculo de superficie
+
+El segundo paso presenta un mapa para marcar los vértices del terreno. El panel lateral muestra las coordenadas registradas, el estado del polígono y la superficie calculada.
+
+En la captura se observa un perímetro cerrado de cuatro vértices y un área calculada de 2.81 hectáreas, diferenciada del área declarada de 1.5 hectáreas. La interfaz incluye controles para deshacer el último punto, limpiar el mapa y guardar la parcela, además de opciones para ingresar coordenadas o solicitar la ubicación GPS del dispositivo.
+
+![Delimitación geográfica y cálculo de superficie](assets/img/chapter-5/app-angular/img-1.10.png)
+
+###### 1.11. Confirmación del registro de parcela
+
+Tras guardar la delimitación, la aplicación presenta el cuadro de confirmación “Plot Saved Successfully!”. Este resume el nombre de la parcela, el cultivo, el área calculada y los espacios utilizados del plan.
+
+La evidencia muestra la parcela San Jerónimo – Lote 1, con cultivo Papa Canchán y superficie de 2.81 hectáreas. El diálogo ofrece accesos para consultar la salud del cultivo o regresar a la gestión de parcelas. El indicador de sincronización satelital forma parte de la presentación de la demo.
+
+![Confirmación del registro de parcela](assets/img/chapter-5/app-angular/img-1.11.png)
+
+###### 1.12. Salud del cultivo — Selección de NDWI
+
+La última captura muestra la parcela de Ayacucho con la opción NDWI seleccionada. El límite de la parcela se presenta en azul sobre el fondo satelital, mientras el panel lateral conserva los valores registrados: NDVI de 0.76, NDWI de 0.42 y 0.3 hectáreas de estrés registrado.
+
+Esta evidencia documenta la selección del índice NDWI y la consulta de los datos simulados de la parcela, junto con las acciones de consulta al asesor y descarga de la ficha PNG.
+
+![Salud del cultivo — Selección de NDWI](assets/img/chapter-5/app-angular/img-1.12.png)
+
+
+---
+
+##### 2. Director de cooperativa
+
+El perfil del director de cooperativa, representado por Cristian Santana, presenta una interfaz orientada a la supervisión de socios, parcelas, costos y calidad de la producción. Este segmento continúa en desarrollo; la evidencia documenta el avance de su panel y las opciones de navegación disponibles.
+
+###### 2.1. Panel de control de la cooperativa
+
+La pantalla Panel de Control – Cooperativa Agraria Valle del Mantaro muestra un resumen de 3 socios activos y 7.8 hectáreas bajo monitoreo. Incluye tarjetas de acopio total, estado vegetativo y costo promedio por hectárea, junto con accesos al padrón de socios, mapa de riesgo y matriz de costos.
+
+En la captura se presenta un acopio de 19.4 toneladas, frente a una meta de 210 toneladas, y un costo promedio de S/ 2,432.05 por hectárea. También se observa un espacio para la tendencia temporal del NDVI, todavía sin una serie dibujada, y un resumen de calidad de 4 lotes evaluados.
+
+El menú lateral organiza los accesos a padrón, salud de parcelas, costos, certificados, alertas y reportes de plagas. Los indicadores corresponden al entorno de demostración; la integración y validación de los flujos de este perfil siguen en desarrollo.
+
+![Panel de control de la cooperativa](../report/assets/img/chapter-5/app-angular/img-2.1.png)
+
+---
+
+##### 3. Ingeniero agrónomo
+
+El perfil del ingeniero agrónomo, representado por Ing. Juan A. Morales, presenta una interfaz orientada a la atención de reportes de plagas, inspecciones de campo y prescripciones técnicas. Este segmento continúa en desarrollo; la captura muestra su navegación y el estado inicial de la bandeja de atención.
+
+###### 3.1. Bandeja de diagnóstico
+
+La pantalla Diagnosis Inbox presenta la bandeja de reportes del ingeniero agrónomo. En la evidencia se muestra el mensaje “No reports”, correspondiente al estado de la interfaz cuando no hay reportes disponibles para mostrar.
+
+La pantalla incluye accesos a Field Inspections y Prescription History. El menú lateral reúne las opciones de reportes de plagas, inspecciones, prescripciones técnicas, salud del cultivo y alertas agrícolas.
+
+Esta captura documenta la estructura del perfil y su estado vacío. La evidencia de atención de casos, registro de inspecciones y emisión de prescripciones se incorporará conforme avance el desarrollo.
+
+![Bandeja de diagnóstico](../report/assets/img/chapter-5/app-angular/img-3.1.png)
+
+##### Evidencia Funcional: Video Demostrativo de Navegación
+
+Para evidenciar el funcionamiento de la Web Application de SumaqAgro, se presenta un video demostrativo de la navegación entre las vistas de Angular y la interacción con los componentes de la aplicación. El recorrido muestra el dashboard del agricultor independiente, la gestión y delimitación de parcelas, la consulta de indicadores NDVI/NDWI, los gastos de campaña y la bandeja de reportes de plagas. También presenta el cambio de idioma y los avances de las interfaces del director de cooperativa y del ingeniero agrónomo.
+
+* **Vista Previa del Video:**
+
+![Vista Previa del Video Demostrativo](assets/img/chapter-5/img-about-the-product-app.png)
+
+* **Enlace de Reproducción (Microsoft Stream):** [Video "Video de Exposición AV1"](https://upcedupe-my.sharepoint.com/personal/u202422128_upc_edu_pe/_layouts/15/stream.aspx?id=%2Fpersonal%2Fu202422128%5Fupc%5Fedu%5Fpe%2FDocuments%2FRecording%2D20261009%5F092557%2Ewebm&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0&ga=1&referrer=StreamWebApp%2EWeb&referrerScenario=AddressBarCopied%2Eview%2E418bacb5%2D22ff%2D4d75%2Daa54%2Db24e02149c8b)
+
+
+#### 5.2.2.6. Services Documentation Evidence for Sprint Review
+
+En esta sección se presenta la documentación de los servicios utilizados por la Web Application de **SumaqAgro** durante el **Sprint 2**. Para esta iteración se empleó una **Fake REST API implementada con `json-server`**, que administra los datos de demostración almacenados en `server/db.json`.
+
+La aplicación Angular consume estos servicios mediante `HttpClient` y las clases de la capa **infrastructure** de cada Bounded Context. Esta integración permite desarrollar las operaciones de consulta, registro, actualización y eliminación de información mientras se prepara el backend definitivo en **Spring Boot**.
+
+##### Configuración y ejecución del servicio
+
+La Fake REST API se inicia mediante el comando definido en `package.json`:
+
+```bash
+npm run api
+```
+
+Este comando ejecuta:
+
+```bash
+json-server --watch server/db.json --routes server/routes.json --port 3000
+```
+
+El archivo `server/routes.json` establece el prefijo de acceso a los recursos:
+
+```json
+{
+  "/api/v1/*": "/$1"
+}
+```
+
+Las direcciones de conexión configuradas en el proyecto son:
+
+| Entorno | URL base | Archivo de configuración |
+| :--- | :--- | :--- |
+| Desarrollo local | `http://localhost:3000/api/v1` | `src/environments/environment.development.ts` |
+| Producción | `https://sumaqagro-fake-api.onrender.com/api/v1` | `src/environments/environment.ts` |
+
+La aplicación Angular se ejecuta en una terminal independiente mediante `npm start`.
+
+##### Documentación de endpoints
+
+Los endpoints se organizan según los Bounded Contexts del proyecto. Las rutas indicadas son relativas a la URL base y los métodos corresponden a las operaciones expuestas por las fachadas de infraestructura del frontend.
+
+| Bounded Context | Endpoint | Métodos HTTP | Descripción |
+| :--- | :--- | :--- | :--- |
+| Profiles | `/profiles` | GET, PUT | Consulta y actualización del perfil del agricultor. |
+| Profiles | `/cooperatives` | GET, PUT | Consulta y actualización de la cooperativa. |
+| Profiles | `/cooperative-members` | GET | Consulta de socios de una cooperativa. |
+| Profiles | `/cooperative-dashboards` | GET | Consulta de los datos del panel institucional. |
+| Profiles | `/agronomist-assignments` | GET, POST, PUT, DELETE | Consulta y gestión de asignaciones de ingenieros agrónomos. |
+| Field Management | `/field-plots` | GET, POST, PUT, DELETE | Consulta, registro, actualización y eliminación de parcelas. |
+| Field Management | `/crop-campaigns` | GET, POST, PUT | Consulta, registro y actualización de campañas agrícolas. |
+| Field Management | `/campaign-ledgers` | GET, POST, PUT | Consulta, registro y actualización del libro de gastos de una campaña. |
+| Crop Health | `/satellite-observations` | GET | Consulta de observaciones e indicadores registrados por parcela. |
+| Crop Health | `/agroclimatic-alerts` | GET | Consulta de alertas agroclimáticas por región. |
+| Crop Health | `/climate-forecasts` | GET | Consulta de pronósticos climáticos por región. |
+| Crop Health | `/pest-reports` | GET, POST, PUT, DELETE | Consulta, registro, actualización y eliminación de reportes de plagas. |
+| Crop Health | `/field-inspections` | GET, POST, PUT | Consulta, programación y actualización de inspecciones de campo. |
+| Crop Health | `/technical-prescriptions` | GET, POST | Consulta y emisión de prescripciones técnicas. |
+| Harvest Certification | `/harvest-batches` | GET, POST, PUT | Consulta, registro y actualización de lotes de cosecha. |
+| Harvest Certification | `/quality-certificates` | GET, POST | Consulta y emisión de certificados de calidad, incluyendo búsqueda por token. |
+
+Las operaciones sobre registros individuales utilizan el identificador del recurso en la ruta, por ejemplo, `PUT /api/v1/pest-reports/{id}` y `DELETE /api/v1/pest-reports/{id}`.
+
+La trazabilidad pública se construye en Angular mediante la consulta del certificado por su token y del lote de cosecha asociado. En la implementación actual no se utiliza una colección independiente `/public-traceability` en `server/db.json`.
+
+##### Consultas mediante parámetros
+
+El frontend utiliza parámetros de consulta para recuperar los registros asociados a un propietario, parcela, campaña, región o reporte.
+
+| Petición | Descripción |
+| :--- | :--- |
+| `GET /api/v1/field-plots?ownerUserId=1` | Consulta las parcelas de un propietario. |
+| `GET /api/v1/crop-campaigns?plotId=1` | Consulta las campañas de una parcela. |
+| `GET /api/v1/campaign-ledgers?campaignId=1` | Consulta el libro de gastos de una campaña. |
+| `GET /api/v1/satellite-observations?plotId=1` | Consulta las observaciones registradas de una parcela. |
+| `GET /api/v1/pest-reports?plotId=1` | Consulta los reportes de plagas de una parcela. |
+| `GET /api/v1/agroclimatic-alerts?region=Ayacucho` | Consulta las alertas registradas para Ayacucho. |
+| `GET /api/v1/field-inspections?reportId=1` | Consulta las inspecciones asociadas a un reporte. |
+| `GET /api/v1/technical-prescriptions?reportId=1` | Consulta las prescripciones asociadas a un reporte. |
+
+##### Estructura de los datos intercambiados
+
+Los recursos se intercambian en formato **JSON**. Las consultas a colecciones retornan arreglos, mientras que la consulta mediante `/{id}` retorna un objeto individual. Cuando una consulta no contiene registros, la API retorna un arreglo vacío `[]`.
+
+El siguiente objeto corresponde a un registro de demostración existente en la colección `satellite-observations` de `server/db.json`:
+
+```json
+{
+  "id": 1,
+  "plotId": 1,
+  "date": "2026-09-12T10:00:00Z",
+  "ndviMean": 0.74,
+  "ndwiMean": 0.65,
+  "surfaceTempKelvin": 295.15,
+  "cloudCoveragePercent": 5,
+  "stressAreaHectares": 0.4,
+  "recommendation": "Check the area for signs of the onset of wilting."
+}
+```
+
+Este registro relaciona una observación con una parcela e incluye la fecha de captura, los indicadores NDVI y NDWI, la temperatura superficial, la cobertura nubosa, el área de estrés y una recomendación.
+
+Los valores son datos simulados para la demostración. En el archivo revisado, las colecciones `agroclimatic-alerts`, `climate-forecasts`, `field-inspections` y `technical-prescriptions` se encuentran vacías.
+
+##### Integración con el frontend Angular
+
+El archivo `app.config.ts` habilita la comunicación HTTP mediante `provideHttpClient(withFetch())`. Las fachadas `ProfilesApi`, `FieldManagementApi`, `CropHealthApi` y `HarvestCertificationApi` agrupan las operaciones de acceso a datos de sus respectivos contextos.
+
+La clase compartida `BaseApiEndpoint` implementa las operaciones generales de consulta, creación, actualización y eliminación. Los **assemblers** convierten los recursos JSON recibidos en entidades de dominio y transforman las entidades en recursos para enviarlos a la API.
+
+Por ejemplo, el método `CropHealthApi.getObservationsByPlot(plotId)` delega la consulta al endpoint de observaciones satelitales. Este envía una petición GET con el parámetro `plotId` y transforma los registros recibidos en entidades `SatelliteObservation`.
+
+La documentación presentada corresponde a la configuración y los contratos implementados en el proyecto para la Fake REST API del Sprint 2.
+
+---
+
+#### 5.2.2.7. Software Deployment Evidence for Sprint Review
+
+Durante el **Sprint 2**, el equipo **Dymbia** realizó la configuración y publicación de la **Web Application de SumaqAgro** en **Firebase Hosting** y de la **Fake REST API** en **Render**. Estas actividades permitieron disponer de un entorno publicado para presentar las funcionalidades desarrolladas y consumir los datos de demostración.
+
+El proceso incluyó la configuración de los recursos en ambos proveedores, la vinculación del proyecto con GitHub, la definición de los comandos de compilación y ejecución, y la configuración de la conexión entre el frontend y la API.
+
+El alcance de despliegue de esta iteración comprende la **Web Application** y la **Fake REST API**. La Landing Page corresponde al Sprint 1, mientras que el backend definitivo en Spring Boot se desarrollará en una iteración posterior.
+
+##### Despliegue de la Web Application en Firebase Hosting
+
+Se configuró el proyecto **`sumaqagro-appweb`** en Firebase y se habilitó **Firebase Hosting** para publicar los archivos generados por Angular.
+
+La vinculación del proyecto local se encuentra definida en `.firebaserc`. Por su parte, `firebase.json` establece el directorio de publicación `dist/sumaqAgro-appweb/browser` y una redirección hacia `index.html`, necesaria para que Angular gestione sus rutas internas al ingresar directamente a una vista o recargar la página.
+
+El procedimiento de despliegue documentado en el repositorio utiliza **Firebase CLI**. La preparación del entorno requiere instalar la herramienta y autenticar una cuenta con acceso al proyecto:
+
+```bash
+npm install -g firebase-tools
+firebase login
+```
+
+Posteriormente, la aplicación se compila y publica mediante:
+
+```bash
+npm run build
+firebase deploy --only hosting
+```
+
+La Web Application dispone de los siguientes dominios:
+
+| Tipo | Dirección |
+| :--- | :--- |
+| Dominio principal | https://sumaqagro-appweb.web.app |
+| Dominio alternativo | https://sumaqagro-appweb.firebaseapp.com |
+
+###### Evidencia de publicación en Firebase Hosting
+
+La captura del panel de Firebase Hosting muestra el proyecto `sumaqagro-appweb`, sus dominios y el historial de versiones publicadas. Se observan publicaciones realizadas el **8 y 9 de octubre de 2026**, con la versión **`4e43fc`** identificada como la versión actual en la evidencia.
+
+![Firebase](assets/img/chapter-5/sprint-2/firebase-angular.jpeg)
+
+##### Despliegue de la Fake REST API en Render
+
+Se configuró un **Web Service** denominado **`sumaqAgro-fake-api`** en Render, utilizando el entorno de ejecución **Node** y una instancia gratuita.
+
+El servicio se vinculó con el repositorio **`dymbia-opensource/sumaqAgro-appweb`** y la rama **`develop`**. La configuración documentada en el proyecto es la siguiente:
+
+| Parámetro | Configuración |
+| :--- | :--- |
+| Tipo de servicio | Web Service |
+| Nombre | `sumaqAgro-fake-api` |
+| Repositorio | `dymbia-opensource/sumaqAgro-appweb` |
+| Rama | `develop` |
+| Entorno de ejecución | Node |
+| Comando de instalación | `npm install --include=dev` |
+| Comando de inicio | `npx json-server server/db.json --routes server/routes.json --host 0.0.0.0 --port $PORT` |
+| Tipo de instancia | Free |
+| Actualización | Auto-Deploy |
+
+El comando de inicio utiliza el puerto asignado por Render y permite atender peticiones externas. La Fake REST API administra los datos de `server/db.json` y utiliza `server/routes.json` para exponer los recursos bajo el prefijo `/api/v1`.
+
+La URL base configurada para el servicio es:
+
+**https://sumaqagro-fake-api.onrender.com/api/v1/db**
+
+![fake-api](assets/img/chapter-5/sprint-2/img-fake-api.png)
+
+###### Evidencia de publicación en Render
+
+La captura presenta el servicio en estado **Live**, vinculado a la rama `develop` y al commit **`227c66d`**. El historial muestra despliegues activados mediante **Auto-Deploy**, asociados a la integración de funcionalidades en el repositorio.
+
+Esta evidencia permite observar la automatización del despliegue de la Fake REST API a partir de las actualizaciones de la rama configurada.
+
+![Render](assets/img/chapter-5/sprint-2/render-angular.jpeg)
+
+##### Integración del frontend con la API publicada
+
+El archivo `src/environments/environment.ts` establece la dirección utilizada por Angular para consumir la Fake REST API en producción:
+
+```typescript
+platformProviderApiBaseUrl: 
+  'https://sumaqagro-fake-api.onrender.com/api/v1'
+``` 
+
+Esta configuración conecta la Web Application alojada en **Firebase Hosting** con el servicio publicado en **Render**. Para el desarrollo local, `environment.development.ts` utiliza la dirección `http://localhost:3000/api/v1`.
+
+La publicación del frontend se realiza mediante Firebase CLI, mientras que la actualización de la Fake REST API se automatiza mediante la integración de Render con GitHub.
+
+---
+
+
+#### 5.2.2.8. Team Collaboration Insights during Sprint
+
+En esta sección se describe la colaboración del equipo **Dymbia** durante la implementación de la **Web Application de SumaqAgro** correspondiente al **Sprint 2**. Se presentan las evidencias de participación mediante el historial de commits y los analíticos de contribución disponibles en GitHub.
+
+Las actividades se distribuyeron entre la configuración de Angular, los componentes compartidos, el modelado de entidades, la integración con la Fake REST API y el desarrollo de las interfaces de los Bounded Contexts **Profiles**, **Field Management**, **Crop Health** y **Harvest Certification**.
+
+El trabajo se organizó mediante ramas `feature/*`, cuyas implementaciones se integraron en `develop`. Posteriormente, la versión del producto se consolidó en `main` mediante la integración de la rama `release/v1.0.0`. Este flujo permitió desarrollar funcionalidades en paralelo y mantener la trazabilidad de las entregas.
+
+##### Analíticos de participación del equipo
+
+En la imagen se evidencia las contribuciones registradas por cada integrante. Esta evidencia se utiliza para identificar la participación del equipo en la implementación y complementar la distribución de responsabilidades definida en la matriz Leadership-and-Collaboration Matrix del sprint.
+
+![Insights → Contributors](../report/assets/img/chapter-5/sprint-2/img-collaboration.png)
