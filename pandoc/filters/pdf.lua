@@ -14,6 +14,11 @@
     6. Imágenes solas en un párrafo -> centradas. Varias capturas de celular
        en el mismo párrafo (líneas contiguas) -> una fila, lado a lado.
     7. Cada encabezado de nivel 1 (# ...) inicia en una página nueva.
+    8. Tabla de contenidos igual a la del enunciado: solo se listan los
+       capítulos y las secciones numeradas (1.1., 1.1.1., ...). Los subtítulos
+       internos (Segmento 1, Desktop Web Browser, Tabla `users`, ...) y los
+       de 4 niveles que el enunciado no incluye (4.6.4.1, 4.8.1.1, ...) se
+       mantienen en el documento, pero no aparecen en el índice.
 
   Compatible con Pandoc 2.9+ y 3.x.
 ]]
@@ -176,6 +181,23 @@ local function fix_table(tbl)
   return tbl
 end
 
+-- ¿El encabezado va en la tabla de contenidos? (estructura del enunciado)
+local TOC_LEVEL4 = { '^1%.2%.2%.', '^5%.2%.%d+%.' }   -- únicos 4 niveles del enunciado
+
+local function in_toc(el)
+  if el.level <= 2 then return true end
+  local text = stringify(el.content)
+  if text:match('^Anexo') then return true end
+  local num = text:match('^(%d+%.%d+[%.%d]*)')         -- 1.1., 1.2.1, 2.3.4., ...
+  if not num then return false end
+  local _, dots = num:gsub('%d+', '')
+  if dots <= 3 then return true end
+  for _, p in ipairs(TOC_LEVEL4) do
+    if num:match(p) then return true end
+  end
+  return false
+end
+
 local pass2 = {
   -- ::: {.center} ... ::: -> contenido centrado (carátula)
   Div = function(el)
@@ -246,6 +268,11 @@ local pass2 = {
 
   Header = function(el)
     if el.level == 1 then return { latex('\\clearpage'), el } end
+    if not in_toc(el) then          -- \section*{} sin entrada en el índice
+      el.classes:insert('unnumbered')
+      el.classes:insert('unlisted')
+      return el
+    end
   end,
 }
 
