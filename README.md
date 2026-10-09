@@ -2,7 +2,7 @@
 
 [![Build Status](https://img.shields.io/badge/Docs--as--Code-Pandoc%20%7C%20XeLaTeX-blue.svg)](pandoc/Makefile)
 [![Course](https://img.shields.io/badge/UPC-1ASI0729%20Open%20Source-red.svg)](https://www.upc.edu.pe/)
-[![Milestone](https://img.shields.io/badge/Delivery-AV1%20Sprint%20Review-brightgreen.svg)](#tabla-de-contenidos---entregable-av1)
+[![Milestone](https://img.shields.io/badge/Delivery-TB1%20Stage%20Review-brightgreen.svg)](#tabla-de-contenidos---entregable-tb1)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
 
 Repositorio oficial para la gestión, redacción colaborativa y compilación secuencial del **Informe de Proyecto Final** de la startup **Dymbia** y su plataforma SaaS **SumaqAgro**, desarrollado bajo el enfoque **Docs-as-Code**, GitFlow y Conventional Commits para el curso *1ASI0729 Desarrollo de Aplicaciones Open Source* (Ciclo 2026-20).
@@ -60,7 +60,7 @@ Repositorio oficial para la gestión, redacción colaborativa y compilación sec
 
 ---
 
-## Tabla de Contenidos - Entregable AV1
+## Tabla de Contenidos - Entregable TB1
 
 * [Carátula](report/front-matter/01-caratula.md)
 * [Registro de Versiones del Informe](report/front-matter/02-version-history.md)
@@ -142,15 +142,15 @@ Repositorio oficial para la gestión, redacción colaborativa y compilación sec
       * [5.2.1.6. Services Documentation Evidence for Sprint Review](report/50-chapter-5-implementation.md#5216-services-documentation-evidence-for-sprint-review)
       * [5.2.1.7. Software Deployment Evidence for Sprint Review](report/50-chapter-5-implementation.md#5217-software-deployment-evidence-for-sprint-review)
       * [5.2.1.8. Team Collaboration Insights during Sprint](report/50-chapter-5-implementation.md#5218-team-collaboration-insights-during-sprint)
-  * [5.2.2. Sprint 2](report/50-chapter-5-implementation.md#522-sprint-2)
-    * [5.2.2.1. Sprint Planning 2](report/50-chapter-5-implementation.md#5221-sprint-planning-2)
-    * [5.2.2.2. Aspect Leaders and Collaborators](report/50-chapter-5-implementation.md#5222-aspect-leaders-and-collaborators)
-    * [5.2.2.3. Sprint Backlog 2](report/50-chapter-5-implementation.md#5223-sprint-backlog-2)
-    * [5.2.2.4. Development Evidence for Sprint Review](report/50-chapter-5-implementation.md#5224-development-evidence-for-sprint-review)
-    * [5.2.2.5. Execution Evidence for Sprint Review](report/50-chapter-5-implementation.md#5225-execution-evidence-for-sprint-review)
-    * [5.2.2.6. Services Documentation Evidence for Sprint Review](report/50-chapter-5-implementation.md#5226-services-documentation-evidence-for-sprint-review)
-    * [5.2.2.7. Software Deployment Evidence for Sprint Review](report/50-chapter-5-implementation.md#5227-software-deployment-evidence-for-sprint-review)
-    * [5.2.2.8. Team Collaboration Insights during Sprint](report/50-chapter-5-implementation.md#5228-team-collaboration-insights-during-sprint)
+    * [5.2.2. Sprint 2](report/50-chapter-5-implementation.md#522-sprint-2)
+      * [5.2.2.1. Sprint Planning 2](report/50-chapter-5-implementation.md#5221-sprint-planning-2)
+      * [5.2.2.2. Aspect Leaders and Collaborators](report/50-chapter-5-implementation.md#5222-aspect-leaders-and-collaborators)
+      * [5.2.2.3. Sprint Backlog 2](report/50-chapter-5-implementation.md#5223-sprint-backlog-2)
+      * [5.2.2.4. Development Evidence for Sprint Review](report/50-chapter-5-implementation.md#5224-development-evidence-for-sprint-review)
+      * [5.2.2.5. Execution Evidence for Sprint Review](report/50-chapter-5-implementation.md#5225-execution-evidence-for-sprint-review)
+      * [5.2.2.6. Services Documentation Evidence for Sprint Review](report/50-chapter-5-implementation.md#5226-services-documentation-evidence-for-sprint-review)
+      * [5.2.2.7. Software Deployment Evidence for Sprint Review](report/50-chapter-5-implementation.md#5227-software-deployment-evidence-for-sprint-review)
+      * [5.2.2.8. Team Collaboration Insights during Sprint](report/50-chapter-5-implementation.md#5228-team-collaboration-insights-during-sprint)
 * [Conclusiones](report/60-conclusions.md)
 * [Bibliografía](report/99-bibliography.md)
 * [Anexos](report/annexes/annex-c-videos.md)

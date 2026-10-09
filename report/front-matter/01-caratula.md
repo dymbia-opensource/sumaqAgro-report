@@ -40,7 +40,7 @@ Proyecto
 
 **Período 202620**
 
-**Septiembre 2026**
+**Octubre 2026**
 
 :::
 
