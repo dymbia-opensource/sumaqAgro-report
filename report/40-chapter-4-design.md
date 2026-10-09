@@ -899,6 +899,39 @@ El flujo inicia en el panel financiero, donde el agricultor revisa su resumen de
 El flujo inicia en el módulo Alertas Agrícolas, donde el usuario revisa los avisos emitidos y accede a la sección de Medidas Detalladas. En este apartado, encuentra toda la información técnica necesaria para tomar acciones inmediatas ante la problemática detectada. Una vez completadas las recomendaciones, el usuario presiona el botón «Finalizar Plan de Acción», lo que despliega una ventana modal con el resumen general de las actividades realizadas y la opción para retornar a la bandeja principal de alertas.
 
 
+**Wireflow 1: Consulta y auditoría del padrón consolidado de socios**
+* User Persona: Cristian Santana (Segmento 2: Gerente de Operaciones de Cooperativa Agraria).
+* User Goal 1: Explorar, filtrar y auditar la lista general de productores afiliados y sus predios registrados para supervisar el alcance territorial de la organización y planificar las metas de acopio de la campaña.
+
+![Wireflow2 User Goal 1](assets/img/chapter-4/wireflows/wireflow2-ug1.png)
+
+El flujo inicia en la sección Padrón de Socios, donde se muestra una tabla con los socios registrados. Al presionar el botón “Ver” de un socio, se accede a su expediente, donde se pueden visualizar las parcelas que tiene asignadas actualmente. Posteriormente, al seleccionar el botón “Añadir lote del socio”, se despliega un formulario para ingresar los datos del nuevo lote. Una vez completada la información, al presionar “Registrar”, el usuario avanza a la siguiente etapa, donde podrá delimitar gráficamente el lote mediante la creación de polígonos sobre la parcela.
+
+**Wireflow 2: Registro e incorporación de un nuevo socio al padrón digital**
+* User Persona: Cristian Santana (Segmento 2: Gerente de Operaciones de Cooperativa Agraria).
+* User Goal 2: Registrar los datos personales y de contacto de un nuevo productor para otorgarle alta oficial en el padrón de la cooperativa y habilitar la posterior vinculación de sus terrenos.
+
+![Wireflow2 User Goal 2](assets/img/chapter-4/wireflows/wireflow2-ug2.png)
+
+El flujo inicia en la sección Padrón de Socios, donde se muestra una tabla con todos los socios registrados. Al seleccionar el botón “Asignar o agregar socio”, se despliega un formulario que permite ingresar y completar los datos correspondientes al nuevo socio para su posterior registro en el sistema.
+
+
+**Wireflow 3: Auditoría de la matriz consolidada de costos por hectárea y balance de campaña**
+* User Persona: Cristian Santana (Segmento 2: Gerente de Operaciones de Cooperativa Agraria).
+* User Goal 3: Analizar la matriz comparativa de egresos operacionales de todos los socios afiliados para identificar desviaciones financieras en insumos/jornales y exportar el balance contable consolidado para la asamblea general.
+
+![Wireflow2 User Goal 3](assets/img/chapter-4/wireflows/wireflow2-ug3.png)
+
+El flujo inicia en la sección Costos, donde se muestra una tabla con los datos registrados. Al seleccionar la opción “Auditar usuario”, se accede a una vista que presenta el listado completo de los últimos asientos contables reportados. Posteriormente, al presionar el botón “Ver” en la columna “Comprobante” del registro correspondiente, se despliega una ventana modal que permite revisar y configurar la información necesaria para gestionar correctamente el balance financiero.
+
+
+**Wireflow 4: Monitoreo de salud foliar y despacho de alerta agroclimática en SMS**
+* User Persona: Cristian Santana (Segmento 2: Gerente de Operaciones de Cooperativa Agraria).
+* User Goal 4: Supervisar la salud vegetativa de los predios afiliados mediante mapas satelitales y despachar avisos preventivos por SMS a los socios para mitigar pérdidas por sequías o plagas.
+
+![Wireflow2 User Goal 4](dassets/img/chapter-4/wireflows/wireflow2-ug4.png)
+
+El flujo inicia en la sección Salud de Parcelas, donde se muestra un mapa con las parcelas y sus respectivos estados. Al seleccionar una parcela marcada en rojo, se despliega su información, incluyendo los datos del socio y el estado actual de su terreno. Posteriormente, al presionar el botón “Despachar Alerta SMS a Socio”, se abre una ventana donde se muestra el mensaje que será enviado al socio. Finalmente, al seleccionar “Enviar Alerta SMS Ahora”, se envía la notificación y se muestra un mensaje de confirmación, indicando que la alerta fue enviada correctamente.
 
 ### 4.4.3. Web Applications Mock-ups
 
