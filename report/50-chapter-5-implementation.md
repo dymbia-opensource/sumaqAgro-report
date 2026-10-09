@@ -919,7 +919,7 @@ Para evidenciar el funcionamiento de la Web Application de SumaqAgro, se present
 
 * **Vista Previa del Video:**
 
-  ![Vista Previa del Video Demostrativo](img-video-preview.png)
+![Vista Previa del Video Demostrativo](img-video-preview.png)
 
 * **Enlace de Reproducción (Microsoft Stream):** [Video "Video de Exposición AV1"](https://web.microsoftstream.com/video/tu-enlace-aqui)
 
@@ -1037,11 +1037,97 @@ Por ejemplo, el método `CropHealthApi.getObservationsByPlot(plotId)` delega la 
 
 La documentación presentada corresponde a la configuración y los contratos implementados en el proyecto para la Fake REST API del Sprint 2.
 
-
-
+---
 
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
 
+Durante el **Sprint 2**, el equipo **Dymbia** realizó la configuración y publicación de la **Web Application de SumaqAgro** en **Firebase Hosting** y de la **Fake REST API** en **Render**. Estas actividades permitieron disponer de un entorno publicado para presentar las funcionalidades desarrolladas y consumir los datos de demostración.
+
+El proceso incluyó la configuración de los recursos en ambos proveedores, la vinculación del proyecto con GitHub, la definición de los comandos de compilación y ejecución, y la configuración de la conexión entre el frontend y la API.
+
+El alcance de despliegue de esta iteración comprende la **Web Application** y la **Fake REST API**. La Landing Page corresponde al Sprint 1, mientras que el backend definitivo en Spring Boot se desarrollará en una iteración posterior.
+
+##### Despliegue de la Web Application en Firebase Hosting
+
+Se configuró el proyecto **`sumaqagro-appweb`** en Firebase y se habilitó **Firebase Hosting** para publicar los archivos generados por Angular.
+
+La vinculación del proyecto local se encuentra definida en `.firebaserc`. Por su parte, `firebase.json` establece el directorio de publicación `dist/sumaqAgro-appweb/browser` y una redirección hacia `index.html`, necesaria para que Angular gestione sus rutas internas al ingresar directamente a una vista o recargar la página.
+
+El procedimiento de despliegue documentado en el repositorio utiliza **Firebase CLI**. La preparación del entorno requiere instalar la herramienta y autenticar una cuenta con acceso al proyecto:
+
+```bash
+npm install -g firebase-tools
+firebase login
+```
+
+Posteriormente, la aplicación se compila y publica mediante:
+
+```bash
+npm run build
+firebase deploy --only hosting
+```
+
+La Web Application dispone de los siguientes dominios:
+
+| Tipo | Dirección |
+| :--- | :--- |
+| Dominio principal | https://sumaqagro-appweb.web.app |
+| Dominio alternativo | https://sumaqagro-appweb.firebaseapp.com |
+
+###### Evidencia de publicación en Firebase Hosting
+
+La captura del panel de Firebase Hosting muestra el proyecto `sumaqagro-appweb`, sus dominios y el historial de versiones publicadas. Se observan publicaciones realizadas el **8 y 9 de octubre de 2026**, con la versión **`4e43fc`** identificada como la versión actual en la evidencia.
+
+![Firebase](assets/img/chapter-5/sprint-2/firebase-angular.jpeg)
+
+##### Despliegue de la Fake REST API en Render
+
+Se configuró un **Web Service** denominado **`sumaqAgro-fake-api`** en Render, utilizando el entorno de ejecución **Node** y una instancia gratuita.
+
+El servicio se vinculó con el repositorio **`dymbia-opensource/sumaqAgro-appweb`** y la rama **`develop`**. La configuración documentada en el proyecto es la siguiente:
+
+| Parámetro | Configuración |
+| :--- | :--- |
+| Tipo de servicio | Web Service |
+| Nombre | `sumaqAgro-fake-api` |
+| Repositorio | `dymbia-opensource/sumaqAgro-appweb` |
+| Rama | `develop` |
+| Entorno de ejecución | Node |
+| Comando de instalación | `npm install --include=dev` |
+| Comando de inicio | `npx json-server server/db.json --routes server/routes.json --host 0.0.0.0 --port $PORT` |
+| Tipo de instancia | Free |
+| Actualización | Auto-Deploy |
+
+El comando de inicio utiliza el puerto asignado por Render y permite atender peticiones externas. La Fake REST API administra los datos de `server/db.json` y utiliza `server/routes.json` para exponer los recursos bajo el prefijo `/api/v1`.
+
+La URL base configurada para el servicio es:
+
+**https://sumaqagro-fake-api.onrender.com/api/v1/db**
+
+![fake-api](assets/img/chapter-5/sprint-2/img-fake-api.png)
+
+###### Evidencia de publicación en Render
+
+La captura presenta el servicio en estado **Live**, vinculado a la rama `develop` y al commit **`227c66d`**. El historial muestra despliegues activados mediante **Auto-Deploy**, asociados a la integración de funcionalidades en el repositorio.
+
+Esta evidencia permite observar la automatización del despliegue de la Fake REST API a partir de las actualizaciones de la rama configurada.
+
+![Render](assets/img/chapter-5/sprint-2/render-angular.jpeg)
+
+##### Integración del frontend con la API publicada
+
+El archivo `src/environments/environment.ts` establece la dirección utilizada por Angular para consumir la Fake REST API en producción:
+
+```typescript
+platformProviderApiBaseUrl: 
+  'https://sumaqagro-fake-api.onrender.com/api/v1'
+``` 
+
+Esta configuración conecta la Web Application alojada en **Firebase Hosting** con el servicio publicado en **Render**. Para el desarrollo local, `environment.development.ts` utiliza la dirección `http://localhost:3000/api/v1`.
+
+La publicación del frontend se realiza mediante Firebase CLI, mientras que la actualización de la Fake REST API se automatiza mediante la integración de Render con GitHub.
+
+---
 
 
 #### 5.2.2.8. Team Collaboration Insights during Sprint
