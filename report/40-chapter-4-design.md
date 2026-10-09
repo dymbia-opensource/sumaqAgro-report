@@ -1019,6 +1019,15 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
   <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-certificate-report2.png" width="600px" height="auto"/>
 </p>
 
+### AGRICULTURAL ALERTS
+
+<p align="center">
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alerta-report1.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alerta-report2.png" width="600px" height="auto"/>
+  <img src="assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alerta-report3.png" width="600px" height="auto"/>
+</p>
+
+### SEGMENTO 3
 
 ### DASHBOARD
 <p align="center">
