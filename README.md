@@ -26,7 +26,6 @@ Repositorio oficial para la gestión, redacción colaborativa y compilación sec
 - **Curso:** 1ASI0729 - Desarrollo de Aplicaciones Open Source
 - **Ciclo Académico:** 2026-20
 - **Docente:** Velasquez Nuñez, Angel Augusto
-- **Fecha de Entrega:** Mayo, 2026 (Semana 4 - Hito AV1)
 
 ---
 
