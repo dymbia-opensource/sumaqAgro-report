@@ -22,7 +22,7 @@ Para asegurar una captura de datos estructurada y de alto valor, se han elaborad
     <td colspan="2" style="text-align: center;"><b>Competidores</b></td>
     <td style="text-align: center; vertical-align: middle; width: 20%;">
       <b style="display: block; margin-bottom: 6px;">SumaqAgro</b>
-      <img src="assets/img/chapter-2/sumaqagro-logo-chapter2.png" alt="SumaqAgro" width="100"/>
+      <img src="assets/img/chapter-2/logowebsumaqagrofalso.png" alt="SumaqAgro" width="100"/>
     </td>
     <td style="text-align: center; vertical-align: middle; width: 20%;">
       <b style="display: block; margin-bottom: 6px;">SpaceAG</b>
