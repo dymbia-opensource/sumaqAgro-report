@@ -883,9 +883,9 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
 
 ###### CROP HEALTH
 
-![mockup-app-crog-report2](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-crog-report2.png)
-![mockup-app-crog-report3](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-crog-report3.png)
-![mockup-app-crog-report4](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-crog-report4.png)
+![mockup-app-crop-report2](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-crop-report2.png)
+![mockup-app-crop-report3](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-crop-report3.png)
+![mockup-app-crop-report4](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-crop-report4.png)
 
 ###### EARNING
 
@@ -923,20 +923,20 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
 
 ![mockup-app-offline-report1](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-offline-report1.png)
 
-##### Semento 2
+##### SEGMENTO 2
 
 ###### LOGIN / REGISTER
 
 ![mockup-app-login.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-login.png)
 ![mockup-app-register.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-register.png)
 
-###### Dashboard
+###### DASHBOARD
 
 ![mockup-app-dashboard.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-dashboard.png)
 ![mockup-app-dashboard-conrol-panel.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-dashboard-conrol-panel.png)
 ![mockup-app-dashboard-rapid.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-dashboard-rapid.png)
 
-###### member directory
+###### MEMBER DIRECTORY
 ![mockup-app-member-directory.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-member-directory.png)
 ![mockup-app-member-directory-register-plots.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-member-directory-register-plots.png)
 ![mockup-app-member-directory-register-new.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-member-directory-register-new.png)
@@ -944,27 +944,27 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
 ![mockup-app-register-satellite-polygon-mapping.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-register-satellite-polygon-mapping.png)
 ![mockup-app-register-edite-memeber.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-register-edite-memeber.png)
 
-###### Plots Health
+###### PLOTS HEALTH
 ![mockup-app-plot-health.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plot-health.png)
 ![mockup-app-plot-health-satellite-map-zoommed.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plot-health-satellite-map-zoommed.png)
 ![mockup-app-plot-health-rural-sms-agro.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plot-health-rural-sms-agro.png)
 
-###### Costs
+###### COSTS
 ![mockup-app-costs.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-costs.png)
 ![mockup-app-costs-disbursement-audit.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-costs-disbursement-audit.png)
 ![mockup-app-costs-export-season-financial-satatement.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-costs-export-season-financial-satatement.png)
 
-###### certificates
+###### CERTIFICATES
 ![mockup-app-certificates.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-certificates.png)
 ![mockup-app-certificates-technical-quality.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-certificates-technical-quality.png)
 ![mockup-app-certificates-technical-quality-assessment.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-certificates-technical-quality-assessment.png)
 
-###### Alerts
+###### ALERTS
 ![mockup-app-alerts.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alerts.png)
 ![mockup-app-alerts-regional-agro.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alerts-regional-agro.png)
 ![mockup-app-alerts-critical-incident-detail.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alerts-critical-incident-detail.png)
 
-###### Settings
+###### SETTINGS
 ![mockup-app-settings.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-settings.png)
 ![mockup-app-setting-institutional-config.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-setting-institutional-config.png)
 ![mockup-app-setting-sending-of-credential.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-setting-sending-of-credential.png)
