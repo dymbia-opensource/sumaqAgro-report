@@ -340,15 +340,15 @@ El Landing Page funciona como el portal público de presentación e ingreso a la
 
 #### Guía Paso a Paso del Despliegue
 
-##### Paso 1: Acceso al panel de administración de Workers &amp; Pages
+##### Paso 1: Acceso al panel de administración de Workers & Pages
 
-Se ingresa a la consola de administración de Cloudflare en la sección *Workers &amp; Pages*, donde se visualiza el panel principal de control del proyecto, junto con las métricas de solicitudes y estado del servicio.
+Se ingresa a la consola de administración de Cloudflare en la sección *Workers & Pages*, donde se visualiza el panel principal de control del proyecto, junto con las métricas de solicitudes y estado del servicio.
 
 ![Paso 1](assets/img/chapter-5/deployment-configuration/step-1.png)
 
 ##### Paso 2: Inicio del asistente de creación de aplicación
 
-En la cabecera superior del panel de *Workers &amp; Pages*, se selecciona el botón principal **"Create application"** para iniciar el flujo de aprovisionamiento de un nuevo sitio o servicio estático en la nube.
+En la cabecera superior del panel de *Workers & Pages*, se selecciona el botón principal **"Create application"** para iniciar el flujo de aprovisionamiento de un nuevo sitio o servicio estático en la nube.
 
 ![Paso 2](assets/img/chapter-5/deployment-configuration/step-2.png)
 
@@ -895,7 +895,7 @@ En la captura se presenta un acopio de 19.4 toneladas, frente a una meta de 210 
 
 El menú lateral organiza los accesos a padrón, salud de parcelas, costos, certificados, alertas y reportes de plagas. Los indicadores corresponden al entorno de demostración; la integración y validación de los flujos de este perfil siguen en desarrollo.
 
-![Panel de control de la cooperativa](../report/assets/img/chapter-5/app-angular/img-2.1.png)
+![Panel de control de la cooperativa](assets/img/chapter-5/app-angular/img-2.1.png)
 
 ---
 
@@ -911,7 +911,7 @@ La pantalla incluye accesos a Field Inspections y Prescription History. El menú
 
 Esta captura documenta la estructura del perfil y su estado vacío. La evidencia de atención de casos, registro de inspecciones y emisión de prescripciones se incorporará conforme avance el desarrollo.
 
-![Bandeja de diagnóstico](../report/assets/img/chapter-5/app-angular/img-3.1.png)
+![Bandeja de diagnóstico](assets/img/chapter-5/app-angular/img-3.1.png)
 
 ##### Evidencia Funcional: Video Demostrativo de Navegación
 
@@ -1142,4 +1142,4 @@ El trabajo se organizó mediante ramas `feature/*`, cuyas implementaciones se in
 
 En la imagen se evidencia las contribuciones registradas por cada integrante. Esta evidencia se utiliza para identificar la participación del equipo en la implementación y complementar la distribución de responsabilidades definida en la matriz Leadership-and-Collaboration Matrix del sprint.
 
-![Insights → Contributors](../report/assets/img/chapter-5/sprint-2/img-collaboration.png)
+![Insights → Contributors](assets/img/chapter-5/sprint-2/img-collaboration.png)

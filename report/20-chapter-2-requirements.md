@@ -369,7 +369,7 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
 | Apellidos | Palomino Sánchez |
 | Edad | 27 |
 | Distrito | Andahuaylas - Apurímac |
-| Evidencia | ![Entrevista - name](assets/img/chapter-2/interviews/interview-segment-one-03-Marco-Palomino.png) |
+| Evidencia | ![Entrevista - Marco Palomino](assets/img/chapter-2/interviews/interview-segment-one-03-Marco-Palomino.png) |
 | Link | https://lix.li/l3F5 |
 | Timing donde inicia la entrevista | 12:19 min |
 | Duración de la entrevista | 19:42 min |
@@ -445,7 +445,7 @@ Este cuestionario inicial estandariza la recolección de metadatos demográficos
 | Apellidos | Rodríguez Espinoza |
 | Edad | 30 |
 | Distrito | Piura |
-| Evidencia | ![Entrevista - name](assets/img/chapter-2/interviews/interview-segment-two-03-Jorge-Rodriguez.png) |
+| Evidencia | ![Entrevista - Jorge Rodríguez](assets/img/chapter-2/interviews/interview-segment-three-03-Jorge-Rodriguez.png) |
 | Link | https://lix.li/l3F5 |
 | Timing donde inicia la entrevista | 51:53 min |
 | Duración de la entrevista | 56:29 min |

@@ -883,9 +883,9 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
 
 ###### CROP HEALTH
 
-![mockup-app-crog-report2](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-crog-report2.png)
-![mockup-app-crog-report3](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-crog-report3.png)
-![mockup-app-crog-report4](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-crog-report4.png)
+![mockup-app-crop-report2](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-crop-report2.png)
+![mockup-app-crop-report3](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-crop-report3.png)
+![mockup-app-crop-report4](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-crop-report4.png)
 
 ###### EARNING
 
@@ -923,20 +923,20 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
 
 ![mockup-app-offline-report1](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-offline-report1.png)
 
-##### Semento 2
+##### SEGMENTO 2
 
 ###### LOGIN / REGISTER
 
 ![mockup-app-login.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-login.png)
 ![mockup-app-register.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-register.png)
 
-###### Dashboard
+###### DASHBOARD
 
 ![mockup-app-dashboard.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-dashboard.png)
 ![mockup-app-dashboard-conrol-panel.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-dashboard-conrol-panel.png)
 ![mockup-app-dashboard-rapid.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-dashboard-rapid.png)
 
-###### member directory
+###### MEMBER DIRECTORY
 ![mockup-app-member-directory.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-member-directory.png)
 ![mockup-app-member-directory-register-plots.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-member-directory-register-plots.png)
 ![mockup-app-member-directory-register-new.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-member-directory-register-new.png)
@@ -944,27 +944,27 @@ En esta sección se presentan los mockups de la aplicación web de **SumaqAgro**
 ![mockup-app-register-satellite-polygon-mapping.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-register-satellite-polygon-mapping.png)
 ![mockup-app-register-edite-memeber.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-register-edite-memeber.png)
 
-###### Plots Health
+###### PLOTS HEALTH
 ![mockup-app-plot-health.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plot-health.png)
 ![mockup-app-plot-health-satellite-map-zoommed.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plot-health-satellite-map-zoommed.png)
 ![mockup-app-plot-health-rural-sms-agro.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-plot-health-rural-sms-agro.png)
 
-###### Costs
+###### COSTS
 ![mockup-app-costs.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-costs.png)
 ![mockup-app-costs-disbursement-audit.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-costs-disbursement-audit.png)
 ![mockup-app-costs-export-season-financial-satatement.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-costs-export-season-financial-satatement.png)
 
-###### certificates
+###### CERTIFICATES
 ![mockup-app-certificates.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-certificates.png)
 ![mockup-app-certificates-technical-quality.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-certificates-technical-quality.png)
 ![mockup-app-certificates-technical-quality-assessment.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-certificates-technical-quality-assessment.png)
 
-###### Alerts
+###### ALERTS
 ![mockup-app-alerts.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alerts.png)
 ![mockup-app-alerts-regional-agro.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alerts-regional-agro.png)
 ![mockup-app-alerts-critical-incident-detail.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-alerts-critical-incident-detail.png)
 
-###### Settings
+###### SETTINGS
 ![mockup-app-settings.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-settings.png)
 ![mockup-app-setting-institutional-config.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-setting-institutional-config.png)
 ![mockup-app-setting-sending-of-credential.png](assets/img/chapter-4/applications-design/mockups/desktop/mockup-app-setting-sending-of-credential.png)
@@ -1523,10 +1523,10 @@ En esta sección se presenta y describe el Diagrama de Contenedores (Nivel 2 del
 La topología de ejecución del sistema está conformada por cinco contenedores:
 
 * **Static Content Container:**
-  Carpeta con los archivos compilados de la Web Application (HTML, CSS, JavaScript e imágenes), publicada en Cloudflare Pages. Desde aquí el navegador del productor, del directivo y del agrónomo descarga la aplicación Angular. El visitante también la usa para abrir la vista pública del certificado al escanear un código QR.
+  Carpeta con los archivos compilados de la Web Application (HTML, CSS, JavaScript e imágenes), publicada en Firebase Hosting. Desde aquí el navegador del productor, del directivo y del agrónomo descarga la aplicación Angular. El visitante también la usa para abrir la vista pública del certificado al escanear un código QR.
 
 * **Landing Page Container:**
-  Sitio web público estático desarrollado con HTML5, CSS3 y JavaScript vanilla, alojado en un servicio cloud de distribución estática. Diseñado con una carga ligera para garantizar un rendimiento óptimo en terminales móviles bajo redes rurales 3G/4G. Su propósito es exponer la propuesta de valor del producto, presentar los planes de suscripción comercial (Semilla, Cooperativa Pro y Asesor Técnico) y llevar al visitante al registro de la Web Application. No se comunica con el backend: es un sitio estático.
+  Carpeta de archivos estáticos del sitio web público, desarrollado con HTML5, CSS3 y JavaScript vanilla y publicado en Cloudflare Pages. Diseñado con una carga ligera para garantizar un rendimiento óptimo en terminales móviles bajo redes rurales 3G/4G. Su propósito es exponer la propuesta de valor del producto, presentar los planes de suscripción comercial (Semilla, Cooperativa Pro y Asesor Técnico) y llevar al visitante al registro de la Web Application. No se comunica con el backend: es un sitio estático.
 
 * **Web Application Container (Single Page Application - SPA):**
   Aplicación web cliente desarrollada sobre el framework Angular 18, utilizando TypeScript y la biblioteca Angular Material. Provee una interfaz reactiva y accesible tanto para productores de campo como para administradores de cooperativas e ingenieros agrónomos. Integra capacidades de almacenamiento local mediante *Service Workers* e *IndexedDB*, lo que permite soportar operaciones en modo desconectado (*offline-first*) para el registro de gastos de campo y de reportes de plagas en predios rurales sin cobertura de datos móvil, sincronizando la información automáticamente contra la API REST al recuperar la conexión a internet. Asimismo, aloja el visor público interactivo que permite auditar las credenciales y trazabilidad de los lotes cuando un visitante escanea el código QR impreso.
