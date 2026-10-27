@@ -96,12 +96,17 @@ Para garantizar una colaboración fluida y estandarizada a lo largo del ciclo de
 
 ![GitHub Pages](assets/img/chapter-5/img-github-pages.png)
 
-##### **Railway**
+##### **Firebase**
+- **Propósito en el proyecto:** Plataforma de alojamiento en la nube de Google utilizada para el despliegue continuo (*Continuous Deployment*) y hosting de la aplicación web desarrollada con Angular, garantizando un despliegue rápido, seguro y escalable.
+- **Ruta de Referencia:** [https://firebase.google.com](https://firebase.google.com)
 
-* **Propósito en el proyecto:** Infraestructura Cloud PaaS utilizada para el despliegue continuo y alojamiento del backend RESTful desarrollado en Spring Boot, así como el aprovisionamiento del servidor de base de datos relacional MySQL en entorno de producción.
-* **Ruta de Referencia:** [https://railway.app](https://railway.app)
+![Firebase](assets/img/chapter-5/img-firebase.png)
 
-![Railway](assets/img/chapter-5/img-railway.png)
+##### **Render**
+- **Propósito en el proyecto:** Infraestructura Cloud PaaS utilizada para el despliegue continuo y alojamiento del backend RESTful desarrollado en Spring Boot, así como el aprovisionamiento del servidor de base de datos relacional MySQL en entorno de producción.
+- **Ruta de Referencia:** [https://render.com](https://render.com)
+
+![Render](assets/img/chapter-5/img-render.png)
 
 ---
 
