@@ -1,5 +1,7 @@
 # Capítulo IV: Product Design
 
+**Alcance del diseño:** La arquitectura de información, los flujos y los modelos de software de SumaqAgro comprenden la gestión de parcelas y campañas, el monitoreo y la asistencia agronómica, los costos y el punto de equilibrio, y el acopio, la calificación, la certificación y la trazabilidad de cosechas. La publicación de ofertas de cosecha, el catálogo comercial, las propuestas de compra, la aceptación de ofertas, el registro de ventas y la liquidación comercial quedan fuera del alcance del producto. Las negociaciones se realizan fuera de la plataforma con el respaldo de la información de costos y calidad. Se mantienen las suscripciones y los pagos por el uso del servicio.
+
 ## 4.1. Style Guidelines
 
 ### 4.1.1. General Style Guidelines
@@ -288,7 +290,7 @@ Sistema jerárquico accesible desde un menú lateral con iconografía clara. Inc
 
 - Enfoque en la estandarización de la producción, respaldo técnico comercial de la cosecha colectiva y la gestión eficiente de costos.
 
-- Herramientas para la generación de documentos oficiales con código QR que facilitan la venta transparente a acopiadores y compradores.
+- Herramientas para generar certificados de calidad con código QR que permiten a acopiadores y compradores consultar la procedencia y los atributos de la cosecha como respaldo de negociaciones externas.
 
 **c. Asesores técnicos y agrónomos**
 
@@ -331,7 +333,7 @@ El sistema de etiquetado de **SumaqAgro** ha sido diseñado para ser claro, dire
 
 - **Salud del Cultivo:** Visor con mapas de **“Vigor del Follaje (NDVI)”**, **“Humedad del Suelo”** y opciones como **“Cambiar Parcela”**, **“Consultar con el Asesor”** y **“Descargar Ficha PDF”**.
 
-- **Mis Gastos y Ganancias:** Sección financiera que etiqueta **“Finanzas de la Campaña”**, **“Anotar nuevo gasto”**, **“Historial de desembolsos”** y **“Filtrar Historial”**.
+- **Mis Gastos y Ganancias:** Etiqueta conservada en los diseños para la sección de costos y punto de equilibrio, con **“Finanzas de la Campaña”**, **“Anotar nuevo gasto”**, **“Historial de desembolsos”** y **“Filtrar Historial”**. Su alcance comprende egresos, rendimiento esperado y precio mínimo de equilibrio; no incluye ingresos por ventas ni cálculo de ganancias netas por liquidación comercial.
 
 - **Consulta al Asesor:** Canal fitosanitario con etiquetas como **“Asistencia Fitosanitaria y Recetas”**, **“Enviar foto de plaga”**, **“Ver receta técnica”** e **“Historial de consultas”**.
 
@@ -524,7 +526,7 @@ En la **aplicación móvil** el menú lateral se sustituye por una barra de nave
 
 - **Inicio:** Panel de Mi Parcela con salud foliar, gasto total y precio para no perder.
 - **Monitoreo:** Visor satelital con las capas de vigor foliar (NDVI) y humedad (NDWI).
-- **Finanzas:** Gastos y ganancias de la campaña, con acceso al registro de un nuevo gasto.
+- **Finanzas:** Gastos, rendimiento esperado y punto de equilibrio de la campaña, con acceso al registro de un nuevo gasto.
 - **Alertas:** Avisos de riesgo y plan de acción.
 - **Perfil:** Configuración, ayuda, modo sin conexión y cierre de sesión.
 
@@ -1303,11 +1305,13 @@ Durante la dinámica colaborativa, el equipo ejecutó las siguientes actividades
 #### Evidencia del Modelado en Miro
 A continuación se presenta la vista general del tablero desarrollado en Miro, evidenciando los 10 pasos de la técnica Design-Level Event Storming y la organización de los elementos de modelado por colores y categorías.
 
+**Interpretación del alcance:** Las imágenes se conservan como evidencia del taller original y pueden incluir eventos comerciales del negocio. Publicar lotes, recibir ofertas de compra, registrar ventas y calcular ingresos netos son actividades externas al producto, sin comandos, modelos de lectura, agregados ni persistencia propios dentro del alcance de SumaqAgro. La sección de comercialización rotulada en las imágenes como fuera del MVP se interpreta como fuera del alcance actual del producto, no como una funcionalidad comprometida para una entrega posterior.
+
 #### Step 1: Unstructured Exploration
 
 ![event-storming-step-1-unstructured-exploration.jpg](assets/img/chapter-4/domain-driven-design/event-storming-step-1-unstructured-exploration.jpg)
 
-* En este paso se colocan los eventos de dominio del negocio sin un orden definido, escritos en inglés y en tiempo pasado. Son 67 eventos que van desde el registro del usuario hasta la certificación de la cosecha, por ejemplo *User Signed Up*, *Field Plot Registered*, *Frost Risk Detected* y *Quality Certificate Issued*. También aparecen algunos eventos de venta del lote, que quedan fuera del alcance del MVP.
+* En este paso se colocan los eventos de dominio del negocio sin un orden definido, escritos en inglés y en tiempo pasado. Son 67 eventos que van desde el registro del usuario hasta la certificación de la cosecha, por ejemplo *User Signed Up*, *Field Plot Registered*, *Frost Risk Detected* y *Quality Certificate Issued*. También aparecen algunos eventos de venta del lote, que se conservan como contexto del negocio y quedan fuera del alcance del producto.
 
 #### Step 2: Timelines
 
@@ -1325,7 +1329,7 @@ A continuación se presenta la vista general del tablero desarrollado en Miro, e
 
 ![event-storming-step-4-timelines-pivotal-points.jpg](assets/img/chapter-4/domain-driven-design/event-storming-step-4-timelines-pivotal-points.jpg)
 
-* Las barras verticales marcan los eventos que cambian la etapa del negocio y dividen la línea de tiempo en seis secciones: registro, organizaciones y suscripciones; configuración de la parcela y la campaña; monitoreo del cultivo y alertas; asesoría agronómica; contabilidad de costos de campo; y calidad y certificación de la cosecha. Por ejemplo, *Subscription Activated* cierra el registro y *Crop Campaign Started* inicia el seguimiento del cultivo. La última sección, comercialización del lote, queda fuera del alcance del MVP.
+* Las barras verticales marcan los eventos que cambian la etapa del negocio y dividen la línea de tiempo en seis secciones: registro, organizaciones y suscripciones; configuración de la parcela y la campaña; monitoreo del cultivo y alertas; asesoría agronómica; contabilidad de costos de campo; y calidad y certificación de la cosecha. Por ejemplo, *Subscription Activated* cierra el registro y *Crop Campaign Started* inicia el seguimiento del cultivo. La sección adicional de comercialización del lote se conserva como contexto externo y queda fuera del alcance del producto.
 
 #### Step 5: Commands
 

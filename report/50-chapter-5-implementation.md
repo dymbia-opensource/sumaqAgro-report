@@ -1,5 +1,7 @@
 # Capítulo V: Product Implementation, Validation & Deployment
 
+**Alcance de implementación y validación:** Las entregas documentadas se interpretan según el alcance actualizado de SumaqAgro: gestión de parcelas y campañas, monitoreo y asistencia agronómica, costos y punto de equilibrio, y calificación, certificación y trazabilidad de cosechas. La publicación de ofertas, el catálogo comercial, las propuestas de compra, la aceptación de ofertas, el registro de ventas y la liquidación comercial quedan fuera del producto. Los certificados y los reportes de costos respaldan decisiones y negociaciones externas. Las suscripciones y los pagos por el uso del servicio permanecen en el alcance del diseño; esta delimitación no modifica los estados de avance ni acredita funcionalidades adicionales a las evidencias presentadas.
+
 ## 5.1. Software Configuration Management
 
 ### 5.1.1. Software Development Environment Configuration
@@ -802,7 +804,7 @@ El panel lateral presenta la fecha de captura y los valores de demostración: ND
 
 ###### 1.3. Gastos de campaña y precio de equilibrio
 
-La pantalla My Expenses and Earnings organiza los gastos de la campaña por categorías y presenta una tabla con la fecha, el tipo de gasto, la descripción, la cantidad, el precio unitario y el total de cada registro.
+La pantalla My Expenses and Earnings organiza los gastos de la campaña por categorías y presenta una tabla con la fecha, el tipo de gasto, la descripción, la cantidad, el precio unitario y el total de cada registro. El nombre de la pantalla se conserva para identificar la evidencia; el alcance documentado comprende gastos y punto de equilibrio, sin registro de ventas ni cálculo de ganancias netas por liquidación comercial.
 
 Para la parcela de Apurímac se muestra una inversión de S/ 4,670.00, distribuida en S/ 3,000.00 de insumos, S/ 1,320.00 de mano de obra y S/ 350.00 de transporte. El panel de equilibrio presenta un rendimiento esperado de 280 sacos y un precio mínimo calculado de S/ 16.68 por saco. La interfaz incluye las acciones para registrar gastos y actualizar el rendimiento esperado.
 
@@ -820,7 +822,7 @@ La captura muestra el reporte #1 de la parcela de Apurímac, con estado Pending 
 
 La pantalla Official Quality and Origin Certificates presenta un certificado asociado al lote BATCH-2026-08. La tarjeta muestra el cultivo, el predio de origen, la fecha de emisión y la distribución de la clasificación técnica de la cosecha.
 
-La interfaz ofrece las opciones para mostrar el código QR al comprador, descargar el certificado en PDF y consultar su registro web. Esta captura documenta la presentación del certificado y sus acciones disponibles.
+La interfaz ofrece las opciones para mostrar el código QR al comprador, descargar el certificado en PDF y consultar su registro web. Esta captura documenta la presentación del certificado y sus acciones disponibles. La consulta pública respalda la verificación de calidad y origen; la negociación y la compraventa se realizan fuera de SumaqAgro.
 
 ![Consulta de certificados de cosecha](assets/img/chapter-5/app-angular/img-1.5.png)
 

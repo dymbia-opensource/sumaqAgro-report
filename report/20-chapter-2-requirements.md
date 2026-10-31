@@ -2,6 +2,8 @@
 
 En el presente capítulo, el equipo se dedica a investigar y comprender a fondo el contexto operativo y las carencias del sector agroalimentario antes de iniciar el desarrollo tecnológico. Más allá de definir un listado de características del software, aplicamos un riguroso proceso de educción y análisis de requisitos. Esta fase es fundamental para comprobar empíricamente que las problemáticas que SumaqAgro pretende solucionar tienen un impacto genuino en la rentabilidad y gestión diaria de los agricultores y cooperativas peruanas.
 
+**Delimitación del alcance:** La investigación conserva las necesidades y actividades reales de los usuarios, incluidas sus relaciones con compradores y sus procesos comerciales. SumaqAgro atiende estas necesidades mediante el monitoreo y la asistencia agronómica, el registro de costos, la calificación de cosechas y la certificación y trazabilidad. La publicación de ofertas, el catálogo comercial, las propuestas de compra, la gestión de ventas y la liquidación comercial quedan fuera de la plataforma; las suscripciones y los pagos por el servicio se mantienen dentro del alcance.
+
 ## 2.1. Competidores
 ### 2.1.1. Análisis competitivo
 
@@ -589,7 +591,8 @@ La cobertura técnica de Juan Antonio está limitada a un máximo de 20 a 40 pro
 
 ### 2.3.2. User Task Matrix
 
-El **User Task Matrix** evalúa las tareas clave que realizan los tres arquetipos en la cadena de valor:
+El **User Task Matrix** evalúa las tareas clave que realizan los tres arquetipos en la cadena de valor. Describe sus actividades actuales y no constituye por sí mismo una lista de funcionalidades de SumaqAgro. La negociación de volúmenes y precios se conserva como actividad externa, respaldada por los registros de costos y los certificados de calidad de la plataforma:
+
 * **Segmento 1: Pequeños y medianos agricultores independientes de papa y café**, representado por **Guillermo Cortés** (Agricultor Independiente).
 * **Segmento 2: Productores organizados y directivos de cooperativas agrícolas**, representado por **Cristian Santana** (Directivo de Cooperativa).
 * **Segmento 3: Ingenieros agrónomos y asesores técnicos de campo**, representado por **Juan Antonio Morales** (Asesor Técnico).
@@ -614,7 +617,7 @@ El **User Task Matrix** evalúa las tareas clave que realizan los tres arquetipo
 ##### 1. Tareas Críticas (Mayor Frecuencia e Importancia)
 * **Clima y prevención:** *Monitorear alertas climáticas* es la tarea con mayor peso transversal (**High** para todos, **Often** para Guillermo y Cristian), siendo vital para mitigar riesgos agronómicos y de abastecimiento.
 * **Núcleo operativo de campo:** *Inspeccionar fitosanitariamente* y *aplicar insumos* lideran en Guillermo (**Often / High**) y Juan Antonio (**Often / High** en diagnóstico).
-* **Gestión comercial y normativa:** *Negociar precios/volúmenes*, *auditar cuadernos de campo* y *gestionar certificaciones* son exclusivas de Cristian (**Often / High**).
+* **Gestión cooperativa y trazabilidad:** *Auditar cuadernos de campo* y *gestionar certificaciones* son tareas frecuentes y de alta importancia para Cristian (**Often / High**). La negociación de precios y volúmenes también tiene ese peso para el directivo, pero se realiza fuera de SumaqAgro; la plataforma aporta información de costos, calidad y origen como respaldo.
 
 ##### 2. Principales Coincidencias
 * **Monitoreo y respuesta a siniestros:** Alta relevancia compartida en clima y daños post-siniestro entre agricultor y asesor para replantear el manejo técnico.
@@ -624,7 +627,7 @@ El **User Task Matrix** evalúa las tareas clave que realizan los tres arquetipo
 ##### 3. Principales Diferencias
 * **Campo vs. Administración:** Guillermo ejecuta labores físicas directas (*Never / Low* para Cristian), mientras Cristian gestiona acopio, auditorías y certificaciones (*Never / Low* para Guillermo).
 * **Prescripción técnica:** Juan Antonio formula recetas y dosificaciones nutricionales (**Often / High**), rol donde el agricultor y directivo solo actúan como receptores (*Rarely / Low*).
-* **Comercialización:** Ausente en el asesor técnico (**Never / Low**), pero crítica y formal en la cooperativa (**Often / High**), frente a una negociación esporádica e individual en el agricultor independiente (**Sometimes / High**).
+* **Negociación externa:** Ausente en el asesor técnico (**Never / Low**), pero crítica y formal en la cooperativa (**Often / High**), frente a una negociación esporádica e individual en el agricultor independiente (**Sometimes / High**). Estas diferencias describen el contexto de los usuarios y no implican la incorporación de un módulo comercial en SumaqAgro.
 ### 2.3.3. User Journey Mapping
 
 Con el User Journey Map (disponible en: https://uxpressia.com/w/v8FzI/t/eqZxS) reconstruimos paso a paso lo que viven y sienten el administrador y la familia durante el proceso. Al hacer visibles sus principales dificultades y puntos de dolor, podemos dirigir nuestra solución tecnológica justo donde más se necesita, convirtiendo una mala experiencia en un proceso simple y eficiente.
@@ -660,13 +663,15 @@ Crear un producto con impacto real exige mirar más allá de las conductas visib
 
 En una sesión colaborativa sincrónica mediante la herramienta Miro, el equipo llevó a cabo el modelado del dominio de negocio a través de la técnica de Big Picture Event Storming, tomando como referencia las pautas de la guía metodológica (<https://bit.ly/bpes-guide>). Esta dinámica permitió explorar de forma visual e intuitiva el ciclo de vida productivo y comercial en las cadenas de papa andina y café de especialidad, identificando los eventos trascendentales del negocio, los cuellos de botella operativos y los hitos comerciales sin sesgos tempranos de desarrollo técnico.
 
+**Delimitación del modelo exploratorio:** Las imágenes del taller se conservan como evidencia de la exploración original del negocio. Los eventos relativos a fijar el precio de liquidación, publicar lotes certificados, recibir ofertas de compra, registrar ventas y calcular ingresos netos corresponden al proceso comercial externo y quedan fuera del alcance de SumaqAgro. El flujo funcional de cosecha de la plataforma comprende el acopio, el pesaje, el muestreo, la calificación, la emisión del certificado y la generación y verificación del QR de trazabilidad. Los pagos por suscripciones al servicio se mantienen dentro del alcance.
+
 ### Exploración No Estructurada de Eventos (Domain Events)
 El taller inició con una lluvia de ideas abierta en la que cada integrante aportó hechos consumados de relevancia agronómica, financiera y de certificación. Estos eventos se formularon estrictamente en tiempo pasado participio mediante notas adhesivas de color naranja, abarcando desde la delimitación del predio y el cálculo de índices satelitales, hasta la anotación diaria de jornales y la emisión de certificados de calidad:
 
 ![Exploración no estructurada de eventos de dominio](assets/img/chapter-2/step-1-unstructured-exploration.jpg)
 
 ### Línea de Tiempo, Puntos de Dolor e Hitos del Negocio
-Posteriormente, los eventos se organizaron en una secuencia cronológica de izquierda a derecha sobre una línea de tiempo continua. A partir de este ordenamiento, se superpusieron los puntos de dolor (*pain points*) identificados durante el Needfinding mediante notas moradas en rombo (resistencia cultural al celular, desconexión móvil en quebradas, registros en papel extraviados y castigos arbitrarios de precio). Asimismo, se establecieron líneas divisorias verticales para demarcar los eventos fundamentales (*pivotal points*) que delimitan las fases operativas de SumaqAgro:
+Posteriormente, los eventos se organizaron en una secuencia cronológica de izquierda a derecha sobre una línea de tiempo continua. A partir de este ordenamiento, se superpusieron los puntos de dolor (*pain points*) identificados durante el Needfinding mediante notas moradas en rombo (resistencia cultural al celular, desconexión móvil en quebradas, registros en papel extraviados y castigos arbitrarios de precio). Asimismo, se establecieron líneas divisorias verticales para demarcar los eventos fundamentales (*pivotal points*) que delimitan las fases del proceso de negocio explorado; su inclusión en la imagen no implica que todas se implementen en SumaqAgro:
 
 ![Línea de tiempo con puntos de dolor e hitos fundamentales](assets/img/chapter-2/step-2-timelines-pivotal-points.jpg)
 
@@ -678,7 +683,7 @@ Con el fin de garantizar una comunicación fluida, consistente y libre de ambig�
 
 * **Field Plot (Parcela Agrícola):** Unidad territorial delimitada geográficamente mediante coordenadas perimetrales, destinada a la producción agraria y gestionada por un productor o socio cooperativo.
 * **Agricultural Cooperative (Cooperativa Agraria):** Organización asociativa formal que agrupa a productores de café y papa para centralizar el acopio, la asistencia técnica y la comercialización mayorista.
-* **Cooperative Member (Socio Cooperativo):** Productor empadronado formalmente en la cooperativa que accede a servicios de pesaje, secado, asistencia y liquidación comercial.
+* **Cooperative Member (Socio Cooperativo):** Productor empadronado formalmente en la cooperativa cuyas parcelas, campañas y lotes de cosecha se vinculan a los procesos de asistencia técnica, acopio, pesaje y trazabilidad.
 * **Technical Advisor (Asesor Técnico):** Profesional agrónomo responsable de diagnosticar el estado sanitario de las parcelas, formular recetas de fertilización y asistir en campo.
 * **Sowing Date (Fecha de Siembra):** Momento temporal en el que se instala la semilla o plantón en el suelo, marcando el inicio del ciclo fenológico y el monitoreo satelital continuo.
 * **Crop Variety (Variedad de Cultivo):** Clasificación botánica de la semilla (p. ej., variedades de papa como Canchán o Yungay; variedades de café como Caturra o Geisha) que define los requerimientos de manejo.
@@ -696,4 +701,4 @@ Con el fin de garantizar una comunicación fluida, consistente y libre de ambig�
 * **Cup Profile Scoring - SCA (Puntaje de Perfil de Taza):** Calificación sensorial sobre 100 puntos asignada en laboratorio de catación para medir la calidad de cafés de especialidad.
 * **Digital Quality Certificate (Certificado Digital de Calidad):** Acreditación técnica no repudiable que valida los parámetros físicos, sensoriales y de procedencia del lote cosechado.
 * **Cryptographic Traceability QR (Código QR de Trazabilidad):** Identificador visual impreso o adherido al lote que enlaza públicamente a la ficha técnica de origen, calidad y no deforestación.
-* **Quality Premium Bonus (Bonificación por Calidad):** Sobreprecio o compensación económica adicional liquidada al agricultor por entregar cosechas que superan los estándares básicos de mercado.
+* **Quality Premium Bonus (Bonificación por Calidad):** Sobreprecio o compensación económica adicional que compradores o cooperativas acuerdan con el agricultor fuera de SumaqAgro por entregar cosechas que superan los estándares básicos de mercado. La plataforma aporta la evaluación y el certificado de calidad como respaldo, sin calcular ni liquidar esa compensación.
