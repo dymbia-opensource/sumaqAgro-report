@@ -1,9 +1,9 @@
 # SumaqAgro — Project Documentation Report
 
-[![Build Status](https://img.shields.io/badge/Docs--as--Code-Pandoc%20%7C%20XeLaTeX-blue.svg)](Makefile)
+[![Build Status](https://img.shields.io/badge/Docs--as--Code-Pandoc%20%7C%20XeLaTeX-blue.svg)](pandoc/Makefile)
 [![Course](https://img.shields.io/badge/UPC-1ASI0729%20Open%20Source-red.svg)](https://www.upc.edu.pe/)
-[![Milestone](https://img.shields.io/badge/Delivery-AV1%20Sprint%20Review-brightgreen.svg)](#tabla-de-contenidos---entregable-av1)
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](LICENSE.md)
+[![Milestone](https://img.shields.io/badge/Delivery-TB1%20Stage%20Review-brightgreen.svg)](#tabla-de-contenidos---entregable-tb1)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
 
 Repositorio oficial para la gestión, redacción colaborativa y compilación secuencial del **Informe de Proyecto Final** de la startup **Dymbia** y su plataforma SaaS **SumaqAgro**, desarrollado bajo el enfoque **Docs-as-Code**, GitFlow y Conventional Commits para el curso *1ASI0729 Desarrollo de Aplicaciones Open Source* (Ciclo 2026-20).
 
@@ -26,7 +26,6 @@ Repositorio oficial para la gestión, redacción colaborativa y compilación sec
 - **Curso:** 1ASI0729 - Desarrollo de Aplicaciones Open Source
 - **Ciclo Académico:** 2026-20
 - **Docente:** Velasquez Nuñez, Angel Augusto
-- **Fecha de Entrega:** Mayo, 2026 (Semana 4 - Hito AV1)
 
 ---
 
@@ -61,7 +60,7 @@ Repositorio oficial para la gestión, redacción colaborativa y compilación sec
 
 ---
 
-## Tabla de Contenidos - Entregable AV1
+## Tabla de Contenidos - Entregable TB1
 
 * [Carátula](report/front-matter/01-caratula.md)
 * [Registro de Versiones del Informe](report/front-matter/02-version-history.md)
@@ -102,6 +101,7 @@ Repositorio oficial para la gestión, redacción colaborativa y compilación sec
   * [4.1. Style Guidelines](report/40-chapter-4-design.md#41-style-guidelines)
     * [4.1.1. General Style Guidelines](report/40-chapter-4-design.md#411-general-style-guidelines)
     * [4.1.2. Web Style Guidelines](report/40-chapter-4-design.md#412-web-style-guidelines)
+    * [4.1.3. Mobile Style Guidelines](report/40-chapter-4-design.md#413-mobile-style-guidelines)
   * [4.2. Information Architecture](report/40-chapter-4-design.md#42-information-architecture)
     * [4.2.1. Organization Systems](report/40-chapter-4-design.md#421-organization-systems)
     * [4.2.2. Labeling Systems](report/40-chapter-4-design.md#422-labeling-systems)
@@ -142,6 +142,15 @@ Repositorio oficial para la gestión, redacción colaborativa y compilación sec
       * [5.2.1.6. Services Documentation Evidence for Sprint Review](report/50-chapter-5-implementation.md#5216-services-documentation-evidence-for-sprint-review)
       * [5.2.1.7. Software Deployment Evidence for Sprint Review](report/50-chapter-5-implementation.md#5217-software-deployment-evidence-for-sprint-review)
       * [5.2.1.8. Team Collaboration Insights during Sprint](report/50-chapter-5-implementation.md#5218-team-collaboration-insights-during-sprint)
+    * [5.2.2. Sprint 2](report/50-chapter-5-implementation.md#522-sprint-2)
+      * [5.2.2.1. Sprint Planning 2](report/50-chapter-5-implementation.md#5221-sprint-planning-2)
+      * [5.2.2.2. Aspect Leaders and Collaborators](report/50-chapter-5-implementation.md#5222-aspect-leaders-and-collaborators)
+      * [5.2.2.3. Sprint Backlog 2](report/50-chapter-5-implementation.md#5223-sprint-backlog-2)
+      * [5.2.2.4. Development Evidence for Sprint Review](report/50-chapter-5-implementation.md#5224-development-evidence-for-sprint-review)
+      * [5.2.2.5. Execution Evidence for Sprint Review](report/50-chapter-5-implementation.md#5225-execution-evidence-for-sprint-review)
+      * [5.2.2.6. Services Documentation Evidence for Sprint Review](report/50-chapter-5-implementation.md#5226-services-documentation-evidence-for-sprint-review)
+      * [5.2.2.7. Software Deployment Evidence for Sprint Review](report/50-chapter-5-implementation.md#5227-software-deployment-evidence-for-sprint-review)
+      * [5.2.2.8. Team Collaboration Insights during Sprint](report/50-chapter-5-implementation.md#5228-team-collaboration-insights-during-sprint)
 * [Conclusiones](report/60-conclusions.md)
 * [Bibliografía](report/99-bibliography.md)
 * [Anexos](report/annexes/annex-c-videos.md)
@@ -157,39 +166,66 @@ El repositorio implementa la estructura modular de directorios para compilación
 
 ```text
 sumaqAgro-report/
-├── config/
-│   └── build.yaml                       # Configuración de compilación Pandoc / XeLaTeX
-├── report/                              # Directorio raíz del informe modular
-│   ├── front-matter/                    # Prefijos 01-09: Carátula, versiones y Student Outcome
+├── pandoc/                              # Pipeline de exportación a PDF
+│   ├── build.yaml                       # Configuración Pandoc / XeLaTeX (orden de los capítulos)
+│   ├── metadata.yaml                    # Propiedades del PDF (fuentes, márgenes, idioma)
+│   ├── Makefile                         # make -C pandoc pdf MILESTONE=tb1
+│   ├── build.ps1                        # .\pandoc\build.ps1 -Milestone tb1 (Windows)
+│   ├── filters/
+│   │   └── pdf.lua                      # Imágenes y tablas HTML → PDF
+│   ├── pdf/
+│   │   ├── preamble.tex                 # Ajustes LaTeX
+│   │   └── toc.md                       # Posición de la tabla de contenidos
+│   └── build/                           # Salida del PDF (ignorada por Git)
+├── report/                              # Contenido del informe
+│   ├── front-matter/                    # Prefijos 01-09
 │   │   ├── 01-caratula.md
 │   │   ├── 02-version-history.md
 │   │   ├── 03-collaboration.md
 │   │   └── 04-student-outcome.md
-│   ├── 10-chapter-1-intro.md            # Prefijos 10-89: Capítulos principales
+│   ├── 10-chapter-1-intro.md            # Prefijos 10-89: capítulos
 │   ├── 20-chapter-2-requirements.md
 │   ├── 30-chapter-3-specification.md
 │   ├── 40-chapter-4-design.md
 │   ├── 50-chapter-5-implementation.md
 │   ├── 60-conclusions.md
-│   ├── 99-bibliography.md               # Prefijo 99: Referencias en formato APA
-│   ├── annexes/                         # Anexos aislados dentro de report/
+│   ├── 99-bibliography.md               # Prefijo 99: referencias APA
+│   ├── annexes/
 │   │   ├── annex-a-student-outcome.md
 │   │   ├── annex-b-performance-report.md
 │   │   └── annex-c-videos.md
-│   └── assets/                          # Imágenes, diagramas y recursos
-│       └── img/
-│           ├── c4/
-│           ├── chapter-II/
-│           ├── chapter-III/
-│           ├── chapter-IV/
-│           ├── chapter-V/
-│           ├── class-diagrams/
-│           ├── event-storming/
-│           ├── interview/
-│           ├── team/
-│           ├── lean-ux-canvas.png
-│           └── upc-logo.png
-├── .gitignore
-├── Makefile                             # Automatización de compilación (make pdf)
-├── metadata.yaml                        # Variables globales del reporte académico
+│   └── assets/img/                      # Imágenes agrupadas por capítulo
+│       ├── chapter-1/                   # team/, lean-ux-canvas.png
+│       ├── chapter-2/                   # interviews/, personas, empathy y journey maps
+│       ├── chapter-3/                   # impact map, backlog
+│       ├── chapter-4/                   # c4/, class-diagrams/, database/, event-storming/,
+│       │                                # domain-driven-design/, applications-design/, landing-page/, wireflows/
+│       ├── chapter-5/                   # deployment-configuration/, landing-page/, sprint-1/
+│       ├── lean-ux-canvas.png
+│       └── upc-logo.png
+├── CHANGELOG.md                         # Cambios por versión
+├── CONTRIBUTING.md                      # GitFlow, Conventional Commits y compilación
+├── LICENSE.md                           # MIT
 └── README.md                            # Portada digital e índice navegable
+```
+
+## Compilación del PDF
+
+Requisitos: **Pandoc 3.x** y **XeLaTeX** (MiKTeX o TeX Live / MacTeX). Todos los comandos se ejecutan desde la raíz del repositorio.
+
+### Windows (PowerShell)
+
+Instalación (una sola vez):
+
+```powershell
+winget install --id JohnMacFarlane.Pandoc
+winget install --id MiKTeX.MiKTeX
+```
+
+En **MiKTeX Console → Settings**, activa *Install missing packages on-the-fly: Always*.
+
+Compilación:
+
+```powershell
+.\pandoc\build.ps1 -Milestone tb1
+```
