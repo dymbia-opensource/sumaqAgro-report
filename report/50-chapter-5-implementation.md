@@ -851,7 +851,7 @@ La sección de seguridad muestra los campos de contraseña deshabilitados y un m
 
 La pantalla My Registered Plots presenta las parcelas del agricultor mediante tarjetas con su nombre, cultivo, superficie, ubicación y acceso al monitoreo.
 
-En la evidencia se muestran las parcelas de demostración de Ayacucho y Apurímac, además de Parcela San Jerónimo – Lote 1, con superficies de 4.83, 4.82 y 2.81 hectáreas, respectivamente. La interfaz también informa que se han utilizado los tres espacios del plan gratuito.
+En la evidencia se muestran las parcelas de demostración de Ayacucho y Apurímac, además de Parcela San Jerónimo – Lote 1, con superficies de 4.83, 4.82 y 2.81 hectáreas, respectivamente. La interfaz también informa cuántos espacios de la cuota del Plan Semilla se han utilizado.
 
 ![Consulta de parcelas registradas](assets/img/chapter-5/app-angular/img-1.8.png)
 
