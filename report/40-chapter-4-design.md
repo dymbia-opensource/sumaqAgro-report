@@ -1377,8 +1377,8 @@ Considerando la estructura de subdominios recomendada para plataformas SaaS de s
 
 * **Responsabilidad:** Registrar a los usuarios, autenticarlos mediante tokens JWT y controlar el acceso a la plataforma.
 * **Agregado `User`:**
-  * *Commands:* `SignUp`, `SignIn`.
-  * *Events:* `UserSignedUp`, `UserSignedIn`.
+  * *Commands:* `SignUp`, `SignIn`, `RequestPasswordReset`, `ResetPassword`.
+  * *Events:* `UserSignedUp`, `UserSignedIn`, `PasswordResetRequested`, `PasswordReset`.
   * *Read Models:* `PlansCatalog`.
   * *External System:* Brevo Email Service (correo de recuperación de contraseña).
 
@@ -1403,8 +1403,8 @@ Considerando la estructura de subdominios recomendada para plataformas SaaS de s
 
 * **Responsabilidad:** Controlar los planes de suscripción (Semilla, Cooperativa Pro y Asesor Técnico), el cobro mediante la pasarela de pagos y la cuota de parcelas que permite cada plan.
 * **Agregado `Subscription`:**
-  * *Commands:* `AssignSeedPlan`, `SelectSubscriptionPlan`, `SubmitPayment`, `ActivateSubscription`, `CancelSubscription`.
-  * *Events:* `SeedPlanAssigned`, `SubscriptionPlanSelected`, `PaymentConfirmed`, `SubscriptionActivated`, `SubscriptionCancelled`.
+  * *Commands:* `SelectSubscriptionPlan`, `SubmitPayment`, `ActivateSubscription`, `CancelSubscription`.
+  * *Events:* `SubscriptionPlanSelected`, `PaymentConfirmed`, `SubscriptionActivated`, `SubscriptionCancelled`.
   * *Read Models:* `PlansCatalog`, `BillingSummary`.
   * *External System:* Niubiz Payment Gateway.
 
@@ -1444,8 +1444,8 @@ Considerando la estructura de subdominios recomendada para plataformas SaaS de s
   * *Events:* `RegionalBulletinIssued`.
   * *Read Models:* `MultiPlotDashboardByUrgency`.
 * **Agregado `PestReport`:**
-  * *Commands:* `UploadPestEvidencePhoto`, `NotifyAssignedAgronomist`, `RecordDamageAssessment`.
-  * *Events:* `PestEvidencePhotoUploaded`, `AgronomistNotified`, `DamageAssessmentRecorded`.
+  * *Commands:* `RecordPestReport`, `NotifyAssignedAgronomist`, `RecordDamageAssessment`.
+  * *Events:* `PestReportRecorded`, `AgronomistNotified`, `DamageAssessmentRecorded`.
   * *Read Models:* `AdvisorConsultation`, `PhytosanitaryDiagnosisInbox`.
 * **Agregado `FieldInspection`:**
   * *Commands:* `ScheduleFieldInspection`, `CompleteFieldInspection`.
@@ -1478,13 +1478,13 @@ Considerando la estructura de subdominios recomendada para plataformas SaaS de s
 
 La orquestación entre los contextos delimitados se rige por políticas eventuales bajo el estándar *Whenever [Domain Event] Then [Command]*:
 
-* **P1:** `Whenever UserSignedUp Then AssignSeedPlan` (IAM → Subscriptions and Payments)
+* **P1:** `Whenever UserSignedUp Then SelectSubscriptionPlan` (IAM → Subscriptions and Payments)
 * **P2:** `Whenever PaymentConfirmed Then ActivateSubscription` (Subscriptions and Payments)
 * **P3:** `Whenever PlotBoundaryDelineated Then LinkPlotPolygon` (Field Management)
 * **P4:** `Whenever SowingDateRecorded Then ScheduleSatelliteMonitoring` (Field Management → Crop Health)
 * **P5:** `Whenever VegetationAnomalyDetected, WaterStressDetected or FrostRiskDetected Then RaiseAgroclimaticAlert` (Crop Health)
 * **P6:** `Whenever AgroclimaticAlertRaised Then NotifyFarmerAndAgronomist` (Crop Health)
-* **P7:** `Whenever PestEvidencePhotoUploaded Then NotifyAssignedAgronomist` (Crop Health)
+* **P7:** `Whenever PestReportRecorded Then NotifyAssignedAgronomist` (Crop Health)
 * **P8:** `Whenever CropCampaignStarted Then OpenCampaignLedger` (Field Management)
 * **P9:** `Whenever InputExpenseRecorded, DailyLaborExpenseRecorded, FieldFreightExpenseRecorded or ExpectedYieldSet Then RecalculateBreakevenPrice` (Field Management)
 * **P10:** `Whenever DeliveredBatchWeighed Then RecordActualYield` (Harvest Certification → Field Management)
